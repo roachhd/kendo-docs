@@ -194,7 +194,7 @@ Adds one or more ToolBarItemMenuButton to the ToolBarItem.
     ?>
 
 ### overflow
-Specifies how the button behaves when the ToolBar is resized.
+Specifies how the button behaves when the ToolBar is resized. Possible values are: "always", "never" or "auto" (default).
 
 #### Returns
 `\Kendo\UI\ToolBarItem`
@@ -272,7 +272,7 @@ Specifies if the toggle button is initially selected. Applicable only for button
     ?>
 
 ### showIcon
-Specifies where the icon will be displayed.
+Specifies where the button icon will be displayed. Possible values are: "toolbar", "overflow" or "both" (default).
 
 #### Returns
 `\Kendo\UI\ToolBarItem`
@@ -290,7 +290,7 @@ Specifies where the icon will be displayed.
     ?>
 
 ### showText
-Specifies where the text will be displayed.
+Specifies where the text will be displayed. Possible values are: "toolbar", "overflow" or "both" (default).
 
 #### Returns
 `\Kendo\UI\ToolBarItem`
@@ -404,7 +404,7 @@ Specifies the toggle event handler of the button. Applicable only for commands o
     ?>
 
 ### type
-Specifies the type of the item.
+Specifies the command type. Supported types are "button", "splitButton", "buttonGroup", "separator".
 
 #### Returns
 `\Kendo\UI\ToolBarItem`

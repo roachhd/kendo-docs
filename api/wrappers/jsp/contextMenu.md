@@ -99,18 +99,6 @@ More documentation is available at [kendo:contextMenu-animation](/api/wrappers/j
         <kendo:contextMenu-animation></kendo:contextMenu-animation>
     </kendo:contextMenu>
 
-### kendo:contextMenu-items
-
-Contains the items of the menu widget
-
-More documentation is available at [kendo:contextMenu-items](/api/wrappers/jsp/contextmenu/items).
-
-#### Example
-
-    <kendo:contextMenu>
-        <kendo:contextMenu-items></kendo:contextMenu-items>
-    </kendo:contextMenu>
-
 
 ## Event Attributes
 

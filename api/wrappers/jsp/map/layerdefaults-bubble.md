@@ -47,7 +47,12 @@ The the opacity of all bubble layers.
 
 ### symbol `java.lang.String`
 
-The bubble layer symbol type. Supported symbols are "circle" and "square".
+The default symbol for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
 
 #### Example
     <kendo:map-layerDefaults-bubble symbol="symbol">
@@ -66,5 +71,50 @@ More documentation is available at [kendo:map-layerDefaults-bubble-style](/api/w
 
     <kendo:map-layerDefaults-bubble>
         <kendo:map-layerDefaults-bubble-style></kendo:map-layerDefaults-bubble-style>
+    </kendo:map-layerDefaults-bubble>
+
+
+## Event Attributes
+
+### symbol `String`
+
+The default symbol for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
+
+
+#### Example
+    <kendo:map-layerDefaults-bubble symbol="handle_symbol">
+    </kendo:map-layerDefaults-bubble>
+    <script>
+        function handle_symbol(e) {
+            // Code to handle the symbol event.
+        }
+    </script>
+
+## Event Tags
+
+### kendo:map-layerDefaults-bubble-symbol
+
+The default symbol for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
+
+
+#### Example
+    <kendo:map-layerDefaults-bubble>
+        <kendo:map-layerDefaults-bubble-symbol>
+            <script>
+                function(e) {
+                    // Code to handle the symbol event.
+                }
+            </script>
+        </kendo:map-layerDefaults-bubble-symbol>
     </kendo:map-layerDefaults-bubble>
 

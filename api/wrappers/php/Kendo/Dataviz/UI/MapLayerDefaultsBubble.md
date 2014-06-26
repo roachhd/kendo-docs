@@ -111,20 +111,31 @@ The default style for bubble layer symbols.
     ?>
 
 ### symbol
-The bubble layer symbol type. Supported symbols are "circle" and "square".
+The default symbol for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
 
 #### Returns
 `\Kendo\Dataviz\UI\MapLayerDefaultsBubble`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $bubble = new \Kendo\Dataviz\UI\MapLayerDefaultsBubble();
     $bubble->symbol('value');
+    ?>
+
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $bubble = new \Kendo\Dataviz\UI\MapLayerDefaultsBubble();
+    $bubble->symbol(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 

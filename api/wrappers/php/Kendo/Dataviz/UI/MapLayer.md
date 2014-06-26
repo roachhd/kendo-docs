@@ -269,21 +269,32 @@ Alternating between different subdomains allows more requests to be executed in 
     ?>
 
 ### symbol
-The bubble layer symbol type. Supported symbols are "circle" and "square".
+The symbol to use for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
 
 #### Returns
 `\Kendo\Dataviz\UI\MapLayer`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $layer = new \Kendo\Dataviz\UI\MapLayer();
     $layer->symbol('value');
+    ?>
+
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $layer = new \Kendo\Dataviz\UI\MapLayer();
+    $layer->symbol(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
 ### titleField
@@ -335,7 +346,7 @@ The default Kendo UI Tooltip options for data-bound markers.
     ?>
 
 ### type
-The layer type. Supported types are "tile", "bing", "shape", "marker" and "bubble".
+The layer type. Supported types are "tile" and "shape".
 
 #### Returns
 `\Kendo\Dataviz\UI\MapLayer`

@@ -124,7 +124,7 @@ The [template](/api/framework/kendo#methods-template used to render the time slo
     ?>
 
 ### type
-The view type. Supported types are "day", "week", and "month".
+The type of the view. The built-in views are: "day", "week", and "month".
 
 #### Returns
 `\Kendo\UI\GanttView`

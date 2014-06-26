@@ -286,44 +286,6 @@ Specifies the delay in ms before the sub menus are opened/closed - used to avoid
     $contextMenu->hoverDelay(1);
     ?>
 
-### addItem
-
-Adds one or more ContextMenuItem to the ContextMenu.
-
-#### Returns
-`\Kendo\UI\ContextMenu`
-
-#### Parameters
-
-##### $value[, $value2, ...] `\Kendo\UI\ContextMenuItem|array`
-
-#### Example - using \Kendo\UI\ContextMenuItem
-
-    <?php
-    $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
-    $item = new \Kendo\UI\ContextMenuItem();
-    $enabled = true;
-    $item->enabled($enabled);
-    $contextMenu->addItem($item);
-    ?>
-
-#### Example - using array
-
-    <?php
-    $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
-    $enabled = true;
-    $contextMenu->addItem(array('enabled' => $enabled));
-    ?>
-
-#### Example - adding more than one ContextMenuItem
-
-    <?php
-    $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
-    $first  = new \Kendo\UI\ContextMenuItem();
-    $second = new \Kendo\UI\ContextMenuItem();
-    $contextMenu->addItem($first, $second);
-    ?>
-
 ### open
 Fires before a sub menu or the ContextMenu gets opened. You can cancel this event to prevent opening the sub menu.
 For additional information check the [open](/api/web/contextmenu#events-open) event documentation.

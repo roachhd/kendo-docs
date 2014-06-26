@@ -63,7 +63,7 @@ If set, the ToolBar will render an image with the specified URL in the button.
 
 ### overflow `java.lang.String`
 
-Specifies how the button behaves when the ToolBar is resized.
+Specifies how the button behaves when the ToolBar is resized. Possible values are: "always", "never" or "auto" (default).
 
 #### Example
     <kendo:toolBar-item overflow="overflow">
@@ -95,7 +95,7 @@ Specifies if the toggle button is initially selected. Applicable only for button
 
 ### showIcon `java.lang.String`
 
-Specifies where the icon will be displayed.
+Specifies where the button icon will be displayed. Possible values are: "toolbar", "overflow" or "both" (default).
 
 #### Example
     <kendo:toolBar-item showIcon="showIcon">
@@ -103,7 +103,7 @@ Specifies where the icon will be displayed.
 
 ### showText `java.lang.String`
 
-Specifies where the text will be displayed.
+Specifies where the text will be displayed. Possible values are: "toolbar", "overflow" or "both" (default).
 
 #### Example
     <kendo:toolBar-item showText="showText">
@@ -151,7 +151,7 @@ Specifies the toggle event handler of the button. Applicable only for commands o
 
 ### type `java.lang.String`
 
-Specifies the type of the item.
+Specifies the command type. Supported types are "button", "splitButton", "buttonGroup", "separator".
 
 #### Example
     <kendo:toolBar-item type="type">

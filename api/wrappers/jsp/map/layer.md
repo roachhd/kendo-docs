@@ -109,7 +109,12 @@ Alternating between different subdomains allows more requests to be executed in 
 
 ### symbol `java.lang.String`
 
-The bubble layer symbol type. Supported symbols are "circle" and "square".
+The symbol to use for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
 
 #### Example
     <kendo:map-layer symbol="symbol">
@@ -126,7 +131,7 @@ Requires the dataSource option to be set.
 
 ### type `java.lang.String`
 
-The layer type. Supported types are "tile", "bing", "shape", "marker" and "bubble".
+The layer type. Supported types are "tile" and "shape".
 
 #### Example
     <kendo:map-layer type="type">
@@ -174,5 +179,50 @@ More documentation is available at [kendo:map-layer-tooltip](/api/wrappers/jsp/m
 
     <kendo:map-layer>
         <kendo:map-layer-tooltip></kendo:map-layer-tooltip>
+    </kendo:map-layer>
+
+
+## Event Attributes
+
+### symbol `String`
+
+The symbol to use for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
+
+
+#### Example
+    <kendo:map-layer symbol="handle_symbol">
+    </kendo:map-layer>
+    <script>
+        function handle_symbol(e) {
+            // Code to handle the symbol event.
+        }
+    </script>
+
+## Event Tags
+
+### kendo:map-layer-symbol
+
+The symbol to use for bubble layers. Possible values:The function must accept an object with the following fields:
+* center - The symbol center on the current layer.
+* size - The symbol size.
+* style - The symbol style.
+* dataItem - The dataItem used to create the symbol.
+* location - The location of the data point.The function return value must be a kendo.dataviz.drawing.Shape.
+
+
+#### Example
+    <kendo:map-layer>
+        <kendo:map-layer-symbol>
+            <script>
+                function(e) {
+                    // Code to handle the symbol event.
+                }
+            </script>
+        </kendo:map-layer-symbol>
     </kendo:map-layer>
 
