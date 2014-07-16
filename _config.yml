@@ -239,10 +239,11 @@ defaults:
 google_tag_manager: GTM-6X92
 google_custom_search: '001595215763381649090:eblhnfskwrk'
 
+# Assets pipeline configuration
+assets:
+    cachebust: soft
+    js_compressor: uglifier
+
 ## Do not edit below this line
 safe: false
 markdown: MarkdownProcessor
-kramdown:
-    toc_levels: 2..3
-    smart_quotes: ["quot", "quot", "quot", "quot"]
-    input: GFM
