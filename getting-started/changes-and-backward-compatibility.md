@@ -32,6 +32,9 @@ If you need any custom checkbox rendering, use the checkboxes.template option:
 
 **Editor**: The deprecated **formatBlock** and **style** tools have been removed. See the 2013 Q2 release notes below on how to migrate to the **formatting** tool.
 
+**Editor for ASP.NET MVC**: The ImageBrowser controller now works with `FileBrowserEntry` and `FileBrowserEntryType` types, instead of `FileBrowserEntry` and `FileBrowserEntryType`.
+This change is related to the introduction of the new FileBrowser tool.
+
 ## Kendo UI 2014 Q1 SP2 (2014.1.528)
 
 ### Changes from 2014 Q1 SP1 (2014.1.416)
