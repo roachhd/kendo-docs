@@ -72,8 +72,7 @@ The behavior is configurable via the [`appendTo` setting](/api/web/window#config
 A **Window** provides many configuration options that can be easily set during initialization.
 Among the properties that can be controlled:
 
-
-*   Minimum height/width
+*   Minimum and maximum height/width during resizing
 *   Available user actions (close/refresh/maximize/minimize/pin) and ability to define custom ones
 *   Title
 *   Draggable and resizable behaviors
@@ -148,6 +147,17 @@ Click events can be captured and handled in a standard way:
         win.open();
     });
 
+## Window dimensions
+
+By default the Window does not have any preset dimensions, so its size depends on its content. You need to keep in mind the following:
+
+* If the Window contains horizontally expandable block-level elements (including Kendo UI widgets such as the Grid, Editor, etc), the Window can expand horizontally to the point of touching the browser viewport's right edge.
+In this situation the widget "sticks" to the right viewport edge and cannot be separated from it. This problem is caused by the fact that the Window is absolutely positioned with CSS and is not related to Kendo UI.
+In order to avoid the issue, set some appropriate width to the Window or set a (max-)width to its content.
+* If the Window and its content are able to expand vertically without any restrictions, this may result in a popup, which is higher than the browser viewport. Such an interface is not very usable and should be avoided.
+* When the Window uses an `iframe` it does not resize automatically, according to the iframe content, because there is no relationship between the iframe content and iframe size. On the other side,
+iOS devices do not support iframe scrolling and expand iframes, according to their content, which may increase the Window height too much. That's why using the Window in iframe mode on Apple touch devices is not recommended.
+
 ## Loading Window content via AJAX
 
 A **Window** provides built-in support for asynchronously loading content from a URL. This URL
@@ -168,6 +178,9 @@ all sorts of undesired side effects, including a broken DOM tree, deleted widget
             title: "Async Window Content"
         });
     });
+
+If the Window has no set dimensions, it will probably resize after the AJAX content is loaded. This will naturally change the widget position on the screen and it will no longer be centered. If this is a requirement,
+then either [`center`](/api/web/window#methods-center) the Window in its [`refresh`](/api/web/window#events-refresh) event, or set some explicit dimensions.
 
 ## Using iframes
 
