@@ -8,6 +8,11 @@ description: How to hide the browser address bar, set the platform which will fo
 
 ## Configuration
 
+### hashBang `Boolean` *(default: false)*
+
+Introduced in the 2014 Q1 Service Pack 1 release. If set to `true`, the navigation will parse and prefix the url fragment value with `!`,
+which [should be SEO friendly](http://googlewebmastercentral.blogspot.com/2009/10/proposal-for-making-ajax-crawlable.html).
+
 ### hideAddressBar `Boolean`*(default: true)*
 
 Whether to hide the browser address bar. Supported only in iPhone and iPod. Doesn't affect standalone mode as there the address bar is always hidden.
@@ -19,24 +24,6 @@ Whether to hide the browser address bar. Supported only in iPhone and iPod. Does
     <script>
     new kendo.mobile.Application($(document.body), { hideAddressBar: false });
     </script>
-
-### updateDocumentTitle `Boolean` *(default: true)*
-
-Whether to update the document title.
-
-#### Example
-
-    <div data-role="view"><a data-role="button">Foo</a></div>
-
-    <script>
-    new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
-    </script>
-
-
-### hashBang `Boolean` *(default: false)*
-
-Introduced in the 2014 Q1 Service Pack 1 release. If set to `true`, the navigation will parse and prefix the url fragment value with `!`,
-which [should be SEO friendly](http://googlewebmastercentral.blogspot.com/2009/10/proposal-for-making-ajax-crawlable.html).
 
 ### initial `String`
 
@@ -85,6 +72,24 @@ The text displayed in the loading popup. Setting this value to false will disabl
     </script>
 
 ### modelScope `Object` *(default: "window")*
+
+The view model scope. By default, the views will try to resolve their models from the global scope (window).
+
+#### Example
+
+    <div data-role="view" data-model="foo" data-bind="events: {init: onInit }">Bar</div>
+
+    <script>
+    new kendo.mobile.Application($(document.body), {
+        modelScope: {
+            foo: {
+                onInit: function(e) {
+                    console.log(e);
+                }
+            }
+        }
+    });
+    </script>### modelScope `Object` *(default: "window")*
 
 The view model scope. By default, the views will try to resolve their models from the global scope (window).
 
@@ -187,6 +192,41 @@ The default View transition.
 
     <script>
     new kendo.mobile.Application($(document.body), { transition: "slide" });
+    </script>
+
+### updateDocumentTitle `Boolean` *(default: true)*
+
+Whether to update the document title.
+
+#### Example
+
+    <div data-role="view"><a data-role="button">Foo</a></div>
+
+    <script>
+    new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
+    </script>
+
+### useNativeScrolling `Boolean` *(default: false)*
+
+By default, the mobile application uses flexbox for the mobile views layout. The content element is made scrollable, either by initializing a mobile scroller or with the browser supported `overflow: auto` and `-webkit-overflow-scrolling: touch` CSS declarations.
+When the `useNativeScrolling` configuration option is set to true, the view header and footer are positioned using `position: fixed` CSS declaration. The view content vertical padding is adjusted to match the header and footer height; The default browser scroller is utilized for the content scrolling.
+
+For more information regarding native scrolling check [this article](/getting-started/mobile/native-scrolling).
+
+#### Example
+
+    <div data-role="view">
+        <header data-role="header">
+            <h1>Header</h1>
+        </header>
+        <div style="height: 2000px"> Tall content </div>
+        <footer data-role="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+
+    <script>
+        new kendo.mobile.Application(document.body, { useNativeScrolling: true });
     </script>
 
 ### webAppCapable `Boolean` **(default: true)**
