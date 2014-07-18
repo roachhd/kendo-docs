@@ -12626,7 +12626,7 @@ The data item field containing the Y value.
         type: "bubble",
         yField: "price",
         data: [
-          { x: 1, yField: 2, size: 3 }
+          { x: 1, price: 2, size: 3 }
         ]
       }]
     });
