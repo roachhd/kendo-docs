@@ -2,7 +2,7 @@ var dojoApi = (function($) {
 
     var dojoApi = {
         configuration: {
-            url: "http://trykendoui.telerik.com/",
+            url: "http://dojo.telerik.com/",
             currentKendoVersion: kendo.version
         },
         post: function (snippet) {
@@ -23,12 +23,7 @@ var dojoApi = (function($) {
 
             $("<button>")
                 .text(text)
-                .addClass("btn btn-primary dojo-submit-button")
-                .css({
-                    opacity: .8,
-                    "float": "right",
-                    margin: "1em 1em -4em 0"
-                })
+                .addClass("btn btn-action dojo-submit-button")
                 .insertBefore(element);
         },
         wrapInHtml: function(snippet) {

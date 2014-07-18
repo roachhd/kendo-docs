@@ -59,6 +59,7 @@ footer {
     font-weight: bold;
     text-align: center;
     margin: 1.467em 0.267em;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -75,7 +76,22 @@ footer {
 .btn-primary:hover {
     background-color: #c2410e;
     border-color: #c2410e;
-    cursor: pointer;
+}
+
+.btn-action {
+    background-color: #015991;
+    color: #fff;
+    border-width: 0;
+}
+
+.btn-action:hover {
+    background-color: #013a5e;
+}
+
+.dojo-submit-button {
+    opacity: .8;
+    float: right;
+    margin: -3em 0 0 0;
 }
 
 .prettyprint {
