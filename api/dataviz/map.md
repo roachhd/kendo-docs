@@ -638,7 +638,6 @@ The fields which can be used in the template are:
             },
             layers: [{
                 type: "marker",
-
                 locationField: "latlng",
                 dataSource: {
                     data: [{
@@ -2586,6 +2585,26 @@ The fields which can be used in the template are:
                 dataSource: {
                     data: [{
                         latlng: [0, 0]
+                    }]
+                },
+                locationField: "latlng"
+            }]
+        });
+    </script>
+
+#### Example - use formatted dataItem value in the tooltip template
+    <div id="map"></div>
+    <script>
+        $("#map").kendoMap({
+            layers: [{
+                type: "marker",
+                tooltip: {
+                    template: "#= kendo.toString(marker.dataItem.value, 'C') #"
+                },
+                dataSource: {
+                    data: [{
+                        latlng: [0, 0],
+                        value: 1000
                     }]
                 },
                 locationField: "latlng"
