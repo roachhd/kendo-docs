@@ -8,7 +8,7 @@ description: Define CSS classes of Kendo UI Widgets to change their appearance. 
 The appearance of the **Kendo UI** widgets depends entirely on styles defined by the applied CSS classes. No inline styles are used, except for some very specific cases in which these styles must be set with Javascript, depending on the browser or configuration.
 
 ## Common and theme StyleSheets
- Kendo UI requires two stylesheets: **kendo.common.css** and **kendo.[theme].css**.
+ The Kendo UI **Web** widgets (i.e. excluding Mobile and DataViz) require two stylesheets: **kendo.common.css** and **kendo.[theme].css**.
  The common (base) stylesheet applies styles related to positioning and size, but which are not related to the color scheme and are always required for the widget to
  look correct and function properly. The theme stylesheet applies theme-specific styles like colors and backgrounds.
 
