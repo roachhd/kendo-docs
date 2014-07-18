@@ -3221,6 +3221,7 @@ The new page.
       page: 2
     });
     console.log(dataSource.page()); // displays "2"
+    </script>
 
 ### pageSize
 
