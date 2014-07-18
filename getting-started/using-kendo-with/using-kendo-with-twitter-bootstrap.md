@@ -48,7 +48,8 @@ A possible easy workaround is to override the Bootstrap CSS, apply `content-box`
 	}
 	 
 	/* set a border-box model only to elements that need it */
-	 
+	
+    .form-control, /* if this class is applied to a Kendo UI widget, its layout may change */
 	.container,
 	.container-fluid,
 	.row,
