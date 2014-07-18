@@ -993,6 +993,18 @@ Fires before a sub menu or the ContextMenu gets closed. You can cancel this even
 
 The closed item
 
+##### e.type `String`
+
+The event type as a string - "close".
+
+##### e.target `Element`
+
+The current target of the ContextMenu - either the init target or the current element chosen through filter, if specified.
+
+##### e.event `jQuery.Event`
+
+The jQuery event that triggered this one - only available for the close event of the whole ContextMenu and not for its items. 
+
 #### Example
 
     <div id="target">Target</div>
@@ -1058,6 +1070,18 @@ Fires before a sub menu or the ContextMenu gets opened. You can cancel this even
 ##### e.item `Element`
 
 The opened item
+
+##### e.type `String`
+
+The event type as a string - "close".
+
+##### e.target `Element`
+
+The current target of the ContextMenu - either the init target or the current element chosen through filter, if specified.
+
+##### e.event `jQuery.Event`
+
+The jQuery event that triggered this one - only available for the open event of the whole ContextMenu and not for its items. 
 
 #### Example
 
@@ -1125,6 +1149,14 @@ Fires when a sub menu or the ContextMenu gets opened and its animation finished.
 
 The activated item
 
+##### e.type `String`
+
+The event type as a string - "activate".
+
+##### e.target `Element`
+
+The current target of the ContextMenu - either the init target or the current element chosen through filter, if specified.
+
 #### Example
 
     <div id="target">Target</div>
@@ -1191,6 +1223,14 @@ Fires when a sub menu or the ContextMenu gets closed and its animation finished.
 
 The deactivated item
 
+##### e.type `String`
+
+The event type as a string - "deactivate".
+
+##### e.target `Element`
+
+The current target of the ContextMenu - either the init target or the current element chosen through filter, if specified.
+
 #### Example
 
     <div id="target">Target</div>
@@ -1256,6 +1296,14 @@ Fires when a menu item gets selected.
 ##### e.item `Element`
 
 The selected item
+
+##### e.type `String`
+
+The event type as a string - "select".
+
+##### e.target `Element`
+
+The current target of the ContextMenu - either the init target or the current element chosen through filter, if specified.
 
 #### Example
 
