@@ -3388,8 +3388,8 @@ Defines the text of the command buttons that are shown within the Grid. Used pri
 
 #### Example - change the messages
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3414,7 +3414,7 @@ Defines the text of the command buttons that are shown within the Grid. Used pri
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands `Object`
 
@@ -3422,8 +3422,8 @@ Defines the text of the command buttons that are shown within the Grid. Used pri
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3448,7 +3448,7 @@ Defines the text of the command buttons that are shown within the Grid. Used pri
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.cancel `String`
 
@@ -3456,8 +3456,8 @@ Defines the text of "Cancel Changes" button located in the ToolBar of the widget
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3475,7 +3475,7 @@ Defines the text of "Cancel Changes" button located in the ToolBar of the widget
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.canceledit `String`
 
@@ -3483,8 +3483,8 @@ Defines the text of "Cancel" button that is rendered in `inline` or `popup` edit
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3502,7 +3502,7 @@ Defines the text of "Cancel" button that is rendered in `inline` or `popup` edit
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.create `String`
 
@@ -3510,8 +3510,8 @@ Defines the text of "Add new record" button located in the ToolBar of the widget
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3529,7 +3529,7 @@ Defines the text of "Add new record" button located in the ToolBar of the widget
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.destroy `String`
 
@@ -3537,8 +3537,8 @@ Defines the text of "Delete" button rendered in `inline` or `popup` editing mode
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3556,7 +3556,7 @@ Defines the text of "Delete" button rendered in `inline` or `popup` editing mode
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.edit `String`
 
@@ -3564,8 +3564,8 @@ Defines the text of "Edit" button that is rendered in `inline` or `popup` editin
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3583,7 +3583,7 @@ Defines the text of "Edit" button that is rendered in `inline` or `popup` editin
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.save `String`
 
@@ -3591,8 +3591,8 @@ Defines the text of "Save Changes" button located in the ToolBar of the widget.
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3610,7 +3610,7 @@ Defines the text of "Save Changes" button located in the ToolBar of the widget.
         }
       }
     });
-  </script>
+    </script>
 
 ### messages.commands.update `String`
 
@@ -3618,8 +3618,8 @@ Defines the text of "Update" button that is rendered in `inline` or `popup` edit
 
 #### Example
 
-  <div id="grid"></div>
-  <script>
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
@@ -3637,7 +3637,7 @@ Defines the text of "Update" button that is rendered in `inline` or `popup` edit
         }
       }
     });
-  </script>
+    </script>
 
 ### mobile `Boolean|String` *(default: false)*
 
