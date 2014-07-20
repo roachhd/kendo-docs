@@ -140,6 +140,23 @@ More documentation is available at [kendo:map-markers](/api/wrappers/jsp/map/mar
 
 ## Event Attributes
 
+### beforeReset `String`
+
+Fired immediately before the map is reset.
+This event is typically used for cleanup by layer implementers.
+
+
+For additional information check the [beforeReset](/api/dataviz/map#events-beforeReset) event documentation.
+
+#### Example
+    <kendo:map beforeReset="handle_beforeReset">
+    </kendo:map>
+    <script>
+        function handle_beforeReset(e) {
+            // Code to handle the beforeReset event.
+        }
+    </script>
+
 ### click `String`
 
 Fired when the user clicks on the map.
@@ -320,6 +337,25 @@ For additional information check the [zoomEnd](/api/dataviz/map#events-zoomEnd) 
     </script>
 
 ## Event Tags
+
+### kendo:map-beforeReset
+
+Fired immediately before the map is reset.
+This event is typically used for cleanup by layer implementers.
+
+
+For additional information check the [beforeReset](/api/dataviz/map#events-beforeReset) event documentation.
+
+#### Example
+    <kendo:map>
+        <kendo:map-beforeReset>
+            <script>
+                function(e) {
+                    // Code to handle the beforeReset event.
+                }
+            </script>
+        </kendo:map-beforeReset>
+    </kendo:map>
 
 ### kendo:map-click
 

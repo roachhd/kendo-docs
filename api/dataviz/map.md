@@ -3298,6 +3298,12 @@ The data item field should be a number.
         });
     </script>
 
+### layers.zIndex `Number`
+
+The zIndex for this layer.
+
+Layers are normally stacked in declaration order (last one is on top).
+
 ### markerDefaults `Object`
 
 The default options for all markers.
@@ -5232,6 +5238,17 @@ The new zoom level. The value is clamped to the
     </script>
 
 ## Events
+
+### beforeReset
+
+Fired immediately before the map is reset.
+This event is typically used for cleanup by layer implementers.
+
+#### Event Data
+
+##### e.sender `kendo.dataviz.ui.Map`
+
+The source widget instance.
 
 ### click
 

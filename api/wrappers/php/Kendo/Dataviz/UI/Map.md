@@ -30,6 +30,43 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ## Methods
 
+### beforeReset
+Fired immediately before the map is reset.
+This event is typically used for cleanup by layer implementers.
+For additional information check the [beforeReset](/api/dataviz/map#events-beforeReset) event documentation.
+
+#### Returns
+`\Kendo\Dataviz\UI\Map`
+
+#### Parameters
+
+##### $value `string|\Kendo\JavaScriptFunction`
+
+#### Example - using string which defines a JavaScript function
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->beforeReset('function(e) { }');
+    ?>
+
+#### Example - using string which defines a JavaScript name
+    <script>
+        function onBeforeReset(e) {
+            // handle the beforeReset event.
+        }
+    </script>
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->beforeReset('onBeforeReset');
+    ?>
+
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->beforeReset(new \Kendo\JavaScriptFunction('function(e) { }'));
+    ?>
+
 ### center
 The map center. Coordinates are listed as [Latitude, Longitude].
 

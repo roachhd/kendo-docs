@@ -400,3 +400,21 @@ The data item field should be a number.
     $layer->valueField('value');
     ?>
 
+### zIndex
+The zIndex for this layer.Layers are normally stacked in declaration order (last one is on top).
+
+#### Returns
+`\Kendo\Dataviz\UI\MapLayer`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $layer = new \Kendo\Dataviz\UI\MapLayer();
+    $layer->zIndex(1);
+    ?>
+

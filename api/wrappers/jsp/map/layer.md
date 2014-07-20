@@ -154,6 +154,14 @@ The data item field should be a number.
     <kendo:map-layer valueField="valueField">
     </kendo:map-layer>
 
+### zIndex `float`
+
+The zIndex for this layer.Layers are normally stacked in declaration order (last one is on top).
+
+#### Example
+    <kendo:map-layer zIndex="zIndex">
+    </kendo:map-layer>
+
 
 ##  Configuration JSP Tags
 
