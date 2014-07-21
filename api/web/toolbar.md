@@ -168,6 +168,8 @@ Sets icon for the menu button. The icon should be one of the existing in the Ken
 
 Specifies the ID of the button.
 
+> By design the widget will render two buttons - the one located in the ToolBar container will receive the specified ID, the one located in the Overflow Popup container will receive the specified ID but with *_overflow* suffix. If the ID will be used for determining which button is clicked in the `click` or `toggle` event handler, the developer should use the ID property of the event data which always contains the specified ID without suffix.
+
 #### Example
 
     <div id="toolbar"></div>
@@ -473,6 +475,8 @@ Sets icon for the item. The icon should be one of the existing in the Kendo UI t
 
 Specifies the ID of the button.
 
+> By design the widget will render two buttons - the one located in the ToolBar container will receive the specified ID, the one located in the Overflow Popup container will receive the specified ID but with *_overflow* suffix. If the ID will be used for determining which button is clicked in the `click` or `toggle` event handler, the developer should use the ID property of the event data which always contains the specified ID without suffix.
+
 #### Example
 
     <div id="toolbar"></div>
@@ -578,6 +582,8 @@ Sets icon for the menu buttons. The icon should be one of the existing in the Ke
 ### items.menuButtons.id `String`
 
 Specifies the ID of the menu buttons.
+
+> By design the widget will render two buttons - the one located in the ToolBar container will receive the specified ID, the one located in the Overflow Popup container will receive the specified ID but with *_overflow* suffix. If the ID will be used for determining which button is clicked in the `click` or `toggle` event handler, the developer should use the ID property of the event data which always contains the specified ID without suffix.
 
 #### Example
 
