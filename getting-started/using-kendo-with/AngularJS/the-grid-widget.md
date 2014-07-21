@@ -91,7 +91,7 @@ When you need to, say, load columns definition from the server, you need to post
 
 ## Templates
 
-The Grid supports a lot of user-customizable templates. You can define the `rowTemplate` if you want to completely customize how each row is displayed, or individual cell templates by adding a `template` property in your column definitions. The difference versus plain Kendo is that when the Grid is created with the Angular directive the templates can contain live `{{angular}}` bits. Both `rowTemplate` and `columns.template` are compiled with Angular in a scope containing a `dataItem` variable which points to the data model of the current item. Here is an example for `rowTemplate`:
+The Grid supports a lot of user-customizable templates. You can define the `rowTemplate` if you want to completely customize how each row is displayed, or individual cell templates by adding a `template` property in your column definitions. The difference versus plain Kendo is that when the Grid is created with the Angular directive the templates can contain live `\{\{angular\}\}` bits. Both `rowTemplate` and `columns.template` are compiled with Angular in a scope containing a `dataItem` variable which points to the data model of the current item. Here is an example for `rowTemplate`:
 
     // controller
     function Ctrl3($scope) {
