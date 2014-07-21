@@ -36,6 +36,46 @@ As a shortcut, you can discard the dashes after `kendo-`:
 
     <input kendo-numerictextbox />
 
+### Widget options in HTML
+
+You can specify any options supported by Kendo UI widgets in element attributes, by converting the option name from camelCase to dash-separated-words, and prefixing it with `k-`.  For example:
+
+    <input kendo-numerictextbox
+           k-min="1" k-max="10"
+           k-up-arrow-text="'Increment'"
+           k-down-arrow-text="'Decrement'" />
+
+Notice an important detail in the example above: the strings `'Increment'` and `'Decrement'` are quoted inside the attribute values.  Without the single inside they will be interpreted as variable names and Angular-Kendo will look for `$scope.Increment` and `$scope.Decrement` variables.  Because omitting the quotes is a common error, Angular-Kendo will emit a warning in the JS console when such variables are not found.
+
+For instance, to declare the texts in the controller you could say:
+
+    <input kendo-numerictextbox
+           k-up-arrow-text="textUp"
+           k-down-arrow-text="textDown" />
+
+and have the following in your controller:
+
+    $scope.textUp = "Increment";
+    $scope.textDown = "Decrement";
+
+You can use declarative attributes for array and object configuration options, too.
+
+    <textarea kendo-editor k-tools="[ 'bold', 'italic', 'undeline' ]"></textarea>
+
+### Widget configuration in controller
+
+If you'd like to store all widget configuration in the controller, you can use the special `k-options` attribute:
+
+    // in controller:
+    $scope.monthPickerConfig = {
+      start  : "year",
+      depth  : "year",
+      format : "MMMM yyyy"
+    };
+
+    <!-- in HTML: -->
+    <input kendo-date-picker k-options="monthPickerConfig" />
+
 ### Scope bindings (`ng-model`)
 
 For all widgets which provide a `value()` method you can use the standard `ng-model` directive to bind their value into the AngularJS scope.  Example:
@@ -57,57 +97,16 @@ If you need to get the actual `widget.value()` you can use `k-ng-model`:
 
 The directive will update the `birthday` variable with the selected `Date` object whenever the `change` event occurs on the widget.
 
-### Widget configuration in markup
-
-Kendo UI widgets provide tons of configuration options.  When using the Kendo API you pass those options in widget constructors, e.g.:
-
-    $("#birthday").kendoDatePicker({
-      format : "dddd MMMM d, yyyy"
-    });
-
-To do the same with AngularJS bindings, you can use attributes prefixed with `k-`:
-
-    <label>
-      Birthday:
-      <input kendo-date-picker k-format="'dddd MMMM d, yyyy'" />
-    </label>
-
-Note that we had to 'quote' the string attribute.  This is because the `k-` attributes are evaluated against the AngularJS scope.  If you need to store the date format as a scope variable you can do:
-
-    // in your controller:
-    $scope.dateFormat = "dddd MMMM d, yyyy";
-
-    <!-- in HTML: -->
-    <input kendo-date-picker k-format="dateFormat" />
-
-You can use declarative binding for array and object configuration options, too.
-
-    <textarea kendo-editor k-tools="[ 'bold', 'italic', 'undeline' ]"></textarea>
-
-### Widget configuration in controller
-
-If you'd like to store all widget configuration in the controller, you can use the special `k-options` attribute:
-
-    // in controller:
-    $scope.monthPickerConfig = {
-      start  : "year",
-      depth  : "year",
-      format : "MMMM yyyy"
-    };
-
-    <!-- in HTML: -->
-    <input kendo-date-picker k-options="monthPickerConfig" />
-
 ### Event handlers
 
-If you store the whole configuration in the controller, like above, then adding an event handler is done the same you would do with plain Kendo:
+If you store the whole configuration in the controller, then adding an event handler is done the same you would do with plain Kendo:
 
     // in controller:
     $scope.monthPickerConfig = {
       start  : "year",
       depth  : "year",
       format : "MMMM yyyy",
-      change : function(e) {
+      change : function(e) { // handler for "change" event
         var datePicker = e.sender;
         console.log(datePicker.value());
         $scope.selected = true;
