@@ -613,6 +613,76 @@ Specifies the delay of the AutoComplete widget which will provide the suggest fu
             dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }] });
     </script>
 
+### columns.filterable.cell.inputWidth `Number`
+
+Specifies the width of the input before it is initialized or turned into a widget. Provides convenient way to set the width according to the column width.
+
+#### Example - Specifying inputWidth option for the filter cell of a column
+
+    <div id="grid"></div>
+    <script>
+          $("#grid").kendoGrid({
+              columns: [
+                {
+                    field: "name",
+                    filterable: {
+                        cell: {
+                            inputWidth: 333
+                        }
+                    }
+                },
+                { field: "age" } ],
+            filterable: { mode: "row" },
+            dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }] });
+    </script>
+
+### columns.filterable.cell.suggestionOperator `String` *(default: "startswidth")*
+
+Specifies the AutoComplete filter option. Possible values are same as the one for the AutoComplete filter option- "startswidht", "endswith", "contains". Notice this operator is completely separate from the operator used for filtering on this column.
+
+#### Example - Specifying inputWidth option for the filter cell of a column
+
+    <div id="grid"></div>
+    <script>
+          $("#grid").kendoGrid({
+              columns: [
+                {
+                    field: "name",
+                    filterable: {
+                        cell: {
+                            suggestionOperator: "contains"
+                        }
+                    }
+                },
+                { field: "age" } ],
+            filterable: { mode: "row" },
+            dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }] });
+    </script>
+
+### columns.filterable.cell.minLength `Number` *(default: 1)*
+
+Specifies the minLength option of the AutoComplete widget when column is of type string.
+
+#### Example - Specifying minLength of the AutoComplete widget when using filter cell.
+
+    <div id="grid"></div>
+    <script>
+          $("#grid").kendoGrid({
+              columns: [
+                {
+                    field: "name",
+                    filterable: {
+                        cell: {
+                            minLength: 3
+                        }
+                    }
+                },
+                { field: "age" } ],
+            filterable: { mode: "row" },
+            dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }] });
+    </script>
+
+
 ### columns.filterable.cell.enabled `Boolean` *(default: true)*
 
 When set to false the Grid will not render the cell filtering widget for that specific column.
