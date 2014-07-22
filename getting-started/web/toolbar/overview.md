@@ -43,7 +43,7 @@ The TollBar wrapper holds all commands that can be placed within the available c
                 {
                     type: "splitButton",
                     text: "Split Button",
-                    items: [
+                    menuButtons: [
                         { id: "option1", text: "Option 1" },
                         { id: "option2", text: "Option 2" },
                         { id: "option3", text: "Option 3" }
@@ -53,7 +53,7 @@ The TollBar wrapper holds all commands that can be placed within the available c
                 //button group
                 {
                     type: "buttonGroup",
-                    items: [
+                    buttons: [
                         { text: "left",   showText: "overflow", icon: "justifyLeft",   showIcon: "toolbar" },
                         { text: "center", showText: "overflow", icon: "justifyCenter", showIcon: "toolbar" },
                         { text: "right",  showText: "overflow", icon: "justifyRight",  showIcon: "toolbar" }
@@ -258,7 +258,7 @@ In the command overflow popup the Split Button is rendered as flat list of comma
                     type: "splitButton", //setting the command type is **mandatory**
                     text: "Split Button", //define the text of the primary button
                     icon: "folter-add", //set icon of the primary button
-                    items: [ //define the drop-down options
+                    menuButtons: [ //define the drop-down options
                         { id: "option1", text: "Option 1" },
                         { id: "option2", text: "Option 2" },
                         { id: "option3", text: "Option 3" },
@@ -286,7 +286,7 @@ In the command overflow popup the Button Group is rendered as list of commands.
                     type: "buttonGroup",
                     id: "btnGroup",
                     //ButtonGroup's items accept the same appearance configuration options as the button item
-                    items: [
+                    buttons: [
                         { text: "prev", icon: "arrow-w" },
                         { text: "next", icon: "arrow-e" }
                     ]
@@ -306,7 +306,7 @@ In the command overflow popup the Button Group is rendered as list of commands.
                     type: "buttonGroup",
                     id: "btnGroup",
                     //ButtonGroup's items accept the same appearance configration optinos as the button control
-                    items: [
+                    buttons: [
                         { text: "foo", togglable: true, group: "controlGroup" },
                         { text: "bar", togglable: true, group: "controlGroup" },
                         { text: "baz", togglable: true, group: "controlGroup" }
