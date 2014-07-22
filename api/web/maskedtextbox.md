@@ -10,9 +10,23 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ## Configuration
 
+### clearPromptChar `Boolean`*(default: false)*
+
+Specifies whether the widget will replace the prompt characters with spaces on blur. Prompt chars will be shown again on focus.
+
+#### Example - specify different prompt char
+
+    <input id="maskedtextbox" />
+    <script>
+    $("#maskedtextbox").kendoMaskedTextBox({
+        mask: "000000",
+        clearPromptChar: true
+    });
+    </script>
+
 ### culture `String`*(default: "en-US")*
 
- Specifies the culture info used by the widget.
+Specifies the culture info used by the widget.
 
 #### Example - specify German culture internationalization
 
@@ -26,7 +40,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ### mask `String`*(default: "")*
 
- Specifies the input mask. The following mask rules are supported:
+Specifies the input mask. The following mask rules are supported:
 
 - **0** - Digit. Accepts any digit between 0 and 9.
 - **9** - Digit or space. Accepts any digit between 0 and 9, plus space.
@@ -52,7 +66,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ### promptChar `String`*(default: "_")*
 
- Specifies the character used to represent the absence of user input in the widget
+Specifies the character used to represent the absence of user input in the widget
 
 #### Example - specify different prompt char
 
@@ -68,7 +82,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ### rules `Object`
 
-  Defines an object of custom mask rules.
+Defines an object of custom mask rules.
 
 #### Example - specify a custom rule as a RegExp instance
 
@@ -98,7 +112,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ### value `String`*(default: "")*
 
- Specifies the value of the MaskedTextBox widget.
+Specifies the value of the MaskedTextBox widget.
 
 #### Example - specify value option
 
@@ -122,6 +136,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 ## Fields
 
 ### options `Object`
+
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -138,6 +153,7 @@ An object, which holds the options of the widget.
 ## Methods
 
 ### destroy
+
 Prepares the **MaskedTextBox** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks.
 
 > **Important:** This method does not remove the MaskedTextBox element from DOM.
@@ -278,3 +294,4 @@ The widget instance which fired the event.
         console.log(value); //value is the selected date in the maskedtextbox
     });
     </script>
+
