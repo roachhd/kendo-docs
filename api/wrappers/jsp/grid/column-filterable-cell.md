@@ -37,6 +37,22 @@ When set to false the Grid will not render the cell filtering widget for that sp
     <kendo:grid-column-filterable-cell enabled="enabled">
     </kendo:grid-column-filterable-cell>
 
+### inputWidth `float`
+
+Specifies the width of the input before it is initialized or turned into a widget. Provides convenient way to set the width according to the column width.
+
+#### Example
+    <kendo:grid-column-filterable-cell inputWidth="inputWidth">
+    </kendo:grid-column-filterable-cell>
+
+### minLength `float`
+
+Specifies the minLength option of the AutoComplete widget when column is of type string.
+
+#### Example
+    <kendo:grid-column-filterable-cell minLength="minLength">
+    </kendo:grid-column-filterable-cell>
+
 ### operator `java.lang.String`
 
 Specifies the default operator that will be used for the cell filtering.
@@ -51,6 +67,14 @@ Specifies whether to show or hide the DropDownList with the operators.
 
 #### Example
     <kendo:grid-column-filterable-cell showOperators="showOperators">
+    </kendo:grid-column-filterable-cell>
+
+### suggestionOperator `java.lang.String`
+
+Specifies the AutoComplete filter option. Possible values are same as the one for the AutoComplete filter option- "startswidht", "endswith", "contains". Notice this operator is completely separate from the operator used for filtering on this column.
+
+#### Example
+    <kendo:grid-column-filterable-cell suggestionOperator="suggestionOperator">
     </kendo:grid-column-filterable-cell>
 
 ### template `java.lang.String`
