@@ -9228,9 +9228,7 @@ Returns a PNG image of the chart encoded as a [Data URL](https://developer.mozil
 
     var chart = $("#stock-chart").data("kendoStockChart");
     var image = chart.imageDataURL();
-    if (!window.open(image)) {
-        document.location.href = image;
-    }
+    $("<img>").attr("src", image).appendTo(document.body);
     </script>
 
 ## Events
