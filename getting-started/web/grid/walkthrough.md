@@ -579,6 +579,7 @@ The code below addresses this issue by cloning the header row and prepending it 
 				'html { font: 11pt sans-serif; }' +
 				'.k-grid { border-top-width: 0; }' +
 				'.k-grid, .k-grid-content { height: auto !important; }' +
+				'.k-grid-content { overflow: visible !important; }' +
 				'.k-grid .k-grid-header th { border-top: 1px solid; }' +
 				'.k-grid-toolbar, .k-grid-pager > .k-link { display: none; }' +
 				'</style>' +
