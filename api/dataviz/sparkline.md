@@ -6010,15 +6010,36 @@ Returns a PNG image of the sparkline encoded as a [Data URL](https://developer.m
 #### Example - show a snapshot of the Sparkline
 
     <span id="sparkline"></div>
+    <a download="export.png" id="export" class="k-button">Export PNG</a>
     <script>
     $("#sparkline").kendoSparkline({
         type: "column",
         data: [1, 2, 3, 4]
     });
-    var sparkline = $("#sparkline").data("kendoSparkline");
-    var image = sparkline.imageDataURL();
-    if (!window.open(image)) {
-        document.location.href = image;
+
+    $("#export").on("click", function() {
+      var sparkline = $("#sparkline").data("kendoSparkline");
+      var imageDataURL = sparkline.imageDataURL();
+
+      if (navigator.msSaveBlob) {
+        var blob = toBlob(imageDataURL, "image/png");
+        navigator.msSaveBlob(blob, this.getAttribute("download"));
+      } else {
+        this.href = imageDataURL;
+      }
+    });
+
+    // See: http://goo.gl/qlg5dd
+    function toBlob(base64, type) {
+      var rawData = base64.substring(base64.indexOf("base64,") + 7);
+      var data = atob(rawData);
+      var arr = new Uint8Array(data.length);
+
+      for (var i = 0; i < data.length; ++i) {
+        arr[i] = data.charCodeAt(i);
+      }
+
+      return new Blob([ arr.buffer ], { type: type });
     }
     </script>
 

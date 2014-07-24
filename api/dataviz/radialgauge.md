@@ -479,6 +479,7 @@ Returns a PNG image of the gauge encoded as a [Data URL](https://developer.mozil
 #### Example - show a snapshot of the gauge
 
     <div id="gauge"></div>
+    <a download="export.png" id="export" class="k-button">Export PNG</a>
     <script>
     $("#gauge").kendoRadialGauge({
         pointer: {
@@ -489,10 +490,30 @@ Returns a PNG image of the gauge encoded as a [Data URL](https://developer.mozil
             max: 100
         }
     });
-    var gauge = $("#gauge").data("kendoRadialGauge");
-    var image = gauge.imageDataURL();
-    if (!window.open(image)) {
-        document.location.href = image;
+
+    $("#export").on("click", function() {
+      var gauge = $("#gauge").data("kendoRadialGauge");
+      var imageDataURL = chart.imageDataURL();
+
+      if (navigator.msSaveBlob) {
+        var blob = toBlob(imageDataURL, "image/png");
+        navigator.msSaveBlob(blob, this.getAttribute("download"));
+      } else {
+        this.href = imageDataURL;
+      }
+    });
+
+    // See: http://goo.gl/qlg5dd
+    function toBlob(base64, type) {
+      var rawData = base64.substring(base64.indexOf("base64,") + 7);
+      var data = atob(rawData);
+      var arr = new Uint8Array(data.length);
+
+      for (var i = 0; i < data.length; ++i) {
+        arr[i] = data.charCodeAt(i);
+      }
+
+      return new Blob([ arr.buffer ], { type: type });
     }
     </script>
 

@@ -9213,6 +9213,7 @@ Returns a PNG image of the chart encoded as a [Data URL](https://developer.mozil
 #### Example - show a snapshot of the Chart
 
     <div id="stock-chart"></div>
+    <a download="export.png" id="export" class="k-button">Export PNG</a>
     <script>
     $("#stock-chart").kendoStockChart({
         series: [{
@@ -9226,9 +9227,30 @@ Returns a PNG image of the chart encoded as a [Data URL](https://developer.mozil
         }]
     });
 
-    var chart = $("#stock-chart").data("kendoStockChart");
-    var image = chart.imageDataURL();
-    $("<img>").attr("src", image).appendTo(document.body);
+    $("#export").on("click", function() {
+      var chart = $("#stock-chart").data("kendoStockChart");
+      var imageDataURL = chart.imageDataURL();
+
+      if (navigator.msSaveBlob) {
+        var blob = toBlob(imageDataURL, "image/png");
+        navigator.msSaveBlob(blob, this.getAttribute("download"));
+      } else {
+        this.href = imageDataURL;
+      }
+    });
+
+    // See: http://goo.gl/qlg5dd
+    function toBlob(base64, type) {
+      var rawData = base64.substring(base64.indexOf("base64,") + 7);
+      var data = atob(rawData);
+      var arr = new Uint8Array(data.length);
+
+      for (var i = 0; i < data.length; ++i) {
+        arr[i] = data.charCodeAt(i);
+      }
+
+      return new Blob([ arr.buffer ], { type: type });
+    }
     </script>
 
 ## Events
