@@ -2,6 +2,8 @@
 title: Global events in Angular-Kendo
 ---
 
+{% raw %}
+
 # Global events in Angular-Kendo
 
 Angular-Kendo emits a `"kendoWidgetCreated"` event for each widget which is created, and a `"kendoRendered"` event after all widgets defined in the page were created.
@@ -81,3 +83,5 @@ For example, suppose we want to create a TreeView widget that automatically expa
 ## `kendoRendered`
 
 This event might be useful to know when all widgets defined in page have been rendered, since everything happens asynchronously. Using it you can for instance hide the view initially and display it when widgets have been initialized; or you can show a “loading” overlay, etc.
+
+{% endraw %}

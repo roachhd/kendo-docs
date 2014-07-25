@@ -2,6 +2,8 @@
 title: Notes on ng-repeat
 ---
 
+{% raw %}
+
 # Notes on `ng-repeat`
 
 For widgets that are instantiated from plain HTML, it might be tempting to use `ng-repeat` to build that HTML. That works to initialize the widget, but it won't work properly to update the widget if the data changes later. It isn't possible to fix this; the widgets build their own DOM on initialization and that doesn't necessarily match the original HTML (which `ng-repeat` will generate). Here is an example of what to avoid:
@@ -58,3 +60,5 @@ To create a widget that needs to be updated you can use a data source and manipu
 
     <button ng-click="add()">Add new</button>
     <ul kendo-tree-view k-data-source="tree"></ul>
+
+{% endraw %}

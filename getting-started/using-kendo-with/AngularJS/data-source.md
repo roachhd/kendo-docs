@@ -2,6 +2,8 @@
 title: DataSource vs. Angular scope
 ---
 
+{% raw %}
+
 # Kendo DataSource vs. Angular scope
 
 Most Kendo UI widgets work with a DataSource object. Kendo strives hard to keep simple cases simple, so you don't always have to create the DataSource object yourself.
@@ -69,3 +71,5 @@ Note that I used [ObservableObject](../../../api/framework/observableobject.md)'
     $scope.gridData[0].track = "Hey you";
 
 but that's because of a relatively ugly hack: when grid columns don't declare a template property, Angular-Kendo bindings will automatically initialize it with a template which uses `{{angular}}` expressions. So if you just set the property in the object, the display will update, but it's Angular, not Kendo, who manages that. The grid itself would not be notified about a change in the data. In general we recommend using methods of the Observable objects to manage the data, that's the only guaranteed way that widgets will properly update.
+
+{% endraw %}

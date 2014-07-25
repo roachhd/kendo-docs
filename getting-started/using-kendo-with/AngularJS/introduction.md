@@ -2,6 +2,8 @@
 title: Using Kendo with AngularJS
 ---
 
+{% raw %}
+
 # Using Kendo with AngularJS
 
 Kendo UI can be used seamlessly with AngularJS.  The two frameworks have some overlapping features though; if you are using AngularJS then you probably want to use Angular's own routing mechanism and data binding.  Do not mix that with Kendo MVVM.
@@ -229,3 +231,5 @@ This event is emitted when a Kendo widget has been created.  You can hook on it 
 #### `kendoRendered`
 
 This event is emitted when all Kendo widgets defined in the page have been created.  It's sometimes useful to be able to intercept this event, since widgets are created asynchronously.  For example you can initially display a "Loading..." overlay in the page, and hide it from a handler on this event.
+
+{% endraw %}

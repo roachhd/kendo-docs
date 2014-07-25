@@ -2,6 +2,8 @@
 title: The Grid widget in Angular-Kendo
 ---
 
+{% raw %}
+
 # The Grid widget in Angular-Kendo
 
 The Grid is one of Kendo's most complex widgets. On this page we will outline some particularities.
@@ -127,3 +129,5 @@ The Grid supports a lot of user-customizable templates. You can define the `rowT
 In the above example if you select an item it will display two input fields bound to the selected data model. You can notice that if you edit the data, the text in the grid will be updated seamlessly, thanks to Angular. Grid functions like sorting will still work properly.
 
 The one thing you must be careful about when using `rowTemplate` is to include the attribute `data-uid="#: uid #"` on the toplevel row element, as described in the Grid documentation. That cannot use an Angular template like `data-uid="{{dataItem.uid}}"`, because that is compiled after the grid was displayed and the widget will not be able to tell which row belongs to which data item.
+
+{% endraw %}
