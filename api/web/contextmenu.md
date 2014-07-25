@@ -81,10 +81,10 @@ ContextMenu content expands from the top down. Similar to slideIn.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
-                open: { 
-                    effects: "fadeIn" 
-                } 
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
             }
         });
     </script>
@@ -113,10 +113,10 @@ The animation that will be used when closing sub menus.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
-                close: { 
-                    effects: "slideIn:up" 
-                } 
+            animation: {
+                close: {
+                    effects: "slideIn:up"
+                }
             }
         });
     </script>
@@ -145,10 +145,10 @@ Effect to be used when closing the popup.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
-                close: { 
-                    effects: "slideIn:up" 
-                } 
+            animation: {
+                close: {
+                    effects: "slideIn:up"
+                }
             }
         });
     </script>
@@ -177,11 +177,11 @@ Defines the close animation duration in milliseconds.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
+            animation: {
                 open: {
                     effects: "slideIn:down",
                     duration: 100
-                } 
+                }
             }
          });
     </script>
@@ -210,10 +210,10 @@ The animation that will be used when opening sub menus.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
-                open: { 
-                    effects: "slideIn:down" 
-                } 
+            animation: {
+                open: {
+                    effects: "slideIn:down"
+                }
             }
         });
     </script>
@@ -242,10 +242,10 @@ Effect to be used when opening the popup.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
-                open: { 
-                    effects: "slideIn:down" 
-                } 
+            animation: {
+                open: {
+                    effects: "slideIn:down"
+                }
             }
         });
     </script>
@@ -274,11 +274,11 @@ Defines the open animation duration in milliseconds.
     <script>
         $("#context-menu").kendoContextMenu({
             target: "#target",
-            animation: { 
+            animation: {
                 open: {
                     effects: "zoomIn",
                     duration: 100
-                } 
+                }
             }
          });
     </script>
@@ -403,9 +403,9 @@ The example below will initialize the sub menus to open to the left.
 
 ### filter `String`
 
-Specifies ContextMenu filter selector - the ContextMenu will only be shown on items that satisfy the provided selector. 
+Specifies ContextMenu filter selector - the ContextMenu will only be shown on items that satisfy the provided selector.
 
-#### Show the ContextMenu on some elements inside the target 
+#### Show the ContextMenu on some elements inside the target
 
     <div id="target">Target
         <div class="box"></div>
@@ -532,7 +532,7 @@ its parent horizontally. You can also switch off the screen boundary detection c
 Specifies the event or events on which ContextMenu should open. By default ContextMenu will show on *contextmenu* event on desktop and *hold* event on touch devices.
 Could be any pointer/mouse/touch event, also several, separated by spaces.
 
-#### Show the ContextMenu on left click 
+#### Show the ContextMenu on left click
 
     <div id="target">Target</div>
     <ul id="context-menu">
@@ -1003,7 +1003,7 @@ The current target of the ContextMenu - either the init target or the current el
 
 ##### e.event `jQuery.Event`
 
-The jQuery event that triggered this one - only available for the close event of the whole ContextMenu and not for its items. 
+The jQuery event that triggered this one - only available for the close event of the whole ContextMenu and not for its items.
 
 #### Example
 
@@ -1073,7 +1073,7 @@ The opened item
 
 ##### e.type `String`
 
-The event type as a string - "close".
+The event type as a string - "open".
 
 ##### e.target `Element`
 
@@ -1081,7 +1081,7 @@ The current target of the ContextMenu - either the init target or the current el
 
 ##### e.event `jQuery.Event`
 
-The jQuery event that triggered this one - only available for the open event of the whole ContextMenu and not for its items. 
+The jQuery event that triggered this one - only available for the open event of the whole ContextMenu and not for its items.
 
 #### Example
 
