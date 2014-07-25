@@ -13,9 +13,12 @@ If set to `true`, the view template will be treated as kendo template and evalua
 #### Example
 
     <div id="app"></div>
+    <script id="foo-template" type="text/x-kendo-template">
+        <span>#: foo #</span>
+    </script>
     <script>
      var foo = { foo: "foo" }
-     var view = new kendo.View('<span>#: foo #</span>', { model: foo, evalTemplate: true });
+     var view = new kendo.View('foo-template', { model: foo, evalTemplate: true });
      view.render($("#app"));
     </script>
 
