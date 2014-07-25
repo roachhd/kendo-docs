@@ -217,6 +217,78 @@ Adds one or more MapLayer to the Map.
     $map->addLayer($first, $second);
     ?>
 
+### markerActivate
+Fired when a marker has been displayed.
+For additional information check the [markerActivate](/api/dataviz/map#events-markerActivate) event documentation.
+
+#### Returns
+`\Kendo\Dataviz\UI\Map`
+
+#### Parameters
+
+##### $value `string|\Kendo\JavaScriptFunction`
+
+#### Example - using string which defines a JavaScript function
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerActivate('function(e) { }');
+    ?>
+
+#### Example - using string which defines a JavaScript name
+    <script>
+        function onMarkerActivate(e) {
+            // handle the markerActivate event.
+        }
+    </script>
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerActivate('onMarkerActivate');
+    ?>
+
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerActivate(new \Kendo\JavaScriptFunction('function(e) { }'));
+    ?>
+
+### markerClick
+Fired when a marker has been clicked or tapped.
+For additional information check the [markerClick](/api/dataviz/map#events-markerClick) event documentation.
+
+#### Returns
+`\Kendo\Dataviz\UI\Map`
+
+#### Parameters
+
+##### $value `string|\Kendo\JavaScriptFunction`
+
+#### Example - using string which defines a JavaScript function
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerClick('function(e) { }');
+    ?>
+
+#### Example - using string which defines a JavaScript name
+    <script>
+        function onMarkerClick(e) {
+            // handle the markerClick event.
+        }
+    </script>
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerClick('onMarkerClick');
+    ?>
+
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
+
+    <?php
+    $map = new \Kendo\Dataviz\UI\Map('Map');
+    $map->markerClick(new \Kendo\JavaScriptFunction('function(e) { }'));
+    ?>
+
 ### markerCreated
 Fired when a marker has been created and is about to be displayed.
 Cancelling the event will prevent the marker from being shown.

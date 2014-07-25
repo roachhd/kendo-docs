@@ -173,6 +173,22 @@ For additional information check the [click](/api/dataviz/map#events-click) even
         }
     </script>
 
+### markerActivate `String`
+
+Fired when a marker has been displayed.
+
+
+For additional information check the [markerActivate](/api/dataviz/map#events-markerActivate) event documentation.
+
+#### Example
+    <kendo:map markerActivate="handle_markerActivate">
+    </kendo:map>
+    <script>
+        function handle_markerActivate(e) {
+            // Code to handle the markerActivate event.
+        }
+    </script>
+
 ### markerCreated `String`
 
 Fired when a marker has been created and is about to be displayed.
@@ -187,6 +203,22 @@ For additional information check the [markerCreated](/api/dataviz/map#events-mar
     <script>
         function handle_markerCreated(e) {
             // Code to handle the markerCreated event.
+        }
+    </script>
+
+### markerClick `String`
+
+Fired when a marker has been clicked or tapped.
+
+
+For additional information check the [markerClick](/api/dataviz/map#events-markerClick) event documentation.
+
+#### Example
+    <kendo:map markerClick="handle_markerClick">
+    </kendo:map>
+    <script>
+        function handle_markerClick(e) {
+            // Code to handle the markerClick event.
         }
     </script>
 
@@ -375,6 +407,24 @@ For additional information check the [click](/api/dataviz/map#events-click) even
         </kendo:map-click>
     </kendo:map>
 
+### kendo:map-markerActivate
+
+Fired when a marker has been displayed.
+
+
+For additional information check the [markerActivate](/api/dataviz/map#events-markerActivate) event documentation.
+
+#### Example
+    <kendo:map>
+        <kendo:map-markerActivate>
+            <script>
+                function(e) {
+                    // Code to handle the markerActivate event.
+                }
+            </script>
+        </kendo:map-markerActivate>
+    </kendo:map>
+
 ### kendo:map-markerCreated
 
 Fired when a marker has been created and is about to be displayed.
@@ -392,6 +442,24 @@ For additional information check the [markerCreated](/api/dataviz/map#events-mar
                 }
             </script>
         </kendo:map-markerCreated>
+    </kendo:map>
+
+### kendo:map-markerClick
+
+Fired when a marker has been clicked or tapped.
+
+
+For additional information check the [markerClick](/api/dataviz/map#events-markerClick) event documentation.
+
+#### Example
+    <kendo:map>
+        <kendo:map-markerClick>
+            <script>
+                function(e) {
+                    // Code to handle the markerClick event.
+                }
+            </script>
+        </kendo:map-markerClick>
     </kendo:map>
 
 ### kendo:map-pan
