@@ -1078,9 +1078,7 @@ If set to `true` the column will not be displayed in the grid. By default all co
 
 ### columns.locked `Boolean` *(default: false)*
 
-[frozen-columns-url]: /kendo-ui/getting-started/web/grid/walkthrough#frozen-columns-(locked-columns)
-
-If set to `true` the column will be displayed as locked in the grid. Also see [Frozen Columns][frozen-columns-url].
+If set to `true` the column will be displayed as locked in the grid. Also see [Frozen Columns](/getting-started/web/grid/walkthrough#frozen-columns-locked-columns).
 
 > Row template and detail features are not supported in combination with column locking.
 
