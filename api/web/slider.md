@@ -170,6 +170,23 @@ The value to be set for a Slider.
 
 `Number` The value of the Slider.
 
+### resize
+
+Adjusts the Slider layout to match the size of the container.
+
+#### Example
+
+    <input id="slider" style="width: 200px;" />
+    <script>
+        $(document).ready(function() {
+            $("#slider").kendoSlider();
+
+            var slider = $("#slider").getKendoSlider();
+            slider.wrapper.css("width", "400px");
+            slider.resize();
+        });
+    </script>
+
 ## Events
 
 ### change

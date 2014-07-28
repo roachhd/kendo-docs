@@ -147,6 +147,25 @@ The selection start value of the RangeSlider.
 
 `Array` The value of the RangeSlider.
 
+### resize
+
+Adjusts the RangeSlider layout to match the size of the container.
+
+#### Example
+
+    <div id="rangeslider" style="width: 200px;">
+        <input />
+        <input />
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#rangeslider").kendoRangeSlider();
+            var rangeSlider = $("#rangeslider").getKendoRangeSlider();
+            rangeSlider.wrapper.css("width", "400px");
+            rangeSlider.resize();
+        });
+    </script>
+
 ## Events
 
 ### change
