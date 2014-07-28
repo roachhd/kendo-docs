@@ -7,7 +7,7 @@ position: 1
 
 # Overview
 
-The TreeMap displays hierarchical data in a traditional tree structure. It supports user interaction through the mouse or touch to perform re-ordering operations via drag-and-drop.
+The TreeMap displays hierarchical data in a traditional tree structure. The TreeMap also support different layout types such us Squarified, Vertical and Horizontal Slise and Dice.
 
 ## Getting Started
 
@@ -28,13 +28,13 @@ The TreeMap displays hierarchical data in a traditional tree structure. It suppo
     $(document).ready(function() {
         $("#treeMap").kendoTreeMap({
             dataSource: [{
-				data: [{
-			        name: "foo",
-			        value: 1
-    			}]
-			}],
-		    valueFied: "value",
-    		textField: "name"
+                data: [{
+                    name: "foo",
+                    value: 1
+                }]
+            }],
+            valueFied: "value",
+            textField: "name"
         })
     });
 
