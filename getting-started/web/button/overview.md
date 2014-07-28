@@ -13,7 +13,8 @@ It is assumed that the reader of this page is familiar with the [fundamental Ken
 
 ## Getting Started
 
-The **Button** widget can be initialized from any element with any content. However, using `button` or `a` elements is more reasonable.
+The **Button** widget can be initialized from any element with any content. However, using `button` or `a` elements is more reasonable. When using a `button` element inside a `form`, one should be aware
+that the default `type` HTML attribute for buttons is `submit`. Clicking the button will submit the form and reload the page. If this is not desired, then use an explicit `type="button"` HTML attribute.
 
 The **Button** can include both inline and block elements, but one should take into account web standards, which prohibit placing block elements (e.g. `div`, `p`) inside inline elements (e.g. `a`, `span`).
 
