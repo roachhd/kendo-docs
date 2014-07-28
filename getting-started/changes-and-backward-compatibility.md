@@ -12,7 +12,14 @@ description: Find all changes which are effective in Kendo UI 2012 Q2 from previ
 
 #### Breaking changes
 
-**TabStrip**: Q2 2014 introduces an additional TabStrip wrapper div which makes sure that the TabStrip changes in height won't affect the page scrolling position.
+**TabStrip**:
+
+* Q2 2014 introduces an additional TabStrip wrapper div which makes sure that the TabStrip changes in height won't affect the page scrolling position.
+* TabStrip's **activate** event has been renamed to [**show**](../api/web/tabstrip#events-show) event - 
+    which fires at the beginning of the open animation. A new [**activate**](../api/web/tabstrip#events-activate) event has been introduced, which is fired at the end of the 
+    open animation. This is done for consistency with the rest of the widgets.
+* TabStrip automatically calls [**kendo.resize**](../api/framework/kendo#methods-resize) to its contents in both [**show**](../api/web/tabstrip#events-show) and 
+    [**activate**](../api/web/tabstrip#events-activate) events. 
 
 **TreeView**: The deprecated `checkboxTemplate` configuration option has been removed.
 If you don't need a highly specific checkbox template, consider using the default one (using checkboxes: true).
