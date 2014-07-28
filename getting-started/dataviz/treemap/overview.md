@@ -27,13 +27,13 @@ The TreeMap displays hierarchical data in a traditional tree structure. The Tree
 
     $(document).ready(function() {
         $("#treeMap").kendoTreeMap({
-            dataSource: [{
+            dataSource: {
                 data: [{
                     name: "foo",
                     value: 1
                 }]
-            }],
-            valueFied: "value",
+            },
+            valueField: "value",
             textField: "name"
         })
     });
@@ -50,5 +50,3 @@ use the API to control its behavior.
 ### Accessing an existing TreeMap instance
 
     var treeMap = $("#treeMap").data("kendoTreeMap");
-
-

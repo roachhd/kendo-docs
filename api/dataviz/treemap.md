@@ -38,7 +38,7 @@ data source is fired. By default the widget will bind to the data source specifi
     $("#treemap").kendoTreeMap({
         autoBind: false,
         dataSource: dataSource,
-        valueFied: "value",
+        valueField: "value",
         textField: "name"
     });
     dataSource.read(); // "read()" will fire the "change" event of the dataSource and the widget will be bound
