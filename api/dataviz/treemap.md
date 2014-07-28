@@ -46,13 +46,17 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### type `String` *(default: "squarified")*
 
-The layout type for the Treemap.
+The layout type for the TreeMap.
 
 The Supported values are:
 
 * squarified
 * horizontal
 * veritcal
+
+### theme `String` *(default: "default")*
+
+The theme of the TreeMap.
 
 ### valueField `String` *(default: "value")*
 
