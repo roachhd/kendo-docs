@@ -19,7 +19,7 @@ Renders the **View** element in the element specified by the selector
     <script>
         var view = new kendo.View("<span>Foo</span>");
 
-        var layout = new kendo.Layout("<header>Header</header><section id="content"></section><footer></footer>");
+        var layout = new kendo.Layout("<header>Header</header><section id='content'></section><footer></footer>");
 
         layout.render($("#app"));
 
