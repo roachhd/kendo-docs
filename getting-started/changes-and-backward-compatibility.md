@@ -12,6 +12,8 @@ description: Find all changes which are effective in Kendo UI 2012 Q2 from previ
 
 #### Breaking changes
 
+**TabStrip**: Q2 2014 introduces an additional TabStrip wrapper div which makes sure that the TabStrip changes in height won't affect the page scrolling position.
+
 **TreeView**: The deprecated `checkboxTemplate` configuration option has been removed.
 If you don't need a highly specific checkbox template, consider using the default one (using checkboxes: true).
 If you need any custom checkbox rendering, use the checkboxes.template option:
