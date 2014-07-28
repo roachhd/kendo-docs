@@ -44,6 +44,16 @@ data source is fired. By default the widget will bind to the data source specifi
     dataSource.read(); // "read()" will fire the "change" event of the dataSource and the widget will be bound
     </script>
 
+### type `String` *(default: "squarified")*
+
+The layout type for the Treemap.
+
+The Supported values are:
+
+* squarified
+* horizontal
+* veritcal
+
 ### valueField `String` *(default: "value")*
 
 The data item field which contains the tile value.
