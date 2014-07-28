@@ -785,7 +785,7 @@ The role data attribute of the widget used in the filter menu or a JavaScript fu
 
 > This feature is not supported for columns which have their [values](#configuration-columns.values) option set.
 
-> If [filterable.mode](#configuration-filterable.mode) is set to true, [columns.filterable.cell.template](#configuration-columns.filterable.cell.template) should be used to customize the input.
+> If [filterable.mode](#configuration-filterable.mode) is set, [columns.filterable.cell.template](#configuration-columns.filterable.cell.template) should be used to customize the input.
 
 #### Example - specify the filter UI as a string
     <div id="grid"></div>
