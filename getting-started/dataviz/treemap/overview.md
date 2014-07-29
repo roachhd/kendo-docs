@@ -7,7 +7,7 @@ position: 1
 
 # Overview
 
-The TreeMap displays hierarchical data in a traditional tree structure. The TreeMap also support different layout types such us Squarified, Vertical and Horizontal Slise and Dice.
+The TreeMap displays hierarchical data in a traditional tree structure. The TreeMap also support different rendering types such us Squarified, Vertical and Horizontal(slise and dice algorithm).
 
 ## Getting Started
 
