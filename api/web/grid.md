@@ -496,7 +496,7 @@ Can be set to a JavaScript object which represents the filter menu configuration
 
 ### columns.filterable.cell `Object`
 
-Specifies options for the filter cell when enabled.
+Specifies options for the filter header cell when filter mode is set to 'row'.
 
 Can be set to a JavaScript object which represents the filter cell configuration.
 
