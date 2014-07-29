@@ -2750,6 +2750,7 @@ Returns the aggregate results.
         { field: "name", aggregate: "max" }
       ]
     });
+    dataSource.read();
     var ageAggregates = dataSource.aggregates().age;
     console.log(ageAggregates.min); // displays "30"
     console.log(ageAggregates.max); // displays "33"
