@@ -49,7 +49,15 @@ Since the inline editor is initialized from a non-form element, it is not posted
 
 ## Images inside the Editor are not resizable in some scenarios
 
-To begin with, image resizing inside contenteditable elements depends on the browser, and this is not an Editor feature. In addition, there is a browser issue, which is exhibited in the following way -
+To begin with, image resizing inside contenteditable elements depends on the browser and is not an Editor feature. In addition, there is a browser issue, which is exhibited in the following way -
 if a "classic" Editor (which uses an `iframe`) is created while hidden, or is hidden after initialization and then displayed back, then images become non-resizable. This problem is not related to Kendo UI.
 It can be resolved by calling the Editor's [`refresh`](/api/web/editor#methods-refresh) method after the Editor becomes visible. Refreshing the widget will recreate the iframe.
 Another possible approach is to use the Editor's "inline" mode, i.e. create the Editor from a `div`.
+
+## Editor displays raw HTML content when using the browser's Back and Forward buttons
+
+The Editor stores its value encoded by default. When the page is retrieved from the *bfcache* (back-forward cache), the textarea value is persisted encoded and the Editor encodes it again. This process can be easily observed if one navigates several times back and forth - on each navigation, the Editor value will be encoded once more.
+
+To resolve the problem, set the [`encoded`](/api/web/editor#configuration-encoded) property to `false`, and expect the editor value to be posted unencoded to the server. If you are using ASP.NET, be sure to either disable the ASP.NET security validation or set the `AllowHtml` attribute on the model field that will receive the HTML string. Here is some more [information about request validation in ASP.NET](http://blogs.learnnowonline.com/blog/bid/199703/ASP-NET-MVC-Request-Validation-Protection-AllowHtml-Attribute).
+
+Another option is to enable the [inline Editor mode](/getting-started/web/editor/overview#classic-mode-vs-inline-mode), which does not use an `iframe` and a `textarea`. In this case, however, the Editor's value should be [submitted manually](/getting-started/web/editor/troubleshooting#inline-editor-value-is-not-posted-to-the-server).
