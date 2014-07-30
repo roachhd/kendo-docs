@@ -1,17 +1,17 @@
 ---
 title: Overview
 page_title: Overview of DOM element Draggable functionality | Kendo UI Docs
-description: Lear more for the draggable functionality on any DOM element and how to enable and initialize it. We guide you how to enable DOM to be a target for draggable elements.
+description: Lear more about the draggable functionality on any DOM element and how to enable and initialize it. We guide you how to enable DOM elements to be targets for draggable elements.
 ---
 
-# Drag'n'Drop Overview
+# Drag & Drop Overview
 
-There are two separate Kendo UI widgets that allows the developer to implement Drag'n'Drop scenarios - `kendoDraggable` and `kendoDropTarget`.
-First one enables the draggable functionality, while the second one creates the drop-able zones.
+There are two separate Kendo UI widgets which, combined together, allow the developer to implement Drag & Drop scenarios - `kendoDraggable` and `kendoDropTarget`.
+The first one enables the draggable functionality, while the second one creates the drop-able zones.
 
 ## Draggable
 
-Draggable widget allows any DOM elements to be moved using the mouse.
+The Draggable widget allows a DOM element to be moved using the mouse or finger on touch devices.
 
 ### Initialization
 
@@ -24,18 +24,21 @@ Draggable widget allows any DOM elements to be moved using the mouse.
         });
     </script>
 
-> If a `hint` is not specified the user will not have any visual indication that the item is being dragged.
+> The `hint` configuration option must be specified in order for the user to have a visual indication of the dragged item.
 
 ### Creating a list/table with draggable items
 
-Draggable widget itself does not support binding to DataSource which is why the developer should bind the DataSource to ListView or Grid and initialize Draggable for it. 
-Usually the data is retrieved from the remote server **asynchronously** which means that at the time when Draggable is initialized the items that should be draggable are not yet rendered.
-In order this to be resolved, the developer should initialize Draggable for the parent container and use `filter` option to specify which child items will be draggable.
+The Draggable widget itself does not support binding to DataSource. The developer may bind a DataSource instance to a ListView or a Grid widget and initialize a Draggable widget for it.
+If the data is retrieved from a remote server **asynchronously**, by the time the Draggable is initialized the items that should be draggable will not be rendered yet.
+Because of this, you should initialize the Draggable widget on the parent container and use the `filter` draggable configuration option with a selector that matches the Grid/ListView item elements.
+
+#### ListView with draggable items
 
     <div id="listA"></div>
+
     <script>
         //create dataSource
-        var listA_DS= new kendo.data.DataSource({
+        var listA_DS = new kendo.data.DataSource({
             data: [
                 { id: 1, item: "Item 1" },
                 { id: 2, item: "Item 2" }
@@ -60,7 +63,7 @@ In order this to be resolved, the developer should initialize Draggable for the 
         //create a draggable for the parent container
         $("#listA").kendoDraggable({
             filter: ".item", //specify which items will be draggable
-            hint: function(element) { //create a UI hint
+            hint: function(element) { //create a UI hint, the `element` argument is the dragged item
                 return element.clone().css({
                     "opacity": 0.6,
                     "background-color": "#0cf"
@@ -68,6 +71,7 @@ In order this to be resolved, the developer should initialize Draggable for the 
             }
         });
     </script>
+
     <style>
         #listA {
             width: 300px;
@@ -86,7 +90,7 @@ In order this to be resolved, the developer should initialize Draggable for the 
 
 ## DropTarget
 
-DropTarget widget creates from any DOM element a target for draggable elements.
+The DropTarget widget marks a DOM element as a drop target for a draggable widget.
 
 ### Initialization
 
@@ -103,15 +107,15 @@ DropTarget widget creates from any DOM element a target for draggable elements.
         }
     </style>
 
-> If the DropTarget element is initially empty, the developer should explicitly specify its `height` or `min-height`. The user will not be able to drag on target with zero height.
+> If the DropTarget element is initially empty, the developer should set the element `height` or `min-height` with CSS, like in the example above. The user will not be able to drag on target with zero height.
 
-## Handling events
+## Using the Draggable/DropTarget events
 
-Draggable, DropTarget and DropTargetArea provide various [events](/api/framework/draggable#events) that the developer may use to implement specific business requirements.
+The Draggable, DropTarget and DropTargetArea widgets provide various [events](/api/framework/draggable#events) that the developer may use to implement specific business requirements.
 
-### Getting the dataItem that corresponds to the dragged element
+### Getting the dragged element corresponding dataItem
 
-Data management widgets such as Grid or ListView automatically append a `uid` data attribute to their items. The developer may use the `uid` attribute to get reference to the dataItem from DataSource.
+Data management widgets such as the Grid or the ListView automatically append an `uid` data attribute to their items' DOM elements. The developer may use the `uid` attribute to get reference to the dataItem from the DataSource instance.
 
     <div id="listA"></div>
     <script>
@@ -124,7 +128,7 @@ Data management widgets such as Grid or ListView automatically append a `uid` da
             filter: ".item",
             dragstart: function(e) {
                 var draggedElement = e.currentTarget, //get the DOM element that is being dragged
-                    dataItem = listA_DS.getByUid(draggedElement.data("uid")); //get corresponding dataItem from the DataSource
+                    dataItem = listA_DS.getByUid(draggedElement.data("uid")); //get corresponding dataItem from the DataSource instance
 
                 console.log(dataItem);
             },
@@ -139,7 +143,7 @@ Data management widgets such as Grid or ListView automatically append a `uid` da
 
 ### Add visual indications
 
-The developer may use DropTarget events such as `dragenter` and `dragleave` to visually indicate that the dragged item is over the DropTarget element.
+The developer may use the DropTarget events such as `dragenter` and `dragleave` to visually indicate that when the dragged item enters/leaves the DropTarget element boundaries.
 
 
     <div id="listA"></div>
@@ -175,6 +179,26 @@ The developer may use DropTarget events such as `dragenter` and `dragleave` to v
             }
         });
 
+        $("#listA").kendoListView({
+            dataSource: listA_DS,
+            template: "<div class='item'>ListA: #: item #</div>"
+        });
+
+        $("#listA").kendoDraggable({
+            filter: ".item",
+            hint: function(element) {
+                return element.clone().css({
+                    "opacity": 0.6,
+                    "background-color": "#0cf"
+                });
+            }
+        });
+
+        $("#listB").kendoListView({
+            dataSource: listB_DS,
+            template: "<div class='item'>ListB: #: item #</div>"
+        });
+
         function addStyling(e) {
             this.element.css({
                 "border-color": "#06c",
@@ -190,33 +214,6 @@ The developer may use DropTarget events such as `dragenter` and `dragleave` to v
                 "opacity": 1
             });
         }
-
-        $("#listA").kendoListView({
-            dataSource: listA_DS,
-            template: "<div class='item'>ListA: #: item #</div>"
-        });
-
-        //create draggable
-        $("#listA").kendoDraggable({
-            filter: ".item",
-            dragstart: function(e) {
-                var draggedElement = e.currentTarget,
-                    dataItem = listA_DS.getByUid(draggedElement.data("uid"));
-
-                console.log(dataItem);
-            },
-            hint: function(element) {
-                return element.clone().css({
-                    "opacity": 0.6,
-                    "background-color": "#0cf"
-                });
-            }
-        });
-
-        $("#listB").kendoListView({
-            dataSource: listB_DS,
-            template: "<div class='item'>ListB: #: item #</div>"
-        });
 
         //create dropTarget
         $("#listB").kendoDropTarget({
@@ -245,7 +242,8 @@ The developer may use DropTarget events such as `dragenter` and `dragleave` to v
 
 ### Moving items from one list to another
 
-The Drag'n'Drop components does not manage the list data. In order to move items from one list to another, developer may hook up to the `drop` event and use DataSource's `remove` and `add` methods to apply changes in the data.
+The Drag & Drop components don't automatically change the data bound widget data.
+To have the move changes applied to the DataSource instances, the developer may use the `drop` event and the DataSource's `add` and `remove` methods.
 
     <div id="listA"></div>
     <div id="listB"></div>
@@ -303,12 +301,6 @@ The Drag'n'Drop components does not manage the list data. In order to move items
 
         $("#listA").kendoDraggable({
             filter: ".item",
-            dragstart: function(e) {
-                var draggedElement = e.currentTarget,
-                    dataItem = listA_DS.getByUid(draggedElement.data("uid"));
-
-                console.log(dataItem);
-            },
             hint: function(element) {
                 return element.clone().css({
                     "opacity": 0.6,
@@ -325,7 +317,7 @@ The Drag'n'Drop components does not manage the list data. In order to move items
         $("#listB").kendoDropTarget({
             dragenter: addStyling,
             dragleave: resetStyling,
-            drop: function(e) { //apply changes in the data after item is dropped
+            drop: function(e) { //apply changes to the data after an item is dropped
                 var draggableElement = e.draggable.currentTarget,
                 dataItem = listA_DS.getByUid(draggableElement.data("uid")); //find the corresponding dataItem by uid
 
@@ -357,17 +349,20 @@ The Drag'n'Drop components does not manage the list data. In order to move items
 
 ## DropTargetArea
 
-DropTargetArea allows the developer to create multiple DropTarget elements located in the area container. This is useful when the DropTarget elements will be added dynamically.
+The DropTargetArea allows the developer to create multiple DropTarget elements located in the area container. This is useful when the DropTarget elements will be added dynamically.
 
 > Specifying `filter` for the DropTargetArea is mandatory!
 
 ### Initialization
 
-    <p>Area accepts only draggable elements from orange group</p>
     <div id="area">
-      <div id="droptarget" class="orange"></div>
+      <div class="orange"></div>
+      <div class="purple"></div>
+      <div class="orange"></div>
+      <div class="purple"></div>
     </div>
-    <div id="draggable" class="purple"></div>
+
+    <div id="draggable"></div>
 
     <script>
       $("#draggable").kendoDraggable({
@@ -376,16 +371,16 @@ DropTargetArea allows the developer to create multiple DropTarget elements locat
         }
       });
 
-      $("#area").kendoDropTargetArea({ 
-          filter: "#droptarget",
+      $("#area").kendoDropTargetArea({
+          filter: ".orange",
           drop: onDrop
       });
 
       function onDrop(e) {
-        e.dropTarget.toggleClass("orange").toggleClass("purple");
-        e.draggable.element.toggleClass("orange").toggleClass("purple");
+        e.dropTarget.removeClass("orange").addClass("purple");
       }
     </script>
+
     <style>
       #draggable {
         width: 50px;
@@ -393,13 +388,19 @@ DropTargetArea allows the developer to create multiple DropTarget elements locat
         border: 2px solid green;
         margin: 5px;
         display: inline-block;
+        background-color: orange;
+      }
+      .orange, .purple {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        display: inline-block;
       }
       .orange { background-color: orange; }
       .purple { background-color: purple; }
       #area {
           width: 300px;
           height: 300px;
-          line-height: 300px;
           background-color: gray;
       }
       #droptarget {
