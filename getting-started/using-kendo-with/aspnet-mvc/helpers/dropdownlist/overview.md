@@ -113,6 +113,102 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
 
 > **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
 
+### Sending parameters to the server
+
+Here is how to configure the Kendo DropDownList to send parameters to the server:
+
+- WebForms
+
+        <%: Html.Kendo().DropDownList()
+                .Name("productDropDownList") //The name of the dropdownlist is mandatory. It specifies the "id" attribute of the widget.
+                .DataTextField("ProductName") //Specifies which property of the Product to be used by the dropdownlist as a text.
+                .DataValueField("ProductID") //Specifies which property of the Product to be used by the dropdownlist as a value.
+                .Filter(FilterType.Contains)
+                .DataSource(source =>
+                {
+                        source.Read(read =>
+                       {
+                                read.Action("GetProducts", "Home")
+                                    .Data("onAdditionalData");
+                       });
+                })
+         %>
+         <script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productDropDownList").data("kendoDropDownList").text()
+                };
+            }
+        </script>
+
+- Razor
+
+        @(Html.Kendo().DropDownList()
+              .Name("productDropDownList") //The name of the dropdownlist is mandatory. It specifies the "id" attribute of the widget.
+              .DataTextField("ProductName") //Specifies which property of the Product to be used by the dropdownlist as a text.
+              .DataValueField("ProductID") //Specifies which property of the Product to be used by the dropdownlist as a value.
+              .Filter(FilterType.Contains)
+              .DataSource(source =>
+              {
+                 source.Read(read =>
+                 {
+                      read.Action("GetProducts", "Home") //Set the Action and Controller name
+                          .Data("onAdditionalData");
+                 });
+              })
+        )
+
+        <script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productDropDownList").data("kendoDropDownList").filterInput.val()
+                };
+            }
+        </script>
+
+Here is how the **GetProducts** method looks like:
+
+        public JsonResult GetProducts(string text)
+        {
+            var northwind = new SampleEntities();
+
+            var products = northwind.Products.Select(product => new ProductViewModel
+                    {
+                    ProductID = product.ProductID,
+                    ProductName = product.ProductName,
+                    UnitPrice = product.UnitPrice ?? 0,
+                    UnitsInStock = product.UnitsInStock ?? 0,
+                    UnitsOnOrder = product.UnitsOnOrder ?? 0,
+                    Discontinued = product.Discontinued
+                    });
+
+            if (!string.IsNullOrEmpty(text))
+            {
+                products = products.Where(p => p.ProductName.Contains(text));
+            }
+
+            return Json(products, JsonRequestBehavior.AllowGet);
+        }
+
+> The Kendo DropDownList has default event handler for the DataSource's Data callback. If you do not
+define event handler, it will be used.
+
+*Default event handler for the DataSource's Data callback*
+
+    function requestData(selector) {
+        var dropdownlist = $(selector).data("kendoDropDownList"),
+            filters = dropdownlist.dataSource.filter(),
+            value = dropdownlist.filterInput.val();
+
+        if (!filters) {
+            value = "";
+        }
+
+        return { text: value };
+    }
+
+As you can see the dropdownlist sends the input's value only if the end-user starts to type in it.
+
 ## Accessing an Existing DropDownList
 
 You can reference an existing DropDownList instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).

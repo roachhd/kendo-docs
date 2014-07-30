@@ -595,6 +595,22 @@ A jQuery object of the span element which holds the selected text.
     span.css("background-color", "red");
     <script>
 
+### filterInput `jQuery`
+A jQuery object of the filter input element, where the user types.
+
+> Available only if the filtering is enabled.
+
+#### Example - get input element
+
+    <input id="dropdownlist" />
+    <script>
+    $("#dropdownlist").kendoDropDownList();
+
+    var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
+
+    var filterInput = dropdownlist.filterInput;
+    <script>
+
 ### options `Object`
 An object, which holds the options of the widget.
 
