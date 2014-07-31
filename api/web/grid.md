@@ -4584,9 +4584,11 @@ The sorting mode. If set to "single" the user can sort by one column. If set to 
     });
     </script>
 
-### toolbar `Array`
+### toolbar `String`|`Array`
 
-The list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
+When a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid toolbar.
+
+When an `Array` value is assigned, it will be treated as the list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
 
 The "cancel" built-in command reverts any data changes done by the end user.
 
