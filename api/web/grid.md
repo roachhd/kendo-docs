@@ -4584,11 +4584,14 @@ The sorting mode. If set to "single" the user can sort by one column. If set to 
     });
     </script>
 
-### toolbar `String`|`Array`
+### toolbar `String`|`Function`|`Array`
 
-When a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid toolbar.
+If a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid toolbar,
+and the string value will be passed as an argument to a [`kendo.template()`](/api/framework/kendo#methods-template) function.
 
-When an `Array` value is assigned, it will be treated as the list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
+If a `Function` value is assigned (it may be a kendo.template() function call or a generic function reference), then the return value of the function will be used to render the Grid toolbar contents.
+
+If an `Array` value is assigned, it will be treated as the list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
 
 The "cancel" built-in command reverts any data changes done by the end user.
 
@@ -4596,7 +4599,51 @@ The "create" command adds an empty data item to the grid.
 
 The "save" command persists any data changes done by the end user.
 
-#### Example - configure the grid toolbar
+#### Example - configure the grid toolbar as a string template
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      toolbar: "<p>My string template in a paragraph.</p>",
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33},
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    </script>
+
+#### Example - configure the grid toolbar template with a function
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      toolbar: kendo.template("<p>My function template.</p>"),
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33},
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    </script>
+
+#### Example - configure the grid toolbar as an array of commands
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
