@@ -27,7 +27,7 @@ Constrains the hint movement to either the horizontal (x) or vertical (y) axis. 
          });
     </script>
 
-### container `String`*(default: null)*
+### container `String | jQuery`*(default: null)*
 
 Selector that determines the container to which boundaries the hint movement will be constrained.
 
@@ -55,7 +55,7 @@ Selector that determines the container to which boundaries the hint movement wil
         }
     </style>
 
-### connectWith `String`*(default: null)*
+### connectWith `String | jQuery`*(default: null)*
 
 Selector which determines if items from the current Sortable widget can be accepted from another Sortable container(s). The connectWith option describes **one way** relationship, if the developer wants a two way connection then the connectWith option should be set on both widgets.
 
