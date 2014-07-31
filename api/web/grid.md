@@ -4584,7 +4584,7 @@ The sorting mode. If set to "single" the user can sort by one column. If set to 
     });
     </script>
 
-### toolbar `String`|`Function`|`Array`
+### toolbar `String|Function|Array`
 
 If a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid toolbar,
 and the string value will be passed as an argument to a [`kendo.template()`](/api/framework/kendo#methods-template) function.
