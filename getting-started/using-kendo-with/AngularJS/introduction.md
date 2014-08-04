@@ -62,7 +62,16 @@ and have the following in your controller:
 
 You can use declarative attributes for array and object configuration options, too.
 
-    <textarea kendo-editor k-tools="[ 'bold', 'italic', 'undeline' ]"></textarea>
+    <textarea kendo-editor
+              k-tools="[
+                  'bold',
+                  'italic',
+                  'undeline',
+                  {
+                    name: 'foreColor',
+                    palette: [ '#f00', '#0f0', '#00f' ]
+                  }
+              ]"></textarea>
 
 ### Widget configuration in controller
 
