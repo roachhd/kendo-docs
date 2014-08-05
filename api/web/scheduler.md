@@ -4849,6 +4849,29 @@ The end date of the period.
     console.log(events);
     </script>
 
+### refresh
+
+Refreshes the Scheduler rendering using the current data items.
+
+#### Example - refresh the widget
+
+    <div id="scheduler"></div>
+    <script>
+        $("#scheduler").kendoScheduler({
+          date: new Date("2013/6/6"),
+          dataSource: [
+            {
+              id: 1,
+              start: new Date("2013/6/6 08:00 AM"),
+              end: new Date("2013/6/6 09:00 AM"),
+              title: "Interview"
+            }
+          ]
+        });
+        var scheduler = $("#scheduler").data("kendoScheduler");
+        scheduler.refresh();
+    </script>
+
 ### removeEvent
 
 Removes the specified scheduler event.
