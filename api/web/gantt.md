@@ -20,7 +20,7 @@ data source is fired. By default the widget will bind to the data source specifi
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -46,7 +46,7 @@ The configuration of the gantt columns. An array of JavaScript objects or string
 #### Example - two columns bound to the "title" and "start" fields
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -85,7 +85,7 @@ The field to which the column is bound. The value of this field is displayed by 
 #### Example - three columns bound to the "title", "start" and "end" fields
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -123,7 +123,7 @@ The text that is displayed in the column header cell. If not set the [field](#co
 #### Example - set the title of a column
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -164,7 +164,7 @@ The format that is applied to the value before it is displayed. Takes the form "
 #### Example - set format for the start and end column
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -191,7 +191,7 @@ The format that is applied to the value before it is displayed. Takes the form "
           start: new Date("2014/6/17 13:00"),
           end: new Date("2014/6/17 15:00")
         }
-        
+
       ],
       dependencies: [
         {
@@ -200,7 +200,7 @@ The format that is applied to the value before it is displayed. Takes the form "
           type: 1
         }
       ],
-      columns: [ 
+      columns: [
         { field: "start", title: "Start Time", format: "{0:MM/dd hh:mm}" },
         { field: "end", title: "End Time", format: "{0:MM/dd hh:mm}" }
       ]
@@ -214,7 +214,7 @@ The width of the column. Numeric values are treated as pixels.
 #### Example - set the column width as a string
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -241,7 +241,7 @@ The width of the column. Numeric values are treated as pixels.
           type: 1
         }
       ],
-      columns: [ 
+      columns: [
         { field: "title", title: "Title", width: "200px" },
         { field: "start", title: "Task Start Time", width: "200px" },
         { field: "end", title: "Task End Time", width: "200px" }
@@ -252,7 +252,7 @@ The width of the column. Numeric values are treated as pixels.
 #### Example - set the column width as a number
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -279,7 +279,7 @@ The width of the column. Numeric values are treated as pixels.
           type: 1
         }
       ],
-      columns: [ 
+      columns: [
         { field: "title", title: "Title", width: 200 },
         { field: "start", title: "Task Start Time", width: 200 },
         { field: "end", title: "Task End Time", width: 200 }
@@ -294,7 +294,7 @@ Specifies whether this column can be edited by the user.
 #### Example - set "title" column as editable
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -321,12 +321,12 @@ Specifies whether this column can be edited by the user.
           type: 1
         }
       ],
-      columns: [ 
+      columns: [
         { field: "title", title: "Title", editable: true }
       ]
     });
     </script>
-  
+
 ### columns.sortable `Boolean` *(default: false)*
 
 If set to `true` the user could sort this column by clicking its header cells. By default sorting is disabled.
@@ -334,7 +334,7 @@ If set to `true` the user could sort this column by clicking its header cells. B
 #### Example - set "start" column as sortable
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -360,7 +360,7 @@ If set to `true` the user could sort this column by clicking its header cells. B
           title: "Task3",
           start: new Date("2014/6/17 13:00"),
           end: new Date("2014/6/17 15:00")
-        }      
+        }
       ],
       dependencies: [
         {
@@ -369,7 +369,7 @@ If set to `true` the user could sort this column by clicking its header cells. B
           type: 1
         }
       ],
-      columns: [ 
+      columns: [
         { field: "title", title: "Title", sortable: true }
       ]
     });
@@ -389,7 +389,7 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/fram
 #### Example - set dataSource as a JavaScript object
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: {
         transport: {
@@ -422,7 +422,7 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/fram
 #### Example - set dataSource as a JavaScript array
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -448,7 +448,7 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/fram
           title: "Task3",
           start: new Date("2014/6/17 13:00"),
           end: new Date("2014/6/17 15:00")
-        }      
+        }
       ],
       editable: false
     });
@@ -457,7 +457,7 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/fram
 #### Example - set dataSource as an existing `kendo.data.GanttDataSource` instance
 
     <div id="gantt"></div>
-    <script>   
+    <script>
     var dataSource = new kendo.data.GanttDataSource({
       transport: {
         read: {
@@ -481,13 +481,13 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/fram
           }
         }
       }
-    });    
+    });
     $("#gantt").kendoGantt({
       dataSource:dataSource,
       editable: false
     });
     </script>
-  
+
 ### dependencies `Object|Array|kendo.data.GanttDependencyDataSource`
 
 The data source of the widget which contains the dependencies. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.GanttDependencyDataSource](/api/framework/ganttdependencydatasource)
@@ -502,7 +502,7 @@ If the `dependencies` option is an existing [kendo.data.GanttDependencyDataSourc
 #### Example - set `dependencies` as a JavaScript object
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: {
         transport: {
@@ -550,11 +550,11 @@ If the `dependencies` option is an existing [kendo.data.GanttDependencyDataSourc
       editable: false
     });
     </script>
-  
+
 #### Example - set `dependencies` as a JavaScript array
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -584,11 +584,11 @@ If the `dependencies` option is an existing [kendo.data.GanttDependencyDataSourc
       editable: false
     });
     </script>
-  
-#### Example - set `dependencies` as an existing `kendo.data.GanttDependencyDataSource` instance  
 
-    <div id="gantt"></div>  
-    <script>   
+#### Example - set `dependencies` as an existing `kendo.data.GanttDependencyDataSource` instance
+
+    <div id="gantt"></div>
+    <script>
     var dataSource = new kendo.data.GanttDataSource({
       transport: {
         read: {
@@ -646,7 +646,7 @@ If set to `false` the user won't be able to create, modify or delete tasks and d
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -676,17 +676,17 @@ If set to `false` the user won't be able to create, modify or delete tasks and d
       editable: false
     });
     </script>
-    
+
 ### navigatable `Boolean` *(default: false)*
 
-If set to `true` the user could navigate the widget using the keyboard. By default keyboard navigation is disabled. 
+If set to `true` the user could navigate the widget using the keyboard. By default keyboard navigation is disabled.
 
 > Even when the keyboard navigation is disabled the user could delete selected tasks or dependencies with the `Del` key.
 
 #### Example - enable keyboard navigation
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -724,7 +724,7 @@ Sets the start of the work day.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -747,7 +747,7 @@ Sets the end of the work day.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -769,10 +769,10 @@ The start of working week (index based).
 
 > The `workWeekEnd` option is supported when [showWorkDays](#configuration-showWorkDays) is `true`.
 
-#### Example 
+#### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
       $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -797,7 +797,7 @@ The end of working week (index based).
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
       $("#gantt").kendoGantt({
         dataSource: [
         {
@@ -820,7 +820,7 @@ The span of an hour slot.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
       $("#gantt").kendoGantt({
         dataSource: [
         {
@@ -843,7 +843,7 @@ If set to true the gantt will snap tasks to the nearest slot during dragging (re
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -864,7 +864,7 @@ The height of the widget. Numeric values are treated as pixels.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -874,7 +874,7 @@ The height of the widget. Numeric values are treated as pixels.
          start: new Date("2014/6/17 9:00"),
          end: new Date("2014/6/17 11:00")
       }],
-      height: 400    
+      height: 400
     });
     </script>
 
@@ -885,7 +885,7 @@ The width of the task list. Numeric values are treated as pixels.
 ##### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -895,7 +895,7 @@ The width of the task list. Numeric values are treated as pixels.
          start: new Date("2014/6/17 9:00"),
          end: new Date("2014/6/17 11:00")
       }],
-      listWidth: 400    
+      listWidth: 400
     });
     </script>
 
@@ -914,7 +914,7 @@ The text similar to "Day" displayed as gantt "day" view title.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -939,7 +939,7 @@ The text similar to "Week" displayed as gantt "week" view title.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -964,7 +964,7 @@ The text similar to "Month" displayed as gantt "month" view title.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -993,7 +993,7 @@ The text similar to "Append" displayed as gantt "append" buttons.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1018,7 +1018,7 @@ The text similar to "Add child" displayed as gantt "add child" buttons.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1043,7 +1043,7 @@ The text similar to "Add above" displayed as gantt "add above" buttons.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1068,7 +1068,7 @@ The text similar to "Add below" displayed as gantt "add below" buttons.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1093,7 +1093,7 @@ If set to `false` the user won't be able to select tasks in the gantt. By defaul
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1114,7 +1114,7 @@ If set to `false`, gantt views will show all days of the week. By default the vi
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
          id: 1,
@@ -1135,7 +1135,7 @@ If set to `false`, the day view will show all hours of the day. By default the v
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1167,7 +1167,7 @@ If set to `true` the view will be initially selected by the gantt widget. The de
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1184,7 +1184,7 @@ If set to `true` the view will be initially selected by the gantt widget. The de
       ]
     });
     </script>
-  
+
 ### views.slotSize `Number|String` *(default: 100)*
 
 The size of the time slot headers. Values are treated as pixels.
@@ -1192,7 +1192,7 @@ The size of the time slot headers. Values are treated as pixels.
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1209,15 +1209,15 @@ The size of the time slot headers. Values are treated as pixels.
       ]
     });
     </script>
-  
+
 ### views.timeHeaderTemplate `String|Function`
 
-The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template) used to render the time slots in "day" view
 
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1234,15 +1234,15 @@ The [template](/api/framework/kendo#methods-template used to render the time slo
       ]
     });
     </script>
-  
-### views.dayHeaderTemplate `String|Function`  
 
-The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+### views.dayHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) used to render the day slots in "day" and "week" views.
 
 #### Example - dayHeaderTemplate set for "day" view.
 
     <div id="gantt"></div>
-    <script>      
+    <script>
       $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1253,20 +1253,20 @@ The [template](/api/framework/kendo#methods-template used to render the day slot
         end: new Date("2014/6/17 11:00")
       }],
       views: [
-        { 
-          type: "day", 
-          dayHeaderTemplate: kendo.template("#=kendo.toString(start, 'D')#") 
+        {
+          type: "day",
+          dayHeaderTemplate: kendo.template("#=kendo.toString(start, 'D')#")
         },
         { type: "week" },
         { type: "month" }
       ]
     });
     </script>
-  
+
 #### Example - dayHeaderTemplate set for "day" view.
 
     <div id="gantt"></div>
-    <script>      
+    <script>
       $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1278,23 +1278,23 @@ The [template](/api/framework/kendo#methods-template used to render the day slot
       }],
       views: [
         { type: "day"},
-        { type: "week", 
-          dayHeaderTemplate: kendo.template("#=kendo.toString(start, 'd')#"), 
-          selected: true 
+        { type: "week",
+          dayHeaderTemplate: kendo.template("#=kendo.toString(start, 'd')#"),
+          selected: true
         },
         { type: "month" }
       ]
     });
     </script>
-  
-### views.weekHeaderTemplate `String|Function`  
 
-The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+### views.weekHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) used to render the week slots in "week" and "month" views.
 
 #### Example - weekHeaderTemplate set for "week" view
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1306,9 +1306,9 @@ The [template](/api/framework/kendo#methods-template used to render the week slo
       }],
       views: [
         { type: "day"},
-        { type: "week", 
-          weekHeaderTemplate: "#=kendo.toString(start, 'D')# - #=kendo.toString(kendo.date.addDays(end, -1), 'D')#", 
-          selected: true 
+        { type: "week",
+          weekHeaderTemplate: "#=kendo.toString(start, 'D')# - #=kendo.toString(kendo.date.addDays(end, -1), 'D')#",
+          selected: true
         },
         { type: "month" }
       ]
@@ -1318,7 +1318,7 @@ The [template](/api/framework/kendo#methods-template used to render the week slo
 #### Example - weekHeaderTemplate set for "month" view
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1331,23 +1331,23 @@ The [template](/api/framework/kendo#methods-template used to render the week slo
       views: [
         { type: "day"},
         { type: "week"},
-        { 
-          type: "month",         
-          weekHeaderTemplate: "#=kendo.toString(start, 'M/dd')# - #=kendo.toString(kendo.date.addDays(end, -1), 'M/dd')#", 
+        {
+          type: "month",
+          weekHeaderTemplate: "#=kendo.toString(start, 'M/dd')# - #=kendo.toString(kendo.date.addDays(end, -1), 'M/dd')#",
           selected: true
         }
       ]
     });
     </script>
-  
-### views.monthHeaderTemplate `String|Function`  
 
-The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
+### views.monthHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) used to render the month slots in "month" views.
 
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1360,9 +1360,9 @@ The [template](/api/framework/kendo#methods-template used to render the month sl
       views: [
         { type: "day"},
         { type: "week"},
-        { 
-          type: "month",         
-          monthHeaderTemplate: "#=kendo.toString(start, 'MMMM, yyyy')#",    
+        {
+          type: "month",
+          monthHeaderTemplate: "#=kendo.toString(start, 'MMMM, yyyy')#",
           selected: true
         }
       ]
@@ -1382,7 +1382,7 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
 #### Example - add a gantt task to the data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [{
         id: 1,
@@ -1394,18 +1394,18 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
       }]
     });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.dataSource.add({ 
+    gantt.dataSource.add({
       parentId: null,
-      start: new Date("2014/6/17 12:00"), 
-      end: new Date("2014/6/17 14:00"), 
-      title: "New Task"  
-    });          
+      start: new Date("2014/6/17 12:00"),
+      end: new Date("2014/6/17 14:00"),
+      title: "New Task"
+    });
     </script>
-    
+
 #### Example - update a gantt task in the data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1422,11 +1422,11 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
     var task = gantt.dataSource.at(0);
     task.set("title", "Project start");
     </script>
-    
+
 #### Example - update multiple gantt task fields with the update method
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1441,17 +1441,17 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
     });
     var gantt = $("#gantt").data("kendoGantt");
     var task = gantt.dataSource.at(0);
-    gantt.dataSource.update(task, { 
+    gantt.dataSource.update(task, {
       title: "Project start",
       start: new Date("2014/6/17 12:00"),
       end: new Date("2014/6/17 14:00")
     });
-    </script>   
-    
+    </script>
+
 #### Example - remove a gantt task from the data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1488,7 +1488,7 @@ The [dependencies data source](/api/framework/ganttdependencydatasource) of the 
 #### Example - add a dependency to the dependencies data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1520,7 +1520,7 @@ The [dependencies data source](/api/framework/ganttdependencydatasource) of the 
 #### Example - remove a dependency from the dependencies data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1562,7 +1562,7 @@ Clears the currently selected task or dependency.
 #### Example - subscribe to the "dataBinding" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1598,7 +1598,7 @@ A string, DOM element or jQuery object which represents the table row. A string 
 #### Example - get the task data item to which the first table row is bound
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1625,7 +1625,7 @@ Prepares the widget for safe removal from DOM. Detaches all event handlers and r
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1649,7 +1649,7 @@ Renders all tasks and dependencies using the current data items.
 #### Example - refresh the widget
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1673,7 +1673,7 @@ Renders all dependencies using the current data items.
 #### Example - refresh the dependencies
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1718,7 +1718,7 @@ The dependency which should be removed. Also accepts a string which is the `uid`
 #### Example - remove a dependency
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1764,7 +1764,7 @@ The task which should be removed. Also accepts a string which is the `uid` of th
 #### Example
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1799,7 +1799,7 @@ A string, DOM element or jQuery object which represents the table row. A string 
 #### Example - select the first table row.
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1829,7 +1829,7 @@ The tasks data source to which the widget should be bound.
 #### Example - set the tasks data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt();
     var gantt = $("#gantt").data("kendoGantt");
     var dataSource = new kendo.data.GanttDataSource({
@@ -1860,7 +1860,7 @@ The dependencies data source to which the widget should be bound.
 #### Example - set the dependencies data source
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1911,7 +1911,7 @@ The view type to select.
 #### Example - set the current view
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -1927,7 +1927,7 @@ The view type to select.
     var gantt = $("#gantt").data("kendoGantt");
     gantt.view("month");
     </script>
-    
+
 ## Events
 
 ### dataBinding
@@ -1949,10 +1949,10 @@ If invoked prevents the data bind action and `dataBound` event will not fire.
 #### Example - subscribe to the "dataBinding" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -1966,17 +1966,17 @@ If invoked prevents the data bind action and `dataBound` event will not fire.
       }
     });
     </script>
-    
+
 #### Example - subscribe to the "dataBinding" after initialization
- 
+
     <div id="gantt"></div>
-    <script>      
+    <script>
     function gantt_dataBinding(e) {
       console.log("dataBinding");
-    }  
+    }
     $("#gantt").kendoGantt({
-     dataSource: [ 
-        { 
+     dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -1989,7 +1989,7 @@ If invoked prevents the data bind action and `dataBound` event will not fire.
     var gantt = $("#gantt").data("kendoGantt");
     gantt.bind("dataBinding", gantt_dataBinding);
     </script>
- 
+
 ### dataBound
 
 Fired when the widget is bound to data from its data source.
@@ -2005,10 +2005,10 @@ The widget instance which fired the event.
 #### Example - subscribe to the "dataBound" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2022,17 +2022,17 @@ The widget instance which fired the event.
       }
     });
     </script>
-    
+
 #### Example - subscribe to the "dataBound" event after initialization
- 
+
     <div id="gantt"></div>
-    <script>      
+    <script>
     function gantt_dataBound(e) {
       console.log("dataBound");
-    }  
+    }
     $("#gantt").kendoGantt({
-     dataSource: [ 
-        { 
+     dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2071,10 +2071,10 @@ If invoked prevents the add action.
 #### Example - subscribe to the "add" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2091,13 +2091,13 @@ If invoked prevents the add action.
 #### Example - subscribe to the "add" event after initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     function gantt_add(e) {
       console.log("Add", e.task.title);
-    }  
+    }
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2138,10 +2138,10 @@ The widget instance which fired the event.
 #### Example - subscribe to the "edit" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2156,17 +2156,17 @@ The widget instance which fired the event.
       }
     });
     </script>
-    
+
 #### Example - subscribe to the "edit" event after initialization
-    
+
     <div id="gantt"></div>
-    <script>      
+    <script>
     function gantt_edit(e) {
       console.log("Editing task: ", e.task.title)
-    }  
+    }
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2207,8 +2207,8 @@ The widget instance which fired the event.
 
 #### Example - subscribe to the "remove" event during initialization
 
-    <div id="gantt"></div>  
-    <script> 
+    <div id="gantt"></div>
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2236,11 +2236,11 @@ The widget instance which fired the event.
           id: 0
         }
       ],
-      remove: function(e) {          
+      remove: function(e) {
         if (e.task) {
           console.log("Removing task:", e.task.title);
           console.log(kendo.format("Removing {0} related dependencies", e.dependencies.length));
-        } else {            
+        } else {
           console.log("Removing dependency with id:", e.dependencies[0].id);
         }
       }
@@ -2250,12 +2250,12 @@ The widget instance which fired the event.
 #### Example - subscribe to the "remove" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_remove(e) {
       if (e.task) {
         console.log("Removing task:", e.task.title);
         console.log(kendo.format("Removing {0} related dependencies", e.dependencies.length));
-      } else {            
+      } else {
         console.log("Removing dependency with id:", e.dependencies[0].id);
       }
     }
@@ -2288,7 +2288,7 @@ The widget instance which fired the event.
       ]
     });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("remove", gantt_remove);      
+    gantt.bind("remove", gantt_remove);
     </script>
 
 ### cancel
@@ -2318,10 +2318,10 @@ The widget instance which fired the event.
 #### Example - subscribe to the "cancel" event during initialization
 
     <div id="gantt"></div>
-    <script>      
+    <script>
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2336,17 +2336,17 @@ The widget instance which fired the event.
       }
     });
     </script>
-    
+
 #### Example - subscribe to the "cancel" event after initialization
-    
+
     <div id="gantt"></div>
-    <script>      
+    <script>
     function gantt_cancel(e) {
       console.log("Cancel editing task: ", e.task.title)
-    }  
+    }
     $("#gantt").kendoGantt({
-      dataSource: [ 
-        { 
+      dataSource: [
+        {
           id: 1,
           orderId: 0,
           parentId: null,
@@ -2388,7 +2388,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "save" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2401,17 +2401,17 @@ The widget instance which fired the event.
         }
       ],
       save: function(e) {
-        console.log("Save task:", e.task.title);          
+        console.log("Save task:", e.task.title);
       }
-    }); 
+    });
     </script>
 
 #### Example - subscribe to the "save" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_save(e) {
-        console.log("Save task:", e.task.title);          
+        console.log("Save task:", e.task.title);
     }
     $("#gantt").kendoGantt({
       dataSource: [
@@ -2426,7 +2426,7 @@ The widget instance which fired the event.
       ]
     });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("save", gantt_save);      
+    gantt.bind("save", gantt_save);
     </script>
 
 ### change
@@ -2444,7 +2444,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "change" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2467,23 +2467,23 @@ The widget instance which fired the event.
       change: function(e) {
         var selection = this.select();
         var task;
-        
+
         if (selection) {
           task = this.dataItem(selection);
           console.log(kendo.format("{0} is selected", task.title));
         }
       }
-    }); 
+    });
     </script>
 
 #### Example - subscribe to the "change" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_change(e) {
       var selection = this.select();
         var task;
-        
+
         if (selection) {
           task = this.dataItem(selection);
           console.log(kendo.format("{0} is selected", task.title));
@@ -2507,12 +2507,12 @@ The widget instance which fired the event.
           start: new Date("2014/6/17 12:00"),
           end: new Date("2014/6/17 14:00")
         }
-      ]        
-    }); 
+      ]
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("change", gantt_change);  
+    gantt.bind("change", gantt_change);
     </script>
-    
+
 ### navigate
 
 Fired when the user changes the selected view of the gantt.
@@ -2540,7 +2540,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "navigate" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2561,15 +2561,15 @@ The widget instance which fired the event.
         }
       ],
       navigate: function(e) {
-        console.log(kendo.format("Navigate to {0} view", e.view.charAt(0).toUpperCase() + e.view.slice(1)));  
+        console.log(kendo.format("Navigate to {0} view", e.view.charAt(0).toUpperCase() + e.view.slice(1)));
       }
     });
-    </script> 
+    </script>
 
 #### Example -  subscribe to the "navigate" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
       function gantt_navigate(e) {
         console.log(kendo.format("Navigate to {0} view", e.view.charAt(0).toUpperCase() + e.view.slice(1)));
       }
@@ -2591,11 +2591,11 @@ The widget instance which fired the event.
             start: new Date("2014/6/17 12:00"),
             end: new Date("2014/6/17 14:00")
           }
-        ]        
-      }); 
+        ]
+      });
       var gantt = $("#gantt").data("kendoGantt");
-      gantt.bind("navigate", gantt_navigate);  
-    </script> 
+      gantt.bind("navigate", gantt_navigate);
+    </script>
 
 ### moveStart
 
@@ -2620,7 +2620,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "moveStart" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2633,15 +2633,15 @@ The widget instance which fired the event.
         }
       ],
       moveStart: function(e) {
-        console.log("Move start ", e.task.title);  
+        console.log("Move start ", e.task.title);
       }
     });
-    </script> 
+    </script>
 
 #### Example - subscribe to the "moveStart" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_moveStart(e) {
       console.log("Move start ", e.task.title);
     }
@@ -2655,11 +2655,11 @@ The widget instance which fired the event.
           start: new Date("2014/6/17 9:00"),
           end: new Date("2014/6/17 11:00")
         }
-      ]  
-    }); 
+      ]
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("moveStart", gantt_moveStart);  
-    </script> 
+    gantt.bind("moveStart", gantt_moveStart);
+    </script>
 
 ### move
 
@@ -2692,7 +2692,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "move" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2705,18 +2705,18 @@ The widget instance which fired the event.
         }
       ],
       move: function(e) {
-        console.log(kendo.format("task's curren Start {0:g}", e.start));        
+        console.log(kendo.format("task's curren Start {0:g}", e.start));
         console.log(kendo.format("task's curren End {0:g}", e.end));
       }
-    }); 
-    </script> 
+    });
+    </script>
 
 #### Example - subscribe to the "move" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_move(e) {
-      console.log(kendo.format("task's curren Start {0:g}", e.start));        
+      console.log(kendo.format("task's curren Start {0:g}", e.start));
       console.log(kendo.format("task's curren End {0:g}", e.end));
     }
     $("#gantt").kendoGantt({
@@ -2729,10 +2729,10 @@ The widget instance which fired the event.
           start: new Date("2014/6/17 9:00"),
           end: new Date("2014/6/17 11:00")
         }
-      ]  
-    }); 
+      ]
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("move", gantt_move);  
+    gantt.bind("move", gantt_move);
     </script>
 
 ### moveEnd
@@ -2766,7 +2766,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "moveEnd" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2779,18 +2779,18 @@ The widget instance which fired the event.
         }
       ],
       moveEnd: function(e) {
-        console.log(kendo.format("task's new Start {0:g}", e.start));    
+        console.log(kendo.format("task's new Start {0:g}", e.start));
         console.log(kendo.format("task's new End {0:g}", e.end));
       }
-    }); 
-    </script> 
+    });
+    </script>
 
 #### Example - subscribe to the "moveEnd" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function moveEnd(e) {
-      console.log(kendo.format("task's new Start {0:g}", e.start));    
+      console.log(kendo.format("task's new Start {0:g}", e.start));
       console.log(kendo.format("task's new End {0:g}", e.end));
     }
     $("#gantt").kendoGantt({
@@ -2803,10 +2803,10 @@ The widget instance which fired the event.
           start: new Date("2014/6/17 9:00"),
           end: new Date("2014/6/17 11:00")
         }
-      ]  
-    }); 
+      ]
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("moveEnd", moveEnd);  
+    gantt.bind("moveEnd", moveEnd);
     </script>
 
 ### resizeStart
@@ -2832,7 +2832,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "resizeStart" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2847,13 +2847,13 @@ The widget instance which fired the event.
       resizeStart: function(e) {
         console.log("Resize start ", e.task.title);
       }
-    });   
+    });
     </script>
 
 #### Example - subscribe to the "resizeStart" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function resizeStart(e) {
       console.log("Resize start ", e.task.title);
     }
@@ -2867,10 +2867,10 @@ The widget instance which fired the event.
           start: new Date("2014/6/17 9:00"),
           end: new Date("2014/6/17 11:00")
         }
-      ]  
-    }); 
+      ]
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("resizeStart", resizeStart);  
+    gantt.bind("resizeStart", resizeStart);
     </script>
 
 ### resize
@@ -2902,7 +2902,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "resize" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2915,18 +2915,18 @@ The widget instance which fired the event.
         }
       ],
       resize: function(e) {
-        console.log(kendo.format("task's curren Start {0:g}", e.start));        
+        console.log(kendo.format("task's curren Start {0:g}", e.start));
         console.log(kendo.format("task's curren End {0:g}", e.end));
       }
-    });   
+    });
     </script>
 
 #### Example - subscribe to the "resize" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_resize(e) {
-      console.log(kendo.format("task's curren Start {0:g}", e.start));    
+      console.log(kendo.format("task's curren Start {0:g}", e.start));
       console.log(kendo.format("task's current End {0:g}", e.end));
     }
     $("#gantt").kendoGantt({
@@ -2940,9 +2940,9 @@ The widget instance which fired the event.
           end: new Date("2014/6/17 11:00")
         }
       ]
-    }); 
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("resize", gantt_resize);  
+    gantt.bind("resize", gantt_resize);
     </script>
 
 ### resizeEnd
@@ -2976,7 +2976,7 @@ The widget instance which fired the event.
 #### Example - subscribe to the "resizeEnd" event during initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     $("#gantt").kendoGantt({
       dataSource: [
         {
@@ -2989,18 +2989,18 @@ The widget instance which fired the event.
         }
       ],
       resizeEnd: function(e) {
-        console.log(kendo.format("task's new Start {0:g}", e.start));    
+        console.log(kendo.format("task's new Start {0:g}", e.start));
         console.log(kendo.format("task's new End {0:g}", e.end));
       }
-    }); 
+    });
     </script>
 
 #### Example - subscribe to the "resizeEnd" event after initialization
 
     <div id="gantt"></div>
-    <script> 
+    <script>
     function gantt_resizeEnd(e) {
-      console.log(kendo.format("task's new Start {0:g}", e.start));    
+      console.log(kendo.format("task's new Start {0:g}", e.start));
       console.log(kendo.format("task's new End {0:g}", e.end));
     }
     $("#gantt").kendoGantt({
@@ -3014,7 +3014,7 @@ The widget instance which fired the event.
           end: new Date("2014/6/17 11:00")
         }
       ]
-    }); 
+    });
     var gantt = $("#gantt").data("kendoGantt");
-    gantt.bind("resizeEnd", gantt_resizeEnd);  
+    gantt.bind("resizeEnd", gantt_resizeEnd);
     </script>
