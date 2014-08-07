@@ -5374,7 +5374,7 @@ Expands specified group.
     var grid = $("#grid").data("kendoGrid");
     // first collapse the group
     grid.collapseGroup(".k-grouping-row:contains(Beverages)");
-    grid.expandGrup(".k-grouping-row:contains(Beverages)");
+    grid.expandGroup(".k-grouping-row:contains(Beverages)");
     </script>
 
 ### expandRow
