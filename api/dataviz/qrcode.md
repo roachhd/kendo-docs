@@ -143,7 +143,7 @@ Sets the minimum distance in pixels that should be left between the border and t
     });
     </script>
 
-### renderAs `String` *(default: "canvas")*
+### renderAs `String` *(default: "svg")*
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the QRCode will switch to the first available mode.
@@ -154,11 +154,11 @@ The supported values are:
 * "svg" - renders the widget as inline SVG document, if available
 * "vml" - renders the widget as VML, if available
 
-> Using Canvas rendering disables most interactive features.
-
 ### size `Number|String`
 
-Specifies the size of a QR code in pixels (i.e. "200px"). Numeric values are treated as pixels. If no size is specified, it will be determined from the element width and height. In case the element does not have width or height bigger than zero, a default value of 200 pixels will be used.
+Specifies the size of a QR code in pixels (i.e. "200px"). Numeric values are treated as pixels.
+If no size is specified, it will be determined from the element width and height.
+In case the element has width or height of zero, a default value of 200 pixels will be used.
 
 #### Example
 

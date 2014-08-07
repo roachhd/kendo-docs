@@ -8,7 +8,7 @@ description: Manipulate the configuration options of Barcode, configure the colo
 
 ## Configuration
 
-### renderAs `String` *(default: "canvas")*
+### renderAs `String` *(default: "svg")*
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Barcode will switch to the first available mode.
@@ -18,8 +18,6 @@ The supported values are:
 * "canvas" - renders the widget as a Canvas element, if available.
 * "svg" - renders the widget as inline SVG document, if available
 * "vml" - renders the widget as VML, if available
-
-> Using Canvas rendering disables most interactive features.
 
 #### Example - Render as SVG, if supported
 
