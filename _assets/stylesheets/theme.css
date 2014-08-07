@@ -1,9 +1,15 @@
 #introduction {
-    height: calc(100% - 123px);
+    position: absolute;
+    top: 79px;
+    bottom: 44px;
+    width: 100%; 
 }
 
 #page-inner-content {
-    height: calc(100% - 184px); /* height of header and footer */
+    position: absolute;
+    top: 141px;
+    bottom: 44px;
+    width: 100%;
 }
 
 #page-header,
