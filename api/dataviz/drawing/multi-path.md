@@ -28,11 +28,6 @@ but each moveTo command starts a new sub-path.
 ### options `Object`
 The configuration options.
 
-## Fields
-
-### paths `Array`
-A collection of sub-[paths](path).
-
 ## Configuration
 
 ### fill `kendo.dataviz.drawing.FillOptions`
@@ -48,6 +43,11 @@ Inherited from [Element.transform](element#configuration-transform)
 ### visible `Boolean`
 A flag, indicating if the element is visible.
 Inherited from [Element.visible](element#configuration-visible)
+
+## Fields
+
+### paths `Array`
+A collection of sub-[paths](path).
 
 ## Methods
 

@@ -11,11 +11,6 @@ An abstract base class representing common members of all drawing elements.
 ### options `Object`
 The configuration of this Group.
 
-## Fields
-
-### options `kendo.dataviz.drawing.OptionsStore`
-The configuration options of the drawing element.
-
 ## Configuration
 
 ### transform `kendo.dataviz.geometry.Transformation`
@@ -23,6 +18,11 @@ The transformation to apply to this element.
 
 ### visible `Boolean`
 A flag, indicating if the element is visible.
+
+## Fields
+
+### options `kendo.dataviz.drawing.OptionsStore`
+The configuration options of the drawing element.
 
 ## Methods
 

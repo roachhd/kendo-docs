@@ -25,11 +25,6 @@ Draws a path consisting of linear or cubic Bézier curve segments.
 ### options `Object`
 The configuration options.
 
-## Fields
-
-### segments `Array`
-A collection of the path [segments](segment).
-
 ## Configuration
 
 ### fill `kendo.dataviz.drawing.FillOptions`
@@ -45,6 +40,11 @@ Inherited from [Element.transform](element#configuration-transform)
 ### visible `Boolean`
 A flag, indicating if the element is visible.
 Inherited from [Element.visible](element#configuration-visible)
+
+## Fields
+
+### segments `Array`
+A collection of the path [segments](segment).
 
 ## Methods
 
