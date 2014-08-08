@@ -837,6 +837,20 @@ Returns true if running in application mode - pinned to desktop in iOS or runnin
 ##### cordova `Boolean`
 Returns true if running in a Cordova/PhoneGap/Telerik AppBuilder application.
 
+### support.browser `Object`
+Convenience replacement for the now deprecated jQuery.browser. It returns an object with the browser identifier initialized as a boolean property and a version. 
+The identifiers are identical to jQuery ones, e.g. "webkit", "opera", "msie" and "mozilla". In addition WebKit browsers will return their name e.g. "safari" and "chrome".  
+   
+    <script>
+        console.log(kendo.stringify(kendo.support.browser));
+        // Chrome will return this object: { "webkit": true, "chrome": true, "version": 37 }
+        // IE11 will return this one: { "msie": true, "version": 11 }
+    </script>
+
+#### support.browser
+##### version `Number`
+The current browser major version, e.g. "7" in Internet Explorer 7.
+
 ### version `String`
 
 Returns the Kendo UI version as a string, for example `"2013.3.1119"` or `"2013.2.918"`, etc. In general, Kendo UI version identifiers provide the following information:
