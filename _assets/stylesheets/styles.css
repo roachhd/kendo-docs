@@ -328,6 +328,42 @@ h4 a:hover, h5 a:hover, h6 a:hover {
     background: transparent url(../images/anchor.png) no-repeat 0 50%;
 }
 
+h1 a.type-link, h1 a.type-link:hover,
+h3 a.type-link, h3 a.type-link:hover,
+h5 a.type-link, h5 a.type-link:hover {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1 span.type-link {
+    display: block;
+    font-size: 12px;
+}
+
+h1 span.type-link a {
+    color: #666;
+}
+
+a.type-link {
+    text-decoration: none;
+}
+
+a.type-link:hover {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+a.type-link code {
+    color: #666;
+}
+
+a.type-link:hover code,
+h1 span.type-link a:hover {
+    color: #036c9c;
+}
+
 h2 {
     margin: 2em 0 0;
 }
@@ -402,6 +438,35 @@ blockquote th, blockquote td {
 
 .prettyprint code .hljs {
     background-color: transparent;
+}
+
+#page-article table {
+    width: 100%;
+    margin-top: 1.2em;
+    border: 1px solid #e1e5ea;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#page-article table tr {
+    background-color: #fff;
+}
+
+#page-article table th,
+#page-article table td {
+    padding: 3px 5px;
+}
+
+#page-article table td {
+    background: #fff;
+    border: 1px solid #e1e5ea;
+    color: #555;
+}
+
+#page-article table th {
+    background: #f3f5f7;
+    color: #000;
+    text-align: left;
 }
 
 /* Footer */

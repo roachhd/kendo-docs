@@ -232,6 +232,17 @@ defaults:
         layout: "page"
         category: "tutorials"
 
+type_links:
+    "kendo.Class": "/api/framework/class"
+    "kendo.data.DataSource": "/api/framework/datasource"
+    "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+    "Boolean": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
+    "Function": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"
+    "jQuery": "http://api.jquery.com/Types/#jQuery"
+    "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+    "Number": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+    "String": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
 
