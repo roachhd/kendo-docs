@@ -66,9 +66,8 @@ Creates a drawing surface matching the browser capabilities.
 ##### element `Element`
 The DOM (or jQuery) element that will host the surface.
 
-##### options `Object`
+##### options `Object` *optional*
 The options to pass to the surface.
-This parameter can be omitted.
 
 #### Returns
 `kendo.dataviz.drawing.Surface` An implementation matching the browser capabilities or caller preference; undefined if none is available.
