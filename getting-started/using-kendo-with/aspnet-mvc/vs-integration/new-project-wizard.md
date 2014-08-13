@@ -15,7 +15,7 @@ The New Project wizard is used for creation of a new Telerik UI for ASP.NET MVC 
 Using the options in the Telerik UI for ASP.NET MVC Project Settings page you can modify various project-wide settings:
 
 -   **Version** - Choose which version of Telerik UI for ASP.NET MVC to use
-- **Add referenced assemblies to solution** - Choose whether to copy referenced assemblies to your solution folder. The assemblies will automatically get added to source control when using Microsoft Team Foundation Server.
+-   **Add referenced assemblies to solution** - Choose whether to copy referenced assemblies to your solution folder. The assemblies will automatically get added to source control when using Microsoft Team Foundation Server.
 -   **Target ASP.NET MVC Version** - Choose the targeted ASP.NET MVC version
 -   **View Engine** - Choose between Razor and WebForms
 -   **Theme** – Choose the visual theme for your Telerik UI for ASP.NET MVC Application
@@ -51,4 +51,8 @@ When you click 'Finish', the creation of new Kendo UI web application will begin
 - Apply the pre-selected theme
 - Create test project (optional)
 
+## Modernizr inclusion
 
+The Kendo UI ASP.NET MVC application includes a custom stripped-down Modernizr in a file called `kendo.modernizr.custom.js`. Its goal is to provide HTML5 element support for old browsers, specifically Internet Explorer.
+If you need Modernizr in your application, you may want to remove the existing Modernizr and register another version, which includes more components and features. In this case, if HTML5 element support is required,
+make sure that the newly registered Modernizr [provides such support](http://modernizr.com/docs/#html5inie) by including the **html5shiv** component.
