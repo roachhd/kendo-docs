@@ -1,7 +1,7 @@
-#introduction {
+#docs-introduction {
     position: absolute;
     top: 79px;
-    bottom: 44px;
+    bottom: 0;
     width: 100%; 
 }
 
@@ -132,30 +132,30 @@ pre .dec { color: #3e526b; } /* decimal */
 
 /* Index page */
 
-#introduction {
+#docs-introduction {
     overflow: auto;
 }
 
-#introduction #page-search {
+#docs-introduction #page-search {
     background-color: #f3f5f7;
     padding: 3em 0;
     height: 75px;
 }
 
-#introduction #page-search > div {
+#docs-introduction #page-search > div {
     width: 800px;
     margin: 0 auto;
 }
 
-#introduction #page-search .gsc-input-box {
+#docs-introduction #page-search .gsc-input-box {
     height: 36px;
 }
 
-#introduction #page-search .gsc-input {
+#docs-introduction #page-search .gsc-input {
     font-size: 18px;
 }
 
-#introduction #page-search table.gsc-search-box td {
+#docs-introduction #page-search table.gsc-search-box td {
     vertical-align: top;
     padding-top: 7px;
 }
