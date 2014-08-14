@@ -20,7 +20,11 @@ There are three ways to use the hash syntax:
 2. Uses HTML encoding to display values: #: #
 3. Execute arbitrary JavaScript code: # if(...){# ... #}#
 
-> If your template includes a "#" that is not part of a binding expression, **you must** escape that value or it will cause a template compliation error (this is common in Kendo UI Mobile where # is often used for view navigation). You can escape any literal "#" in JavaScript strings using "\\\\#" and in HTML script templates using "\\#".
+> If your template includes a "#" that is not part of a binding expression, **you must** escape that character or it will cause a template compilation error
+(this is common in Kendo UI Mobile where # is often used for view navigation).
+Literal "#" in JavaScript strings are escaped with "\\\\#", while literal "#" in external HTML script templates are escaped with "\\#".
+
+> "#" characters, which are part of a binding expression, but the expression is placed inside a nested Kendo UI template, must be escaped as well.
 
 Let's take a closer look at how each of these Kendo UI Template syntaxes can be used in context.
 
