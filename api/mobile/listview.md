@@ -510,7 +510,7 @@ Placeholder text for search input.
 
 ### filterable.autoFilter `Boolean`*(default: true)*
 
-Indicates whether filtering should be performed on every key up event or when the user press the `Search` button of the device keyboard.
+Indicates whether filtering should be performed on every key up event or when the focus is moved out of the filter input.
 
 #### Example - enabled filtering with auto filtering disabled
 
@@ -522,7 +522,7 @@ Indicates whether filtering should be performed on every key up event or when th
         e.view.element.find("#listView").kendoMobileListView({
             dataSource: [ "foo", "bar" ],
             filterable: {
-                autoFilter: false //the user must press `Search` button to trigger filter
+                autoFilter: false
             }
         });
     }
