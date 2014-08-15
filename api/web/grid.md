@@ -4911,6 +4911,22 @@ The jQuery object which represents the table body. Contains all grid table rows.
 
 The jQuery object which represents the grid table header element.
 
+### content `JQuery`
+
+The jQuery object which represents the grid content element, which holds the scrollable content. Available only in a grid with locked columns.
+
+### lockedHeader `JQuery`
+
+The jQuery object which represents the grid locked header element. Available only in a grid with locked columns.
+
+### lockedTable `JQuery`
+
+The jQuery object which represents the grid locked table element. Available only in a grid with locked columns.
+
+### lockedContent `JQuery`
+
+The jQuery object which represents the grid locked content element. Available only in a grid with locked columns.
+
 ## Methods
 
 ### addRow
@@ -5453,6 +5469,38 @@ The index of the column or the [field](#configuration-columns.field) to which th
     grid.hideColumn("age");
     </script>
 
+### lockColumn
+
+Locks (freezes) a column, allowing users to see it at all times when scrolling.
+
+#### Parameters
+
+##### column `Number|String`
+
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+> In order to use this method, the grid must be initialized with at least one locked column, and should have unlocked columns left after the target column is locked.
+
+#### Example - lock a column
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", width: 400, locked: true },
+        { field: "age", width: 200 },
+        { field: "hometown", width: 400 },
+        { field: "siblings", width: 200 }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30, hometown: "Sofia, Bulgaria", siblings: 3 },
+        { name: "John Doe", age: 33, hometown: "Boston, MA, USA", siblings: 1 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.lockColumn("age");
+    </script>
+
 ### refresh
 
 Renders all table rows using the current data items.
@@ -5752,6 +5800,38 @@ The index of the column or the [field](#configuration-columns.field) to which th
     });
     var grid = $("#grid").data("kendoGrid");
     grid.showColumn("age");
+    </script>
+
+### unlockColumn
+
+Unlocks (unfreezes) a column.
+
+#### Parameters
+
+##### column `Number|String`
+
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+> In order to use this method, the grid must be initialized with at least one locked column, and there should be locked columns left after the target column is unlocked.
+
+#### Example - lock a column
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", width: 400, locked: true },
+        { field: "age", width: 200, locked: true },
+        { field: "hometown", width: 400 },
+        { field: "siblings", width: 200 }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30, hometown: "Sofia, Bulgaria", siblings: 3 },
+        { name: "John Doe", age: 33, hometown: "Boston, MA, USA", siblings: 1 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.unlockColumn("name");
     </script>
 
 ## Events
