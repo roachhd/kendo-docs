@@ -12,8 +12,8 @@ an auto-adaptive Mobile framework, and all of the tools needed for HTML5 app dev
 
 Kendo UI comes in different bundles:
 
-* Kendo UI Core - free open source version of Kendo UI licensed under Apache 2.0, including web and mobile widgets and framework features. 
-* Kendo UI Professional - includes web, dataviz and mobile widgets and framework features. 
+* Kendo UI Core - free open source version of Kendo UI licensed under Apache 2.0, including web and mobile widgets and framework features.
+* Kendo UI Professional - includes web, dataviz and mobile widgets and framework features.
 * Telerik UI for ASP.NET MVC - Kendo UI Professional plus ASP.NET MVC wrappers for all available widgets.
 * Telerik UI for JSP - Kendo UI Professional plus JSP wrappers for the available web and dataviz widgets.
 * Telerik UI for PHP - Kendo UI Professional plus PHP wrappers for the available web and dataviz widgets.
@@ -236,7 +236,7 @@ A lot of interactive tutorials are available in the [Kendo UI Dojo](http://tryke
 1. Examples available on github
 -   [ASP.NET MVC examples](https://github.com/telerik/kendo-examples-asp-net-mvc/)
 -   [ASP.NET MVC Kendo UI Music Store](https://github.com/telerik/kendo-music-store)
--   [ASP.NET WebForms examples](https://github.com/telerik/kendo-examples-asp.net/)
+-   [ASP.NET WebForms examples](https://github.com/telerik/kendo-examples-asp-net)
 -   [JSP examples](https://github.com/telerik/kendo-examples-java)
 -   [Kendo Mobile Sushi](https://github.com/telerik/kendo-mobile-sushi)
 -   [PHP examples](https://github.com/telerik/kendo-examples-php)
