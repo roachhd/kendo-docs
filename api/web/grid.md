@@ -4911,19 +4911,19 @@ The jQuery object which represents the table body. Contains all grid table rows.
 
 The jQuery object which represents the grid table header element.
 
-### content `JQuery`
+### content `jQuery`
 
 The jQuery object which represents the grid content element, which holds the scrollable content. Available only in a grid with locked columns.
 
-### lockedHeader `JQuery`
+### lockedHeader `jQuery`
 
 The jQuery object which represents the grid locked header element. Available only in a grid with locked columns.
 
-### lockedTable `JQuery`
+### lockedTable `jQuery`
 
 The jQuery object which represents the grid locked table element. Available only in a grid with locked columns.
 
-### lockedContent `JQuery`
+### lockedContent `jQuery`
 
 The jQuery object which represents the grid locked content element. Available only in a grid with locked columns.
 
