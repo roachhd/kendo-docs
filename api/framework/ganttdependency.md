@@ -57,7 +57,7 @@ The  mandatory 'id' of the successor task.
 
 ### type `String|Number|Object`
 
-The type of the dependency.
+The type of the dependency. The type is a value between 0 and 3, representing the four different dependency types: 0 - Finish-Finish, 1 - Finish-Start, 2 - Start-Finish, 3 - Start-Start.
 
 #### Example - set the type of a dependency
 
@@ -122,7 +122,7 @@ The 'id' of the successor task.
 
 ### type `String|Number|Object`
 
-The type of the dependency.
+The type of the dependency. The type is a value between 0 and 3, representing the four different dependency types: 0 - Finish-Finish, 1 - Finish-Start, 2 - Start-Finish, 3 - Start-Start.
 
 #### Example - get the dependency type
 
