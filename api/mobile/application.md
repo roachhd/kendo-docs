@@ -183,7 +183,7 @@ check [Seamless Status Bar in iOS7](/getting-started/mobile/application#seamless
 
 ### transition `String`
 
-The default View transition.
+The default View transition. For a list of supported transitions, check the [Getting Started help topic](/getting-started/mobile/application#view-transitions).
 
 #### Example
 
