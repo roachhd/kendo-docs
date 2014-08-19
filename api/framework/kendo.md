@@ -53,7 +53,7 @@ exposing the data objects from the Model in such a way that those objects are ea
 ##### element `String|jQuery|Element`
 
 The root element(s) from which the binding starts. Can be a valid jQuery string selector, a DOM element or a jQuery object.
-All child elements are traversed.
+All descendant elements are traversed.
 
 ##### viewModel `Object|kendo.data.ObservableObject`
 
@@ -88,7 +88,7 @@ Instantiates Kendo UI widgets in a given DOM element based on role data attribut
 
 ##### element `String|jQuery|Element`
 
-The root element(s) from which the instantiation starts. Can be a valid jQuery string selector, a DOM element or a jQuery object. All child elements are traversed.
+The root element(s) from which the instantiation starts. Can be a valid jQuery string selector, a DOM element or a jQuery object. All descendant elements are traversed.
 
 ##### namespace `Object`
 
@@ -642,7 +642,7 @@ Unbinds a tree of HTML elements from a View-Model.
 ##### element `String|jQuery|Node`
 
 The root element(s) from which the unbinding starts. Can be a valid jQuery string selector, a DOM element or a jQuery object.
-All child elements are traversed.
+All descendant elements are traversed.
 
 ### widgetInstance
 
@@ -838,9 +838,9 @@ Returns true if running in application mode - pinned to desktop in iOS or runnin
 Returns true if running in a Cordova/PhoneGap/Telerik AppBuilder application.
 
 ### support.browser `Object`
-Convenience replacement for the now deprecated jQuery.browser. It returns an object with the browser identifier initialized as a boolean property and a version. 
-The identifiers are identical to jQuery ones, e.g. "webkit", "opera", "msie" and "mozilla". In addition WebKit browsers will return their name e.g. "safari" and "chrome".  
-   
+Convenience replacement for the now deprecated jQuery.browser. It returns an object with the browser identifier initialized as a boolean property and a version.
+The identifiers are identical to jQuery ones, e.g. "webkit", "opera", "msie" and "mozilla". In addition WebKit browsers will return their name e.g. "safari" and "chrome".
+
     <script>
         console.log(kendo.stringify(kendo.support.browser));
         // Chrome will return this object: { "webkit": true, "chrome": true, "version": 37 }
