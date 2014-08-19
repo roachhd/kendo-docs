@@ -28,6 +28,7 @@ In addition to accessKey support, every Kendo UI Web widget also supports a seri
 - [DateTimePicker](http://demos.telerik.com/kendo-ui/web/datetimepicker/navigation.html)
 - [DropDownList](http://demos.telerik.com/kendo-ui/web/dropdownlist/navigation.html)
 - [Editor](http://demos.telerik.com/kendo-ui/web/editor/navigation.html)
+- [Gantt](http://demos.telerik.com/kendo-ui/gantt/keyboard-navigation)
 - [Grid](http://demos.telerik.com/kendo-ui/web/grid/navigation.html)
 - [ListView](http://demos.telerik.com/kendo-ui/web/listview/navigation.html)
 - [Menu](http://demos.telerik.com/kendo-ui/web/menu/navigation.html)
