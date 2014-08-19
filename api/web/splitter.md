@@ -46,6 +46,24 @@ Specifies whether a pane is initially collapsed (**true**) or expanded (**true**
     });
     </script>
 
+### panes.collapsedSize `String`
+
+Specifies the size of a collapsible pane when collapsed, defined as pixels (i.e. "200px") or as a percentage (i.e. "50%"). 
+When the pane is collapsed a **.k-state-collapsed** class is added to it to ease its styling.
+Note: This value must not exceed **panes.max** or be less then **panes.min**.
+
+#### Example
+
+    <div id="splitter">
+      <div>Pane A</div>
+      <div>Pane B</div>
+    </div>
+    <script>
+    $("#splitter").kendoSplitter({
+      panes: [ { collapsible: true, collapsedSize: "10%" }, {} ]
+    });
+    </script>
+
 ### panes.collapsible `Boolean` *(default: false)*
 
 Specifies whether a pane is collapsible (**true**) or not collapsible (**false**).
