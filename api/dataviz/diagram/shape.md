@@ -12,6 +12,14 @@ The Shape object represents a visual node in the graph or diagram.
 
 The unique identifier for a Shape.
 
+### editable `Boolean|Object` *(default: true)*
+
+Defines the shape editable options.
+
+### editable.connect `Boolean`
+
+Specifies whether the connectors should appear on hover.
+
 ### path `String`
 
 The path option of a Shape is a description of a custom geometry. The format follows the standard SVG format (http://www.w3.org/TR/SVG/paths.html#PathData "SVG Path data.").

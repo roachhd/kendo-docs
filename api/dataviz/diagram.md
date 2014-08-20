@@ -51,11 +51,11 @@ The zoom min level in percentages.
 
 The zoom max level in percentages.
 
-### editable `Boolean|Object`
+### editable `Boolean|Object` *(default: true)*
 
 Specifies the shape editable.
 
-### editable.resize `Boolean|Object`
+### editable.resize `Boolean|Object` *(default: true)*
 
 Specifies the shape resizing.
 
@@ -131,7 +131,7 @@ The hangles width.
 
 The hangles height.
 
-### editable.rotate `Boolean|Object`
+### editable.rotate `Boolean|Object` *(default: true)*
 
 Specifyes the rotate style.
 
@@ -500,7 +500,7 @@ Defines the handles stroke options.
 
 Defines the handles stroke color.
 
-### selectable `Boolean|Object`
+### selectable `Boolean|Object` *(default: true)*
 
 Defines the selectable options.
 
@@ -524,7 +524,7 @@ Defines the selection dash type.
 
 Defines the shape options.
 
-### shapeDefaults.editable `Boolean|Object`
+### shapeDefaults.editable `Boolean|Object` *(default: true)*
 
 Defines the shape editable options.
 
@@ -759,7 +759,7 @@ Defines the shape options.
 
 The unique identifier for a Shape.
 
-### shapes.editable `Boolean|Object`
+### shapes.editable `Boolean|Object` *(default: true)*
 
 Defines the shape editable options.
 
