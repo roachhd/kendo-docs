@@ -9,7 +9,7 @@ position: 1
 
 The Sortable widget may be used for reordering Kendo UI Grid/ListView items via drag and drop.
 
->**Important:** Sortable widget reorders the HTML DOM elements. It will not update automatically the position of the items in the DataSource. It is responsibility of the developer to update the DataSource.
+>**Important:** The Sortable widget reorders the HTML DOM elements. It will not update automatically the position of the items in the DataSource. It is responsibility of the developer to update the DataSource.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ The following help articles assumes that you are already familiar with:
 
 ## Reorder Kendo UI Grid table rows via drag and drop using the Sortable widget
 
-Sortable widget should be initialized for Grid's [`table element`](../../../api/web/grid#fields-table).
+The Sortable widget should be initialized for Grid's [`table element`](../../../api/web/grid#fields-table).
 In the general case filter property of the widget should select all `tr` elements that are direct children of the table's `tbody` element. For example: `filter: ">tbody >tr"`.
 
 **If the Grid's editing is enabled**, you should use a more specific filter selector that excludes the item that is currently in edit mode.
@@ -34,11 +34,57 @@ For more information check [Sortable's events](../../../api/web/sortable#events)
 
 ## Reorder the items in the DataSource
 
+The `change` event of the Sortable widget will fire after row position is changed. You may use the `change` event data to update position of the items in the DataSource.
 
+### Example - shifting the position of the items on the client
 
-TODO
+    function onChange(e) {
+        var grid = e.sender.element.data("kendoGrid"),
+            oldIndex = e.oldIndex , //the old position
+            newIndex = e.newIndex , //the new position
+            view = grid.dataSource.view(),
+            dataItem = grid.dataSource.getByUid(e.item.data("uid")); //retrieved moved dataItem
 
+        dataItem.Order = newIndex; //update the order
+        dataItem.dirty = true;
 
+        //shift the order of the records
+        if (oldIndex < newIndex) {
+            for (var i = oldIndex + 1; i <= newIndex; i++) {
+                view[i].Order--;
+                view[i].dirty = true;
+            }
+        } else {
+            for (var i = oldIndex - 1; i >= newIndex; i--) {
+                view[i].Order++;
+                view[i].dirty = true;
+            }
+        }
+
+        grid.dataSource.sync(); //submit the changes through the update transport and refresh the Grid
+    }
+
+### Example - sending the newIndex and oldIndex to the server
+
+    function onChange(e) {
+        var grid = e.sender.element.data("kendoGrid"),
+            oldIndex = e.oldIndex , //the old position
+            newIndex = e.newIndex , //the new position
+            dataItem = grid.dataSource.getByUid(e.item.data("uid")); //retrieve moved dataItem
+
+        $.ajax({
+            url: "yourUrl",
+            dataType: "json",
+            data: { //send the data and update the order of items on the server
+                oldIndex: oldIndex,
+                newIndex: newIndex,
+                dataItem: dataItem
+            },
+            success: function (response) {
+                grid.dataSource.read(); //refresh the Grid
+            }
+        });
+    }
 
 ## Customizing the hint
 
