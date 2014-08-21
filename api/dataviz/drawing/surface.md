@@ -76,8 +76,14 @@ The options to pass to the surface.
 ## Configuration
 
 ### type `String`
-The preferred type of surface to create.
-Used only by Surface.create, will be ignored by the actual Surface implementation.
+The preferred type of surface to [create](#create).
+Supported types (case insensitive):
+- `svg`
+- `canvas`
+- `vml`
+
+This option will be ignored if not supported by the browser.
+See [Supported Browsers](/getting-started/dataviz/drawing/supported-browsers)
 
 ### height `String` *(default: "100%")*
 The height of the surface element.
