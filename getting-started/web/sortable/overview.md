@@ -288,3 +288,9 @@ In order to restore the Sortable layout you should render the DOM elements in th
         }
     </style>
 
+## Related
+
+- [Kendo Templates](../../../getting-started/framework/templates/overview)
+- [Kendo DataSource](../../../getting-started/framework/datasource/overview)
+- [Integration with Grid/ListView](../../../getting-started/web/sortable/integration)
+- [Integration with TabStrip](../../../getting-started/web/sortable/integration-tabstrip)
