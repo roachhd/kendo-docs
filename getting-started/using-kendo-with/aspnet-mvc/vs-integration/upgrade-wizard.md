@@ -6,14 +6,17 @@ title: Upgrade Wizard
 
 This help topic shows how to upgrade a Telerik UI for ASP.NET MVC Application.
 
-The Upgrade Wizard has two main purposes:
-
-- Check and retrieve the latest available Telerik UI for ASP.NET MVC  release
-- Change the version of Telerik UI for ASP.NET MVC in the projects in the solution use.
-
 The Upgrade Wizard can be launched from the **Telerik | UI for ASP.NET MVC | Upgrade Wizard** menu item.
 
 ![Choose projects](/getting-started/using-kendo-with/aspnet-mvc/vs-integration/images/upgrade_menu.png)
+
+On the first screen of the wizard is described what will be upgraded:
+
+![Upgrade wizard warning page](/getting-started/using-kendo-with/aspnet-mvc/vs-integration/images/upgrade_warning.png)
+
+In addition to the pure assembly reference change, the upgrade wizard provides several important features:
+- Check and retrieve the latest available Telerik UI for ASP.NET MVC release
+- Change the version of Telerik UI for ASP.NET MVC in the projects in the solution use
 
 ##Choose which projects will be updated
 
