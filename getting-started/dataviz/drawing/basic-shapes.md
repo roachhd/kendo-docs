@@ -6,7 +6,7 @@ position: 1
 
 # Draw Basic Shapes
 
-- [Sample scene](#sample-scene)
+- [Our goal](#our-goal)
 - [Walk-through](#walk-through)
     - [Import namespaces](#import-namespaces)
     - [Draw the path](#draw-the-path)
@@ -15,7 +15,7 @@ position: 1
     - [Group the shapes](#group-the-shapes)
     - [Render the scene](#render-the-scene)
 
-## Sample scene
+## Our goal
 
 Scenes are constructed from a set of built-in basic shapes.
 Let's take a simple, static scene and try to replicate it.
