@@ -573,6 +573,42 @@ The data item field to group by.
     });
     </script>
 
+### offlineStorage `String|Object`
+
+The offline storage key or custom offline storage implementation.
+
+#### Example - set offline storage key
+
+    var dataSource = kendo.data.DataSource({
+        offlineStorage: "products-offline",
+        transport: {
+            read: {
+                url: "http://demos.telerik.com/kendo-ui/service/products",
+                type: "jsonp"
+            }
+        }
+    });
+
+#### Example - set custom offline storage implementation
+
+    var dataSource = kendo.data.DataSource({
+        // use sessionStorage instead of localStorage
+        offlineStorage: {
+            getItem: function() {
+                return JSON.parse(sessionStorage.getItem("products-key"));
+            },
+            setItem: function(item) {
+                sessionStorage.setItem("products-key", JSON.stringify(item));
+            }
+        },
+        transport: {
+            read: {
+                url: "http://demos.telerik.com/kendo-ui/service/products",
+                type: "jsonp"
+            }
+        }
+    });
+
 ### page `Number`
 
 The page of data which the data source will return when the [view](#methods-view) method is invoked or request from the remote service.
@@ -3178,6 +3214,127 @@ Either a [kendo.data.Model](/api/framework/model) instance or JavaScript object 
       console.log(index); // displays "0"
     });
     </script>
+
+### online
+
+Gets or sets the online state of the data source.
+
+#### Parameters
+
+##### value `Boolean`
+
+The online state - `true` for online, `false` for offline.
+
+#### Returns
+
+`Boolean` the current online state - `true` if online; otherwise `false`.
+
+#### Example - set the online state
+
+    var dataSource = kendo.data.DataSource({
+        offlineStorage: "products-offline",
+        transport: {
+            read: {
+                url: "http://demos.telerik.com/kendo-ui/service/products",
+                type: "jsonp"
+            },
+            update: {
+                url: "http://demos.telerik.com/kendo-ui/service/products/update",
+                dataType: "jsonp"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return {models: kendo.stringify(options.models)};
+                }
+            }
+        },
+        schema: {
+            model: {
+                id: "ProductID"
+            }
+        }
+    });
+    dataSource.online(false);
+
+#### Example - get the online state
+    var dataSource = kendo.data.DataSource({
+        offlineStorage: "products-offline",
+        transport: {
+            read: {
+                url: "http://demos.telerik.com/kendo-ui/service/products",
+                type: "jsonp"
+            },
+            update: {
+                url: "http://demos.telerik.com/kendo-ui/service/products/update",
+                dataType: "jsonp"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return {models: kendo.stringify(options.models)};
+                }
+            }
+        },
+        schema: {
+            model: {
+                id: "ProductID"
+            }
+        }
+    });
+    dataSource.online(false);
+    console.log(dataSource.online()); // displays "false"
+
+
+### offlineData
+
+Gets or sets the offline state of the data source.
+
+#### Parameters
+
+##### data `Array`
+
+The array of data items that replace the current offline state of the data source.
+
+#### Returns
+
+`Array` array of JavaScript objects that represent the data items. Changed data items have a `__state__` field attached. That field indicates the type of change: "create", "update" or "destroy". Unmodified data items don't have a `__state__` field.
+
+#### Example - get the offline state
+
+    var dataSource = kendo.data.DataSource({
+        offlineStorage: "products-offline",
+        transport: {
+            read: {
+                url: "http://demos.telerik.com/kendo-ui/service/products",
+                type: "jsonp"
+            },
+            update: {
+                url: "http://demos.telerik.com/kendo-ui/service/products/update",
+                dataType: "jsonp"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return {models: kendo.stringify(options.models)};
+                }
+            }
+        },
+        schema: {
+            model: {
+                id: "ProductID"
+            }
+        }
+    });
+
+    dataSource.fetch(function() {
+        // go in offline mode
+        dataSource.online(false);
+        // change the ProductName field of the first data item
+        dataSource.at(0).set("ProductName", "Updated");
+        // sync to accept the changes
+        dataSource.sync();
+        // get the offline data
+        var offlineData = dataSource.offlineData();
+        console.log(offlineData[0].__state__); // displays "update"
+    });
 
 ### page
 
