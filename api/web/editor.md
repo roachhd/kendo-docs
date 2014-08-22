@@ -172,7 +172,7 @@ The available editor commands are:
 *   Table editing
         - **createTable**, **addColumnLeft**, **addColumnRight**, **addRowAbove**, **addRowBelow**, **deleteRow**, **deleteColumn**
 *   Structural markup and styles
-        - **formatting**
+        - **formatting**, **cleanFormatting**
 *   Snippets
         - **insertHtml**
 *   HTML code view
