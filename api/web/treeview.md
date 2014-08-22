@@ -1245,7 +1245,9 @@ The node that should be toggled.
 
 ### updateIndeterminate
 
-Updates the indeterminate state of the treeview checkboxes. Should be used for better performance when checking multiple checkboxes through code.
+Updates the indeterminate state of the treeview checkboxes.
+Call it after using the insert / remove API on TreeViews with [checkChildren: true](#configuration-checkboxes.checkChildren).
+Use to improve performance when checking multiple checkboxes through code.
 
 #### Parameters
 
