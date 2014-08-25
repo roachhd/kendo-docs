@@ -15766,6 +15766,25 @@ The width of the border in pixels. By default the border width is set to zero wh
     });
     </script>
 
+### title.color `String`
+
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the title color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      title: {
+        text: "Chart Title",
+        color: "#aa00bb"
+      },
+      series: [{
+         data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### title.font `String` *(default: "16px Arial,Helvetica,sans-serif")*
 
 The font of the title.

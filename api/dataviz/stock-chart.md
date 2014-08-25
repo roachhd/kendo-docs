@@ -7064,6 +7064,10 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
  The font of the title.
 
+### title.color `String`
+
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
+
 ### title.margin `Number | Object`*(default: 5)*
 
  The margin of the title.
