@@ -44,6 +44,9 @@ If you need any custom checkbox rendering, use the checkboxes.template option:
 **Editor for ASP.NET MVC**: The ImageBrowser controller now works with `FileBrowserEntry` and `FileBrowserEntryType` types, instead of `ImageBrowserEntry` and `ImageBrowserEntryType`.
 This change is related to the introduction of the new FileBrowser tool.
 
+**ComboBox**: Widget with [minLength](../api/web/dropdownlist#configuration-minLength) option set to value bigger than `1` will initiate a request to the server when input is cleared.
+The change was introduced to improve the user experience allowing the end user to request all items when text is cleared.
+
 ## Kendo UI 2014 Q1 SP2 (2014.1.528)
 
 ### Changes from 2014 Q1 SP1 (2014.1.416)
