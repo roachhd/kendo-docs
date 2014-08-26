@@ -360,6 +360,14 @@ The **View** (or the applied mobile layout) footer DOM element.
 
 The **View** content DOM element. If there is a scroller in the View, it will become a child of this element. Please use the `contentElement` method instead, to always get the correct content element.
 
+### model `kendo.data.ObservableObject`
+
+The **Model** associated with the view
+
+### params `Object`
+
+The currently set query string parameters
+
 ### scrollerContent `jQuery`
 
 The View mobile scroller container DOM element. Recommended if scrollable mobile View contents need to be manipulated or replaced. If you don't know if the View has a Scroller initialized, please use the `contentElement` method instead.
