@@ -1,7 +1,7 @@
 ---
 title: Initialize a Kendo UI Widget From Markup
 page_title: Use AngularJS or Kendo UI MVVM to instantiate and configure Kendo UI widgets
-previous_url: /getting-started/data-attribute-initialization.html, /getting-started/data-attribute-initialization
+previous_url: /getting-started/data-attribute-initialization
 description: Learn how to add Kendo UI widgets to your mobile website or web application.
 position: 2
 ---

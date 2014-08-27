@@ -1,7 +1,6 @@
 ---
 title:  Data Attributes Explained
 page_title: Data Attribute Initialization and Configuration
-previous_url: /getting-started/data-attribute-initialization.html, /getting-started/data-attribute-initialization
 description: Learn how to initialize and configure each Kendo UI widget using data attributes.
 Publish: true
 ---
