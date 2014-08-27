@@ -1,149 +1,45 @@
 ---
-title: Javascript Dependencies
-page_title: Javascript Dependencies
-description: A list of scripts that Kendo UI widgets require to work, detailed explanation about all JavaScript files
+title: Include Only What You Need
+page_title: Build a Custom Kendo UI Dstribution
+previous_url: /getting-started/javascript-dependencies.html, /getting-started/javascript-dependencies
+description: "How to include only the parts of Kendo UI which your project uses"
 position: 4
 ---
 
-# JavaScript files used by Kendo UI
+## Pick the Right Combined Script Based on Your Project Type
 
-Every Kendo UI widget needs its JavaScript files to be included in order to work properly. This help topic lists the JavaScript files required by each widget.
+The following combined scripts are available in the bundles or at the CDN in order to facilitate common project types:
 
-## Combined Scripts
+*  **kendo.ui.core.min.js** - contains all widgets available in the [Kendo UI Core project](https://github.com/telerik/kendo-ui-core). The script is available in the Kendo UI Core distribution.
+*  **kendo.all.min.js** - contains a minified version of all features provided by Kendo UI.
 
-The following combined scripts are provided in order to simplify development and deployment.
-
-*   **kendo.all.min.js** contains a minified version of all scripts (Web, DataViz and Mobile).
-
-> **Important**: kendo.all.min.js is available in the Kendo UI Complete, Telerik UI for ASP.NET MVC**, **Telerik UI for JSP** and **Telerik UI for PHP distributions. The contents of
-**kendo.aspnetmvc.min.js** are **not** included in kendo.all.min.js - you need to include kendo.aspnetmvc.min.js in addition to kendo.all.min.js or use the
+> **Important**: kendo.all.min.js is available in the Kendo UI Professional, Telerik UI for ASP.NET MVC**, **Telerik UI for JSP** and **Telerik UI for PHP distributions. The contents of
+**kendo.aspnetmvc.min.js** are **not** included in kendo.all.min.js - you need to include **kendo.aspnetmvc.min.js** in addition to kendo.all.min.js or use the
 [custom download builder tool](http://www.telerik.com/download/custom-download).
 
-*   **kendo.web.min.js** contains a minified version of all scripts from Kendo UI Web.
-*   **kendo.dataviz.min.js** contains a minified version of all scripts from Kendo UI DataViz.
-*   **kendo.mobile.min.js** contains a minified version of all scripts from Kendo UI Mobile.
+* **kendo.web.min.js** Available in Kendo UI Professional, JSP, PHP and MVC. Includes the core framework and all desktop browser widgets (previously distributed as Kendo UI Web).
+* **kendo.dataviz.min.js** Available in Kendo UI Professional, JSP, PHP and MVC. Includes the core framework and all data visualization widgets (previously distributed as Kendo UI DataViz).
+* **kendo.mobile.min.js** Available in Kendo UI Professional, JSP, PHP and MVC. Includes the core framework and all mobile device specific widgets (previously distributed as Kendo UI Mobile).
 
-> **Important:** Only one of the **web**, **dataviz**, **mobile** and **all** combined JavaScript files can be included at a time, because they contain some shared scripts. If widgets from
-different Kendo UI suites will be used simultaneously, one should either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.telerik.com/download/custom-download).
-In addition, each of the combined script files should not be registered together with an individual widget script from the same suite. For example, `kendo.grid.js` should not be registered together with
-`kendo.web.js` or `kendo.all.js`, because they already include the Grid scripts. **Registering duplicate scripts may cause Javascript errors and unexpected behavior.**
+> **Important:** Only one of the combined JavaScript files can be included at a time, because they include the Kendo UI framework. If widgets from
+different Kendo UI suites will be used simultaneously, you should use **kendo.all.min.js** or build a custom script.
 
-## Custom Combined Scripts
+In addition, each of the combined script files should not be registered together with an **individual widget script** from the same suite. For example, `kendo.grid.js` should not be registered together with
+`kendo.web.js` or `kendo.all.js`, because they already include the Grid scripts.
 
-Users who own a commercial license can use the [custom download builder tool](http://www.telerik.com/download/custom-download)
-to create a single JavaScript file which contains only the required widgets and features.
+> Registering duplicate scripts may cause Javascript errors and unexpected behavior.
 
-## CDN
+## Build a Custom Combined Script With the Kendo UI Download Builder
 
-The Kendo UI CDN is hosted on Amazon CloudFront. The minified versions of all JavaScript files are available via the following URLs:
+Users with a commercial license may use the [custom download builder tool](http://www.telerik.com/download/custom-download) to create a single JavaScript file which contains only the required widgets and features.
 
-    http://cdn.kendostatic.com/<version>/js/<filename>.min.js
-    http://cdn.kendostatic.com/<version>/styles/<filename>.min.css
+## Use Grunt to Build a Custom Script
 
-For example:
+If you use **Kendo UI Core**, you may build a custom distribution using the `grunt` build tool by following the [instructions in the README](https://github.com/telerik/kendo-ui-core#building-only-what-you-need).
 
-    http://cdn.kendostatic.com/2014.1.318/js/kendo.all.min.js
-    http://cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css
-    
-To access the combined minified javascript for Kendo UI Core (available since Q1 2014 SP1), use the following url:
+## Include Individual Widget Scripts
 
-    http://cdn.kendostatic.com/2014.1.416/js/kendo.ui.core.min.js
-
-> **Important:** in order to use HTTPS, you need to directly access the CloudFront CDN as shown below, or use your own domain and SSL certificate as depicted here: http://aws.amazon.com/cloudfront/custom-ssl-domains/
-
-    https://da7xgjtj801h2.cloudfront.net/<version>/js/<filename>.min.js
-    https://da7xgjtj801h2.cloudfront.net/<version>/styles/<filename>.min.css
-
-### CDN Fallback and Troubleshooting
-
-Although the Amazon cloud service provides a very reliable level of uptime, disruptions or connection problems are theoretically possible.
-You can check the systems' status at [http://status.aws.amazon.com/](http://status.aws.amazon.com/). If the CDN status is reported as healthy and operating normally, but you still have connection problems,
-then possible reasons may include:
-
-* Internet/network connectivity problems, DNS problems
-* Firewalls, antivirus or other security software, which incorrectly filters out the CDN scripts or modifies (breaks) them on-the-fly.
-* **Kendo UI internal builds are not uploaded on CDN**, because they are intended only for clients with a commercial license. Only major releases and service packs are uploaded on the Kendo UI CDN.
-For internal builds, please use a private CDN.
-* The scripts and stylesheets' URLs are different when using HTTPS - see above.
-
-Since we are unable to investigate connection problems remotely, please contact your system administrators if needed.
-
-When using any kind of CDN, it is recommended to implement a local fallback.
-
-    <head>
-        <meta charset="utf-8" />
-        <title>Page Title</title>
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" />
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.blueopal.min.css" />
-        
-        <script src="http://cdn.kendostatic.com/2014.1.318/js/jquery.min.js"></script>
-        <script>
-            if (typeof jQuery == "undefined") {
-                // fallback to local jQuery
-                document.write(decodeURIComponent('%3Cscript src="/path/to/local/jquery.min.js" %3E%3C/script%3E'));
-            }
-        </script>
-
-        <script src="http://cdn.kendostatic.com/2014.1.318/js/kendo.all.min.js"></script>
-        <script>
-            if (typeof kendo == "undefined") {
-                // checking for loaded CSS files is cumbersome,
-                // that's why we assume that if the scripts have failed, so have the stylesheets
-                
-                // fallback to local Kendo UI stylesheets
-                document.write(decodeURIComponent('%3Clink rel="stylesheet" href="/path/to/local/kendo.common.min.css" %3C/%3E'));
-                document.write(decodeURIComponent('%3Clink rel="stylesheet" href="/path/to/local/kendo.blueopal.min.css" %3C/%3E'));
-                
-                // fallback to local Kendo UI scripts
-                document.write(decodeURIComponent('%3Cscript src="/path/to/local/kendo.all.min.js" %3E%3C/script%3E'));
-                // also add kendo.aspnetmvc.min.js or kendo.timezones.min.js, if needed
-            }
-        </script>
-    </head>
-
-More information is available at [Scott HanselMann - Fallback from CDN to Local Scripts](http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx).
-
-## jQuery version
-
-The current official version of Kendo UI requires **jQuery 1.9.1**. There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
-In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped
-with Kendo UI service packs. We can do this for major releases. The following list provides compatibility information about previous major Kendo UI releases (and their corresponding service packs):
-
-* Kendo UI 2014.2.716 (Q2 2014) - jQuery 1.9.1 (also works with 1.10.x and 2.0.x)
-* Kendo UI 2014.1.318 (Q1 2014) - jQuery 1.9.1 (also works with 1.10.x and 2.0.x)
-* Kendo UI 2013.3.1119 (Q3 2013) - jQuery 1.9.1 (also works with 1.10.x and 2.0.x)
-* Kendo UI 2013.2.716 (Q2 2013) - jQuery 1.9.1
-* Kendo UI 2013.1.319 (Q1 2013) - jQuery 1.9.1
-* Kendo UI 2012.3.1114 (Q3 2012) - jQuery 1.8.2
-* Kendo UI 2012.2.710 (Q2 2012) - jQuery 1.7.1
-* Kendo UI 2012.1.322 (Q1 2012) - jQuery 1.7.1
-* Kendo UI 2011.3.1129 (Q3 2011) - jQuery 1.7.1
-
-There should be no problem to use another minor jQuery version instead of the specified above, e.g. 1.7.2 instead of 1.7.1.
-
-> Registering a new jQuery instance after the Kendo UI script files will delete all Kendo UI jQuery plugins and Javascript errors will occur.
-For more information, please refer to the [Troubleshooting page](/getting-started/troubleshooting#javascript-error-that-jquery-is-unavailable-or-undefined).
-
-### Using Kendo UI and the discontinued Telerik MVC Extensions on the same page
-
-**Kendo UI** and the old **Telerik MVC Extensions** have different APIs, Javascript namespaces and CSS classes, so they can be used together with no danger of script or style conflicts.
-The only thing to consider is the **jQuery version**. The newest jQuery version that the Telerik MVC Extensions support is **1.7.2**, while new Kendo UI versions require newer jQuery versions. There are two options:
-
-* Use the Telerik MVC Extensions with jQuery **1.7.2** and an **old** Kendo UI version (e.g. Q2 2012 SP1).
-* Use the Telerik MVC Extensions with a **new** jQuery version, **[jquery-migrate](https://github.com/jquery/jquery-migrate/)**, and a **new** Kendo UI version.
-
-## Script tag placement
-
-There is a general recommendation to place `script` tags before the closing `body` tag, so that the scripts are loaded and executed after the HTML markup. The Kendo UI widget
-initialization statements are executed in the document.ready event via a jQuery handler. This means that the jQuery must be registered before any Kendo UI initialization statements. When using
-the pure client-side-only Kendo UI widgets one can control the initialization statements' placement, so the jQuery script file can be registered at the bottom of the page. The Kendo UI widgets'
-server wrappers are self-initialized, which means that each initialization script is rendered right after the widget's HTML markup. In this case the Kendo UI scripts can still be registered
-at the end of the page, but the jQuery script must be registered in the `body` before the first Kendo UI widget on the page, or in the page `head`.
-
-## Individual scripts
-
-If more granular control is required, the following script files, either minified or not,
-can be included on a per-widget basis.
+The following script files, either minified or not, can be included on a per-widget basis:
 
 ## Framework
 
@@ -929,6 +825,7 @@ Framework and Widgets for Mobile Applications
 ## Server Wrappers
 
 Supplementary scripts for integration with server-side technologies
+
 ### ASP.NET MVC
 1. jquery.js
 1. kendo.core.js
@@ -939,5 +836,3 @@ Supplementary scripts for integration with server-side technologies
 1. kendo.multiselect.js
 1. kendo.validator.js
 1. kendo.aspnetmvc.js
-
-

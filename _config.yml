@@ -5,6 +5,12 @@ url: "http://docs.telerik.com/kendo-ui"
 exclude: [readme.md, Gemfile, Gemfile.lock,api_sort.rb]
 navigation:
 ## List your directory names and order here, like this:
+    "*install":
+        title: "Installation and Upgrade"
+        position: 2
+    "*basics":
+        title: "The Basics"
+        position: 3
     "*api":
         title: "API"
     "*getting-started":

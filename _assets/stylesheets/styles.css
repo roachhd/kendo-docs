@@ -23,6 +23,16 @@ a img {
     border-width: 0;
 }
 
+p code, li code {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+p code::before,
+p code::after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+}
+
 header,
 nav,
 section,
@@ -107,7 +117,7 @@ article, aside, footer {
     text-align: right
 }
 
-#page-top #page-search > div 
+#page-top #page-search > div
 {
     max-width: 500px;
     text-align: left;
