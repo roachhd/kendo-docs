@@ -4395,7 +4395,7 @@ The user-friendly title of the view displayed by the scheduler.
 
 ### views.type `String`
 
-The type of the view. The built-in views are: "day", "week", "month" and "agenda".
+The type of the view. The built-in views are: "day", "week", "workWeek", "month" and "agenda".
 
 #### Example - set the view type
 
