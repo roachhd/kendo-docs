@@ -130,4 +130,38 @@ In the above example if you select an item it will display two input fields boun
 
 The one thing you must be careful about when using `rowTemplate` is to include the attribute `data-uid="#: uid #"` on the toplevel row element, as described in the Grid documentation. That cannot use an Angular template like `data-uid="{{dataItem.uid}}"`, because that is compiled after the grid was displayed and the widget will not be able to tell which row belongs to which data item.
 
+## How to bind the Grid using the $http service
+
+In order to take full control on the logic that performs the request to the server all you have to do is to define the different transport operations as functions. Inside the function you can use the $http or the $.ajax methods to perform the needed. When done (inside the success callback) you just need to pass the result to the `success` function part of the events arguments object.
+
+        <div ng-controller="MyCtrl">
+            <kendo-grid options="GridOptions"></kendo-grid>
+        </div>
+        <script>
+        function MyCtrl($scope, $http) {
+            $scope.mainGridOptions = {
+                dataSource: {
+                    schema: {
+                        data: "d"
+                    },
+                    transport: {
+                        read: function (e) {
+                          $http({method: 'GET', url: 'http://demos.telerik.com/kendo-ui/service/Northwind.svc/Employees'}).
+                          success(function(data, status, headers, config) {
+                              e.success(data)
+                          }).
+                          error(function(data, status, headers, config) {
+                              alert('something went wrong')
+                              console.log(status);
+                          });
+                      }
+                   },
+                  pageSize: 5,
+                  serverPaging: true,
+                  serverSorting: true
+                }
+            }
+        }
+    </script>
+
 {% endraw %}
