@@ -45,6 +45,28 @@ A JavaScript array that contains the ToolBar's commands configuration.
         });
     </script>
 
+### items.attributes `Object`
+
+Specifies the HTML attributes of a ToolBar button.
+
+> HTML attributes which are JavaScript keywords (e.g. class) must be quoted.
+
+#### Example - adding custom class to a button
+
+    <div id="toolbar"></div>
+
+    <script>
+        $("#toolbar").kendoToolBar({
+            items: [
+            { type: "button", text: "My Button", attributes: { "class": "red" } }
+            ]
+        });
+    </script>
+
+    <style>
+        .red { background-color: red; }
+    </style>
+
 ### items.buttons `Array`
 
 Specifies the buttons of ButtonGroup.
@@ -67,6 +89,31 @@ Specifies the buttons of ButtonGroup.
       ]
     });
     </script>
+
+### items.buttons.attributes `Object`
+
+Specifies the HTML attributes of a ButtonGroup's button.
+
+> HTML attributes which are JavaScript keywords (e.g. class) must be quoted.
+
+#### Example
+
+    <div id="toolbar"></div>
+
+    <script>
+        $("#toolbar").kendoToolBar({
+            items: [
+            { type: "buttonGroup", buttons: [
+                { text: "foo", attributes: { "class": "red" } },
+                { text: "bar", attributes: { "class": "blue" } }
+            ] }
+            ]
+        });
+    </script>
+    <style>
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+    </style>
 
 ### items.buttons.click `Function`
 
@@ -530,6 +577,38 @@ Specifies the menu buttons of a SplitButton.
             } ]
         });
     </script>
+
+### items.menuButtons.attributes `Object`
+
+Specifies the HTML attributes of a menu button.
+
+> HTML attributes which are JavaScript keywords (e.g. class) must be quoted.
+
+#### Example
+
+    <div id="toolbar"></div>
+
+    <script>
+        $("#toolbar").kendoToolBar({
+            items: [
+            {
+                type: "splitButton",
+                id: "hello",
+                text: "Insert",
+                attributes: { "class": "red" },
+                menuButtons: [
+                    { text: "Insert above", icon: "insert-n", attributes: { "class": "blue" } },
+                    { text: "Insert between", icon: "insert-m" },
+                    { text: "Insert below", icon: "insert-s" }
+                ]
+            }
+            ]
+        });
+    </script>
+    <style>
+        .red { background-color: red; }
+        .blue { color: blue; }
+    </style>
 
 ### items.menuButtons.enable `Boolean`
 
