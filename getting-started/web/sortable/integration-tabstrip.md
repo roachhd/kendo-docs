@@ -7,18 +7,18 @@ position: 2
 
 # Integration with Kendo UI TabStrip
 
-The Sortable widget may be used for reordering the TabStrip's tabs via drag and drop.
+The Sortable widget may be used for reordering the TabStrip's tabs.
 
 ## Prerequisites
 
-The following help articles assumes that you are already familiar with:
+The article assumes that you are familiar with the following:
 
 - [Kendo UI Sortable](../../../getting-started/web/sortable/overview)
 - [Kendo UI TabStrip](../../../getting-started/web/tabstrip/overview)
 
-## Reorder Kendo UI TabStrip items via drag and drop using the Sortable widget
+## Reorder Kendo UI TabStrip items using the Sortable widget
 
-The Sortable widget should be initialized for TabStrip's `ul.k-tabstrip-items` element. In the general case filter property of the widget should select all `li.k-item` elements. If required the hint movement can be restricted within the `ul.k-tabstrip-items` element.
+The Sortable widget should be initialized on TabStrip `ul.k-tabstrip-items` element. In the general case, the `filter` property of the widget should select all `li.k-item` elements. If required the hint movement can be restricted within the `ul.k-tabstrip-items` element.
 
     $("#tabstrip ul.k-tabstrip-items").kendoSortable({
         filter: "li.k-item",
@@ -42,13 +42,13 @@ The Sortable widget should be initialized for TabStrip's `ul.k-tabstrip-items` e
         }
     });
 
-In order to avoid visual glitches it is recommended to activate the current tab in the `start` event handler of the Sortable widget.
+In order to avoid visual glitches, it is recommended to activate the current tab at the `start` event handler of the Sortable widget.
 
     start: function(e) {
         $("#tabstrip").data("kendoTabStrip").activateTab(e.item);
     }
 
-After tab is sorted the developer should update its position in the TabStrip widget.
+After a tab is sorted the developer should update its order in the TabStrip widget.
 
     change: function(e) {
         var tabstrip = $("#tabstrip").data("kendoTabStrip"),
@@ -61,5 +61,5 @@ After tab is sorted the developer should update its position in the TabStrip wid
         }
     }
 
-For more information check [Sortable's events](../../../api/web/sortable#events) and TabStrip integration [demo page](http://demos.telerik.com/kendo-ui/web/sortable/integration-tabstrip.html).
+For more information check [Sortable's events](../../../api/web/sortable#events) and [TabStrip/Sortable integration demo](http://demos.telerik.com/kendo-ui/web/sortable/integration-tabstrip.html).
 
