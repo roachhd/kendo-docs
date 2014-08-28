@@ -31,6 +31,12 @@ The following list provides jQuery compatibility information about the major Ken
 * Kendo UI 2012.1.322 (Q1 2012) - jQuery 1.7.1
 * Kendo UI 2011.3.1129 (Q3 2011) - jQuery 1.7.1
 
+### What to do when an older jQuery version is required
+
+There may be cases when a legacy web application requires an older jQuery version, but Kendo UI does not work with it.
+The recommended approach in such scenarios is to use a **new** jQuery version together with
+**[jquery-migrate](https://github.com/jquery/jquery-migrate/)**, which will provide the required backwards compatibility of the new jQuery with the old legacy Javascript code.
+
 ## AngularJS
 
 Since the Q2 2014 release, Kendo UI includes [AngularJS](http://angularjs.org/) directives. The directives will be activated if the AngularJS library is present.
