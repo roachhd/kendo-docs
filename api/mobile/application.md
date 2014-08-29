@@ -17,6 +17,8 @@ which [should be SEO friendly](http://googlewebmastercentral.blogspot.com/2009/1
 
 Whether to hide the browser address bar. Supported only in iPhone and iPod. Doesn't affect standalone mode as there the address bar is always hidden.
 
+> This option is only available in iOS6. For hiding the address bar in iOS7, enable the native scrolling option.
+
 #### Example
 
     <div data-role="view"><a data-role="button">Foo</a></div>
