@@ -89,7 +89,7 @@ The height of the color cell.
 
 ### messages `Object`
 
-Allows customization of "Apply" / "Cancel" labels.
+Allows localization of the strings that are used in the widget.
 
 #### Example
 
@@ -98,6 +98,36 @@ Allows customization of "Apply" / "Cancel" labels.
     $("#colorpicker").kendoColorPicker({
       messages: {
         apply: "Update",
+        cancel: "Discard"
+      }
+    })
+    </script>
+
+### messages.apply `String` *(default: "Apply")*
+
+Allows customization of the "Apply" button text.
+
+#### Example
+
+    <input id="colorpicker" type="color" />
+    <script>
+    $("#colorpicker").kendoColorPicker({
+      messages: {
+        apply: "Update"
+      }
+    })
+    </script>
+
+### messages.cancel `String` *(default: "Cancel")*
+
+Allows customization of the "Cancel" button text.
+
+#### Example
+
+    <input id="colorpicker" type="color" />
+    <script>
+    $("#colorpicker").kendoColorPicker({
+      messages: {
         cancel: "Discard"
       }
     })
