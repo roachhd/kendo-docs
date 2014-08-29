@@ -29,7 +29,7 @@ Weather or not to allow out of bounds dragging and easing.
 
 ### pullOffset `Number`*(default: 140)*
 
-The threshold below which a releasing the scroller will trigger the pull event.
+The threshold below which releasing the scroller will trigger the pull event.
 Has effect only when the `pullToRefresh` option is set to true.
 
 #### Example
