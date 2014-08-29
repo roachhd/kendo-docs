@@ -1,6 +1,7 @@
 ---
 title: Using Kendo with AngularJS
 previous_url: /getting-started/using-kendo-with/using-kendo-with-angularjs
+position: 1
 ---
 
 {% raw %}
