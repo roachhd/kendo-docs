@@ -1,5 +1,7 @@
 ---
-title: Kendo UI and TypeScript
+title: Use the Kendo UI TypeScript definitions
+page_title: Use the Kendo UI TypeScript definitions
+previous_url: /howto/typescript/overview
 ---
 
 # Kendo UI TypeScript Support
@@ -22,15 +24,15 @@ You can optionally include the latest jQuery TypeScript definition file as well:
 
 ### Get instance of existing Kendo UI widgets
 
-![Get instante of existing Kendo UI widget](/howto/typescript/get-instance.png)
+![Get instante of existing Kendo UI widget](/images/get-instance.png)
 
 ### Initialize and configure any Kendo UI widget
 
-![All Kendo UI widgets](/howto/typescript/init.png)
+![All Kendo UI widgets](/images/init.png)
 
 ### Initialize a Kendo DataSource
 
-![Initialize a Kendo DataSource](/howto/typescript/datasource.png)
+![Initialize a Kendo DataSource](/images/datasource.png)
 
 ## Create Kendo UI widget via TypeScript inheritance
 
