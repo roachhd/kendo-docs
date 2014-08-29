@@ -1283,9 +1283,55 @@ Optional. The root of the hierarchy that will be looped through. Allows only a s
 
 ## Events
 
+### check
+
+Triggered after the user has checked or unchecked a checkbox.
+If [checkChildren](#checkboxes.checkChildren) is `true`, the event is triggered after all checked states are updated.
+This event has been introduced in internal builds after 2014.2.828.
+
+#### Event Data
+
+##### e.node `Element`
+
+The node whose the checkbox has been checked.
+
+#### Example - subscribe to the "check" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      check: function(e) {
+        console.log("Checking", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "check" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_check(e) {
+      console.log("Checking", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("check", tree_check);
+    </script>
+
 ### collapse
 
-Triggered before a subgroup gets collapsed.
+Triggered before a subgroup gets collapsed. Cancellable.
 
 #### Event Data
 
