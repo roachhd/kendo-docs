@@ -210,7 +210,8 @@ navigation:
         title: "Home Page"
     "*order-page":
         title: "Order Page"
-
+    "*localization":
+        title: "Localization"
 ## The application virtual path
 baseurl: /kendo-ui
 
