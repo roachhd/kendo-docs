@@ -2,6 +2,7 @@
 title: Overview
 page_title: Documentation for Chart widget in Kendo UI DataViz
 description: How to create a chart, enable the visualization of a series that displays inline data, explore the quick overview of Chart widget major features.
+previous_url: /howto/add-charts-and-graphs-to-an-application
 position: 1
 ---
 
