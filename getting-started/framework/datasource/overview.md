@@ -2,6 +2,7 @@
 title: Overview
 page_title: DataSource component for data binding in Kendo UI framework
 description: How to get started using DataSource component in Kendo UI framework to simplify data binding and operations.
+position: 1
 ---
 
 # Kendo DataSource Overview
@@ -35,10 +36,10 @@ operations and provides both local and server-side support for sorting, paging, 
             read: {
                 // the remote service url
                 url: "http://search.twitter.com/search.json",
-    
+
                 // JSONP is required for cross-domain AJAX
                 dataType: "jsonp",
-    
+
                 // additional parameters sent to the remote service
                 data: {
                     q: "html5"
@@ -101,7 +102,7 @@ to enable multiple UI widgets to bind to the same, observable data collection.
             }
         }
     });
-    
+
     // Bind two UI widgets to same DataSource
     $("#chart").kendoChart({
         title: {
@@ -116,7 +117,7 @@ to enable multiple UI widgets to bind to the same, observable data collection.
             field: "employee"
         }
     });
-    
+
     $("#grid").kendoGrid({
         dataSource: sharableDataSource,
             columns: [

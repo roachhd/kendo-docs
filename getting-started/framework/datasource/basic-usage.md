@@ -1,14 +1,10 @@
 ---
-title: Use the DataSource
-page_title: Using DataSource component in Kendo UI framework | Kendo UI Documentation
-description: In this how-to tutorial we provide a quick introduction of Kendo UI DataSource component and guide you how to use it in your project.
+title: Basic Usage
+page_title: Use the DataSource component in Kendo UI framework
+description: In this articla we provide a quick introduction of Kendo UI DataSource component and a few of its most common usage scenarios.
+previous_url: /howto/use-the-datasource-component
+position: 2
 ---
-
-# How-To: Use the DataSource
-
-In this how-to, we'll examine how to use the DataSource of Kendo UI.
-
-## Introduction
 
 The DataSource plays a central role in the applications and sites built with Kendo UI. Fundamentally, it is an abstraction over local or remote data. However, it has many other responsibilities as well, including:
 
@@ -142,7 +138,7 @@ Data:
                 'aggregates': {}
             }]
         };
-    
+
 DataSource:
 
         var wordsDataSource = new kendo.data.DataSource({

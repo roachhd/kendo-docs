@@ -1,9 +1,12 @@
 ---
-title: Use CORS with All Browsers
-page_title: Using Cross-origin resource sharing with modern browsers | Kendo UI Docs
+title: Fetch data from another domain
+page_title: Use Cross-origin resource sharing to fetch data from another domain
+previous_url: /howto/use-cors-with-all-modern-browsers
 description: This how-to article explains how you can use CORS technology for the web.
+position: 4
 ---
-# How To: Use CORS with All (Modern) Browsers
+
+# Fetch data From Another Domain by using CORS with All (Modern) Browsers
 
 CORS is cool. [Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) is a (slowly) emerging technology for the web that finally gives async web operations a way to directly grab resources from different domains. In fact, we've talked about CORS a couple of times on the Kendo UI blogs [here](http://blogs.telerik.com/kendoui/posts/11-08-25/shields_up_web_service_abstraction_with_kendo_ui) and [here](http://blogs.telerik.com/kendoui/posts/11-08-24/cross-domain_queries_to_odata_services_with_jquery).
 
@@ -44,7 +47,7 @@ As confirmed by the useful [CanIUse.com](http://caniuse.com/#search=CORS), suppo
 
 - Webkit browsers (Chrome, Safari, iOS, Android)
 - Gecko browsers (Firefox)
-- Trident browsers (Internet Explorer 8+)**
+- Trident browsers (Internet Explorer 8+)
 - Presto browsers (specifically, Opera 12+)
 
 That's not bad. Unitl recently Opera was missing from that list, but with the release of Opera 12 in mid 2012, [Opera also now supports CORS](http://dev.opera.com/articles/view/dom-access-control-using-cross-origin-resource-sharing/).
@@ -152,4 +155,4 @@ Now, Opera (any other non-CORS browser) will use an alternate configuration of t
 ## Bottom Line on CORS
 Hopefully this post helps highlight the value of CORS and how it can be used with most modern browsers. As more app code moves to the client, the need for CORS will only grow. Start playing with it today and help push web standards to the next level.
 
-*[This article was [original published on the Kendo UI Blogs](http://blogs.telerik.com/kendoui/posts/11-10-03/using_cors_with_all_modern_browsers) on October 3rd, 2011. Updated July 2012.]*
+*[This article was [originally published on the Kendo UI Blogs](http://blogs.telerik.com/kendoui/posts/11-10-03/using_cors_with_all_modern_browsers) on October 3rd, 2011. Updated July 2012.]*
