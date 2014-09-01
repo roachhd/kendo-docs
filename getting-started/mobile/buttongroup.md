@@ -2,6 +2,7 @@
 title: ButtonGroup
 page_title: Using jQuery Mobile button group in Kendo UI Mobile
 description: Visualize a linear set of grouped buttons in your app by the initialization of Kendo ButtonGroup. Learn how to customize the appearance of the mobile button and set its icons.
+position: 4
 ---
 
 # ButtonGroup

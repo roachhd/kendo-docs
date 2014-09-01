@@ -1,20 +1,18 @@
 ---
-title: Use the ListView of Kendo UI Mobile with pull-to-refresh
+title: Pull to refresh
+previous_url: /howto/howto-use-the-mobile-listview-with-pull-to-refresh
+position: 3
 ---
 
-# How-To: Use the ListView of Kendo UI Mobile with pull-to-refresh
+# Use the Mobile ListView with pull-to-refresh
 
-In this how-to, we will examine how to use the [ListView](/api/mobile/listview) of Kendo UI Mobile with enabled pull-to-refresh.
-
-The Kendo Mobile ListView widget is used to display flat or grouped list of items. It can be either used in unbound mode by enhancing an HTML ul element, or bound to a DataSource instance.
+The Kendo UI mobile ListView widget is used to display flat or grouped list of items. It can be either used in unbound mode by enhancing an HTML `UL` element, or bound to a DataSource instance.
 
 'Pull to refresh' pattern solves the problem when the developer has to display a data with dynamic character.
 
 ## Create a Mobile ListView with pull-to-refresh
 
-** In order to proceed with this "How-to", you will need to know how to build [Kendo Mobile application](/howto/build-apps-with-kendo-ui-mobile).
-
-Let's see how the Mobile ListView works by building a simple example that integrates the Twitter API.
+Let's see how the mobile ListView works by building a simple example that integrates the Twitter API.
 
 First, we'll define a target HTML element such as a list:
 
@@ -65,7 +63,7 @@ Here's the live example of the representation (above):
 
 <a class="jsbin-embed" href="http://jsbin.com/ukitas/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-## Send additional parameters
+## Send Additional Parameters
 
 The Mobile ListView provides a way to define [pullParameters](/api/mobile/listview#pullparameters-function) function, which will add its result to the data send to the server.
 These data will be available in the DataSource's [parameterMap](/api/framework/datasource#transportparametermap-function) function.
@@ -86,7 +84,7 @@ Let's modify the above example to send [an additional parameter](https://dev.twi
         }
     });
 
-Now we can use this additional parameter in the parameterMap function of the DataSource:
+Now we can use this additional parameter in the `parameterMap` function of the DataSource:
 
     var dataSource = new kendo.data.DataSource({
         serverPaging: true,

@@ -2,6 +2,7 @@
 title: Button
 page_title: Documentation Guide for Mobile Button Widget
 description: How to initialize Kendo UI Mobile Button widget, customize its appearance and set a button icon.
+position: 3
 ---
 
 # Button

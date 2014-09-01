@@ -1,5 +1,6 @@
 ---
 title: Icons
+position: 7
 ---
 
 # Icons in Kendo UI Mobile
@@ -688,43 +689,43 @@ already defined and in use, but only in the iOS7 platform theme (and available s
 .k-i-superscript:after { content: "\E118"; }
 .k-i-drophere:after { content: "\E119"; }
 .km-contactadd:after, .km-rowinsert:after { content: "\E039"; }
-.km-rowdelete:after { content: "\E03a"; } 
-.km-detaildisclose:after { content: "\E0E2"; } 
-.km-action:after { content: "\e0ca"; } 
-.km-add:after { content: "\e0cb"; } 
-.km-battery:after { content: "\e0ce"; } 
-.km-bookmarks:after { content: "\e0cf"; } 
-.km-camera:after { content: "\e0d0"; } 
-.km-cart:after { content: "\e0d1"; } 
+.km-rowdelete:after { content: "\E03a"; }
+.km-detaildisclose:after { content: "\E0E2"; }
+.km-action:after { content: "\e0ca"; }
+.km-add:after { content: "\e0cb"; }
+.km-battery:after { content: "\e0ce"; }
+.km-bookmarks:after { content: "\e0cf"; }
+.km-camera:after { content: "\e0d0"; }
+.km-cart:after { content: "\e0d1"; }
 .km-edit:after, .km-compose:after { content: "\e0d5"; }
-.km-contacts:after { content: "\e0e4"; } 
+.km-contacts:after { content: "\e0e4"; }
 .km-trash:after, .km-delete:after { content: "\e0ec"; }
-.km-details:after { content: "\e0e2"; } 
+.km-details:after { content: "\e0e2"; }
 .km-download:after, .km-downloads:after { content: "\e0d4"; }
-.km-fastforward:after { content: "\e0d9"; } 
+.km-fastforward:after { content: "\e0d9"; }
 .km-toprated:after, .km-favorites:after { content: "\e0d7"; }
-.km-featured:after { content: "\e0d8"; } 
-.km-globe:after { content: "\e0dc"; } 
-.km-history:after { content: "\e0e7"; } 
-.km-home:after { content: "\e0dd"; } 
+.km-featured:after { content: "\e0d8"; }
+.km-globe:after { content: "\e0dc"; }
+.km-history:after { content: "\e0e7"; }
+.km-home:after { content: "\e0dd"; }
 .km-info:after, .km-about:after { content: "\e0de"; }
-.km-more:after { content: "\e0e0"; } 
-.km-mostrecent:after { content: "\e0cc"; } 
-.km-mostviewed:after { content: "\e0d6"; } 
-.km-organize:after { content: "\e0eb"; } 
-.km-pause:after { content: "\e0e3"; } 
-.km-play:after { content: "\e0e5"; } 
-.km-recents:after { content: "\e0d2"; } 
-.km-refresh:after { content: "\e0e6"; } 
-.km-reply:after { content: "\e0ed"; } 
-.km-rewind:after { content: "\e0e8"; } 
-.km-search:after { content: "\e0e9"; } 
-.km-settings:after { content: "\e0da"; } 
-.km-share:after { content: "\e0df"; } 
+.km-more:after { content: "\e0e0"; }
+.km-mostrecent:after { content: "\e0cc"; }
+.km-mostviewed:after { content: "\e0d6"; }
+.km-organize:after { content: "\e0eb"; }
+.km-pause:after { content: "\e0e3"; }
+.km-play:after { content: "\e0e5"; }
+.km-recents:after { content: "\e0d2"; }
+.km-refresh:after { content: "\e0e6"; }
+.km-reply:after { content: "\e0ed"; }
+.km-rewind:after { content: "\e0e8"; }
+.km-search:after { content: "\e0e9"; }
+.km-settings:after { content: "\e0da"; }
+.km-share:after { content: "\e0df"; }
 .km-sounds:after, .km-volume:after { content: "\e0ef"; }
-.km-stop:after { content: "\e0ea"; } 
-.km-wifi:after { content: "\e0f0"; } 
-.km-phone:after { content: "\e326"; } 
+.km-stop:after { content: "\e0ea"; }
+.km-wifi:after { content: "\e0f0"; }
+.km-phone:after { content: "\e326"; }
 .k-ios7-action:after { content: "\E200"; }
 .k-ios7-add:after { content: "\E200"; }
 .k-ios7-add-inv:after { content: "\E201"; }

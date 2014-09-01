@@ -2,6 +2,7 @@
 title: Application
 page_title: Documentation for Kendo UI Mobile Application
 description: How to initiate Kendo UI Mobile Application and handle the navigation.
+position: 1
 ---
 
 # Application

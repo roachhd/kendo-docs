@@ -1,16 +1,19 @@
 ---
-title: Use the ListView of Kendo UI Web
+title: Basic Usage
 page_title: Using Kendo UI ListView widget in your app | Kendo UI Documentation
+previous_url: /howto/howto-use-the-listview-of-kendo-ui-web
 description: Learn how to display a custom layout of data-bound items through templates and easily implement Kendo UI Listview widget in your application.
+position: 2
 ---
 
-# How-To: Use the ListView of Kendo UI Web
+#  Use the Web ListView
 
-In this how-to, we'll examine how to use the [ListView](/api/web/listview) of Kendo UI Web.
+The ListView purpose is to display a custom layout of data-bound items through templates. The ListView is ideally suited for scenarios where you wish
+to display a list of items in a consistent manner. Examples of its use can be seen in commonplace design structures applied on the Internet today;
+search engine results, tweets from Twitter, Facebook updates, inbox items in Gmail, card lists in Trello, and so on.
 
-The ListView is a widget that was recently introduced in the March 2012 release of Kendo UI Web. Its purpose is to display a custom layout of data-bound items through templates. The ListView is ideally suited for scenarios where you wish to display a list of items in a consistent manner. Examples of its use can be seen in commonplace design structures applied on the Internet today; search engine results, tweets from Twitter, Facebook updates, inbox items in Gmail, card lists in Trello, and so on.
-
-The ListView is designed to put you back in control when it comes to displaying data. In fact, it does not provide a default rendering of data-bound items. Instead, it relies entirely on templates to define how a list of items - including alternating items and items being edited - is displayed.
+The ListView is designed to put you back in control when it comes to displaying data. In fact, it does not provide a default rendering of data-bound
+items. Instead, it relies entirely on templates to define how a list of items - including alternating items and items being edited - is displayed.
 
 Let's see how the ListView works by building a simple example.
 
@@ -155,7 +158,9 @@ The ListView encapsulates operations for adding and removing items, item selecti
         });
     });
 
-The template you define for the inline editing of items may include other Kendo UI widgets. Looking at [the example for editing items on KendoUI.com](http://demos.telerik.com/kendo-ui/web/listview/editing.html), you can see that the edit template defines a series of widgets for editing an item:
+The template you define for the inline editing of items may include other Kendo UI widgets. Looking at [the example for editing items on
+KendoUI.com](http://demos.telerik.com/kendo-ui/web/listview/editing.html), you can see that the edit template defines a series of widgets for editing
+an item:
 
 ![ListView Item Editing](/howto/images/listview-item-editing.png)
 

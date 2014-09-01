@@ -2,6 +2,7 @@
 title: ActionSheet
 page_title: Intuitive choices with mobile ActionSheet widget | Kendo UI Documentation
 description: The user of HTML5 mobile app initiates a task and the mobile ActionSheet widget displays a set of choices.
+position: 2
 ---
 
 # ActionSheet

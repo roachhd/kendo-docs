@@ -2,6 +2,7 @@
 title: Forms
 page_title: User guide to supported and styled Kendo UI Mobile forms
 description: Detailed steps how to use Kendo UI Mobile Forms in mobile app development.
+position: 6
 ---
 
 # Mobile forms support

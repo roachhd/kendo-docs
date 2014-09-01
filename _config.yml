@@ -27,6 +27,9 @@ navigation:
         title: "Framework"
     "*mobile":
         title: "Mobile"
+    "getting-started/mobile/listview":
+        title: "Mobile ListView"
+        position: 9
     "*web":
         title: "Web"
     "*typescript":

@@ -2,6 +2,7 @@
 title: Overview
 page_title: Kendo UI ListView Widget Documentation
 description: Specify custom type of layout, first steps, configuration and behavior of Kendo UI ListView widget.
+position: 1
 ---
 
 # ListView Overview

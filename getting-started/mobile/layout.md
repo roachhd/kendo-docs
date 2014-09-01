@@ -2,6 +2,7 @@
 title: Layout
 page_title: How to use Kendo UI Mobile Layout widget | Kendo UI Documentation
 description: Instructions how to use Mobile Layout widget to easily share headers and footers between multiple views.
+position: 8
 ---
 
 # Layout
