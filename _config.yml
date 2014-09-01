@@ -15,8 +15,6 @@ navigation:
         title: "API"
     "*getting-started":
         title: "Getting Started"
-    "*howto":
-        title: "How Do I?"
     "*tutorials":
         title: "Tutorials"
     "*dataviz":
@@ -229,12 +227,6 @@ defaults:
     values:
         layout: "page"
         category: "api"
--
-    scope:
-        path: "howto"
-    values:
-        layout: "page"
-        category: "howto"
 -
     scope:
         path: "tutorials"

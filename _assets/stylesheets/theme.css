@@ -2,7 +2,7 @@
     position: absolute;
     top: 79px;
     bottom: 0;
-    width: 100%; 
+    width: 100%;
 }
 
 #page-inner-content {
@@ -163,16 +163,16 @@ pre .dec { color: #3e526b; } /* decimal */
 #category-list {
     text-align: center;
     padding-top: 5em;
-    width: 900px;
+    width: 960px;
     margin: 0 auto;
 }
 
 .category {
     display: inline-block;
     vertical-align: top;
-    width: 40%;
+    width: 27%;
     overflow: hidden;
-    margin: 4%;
+    margin: 2%;
     text-align: left;
     text-decoration: none;
 }

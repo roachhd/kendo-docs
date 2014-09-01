@@ -2,13 +2,12 @@
 title: Bind the Grid to Remote Data
 page_title: Bind Kendo UI jQuery grid to remote data | Kendo UI Grid Documentation
 description: This article will explain how to use Kendo UI Grid widget in your web application and bind it to remote data.
+previous_url: /howto/bind-the-grid-to-remote-data
 ---
 
-# How-To: Bind the Grid to Remote Data
+# Bind the Grid to Remote Data
 
 Love them or hate them, grids are a staple of user interfaces. While jQuery has made UI engineering remarkably easier on most of us, the grid is still a very iffy scenario when designing for the web.
-
-I have used jqGrid in the past on a few projects. While I was fundamentally satisfied with it, I was always a bit taken back at how much code it took to create a simple grid. I also experienced serious lag in the browser when dealing with larger recordsets. I'm also not a huge fan of composing html inside your JavaScript, which is the standard way to render a row in most jQuery grids.
 
 Fortunately, the [Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) makes this much easier on us. With to the rapid templating engine that is included with Kendo UI, and the built-in datasource, we can get up and running with our grid very quickly.
 

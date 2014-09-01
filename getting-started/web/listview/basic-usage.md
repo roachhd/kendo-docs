@@ -162,7 +162,7 @@ The template you define for the inline editing of items may include other Kendo 
 KendoUI.com](http://demos.telerik.com/kendo-ui/web/listview/editing.html), you can see that the edit template defines a series of widgets for editing
 an item:
 
-![ListView Item Editing](/howto/images/listview-item-editing.png)
+![ListView Item Editing](/images/listview-item-editing.png)
 
 The add new record functionality of ListView items is triggered by a click event initiated by a user and is wired up via .click() in jQuery.
 
