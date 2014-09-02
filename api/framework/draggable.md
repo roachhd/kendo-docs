@@ -343,7 +343,7 @@ Has effect only when `holdToDrag` is set to `true`. Cancels the activated state 
 
 ### drag
 
-Fires while dragging.
+Fired while dragging. The `drag` event represents a jQuery `mousemove` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - bind during the initialization
 
@@ -394,13 +394,18 @@ Fires while dragging.
 
 #### Event Data
 
-##### e.dropTarget `DropTarget`
+##### e.target `Element`
 
-The current draggable drop target (if any).
+The draggable element.
+
+##### e.sender `kendo.ui.Draggable`
+
+The Draggable instance which fired the event.
 
 ### dragcancel
 
-Fires when item drag is canceled by pressing the Escape key.
+Fired when item drag is canceled by pressing the Escape key.
+The `dragcancel` event represents a jQuery `keyup` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example
 
@@ -425,9 +430,16 @@ Fires when item drag is canceled by pressing the Escape key.
       }
     </style>
 
+#### Event Data
+
+##### e.sender `kendo.ui.Draggable`
+
+The Draggable instance which fired the event.
+
 ### dragend
 
-Fires when item drag ends.
+Fired when item drag ends.
+The `dragend` event represents a jQuery `mouseup` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - show draggable element on dragend
 
@@ -455,9 +467,20 @@ Fires when item drag ends.
       }
     </style>
 
+#### Event Data
+
+##### e.sender `kendo.ui.Draggable`
+
+The Draggable instance which fired the event.
+
+##### e.target `Element`
+
+The draggable element.
+
 ### dragstart
 
-Fires when item drag starts.
+Fired when item drag starts.
+The `dragstart` event represents a jQuery `mousedown` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - hide draggable element on dragend
 
@@ -485,9 +508,20 @@ Fires when item drag starts.
       }
     </style>
 
+#### Event Data
+
+##### e.sender `kendo.ui.Draggable`
+
+The Draggable instance which fired the event.
+
+##### e.target `Element`
+
+The draggable element.
+
 ### hold
 
-Triggered only when `holdToDrag` is set to `true`. Fires before the `dragStart` event.
+Triggered only when `holdToDrag` is set to `true`. Fired before the `dragStart` event.
+The `hold` event represents a jQuery `mousedown` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - hold to drag
 
@@ -519,3 +553,13 @@ Triggered only when `holdToDrag` is set to `true`. Fires before the `dragStart` 
         border: 2px solid green;
       }
     </style>
+
+#### Event Data
+
+##### e.sender `kendo.ui.Draggable`
+
+The Draggable instance which fired the event.
+
+##### e.target `Element`
+
+The draggable element.

@@ -135,17 +135,8 @@ description: Kendo UI DropTargetArea documentation shows how to configure drop t
 
 ### dragenter
 
-Fires when draggable moves over one of the drop targets.
-
-#### Event Data
-
-##### e.draggable `jQuery`
-
-Reference to the draggable that enters a drop target.
-
-##### e.dropTarget `jQuery`
-
-The current drop target in the area that initiated the event.
+Fired when draggable moves over one of the drop targets.
+The `dragenter` event represents a jQuery `mousemove` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - modify the hint element on dragenter
 
@@ -199,87 +190,97 @@ The current drop target in the area that initiated the event.
         vertical-align: middle;
       }
     </style>
-
-### dragleave
-
-Fires when draggable moves out of one of the drop targets.
-
-#### Event Data
-
-##### e.draggable `jQuery`
-
-Reference to the draggable that leaves a drop target.
-
-##### e.dropTarget `jQuery`
-
-The current drop target in the area that initiated the event.
-
-#### Example - modify the hint element on dragenter
-
-    <div id="area">
-      <div id="leftArea"></div>
-      <div id="rightArea"></div>
-    </div>
-    <div class="purple"></div>
-    <div class="purple"></div>
-
-    <script>
-      $(".purple").kendoDraggable({
-        hint: function(element) {
-          return element.clone();
-        }
-      });
-
-      $("#area").kendoDropTargetArea({ 
-        filter: "#leftArea, #rightArea",
-        dragenter: function(e) {
-          e.draggable.hint.css("opacity", 0.3);
-        },
-        dragleave: function(e) {
-          e.draggable.hint.css("opacity", 1);
-        }
-      });
-
-    </script>
-    <style>
-      .purple{
-        width: 50px;
-        height: 50px;
-        border: 2px solid green;
-        margin: 5px;
-        display: inline-block;
-      }
-      .purple { background-color: purple; }
-      #area {
-          width: 300px;
-          height: 300px;
-          line-height: 300px;
-          background-color: gray;
-      }
-      #leftArea, #rightArea {
-        width: 140px;
-        height: 100px;
-        border: 2px solid green;
-        margin: 2px;
-        background-color: orange;
-        display: inline-block;
-        vertical-align: middle;
-      }
-    </style>
-
-### drop
-
-Fires when draggable is dropped over one of the drop targets.
 
 #### Event Data
 
 ##### e.draggable `kendo.ui.Draggable`
 
-Reference to the draggable that is dropped over the drop target.
+Reference to the Draggable instance that enters a drop target.
 
 ##### e.dropTarget `jQuery`
 
-The current drop target in the area that initiated the event.
+The current DropTarget element in the area that initiated the event.
+
+##### e.target `Element`
+
+The current Draggable element.
+
+### dragleave
+
+Fired when draggable moves out of one of the drop targets.
+The `dragleave` event represents a jQuery `mousemove` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
+
+#### Example - modify the hint element on dragenter
+
+    <div id="area">
+      <div id="leftArea"></div>
+      <div id="rightArea"></div>
+    </div>
+    <div class="purple"></div>
+    <div class="purple"></div>
+
+    <script>
+      $(".purple").kendoDraggable({
+        hint: function(element) {
+          return element.clone();
+        }
+      });
+
+      $("#area").kendoDropTargetArea({ 
+        filter: "#leftArea, #rightArea",
+        dragenter: function(e) {
+          e.draggable.hint.css("opacity", 0.3);
+        },
+        dragleave: function(e) {
+          e.draggable.hint.css("opacity", 1);
+        }
+      });
+
+    </script>
+    <style>
+      .purple{
+        width: 50px;
+        height: 50px;
+        border: 2px solid green;
+        margin: 5px;
+        display: inline-block;
+      }
+      .purple { background-color: purple; }
+      #area {
+          width: 300px;
+          height: 300px;
+          line-height: 300px;
+          background-color: gray;
+      }
+      #leftArea, #rightArea {
+        width: 140px;
+        height: 100px;
+        border: 2px solid green;
+        margin: 2px;
+        background-color: orange;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+
+#### Event Data
+
+##### e.draggable `kendo.ui.Draggable`
+
+Reference to the Draggable instance that enters a drop target.
+
+##### e.dropTarget `jQuery`
+
+The current DropTarget element in the area that initiated the event.
+
+##### e.target `Element`
+
+The current Draggable element.
+
+### drop
+
+Fired when draggable is dropped over one of the drop targets.
+The `drop` event represents a jQuery `mouseup` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - modify the dropTarget and draggable element on successful drop
 
@@ -331,3 +332,17 @@ The current drop target in the area that initiated the event.
         vertical-align: middle;
       }
     </style>
+
+#### Event Data
+
+##### e.draggable `kendo.ui.Draggable`
+
+Reference to the Draggable instance that enters a drop target.
+
+##### e.dropTarget `jQuery`
+
+The current DropTarget element in the area that initiated the event.
+
+##### e.target `Element`
+
+The current Draggable element.

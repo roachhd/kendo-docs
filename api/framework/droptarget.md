@@ -111,13 +111,8 @@ Destroys all DropTarget instances from the group with the given name.
 
 ### dragenter
 
-Fires when draggable moves over the drop target.
-
-#### Event Data
-
-##### e.draggable `kendo.ui.Draggable`
-
-Reference to the draggable that enters the drop target.
+Fired when draggable moves over the drop target.
+The `dragenter` event represents a jQuery `mousemove` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - modify draggable hint and dropTarget element
 
@@ -160,16 +155,25 @@ Reference to the draggable that enters the drop target.
       .orange { background-color: orange; }
       .purple { background-color: purple; }
     </style>
+
+#### Event Data
+
+##### e.draggable `kendo.ui.Draggable`
+
+The Draggable instance that enters the drop target.
+
+##### e.dropTarget `jQuery`
+
+The DropTarget element.
+
+##### e.target `Element`
+
+The Draggable element.
 
 ### dragleave
 
-Fires when draggable moves out of the drop target.
-
-#### Event Data
-
-##### e.draggable `kendo.ui.Draggable`
-
-Reference to the draggable that leaves the drop target.
+Fired when draggable moves out of the drop target.
+The `dragleave` event represents a jQuery `mousemove` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - modify draggable hint and dropTarget element
 
@@ -213,15 +217,24 @@ Reference to the draggable that leaves the drop target.
       .purple { background-color: purple; }
     </style>
 
-### drop
-
-Fires when draggable is dropped over the drop target.
-
 #### Event Data
 
 ##### e.draggable `kendo.ui.Draggable`
 
-Reference to the draggable that is dropped over the drop target.
+The Draggable instance that leaves the drop target.
+
+##### e.dropTarget `jQuery`
+
+The DropTarget element.
+
+##### e.target `Element`
+
+The Draggable element.
+
+### drop
+
+Fired when draggable is dropped over the drop target.
+The `dragleave` event represents a jQuery `mouseup` event and contains all the event data of the [jQuery Event Object](http://api.jquery.com/category/events/event-object/).
 
 #### Example - disable draggable component after it has been dropped
 
@@ -263,3 +276,17 @@ Reference to the draggable that is dropped over the drop target.
       .orange { background-color: orange; }
       .purple { background-color: purple; }
     </style>
+
+#### Event Data
+
+##### e.draggable `kendo.ui.Draggable`
+
+The Draggable instance that leaves the drop target.
+
+##### e.dropTarget `jQuery`
+
+The DropTarget element.
+
+##### e.target `Element`
+
+The Draggable element.
