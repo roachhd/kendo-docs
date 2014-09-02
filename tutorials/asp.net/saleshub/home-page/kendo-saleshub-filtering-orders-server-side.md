@@ -4,6 +4,10 @@ title: Filtering Order's Server-Side
 
 # Tutorial: SalesHub: Filtering Orders Server-Side
 
+  - [Configure Grid for Server-Side Operations](#configure-grid-for-server-side-operations)
+  - [Support Server-Side Operations](#support-server-side-operations)
+  - [Filter Orders by Customer](#filter-orders-by-customer)
+
 ![kendo-saleshub-customer-TreeView-and-grid-screenshot](/tutorials/asp.net/saleshub/home-page/images/kendo-saleshub-customer-treeview-and-grid-screenshot.png)
 
 Since **SalesHub** contains a lot of orders for various customers, it would not be very efficient for **all**

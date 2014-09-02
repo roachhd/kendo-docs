@@ -5,6 +5,15 @@ position: 0
 
 # Tutorial: SalesHub: Creating and Editing Orders
 
+  - [Set up the Partial View for an Order](#set-up-the-partial-view-for-an-order)
+  - [Set up the basic Order fields](#set-up-the-basic-order-fields)
+  - [Set up the TabStrip](#set-up-the-tabstrip)
+  - [Set up the Order details grid](#set-up-the-order-details-grid)
+  - [Set up the Order notes grid](#set-up-the-order-notes-grid)
+  - [Set up the Panel Bar](#set-up-the-panel-bar)
+  - [Set up the Payment Terms Section](#set-up-the-payment-terms-section)
+  - [Setting up the Comments Section](#setting-up-the-comments-section)
+
 Since there are many similarities between the create and edit views for an Order, we'll discuss how
 both of them work in this article.
 

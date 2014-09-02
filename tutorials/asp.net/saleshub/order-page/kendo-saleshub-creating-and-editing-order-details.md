@@ -4,6 +4,11 @@ title: Creating and Editing Orders Details
 
 # Tutorial: SalesHub: Creating and Editing Order Details
 
+  - [How to Setup the Custom Order Detail Editor](#how-to-setup-the-custom-order-detail-editor)
+  - [Auto Update Fields Based on Value Changes](#auto-update-fields-based-on-value-changes)
+  - [Add Server-side Validation](#add-server-side-validation)
+  - [Handle Errors from the Server](#handle-errors-from-the-server)
+
 ![kendo-saleshub-order-details-edit-dialog-screenshot](/tutorials/asp.net/saleshub/order-page/images/kendo-saleshub-order-details-edit-dialog-screenshot.png)
 
 ## How to Setup the Custom Order Detail Editor

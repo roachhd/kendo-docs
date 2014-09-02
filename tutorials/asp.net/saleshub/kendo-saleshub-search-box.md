@@ -4,6 +4,10 @@ title: Creating the Search Box
 
 # Tutorial: SalesHub: Creating the Search Box
 
+  - [Set up the AutoComplete](#set-up-the-autocomplete)
+  - [Handle User Selection in the AutoComplete](#handle-user-selection-in-the-autocomplete)
+  - [Set up the Search Results Window and Grid](#set-up-the-search-results-window-and-grid)
+
 ![kendo-saleshub-search-box-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-search-box-screenshot.png)
 
 The Search Box in SalesHub allows users to search for Orders based on their Order Number. It is

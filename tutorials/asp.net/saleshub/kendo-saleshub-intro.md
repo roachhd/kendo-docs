@@ -5,6 +5,13 @@ position: 1
 
 # Tutorial: SalesHub: Introduction
 
+  - [Aims of the SalesHub sample project](#aims-of-the-saleshub-sample-project)
+  - [View the live site](#view-the-live-site)
+  - [Get the Source Code](#get-the-source-code)
+  - [Add the Kendo UI MVC Extensions to the Project](#add-the-kendo-ui-mvc-extensions-to-the-project)
+  - [Build and Run the Application](#build-and-run-the-application)
+  - [Solution Structure](#solution-structure)
+
 In this tutorial, we will review portions of the SalesHub sample project.
 
 ![kendo-saleshub-intro-home-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-intro-home-screenshot.png)
