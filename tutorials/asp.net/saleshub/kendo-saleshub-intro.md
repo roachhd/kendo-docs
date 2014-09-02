@@ -1,6 +1,8 @@
 ---
 title: Introduction
+page_title: Tutorial SalesHub - Introduction
 position: 1
+previous_url: /tutorials/asp.net/saleshub/kendo-saleshub-intro
 ---
 
 # Tutorial: SalesHub: Introduction

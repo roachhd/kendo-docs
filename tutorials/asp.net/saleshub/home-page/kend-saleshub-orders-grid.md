@@ -1,5 +1,7 @@
 ---
 title: Creating the Orders Grid
+page_title: Tutorial SalesHub - Creating the Orders Grid
+previous_url: /tutorials/asp.net/saleshub/home-page/kend-saleshub-orders-grid
 ---
 
 # Tutorial: SalesHub: Creating the Orders Grid

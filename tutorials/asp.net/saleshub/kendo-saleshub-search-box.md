@@ -1,5 +1,7 @@
 ---
 title: Creating the Search Box
+page_title: Tutorial SalesHub - Creating the Search Box
+previous_url: /tutorials/asp.net/saleshub/kendo-saleshub-search-box
 ---
 
 # Tutorial: SalesHub: Creating the Search Box

@@ -1,5 +1,7 @@
 ---
 title: Filtering Order's Server-Side
+page_title: Tutorial SalesHub - Filtering Orders Server-Side
+previous_url: /tutorials/asp.net/saleshub/home-page/kendo-saleshub-filtering-orders-server-side
 ---
 
 # Tutorial: SalesHub: Filtering Orders Server-Side

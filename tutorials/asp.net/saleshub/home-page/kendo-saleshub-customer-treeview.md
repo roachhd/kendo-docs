@@ -1,5 +1,7 @@
 ---
 title: Creating the Customer TreeView
+page_title: Tutorial SalesHub - Creating the Customer TreeView
+previous_url: /tutorials/asp.net/saleshub/home-page/kendo-saleshub-customer-treeview
 ---
 
 # Tutorial: SalesHub: Creating the Customer TreeView

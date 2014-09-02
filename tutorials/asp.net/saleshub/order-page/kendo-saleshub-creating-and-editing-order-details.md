@@ -1,5 +1,7 @@
 ---
 title: Creating and Editing Orders Details
+page_title: Tutorial SalesHub - Creating and Editing Order Details
+previous_url: /tutorials/asp.net/saleshub/order-page/kendo-saleshub-creating-and-editing-order-details
 ---
 
 # Tutorial: SalesHub: Creating and Editing Order Details
