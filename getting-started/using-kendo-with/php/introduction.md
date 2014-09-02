@@ -1,6 +1,7 @@
 ---
 title: Introduction
 page_title: Documentation guide for Telerik UI for PHP
+previous_url: /tutorials/PHP/build-apps-with-kendo-ui-and-php, /tutorials/PHP/build-apps-with-kendo-ui-and-php-2
 description: How to download, install Telerik UI for PHP and run the sample application.
 ---
 
