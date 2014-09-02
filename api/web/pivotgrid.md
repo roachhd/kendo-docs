@@ -1300,6 +1300,132 @@ The [data source](/api/framework/pivotdatasource) of the widget. Configured via 
 
 ## Methods
 
+### cellInfo
+
+Returns an information about a data cell at a specific column and row index.
+
+#### Parameters
+
+##### columnIndex `Number`
+
+The index of the column cell that crosses the data cell.
+
+##### rowIndex `Number`
+
+The index of the row cell that crosses the data cell.
+
+#### Returns
+
+`Object` the data cell information.
+
+The fields of the result object:
+
+* columnTuple - the tuple of the corresponding column header cell
+* rowTuple - the tuple of the corresponding row header cell
+* measure - the measure value of the data cell
+* dataItem - the data item itself
+
+#### Example - get an information for a specific data cell
+
+    <button id="get">Get info</button>
+    <div id="pivotgrid"></div>
+    <script>
+    $(function() {
+        var pivotgrid = $("#pivotgrid").kendoPivotGrid({
+            height: 550,
+            dataSource: {
+                type: "xmla",
+                columns: [{ name: "[Date].[Calendar]", expand: true } ],
+                rows: [{ name: "[Product].[Category]", expand: true }],
+                measures: ["[Measures].[Internet Sales Amount]"],
+                transport: {
+                    connection: {
+                        catalog: "Adventure Works DW 2008R2",
+                        cube: "Adventure Works"
+                    },
+                    read: {
+                        url: "http://demos.telerik.com/olap/msmdpump.dll",
+                        dataType: "text",
+                        contentType: "text/xml",
+                        type: "POST"
+                    }
+                },
+                schema: {
+                    type: "xmla"
+                }
+            }
+        }).data("kendoPivotGrid");
+
+        $("#button").click(function() {
+            var columnIndex = 1; //2006
+            var rowIndex = 1; //Bikes
+
+            var info = pivotgrid.cellInfo(columnIndex, rowIndex); //retrieve data cell information
+
+            console.log(info);
+        });
+    });
+    </script>
+
+### cellInfoByElement
+
+Returns an information about for a specific data cell element
+
+#### Parameters
+
+##### cell `String|Element|jQuery`
+
+A string, DOM element or jQuery object which represents the data table cell. A string is treated as a jQuery selector.
+
+#### Returns
+
+`Object` the data cell information.
+
+The fields of the result object:
+
+* columnTuple - the tuple of the corresponding column header cell
+* rowTuple - the tuple of the corresponding row header cell
+* measure - the measure value of the data cell
+* dataItem - the data item itself
+
+#### Example - get information on element hover
+
+    <div id="pivotgrid"></div>
+    <script>
+    $(function() {
+        var pivotgrid = $("#pivotgrid").kendoPivotGrid({
+            height: 550,
+            dataSource: {
+                type: "xmla",
+                columns: [{ name: "[Date].[Calendar]", expand: true } ],
+                rows: [{ name: "[Product].[Category]", expand: true }],
+                measures: ["[Measures].[Internet Sales Amount]"],
+                transport: {
+                    connection: {
+                        catalog: "Adventure Works DW 2008R2",
+                        cube: "Adventure Works"
+                    },
+                    read: {
+                        url: "http://demos.telerik.com/olap/msmdpump.dll",
+                        dataType: "text",
+                        contentType: "text/xml",
+                        type: "POST"
+                    }
+                },
+                schema: {
+                    type: "xmla"
+                }
+            }
+        }).data("kendoPivotGrid");
+
+        pivotgrid.wrapper.on("mouseenter", ".k-grid-content td", function(e){
+            var info = pivotgrid.cellInfoByElement(e.currentTarget);
+
+            console.log(info);
+        });
+    });
+    </script>
+
 ### destroy
 
 Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
