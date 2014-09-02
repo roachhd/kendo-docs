@@ -289,6 +289,156 @@ The height of the pivotgrid. Numeric values are treated as pixels.
     });
     </script>
 
+### columnHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the content of the column header cell. By default it renders the *caption* of the tuple member.
+
+The fields which can be used in the template are:
+
+* member - the member of the corresponding column header cell
+* tuple - the tuple of the corresponding column header cell
+
+For information about the tuple structure check this [link](/api/framework/pivotdatasource#configuration-schema.axes).
+
+#### Example - emphasize the title of a specific member
+
+    <div id="pivotgrid"></div>
+
+    <script id="columnTemplate" type="text/x-kendo-template">
+        # if (member.name === "[Date].[Calendar].[Year].&[2005]") { #
+            <em>#: member.caption #</em>
+        # } else { #
+            #: member.caption #
+        # } #
+    </script>
+
+    <script>
+    $("#pivotgrid").kendoPivotGrid({
+        columnHeaderTemplate: $("#columnTemplate").html(),
+        dataSource: {
+            type: "xmla",
+            columns: [{ name: "[Date].[Calendar]", expand: true } ],
+            measures: ["[Measures].[Internet Sales Amount]"],
+            transport: {
+                connection: {
+                    catalog: "Adventure Works DW 2008R2",
+                    cube: "Adventure Works"
+                },
+                read: {
+                    url: "http://demos.telerik.com/olap/msmdpump.dll",
+                    dataType: "text",
+                    contentType: "text/xml",
+                    type: "POST"
+                }
+            },
+            schema: {
+                type: "xmla"
+            }
+        }
+    });
+    </script>
+
+### dataCellTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the content of the data cell. By default renders the formatted value (fmtValue) of the data item.
+
+The fields which can be used in the template are:
+
+* columnTuple - the tuple of the corresponding column header cell
+* rowTuple - the tuple of the corresponding row header cell
+* measure - the value of the data cell measure
+* dataItem - the data item itself
+
+For information about the tuple structure check this [link](/api/framework/pivotdatasource#configuration-schema.axes).
+About the data item structure review this [help topic](/api/framework/pivotdatasource#configuration-schema.data).
+
+#### Example - emphasize the values in *2005*
+
+    <div id="pivotgrid"></div>
+
+    <script id="datacelltemplate" type="text/x-kendo-template">
+        # if (columnTuple.members[0].name === "[Date].[Calendar].[Year].&[2005]") { #
+            <em>#: kendo.toString(kendo.parseFloat(dataItem.value), "c2") #</em>
+        # } else { #
+            #: kendo.toString(kendo.parseFloat(dataItem.value), "c2") #
+        # } #
+    </script>
+
+    <script>
+    $("#pivotgrid").kendoPivotGrid({
+        dataCellTemplate: $("#dataCellTemplate").html(),
+        dataSource: {
+            type: "xmla",
+            columns: [{ name: "[Date].[Calendar]", expand: true } ],
+            measures: ["[Measures].[Internet Sales Amount]"],
+            transport: {
+                connection: {
+                    catalog: "Adventure Works DW 2008R2",
+                    cube: "Adventure Works"
+                },
+                read: {
+                    url: "http://demos.telerik.com/olap/msmdpump.dll",
+                    dataType: "text",
+                    contentType: "text/xml",
+                    type: "POST"
+                }
+            },
+            schema: {
+                type: "xmla"
+            }
+        }
+    });
+    </script>
+
+### rowHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the content of the row header cell. By default it renders the *caption* of the tuple member.
+
+The fields which can be used in the template are:
+
+* member - the member of the corresponding row header cell
+* tuple - the tuple of the corresponding row header cell
+
+For information about the tuple structure check this [link](/api/framework/pivotdatasource#configuration-schema.axes).
+
+#### Example - emphasize the title of a specific member
+
+    <div id="pivotgrid"></div>
+
+    <script id="rowTemplate" type="text/x-kendo-template">
+        # if (member.name === "[Date].[Calendar].[Year].&[2005]") { #
+            <em>#: member.caption #</em>
+        # } else { #
+            #: member.caption #
+        # } #
+    </script>
+
+    <script>
+    $("#pivotgrid").kendoPivotGrid({
+        columnHeaderTemplate: $("#columnTemplate").html(),
+        dataSource: {
+            type: "xmla",
+            rows: [{ name: "[Date].[Calendar]", expand: true } ],
+            measures: ["[Measures].[Internet Sales Amount]"],
+            transport: {
+                connection: {
+                    catalog: "Adventure Works DW 2008R2",
+                    cube: "Adventure Works"
+                },
+                read: {
+                    url: "http://demos.telerik.com/olap/msmdpump.dll",
+                    dataType: "text",
+                    contentType: "text/xml",
+                    type: "POST"
+                }
+            },
+            schema: {
+                type: "xmla"
+            }
+        }
+    });
+    </script>
+
 ### messages `Object`
 
 The text messages displayed in the fields sections.
