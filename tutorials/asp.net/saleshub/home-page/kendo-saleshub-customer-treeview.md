@@ -2,7 +2,7 @@
 title: Creating the Customer TreeView
 ---
 
-# Creating the Customer TreeView - SalesHub
+# Tutorial: SalesHub: Creating the Customer TreeView
 
 ![kendo-saleshub-customer-TreeView-screenshot](/tutorials/asp.net/saleshub/home-page/images/kendo-saleshub-customer-treeview-screenshot.png)
 
@@ -18,7 +18,7 @@ Customer, please read [Filtering Order's Server-Side](kendo-saleshub-filtering-o
 
 The Customer TreeView is located in **Views/Home/Index.cshtml**
 
-## Setting up the Customer TreeView
+## Set up the Customer TreeView
 
 To generate the Customer TreeView we use the following Razor code:
 
@@ -74,7 +74,7 @@ eventually be used by our custom client-side code.
     @Html.Kendo().TreeView().Name("customerTreeView")
 
 Here we use the `Kendo()` extension method to tell the Kendo UI MVC extensions that we want it to create a Kendo TreeView
-with **customerTreeView** as its **Name**. When using the Kendo UI MVC extensions the name of a Kendo UI widget is the **id**
+with `customerTreeView` as its `Name`. When using the Kendo UI MVC extensions the name of a Kendo UI widget is the `id`
 of the HTML element that the extensions generate.
 
 Just telling the extensions to generate a TreeView is not all that useful in and of itself. We also need to tell it what
@@ -84,16 +84,16 @@ server-side using the `BindTo` function on a TreeView.
 
     .BindTo(Model.TreeViewRoot.Items, binding => { // Our custom binding })
 
-Since we already know what data we want in our TreeView when we create it, we take advantage of the **BindTo** function. The
-**BindTo** function takes two parameters, the first parameter is the Enumerable that we would like to bind the tree against
-and the second paramater is an **Action** that takes a **NavigationBindingFactory** object as its parameter.
+Since we already know what data we want in our TreeView when we create it, we take advantage of the `BindTo` function. The
+`BindTo` function takes two parameters, the first parameter is the Enumerable that we would like to bind the tree against
+and the second parameter is an `Action` that takes a `NavigationBindingFactory` object as its parameter.
 
     .BindTo(Model.TreeViewRoot.Items,binding =>
         binding.For<SellingCompanyTreeViewItem>(mapping => { // Code to map our SellingCompanyTreeViewItem to a Kendo TreeViewItem. })
 
-We can use this binding factory to iterate over the objects in the Enumerable that we supplied to the **BindTo** function by calling
-it's **For** function. The generic type given to this function has to be the same type as the objects which are in the **Enumerable**
-that we gave to the **BindTo** function. In our case, the **Enumerable** is a list of **SellingCompanyTreeViewItem**s. The **For**
+We can use this binding factory to iterate over the objects in the Enumerable that we supplied to the `BindTo` function by calling
+it's `For` function. The generic type given to this function has to be the same type as the objects which are in the `Enumerable`
+that we gave to the `BindTo` function. In our case, the `Enumerable` is a list of `SellingCompanyTreeViewItems`. The `For`
 function takes an **Action&lt;NavigationBindingBuilder&gt;** as a parameter.
 
     binding.For<SellingCompanyTreeViewItem>(mapping => mapping
@@ -109,8 +109,8 @@ function takes an **Action&lt;NavigationBindingBuilder&gt;** as a parameter.
             }
         })
 
-We use the **mapping** object to tell Kendo what property to use on our **SellingCompanyTreeViewItem** when it tries
-to render the children of that **SellingCompanyTreeViewItem** and we give it a function to call everytime a Kendo TreeViewItem
+We use the `mapping` object to tell Kendo what property to use on our `SellingCompanyTreeViewItem` when it tries
+to render the children of that `SellingCompanyTreeViewItem` and we give it a function to call every time a Kendo TreeViewItem
 is bound to the TreeView.
 
     .Children(sellingCompanyTreeViewItem => sellingCompanyTreeViewItem.Items)
@@ -128,17 +128,17 @@ Is how we tell it where to look for children nodes when it's rendering the TreeV
         }
     })
 
-The function we give to **ItemDataBound** is called everytime that a Kendo TreeViewItem is bound to the TreeView. The callback function
+The function we give to `ItemDataBound` is called every time that a Kendo TreeViewItem is bound to the TreeView. The callback function
 takes two parameters. The first one is the Kendo TreeViewItem that is being bound to the TreeView and the second parameter is the
-**SellingCompanyTreeViewItem** that corresponds to that Kendo TreeViewItem. This is the point where we set the **Text** and the **Expanded** state
+`SellingCompanyTreeViewItem` that corresponds to that Kendo TreeViewItem. This is the point where we set the `Text` and the `Expanded` state
 of the resulting TreeViewItem.
 
 This is also the point where we call our Razor helper function to generate some HTML data attributes for the items in the TreeView.
 
     .Events(events => events.Select("window.SalesHub.CustomerTreeView_Select"))
 
-Since we want to update the Order's grid depending on the selected Customer, we attach an event handler for the **Select** event of
-the TreeView. If you'd like to read more on how we handle the **Select** event from the TreeView please read
+Since we want to update the Order's grid depending on the selected Customer, we attach an event handler for the `Select` event of
+the TreeView. If you'd like to read more on how we handle the `Select` event from the TreeView please read
 [Filtering Order's Server-Side](kendo-saleshub-filtering-orders-server-side).
 
 If you inspect the resulting HTML markup using your browsers Developer Tools, you'll notice that a `<script>` tag was created
@@ -149,6 +149,6 @@ The contents of the script tag should look something like:
 
     jQuery(function(){jQuery("#customerTreeView").kendoTreeView({"select":window.SalesHub.CustomerTreeView_Select});});
 
-As you can see, the JavaScript generated by the extensions looks for the generated markup based on an **id**. The **id** it
-looks for is the same as the **Name** that we gave the Kendo TreeView when we declared it. After it finds the element, it turns
-it into a TreeView by calling **kendoTreeView** on it.
+As you can see, the JavaScript generated by the extensions looks for the generated markup based on an `id`. The `id` it
+looks for is the same as the `Name` that we gave the Kendo TreeView when we declared it. After it finds the element, it turns
+it into a TreeView by calling `kendoTreeView` on it.

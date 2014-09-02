@@ -2,7 +2,7 @@
 title: Creating the Search Box
 ---
 
-# Creating the Search Box - SalesHub
+# Tutorial: SalesHub: Creating the Search Box
 
 ![kendo-saleshub-search-box-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-search-box-screenshot.png)
 
@@ -15,23 +15,23 @@ that will display all of the search results.
 
 ![kendo-saleshub-search-results-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-search-results-screenshot.png)
 
-## Setting up the AutoComplete
+## Set up the AutoComplete
 
     @Html.Kendo().AutoComplete().Name("search")
 
 The first part of the declaration tells the Kendo UI MVC extensions that you're creating an AutoComplete widget and that
-we want its HTML **id** to be "search".
+we want its HTML `id` to be "search".
 
     .Filter(FilterType.StartsWith)
     .Placeholder("Search for order...")
 
-Next we tell the AutoComplete to only display results that start with the text that has been entered into the textbox.
+Next we tell the AutoComplete to only display results that **start with** the text that has been entered into the textbox.
 Then we set its placeholder text.
 
     .Template("<span data-order-id='${ data.OrderId }'>${ data.OrderNumber }</span>")
 
 Here we specify the item template that the AutoComplete uses when it generates the dropdown containing the search results.
-In this case we display the "OrderNumber" of each search result. We store the "OrderId" in an HTML data attribute, so that
+In this case we display the `OrderNumber` of each search result. We store the `OrderId` in an HTML data attribute, so that
 we can use it later if the user selects that item from the search results.
 
     .MinLength(3)
@@ -46,13 +46,13 @@ have been typed into the textbox.
         .ServerFiltering(true)
     )
 
-We set up the DataSource for the AutoComplete to call our search method on the **SearchController** and we tell it to do server-side
+We set up the DataSource for the AutoComplete to call our search method on the `SearchController` and we tell it to do server-side
 filtering when it queries for data.
 
     .DataTextField("OrderNumber")
 
-Setting the DataTextField to "OrderNumber" tells the AutoComplete to only search against
-the "OrderNumber" property of an Order.
+Setting the DataTextField to `OrderNumber` tells the AutoComplete to only search against
+the `OrderNumber` property of an Order.
 
     .Events(events => events.Select("window.SalesHub.SearchBox_Select"))
 
@@ -61,11 +61,11 @@ when they click on a result in the AutoComplete dropdown.
 
 You can find the full markup for the search AutoComplete in **Views/Shared/_Layout.cshtml**.
 
-## Handling User Selection in the AutoComplete
+## Handle User Selection in the AutoComplete
 
 Because we want to redirect the user to the edit page for the order that they select, we need to create an event handler for
 the `select` event of the AutoComplete. Since we'll be redirecting the user to a different page client-side, we also need a way
-of passing the correct URL to our JavaScript. To do this we inject the correct URL, using Razor, in **Views/Shared/_Layout.cshtml**.
+of passing the correct URL to our JavaScript. To do this we inject the correct URL, using Razor, in `Views/Shared/_Layout.cshtml`.
 
     <script>
         window.SalesHub.Search = {
@@ -85,12 +85,11 @@ Now that we have the URL we need, we can declare our event handler.
 
 Our event handler takes one parameter (`e`) which is an event object that the AutoComplete passes in. This event object has a
 property called `item`, which is a jQuery object that points to the HTML element that the user selected. We use this to find the
-`<span>` that we specified in our Template for the AutoComplete and from there we get the "OrderId" off of the **data-order-id**
-attribute we declared on the span.
+`<span>` that we specified in our Template for the AutoComplete and from there we get the `OrderId` off of the `data-order-id` attribute we declared on the span.
 
 This event handler can be found in **Scripts/search.js**.
 
-## Setting up the Search Results Window and Grid
+## Set up the Search Results Window and Grid
 
 Since our AutoComplete only displays the first 20 results, we need a way of efficiently showing the user all of the results.
 To do this we create a [Kendo Window](http://demos.telerik.com/kendo-ui/web/window/index.html) that contains a
@@ -153,12 +152,12 @@ the page first loads. We also specify the dimensions of the window.
 
 Here we declare the contents of our window. Since we want a [Kendo Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html)
 inside of our window to display the search results, we use Razor's `@<text>` syntax to declare our grid. We also
-subscribe to the `change` event of a the grid. The `change` event is fired when a user selects an item in the grid.
+subscribe to the `change` event of the grid. The `change` event is fired when a user selects an item in the grid.
 This will be useful later when we need to redirect the user to the order that they select.
 
     .Events(e => e.Open("window.SalesHub.SearchResultWindow_Open")))
 
-Finally we supply an event handler for the windows open event. We need this event handler so that we can tell the grid
+Finally we supply an event handler for the windows `open` event. We need this event handler so that we can tell the grid
 what search results it needs to display when the window is opened.
 
 Now that we have the window set up, we need to wire up some event handlers so that it opens when the user presses
@@ -175,7 +174,7 @@ the enter key inside of the search box.
     });
 
 To do this, we wait for the document to load, then we find the search textbox on the page using a jQuery selector. Once we find
-the textbox, we subscribe to its **keyup** event. Since we only want to open the window when the user presses the enter key, we
+the textbox, we subscribe to its `keyup` event. Since we only want to open the window when the user presses the enter key, we
 check to see which key was pressed. If it was the enter key (`13`), we find the window that we create earlier and get the
 [Kendo Window](http://demos.telerik.com/kendo-ui/web/window/index.html) object off of it. Using the window object, we tell the window to
 `center` itself and to `open`.

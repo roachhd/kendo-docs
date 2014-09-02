@@ -2,7 +2,7 @@
 title: Creating the Orders Grid
 ---
 
-# Creating the Orders Grid - SalesHub
+# Tutorial: SalesHub: Creating the Orders Grid
 
 ![kendo-saleshub-orders-grid-screenshot](/tutorials/asp.net/saleshub/home-page/images/kendo-saleshub-orders-grid-screenshot.png)
 
@@ -12,8 +12,8 @@ The Orders grid can be found in **Views/Home/Index.cshtml**
 
     @Html.Kendo().Grid<CustomerOrderViewModel>().Name("ordersGrid")
 
-The first part of the declaration tells the Kendo UI MVC extensions that we want to create a Kendo Grid that will be bound against objects of type **CustomerOrderViewModel** and that we want the grid
-to have an **id** of "ordersGrid" in the final HTML markup.
+The first part of the declaration tells the Kendo UI MVC extensions that we want to create a Kendo Grid that will be bound against objects of type `CustomerOrderViewModel` and that we want the grid
+to have an `id` of "ordersGrid" in the final HTML markup.
 
     .Columns(columns =>
     {
@@ -27,18 +27,17 @@ to have an **id** of "ordersGrid" in the final HTML markup.
     })
 
 Here we declare what columns the grid should have. Since we specified a type to the `Grid()`
-call, we can create **Bound** columns based on properties that exist on that type. A bound column
+call, we can create `Bound` columns based on properties that exist on that type. A bound column
 essentially means that only values for the specified property will be displayed in that column.
-For example, with `columns.Bound(p => p.OrderNumber)` creates a column which displays the **Order
-Number**
-for each CustomerOrderViewModel object that is bound to the grid.
+For example, with `columns.Bound(p => p.OrderNumber)` creates a column which displays the `Order
+Number` for each CustomerOrderViewModel object that is bound to the grid.
 
 For some fields we also want to format the values a little before we display them to the user.
 That's where the `Format` function comes in handy. The `Format` function takes a string that
 contains [Kendo's formatting syntax](/api/framework/kendo#methods-format).
 
 The last column of the Grid works a little differently than the other columns. This is because
-we're not actually displaying information from a property on the **CustomerOrderViewModel**. The
+we're not actually displaying information from a property on the `CustomerOrderViewModel`. The
 last column contains a link which will redirect the user to a page where they can edit the order.
 
     columns.Template(model => null)
@@ -46,7 +45,7 @@ last column contains a link which will redirect the user to a page where they ca
 
 Since the Grid will be bound client-side, we can't specify a template for the column using the
 `Template` function. Instead we have to call the `ClientTemplate` function which allows us to
-specify a Kendo Template. In our case we generate an `<a>` with an **href** that links to
+specify a Kendo Template. In our case we generate an `<a>` with an `href` that links to
 the edit page and contains the Id of the order to edit.
 
         .ToolBar(toolbar => toolbar.Template("<a id='createOrderButton' class='k-button k-button-icontext k-grid-add' href='#'>Create order</a>"))

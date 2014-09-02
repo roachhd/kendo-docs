@@ -2,7 +2,7 @@
 title: Filtering Order's Server-Side
 ---
 
-# Filtering Orders Server-Side - SalesHub
+# Tutorial: SalesHub: Filtering Orders Server-Side
 
 ![kendo-saleshub-customer-TreeView-and-grid-screenshot](/tutorials/asp.net/saleshub/home-page/images/kendo-saleshub-customer-treeview-and-grid-screenshot.png)
 
@@ -34,11 +34,11 @@ request.
 
 The full declaration for orders grid can be found in **Views/Home/Index.cshtml**.
 
-## Supporting Server-Side Operations
+## Support Server-Side Operations
 
 To make supporting server-side filtering easier the Kendo UI MVC extensions expose a few classes and functions which do all
-of the hard work for you. The extensions provide **DataSourceRequest**, **DataSourceResponse**, and **ToDataSourceResult**
-to help with server-side filtering. Let's look at code in the **Api/CustomerOrdersController.cs** to see how these help us.
+of the hard work for you. The extensions provide `DataSourceRequest`, `DataSourceResponse`, and `ToDataSourceResult`
+to help with server-side filtering. Let's look at code in the `Api/CustomerOrdersController.cs` to see how these help us.
 
     using System.Linq;
     using System.Web.Mvc;
@@ -96,7 +96,7 @@ We want this on our controller because the underlying data could change at any t
 
 In this code snippet we declare an MVC Action for our CustomerOrdersController. Since it's a data service, the return value
 of the function is a `JsonResult`. As we'll be receiving filtering data from the client-side DataSource we need to take
-a **DataSourceRequest** object as a parameter. The `[DataSourceRequest]` attribute, which is applied to the parameter, is used
+a `DataSourceRequest` object as a parameter. The `[DataSourceRequest]` attribute, which is applied to the parameter, is used
 by the MVC framework when it binds data from the request to parameters that the Action takes.
 
     IQueryable<Order> orders = _orderRepository.GetAllOrders();
@@ -116,13 +116,13 @@ In the body of the function we get all of the Orders from the database in the fo
 on the Queryable of orders. This extension method is one that's provided by the Kendo UI MVC extenions and does all the hardwork of filtering our
 Queryable of orders based on the DataSourceRequest that we got from DataSource.
 
-**ToDataSourceResult** also provides an overload that allows you to specify a selector function. This selector function is the same as what you would
-pass to the standard `Select` LINQ function. In our case we convert each Order to a CustomerOrderViewModel before we return it to the client.
+`ToDataSourceResult` also provides an overload that allows you to specify a selector function. This selector function is the same as what you would
+pass to the standard `Select` LINQ function. In our case we convert each Order to a `CustomerOrderViewModel` before we return it to the client.
 
-The **DataSourceResult** that we get from calling `ToDataSourceResult` has the filtered list of Orders, which we can now return to the client by
+The `DataSourceResult` that we get from calling `ToDataSourceResult` has the filtered list of Orders, which we can now return to the client by
 calling the `Json` function and passing in the response.
 
-## Filtering Orders by Customer
+## Filter Orders by Customer
 
 Since we only want to display orders for the currently selected Customer in the TreeView we had to write some custom JavaScript to handle this.
 The JavaScript we wrote simply listens to the `select` event of the Customer TreeView and updates the filters on the DataSource that the orders
@@ -179,7 +179,7 @@ selling company nodes). To do this we check if the dataItem has any children; if
 that means a Customer was selected.
 
 We then call the `updateGridCustomerFilter` function, this takes a customerId as a parameter.
-Since we added a the **data-customer-id** attribute to all of the Customer nodes when we
+Since we added a the `data-customer-id` attribute to all of the Customer nodes when we
 generated the TreeView server-side, we just retrieve that value from the jQuery object
 by calling the `data` function on it.
 
