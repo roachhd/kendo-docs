@@ -1,13 +1,13 @@
 ---
-title: Supporting Right-to-Left Languages in Kendo UI
+title: Support Right-to-Left Languages
 related: a11y-accessibility-overview, widget-appearance-rtl
 ---
 
-# Supporting Right-To-Left (RTL) Languages in Kendo UI
+# Supporting Right-To-Left (RTL) Languages
 
 ## The Value of RTL Support
 
-Right-to-Left, or RTL, support is a phrase commonly-used to describe the ability of a library, site or application to handle and respond to users who communicate with a right-to-left language, like Arabic, Hebrew, Chinese or Japanese. Left-to-right is the default for most experiences on the web, but many sites and applications wish to also provide RTL support for their users. 
+Right-to-Left, or RTL, support is a phrase commonly-used to describe the ability of a library, site or application to handle and respond to users who communicate with a right-to-left language, like Arabic, Hebrew, Chinese or Japanese. Left-to-right is the default for most experiences on the web, but many sites and applications wish to also provide RTL support for their users.
 
 Admittedly, RTL falls more into the internationalization space, but we like to think of RTL as an accessibility feature, as well. After all, RTL is about making user experiences more accessible for users working in Right-to-left languages like.
 
@@ -42,7 +42,7 @@ Then, I'll add a click handler for the button and toggle RTL support by adding o
 			form.removeClass('k-rtl')
 		} else {
 			form.addClass('k-rtl');
-		}		
+		}
 	})
 
 With that handler in place, the user can now trigger RTL support on-demand.
@@ -63,6 +63,6 @@ For Rails apps, you can use the `request.env` object:
 
 	userLangs = request.env["HTTP_ACCEPT_LANGUAGE"]
 
-It's important to note that the `Accept-Language` header may return a comma-separated list of languages, ordered by preference. In these cases, you should be prepared to split the returned value into an array or list and inspect the first element to determine if adding the "`k-rtl`" class to the returned markup is necessary. 
+It's important to note that the `Accept-Language` header may return a comma-separated list of languages, ordered by preference. In these cases, you should be prepared to split the returned value into an array or list and inspect the first element to determine if adding the "`k-rtl`" class to the returned markup is necessary.
 
 For additional information on Kendo UI RTL support, including its built-in behavior and layout considerations, see the [RTL Support](/getting-started/web/appearance-rtl) document in the Getting Started section.

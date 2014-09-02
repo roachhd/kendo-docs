@@ -1,9 +1,9 @@
 ---
-title: Keyboard Support in Kendo UI Web
+title: Keyboard Support
 related: a11y-accessibility-overview, a11y-wai-aria-support-in-kendo
 ---
 
-# Keyboard Support in Kendo UI Web
+# Keyboard Support
 
 ## An Overview of Accesskeys
 
@@ -13,7 +13,7 @@ For the unfamiliar, the "accesskey" property that can be placed on HTML elements
 
 By using the `accesskey` attribute, I'm telling the browser to enable to user to set focus on that field by using an access key combination ([which is unique to OS and browser](http://en.wikipedia.org/wiki/Access_key)) plus the 'n' key. For example, if a user of my site is browsing with Chrome on a Mac, they would type 'control' + 'option' + 'n' to set focus on the 'name' field.
 
-Kendo UI recognizes `accesskeys`, and automatically preserves those when creating widgets. This is especially helpful in those cases when Kendo creates multiple DOM elements in order to construct some of our more complex widgets (like the NumericTextBox or DatePicker widgets). 
+Kendo UI recognizes `accesskeys`, and automatically preserves those when creating widgets. This is especially helpful in those cases when Kendo creates multiple DOM elements in order to construct some of our more complex widgets (like the NumericTextBox or DatePicker widgets).
 
 ## Built-in Keyboard Support in Kendo UI Web
 

@@ -1,8 +1,8 @@
 ---
-title: Tips for Creating Accessible Charts with Kendo UI DataViz
+title: Create Accessible Charts
 ---
 
-# Tutorial: Tips for Creating Accessible Charts with Kendo UI DataViz
+# Creating Accessible Charts
 
 **Summary**: In this article, we'll look at five practical tips (with code samples and illustrative videos) for making Kendo UI DataViz charts and graphs more accessible. These are things you can quickly and easily do in your own apps today to make it easier for disabled users to use assistive technologies to interact with your content.
 
@@ -112,7 +112,7 @@ In the next section, we'll look at five steps you can take to improve the access
 	Another simple step you can take is to add an WAI-ARIA role and a title to the div that contains your chart. This can be as simple as doing the following:
 
 		<div id="chart" role="img" title="Sources of Electricity Produced in Spain, 2008"></div>
-	
+
 	In the first video, even though VoiceOver could read the chart title and legend to it, it couldn’t “select” the container, or even tell me I was interacting with an HTML element. By adding a role of “img” and a title, VoiceOver can do both, which you can see in the first 15 seconds of the video for step #1.
 
 3. **Add `title` and `desc` elements to the root of the `svg` element**
@@ -137,7 +137,7 @@ In the next section, we'll look at five steps you can take to improve the access
 
 		function makeChartAccessible() {
 		  var template = kendo.template($("#chartTmpl").html());
-		    
+
 		  $('#chart svg').prepend(template(chartDetails));
 		}
 
@@ -151,8 +151,8 @@ In the next section, we'll look at five steps you can take to improve the access
 4. **Generate an accessible data table from the DataSource**
 
 	The last two steps deal with creating a data table to serve as an alternative or supplement to the chart or graph. Assuming I’m using a DataSource to populate my chart, I can use the same DataSource and Kendo Templates to create a tabular representation of the same data.
-	
-	First, I create a template script block for my table. 
+
+	First, I create a template script block for my table.
 
 		<script id="tableScript" type="text/x-kendo-tmpl">
 		    <table id="chartTable">
@@ -170,7 +170,7 @@ In the next section, we'll look at five steps you can take to improve the access
 		    </table>
 		</script>
 
-	Next, I'll declare a createTable function, where I’ll pass my template script into a Kendo template, render it with the DataSource and then add the table to the page. 
+	Next, I'll declare a createTable function, where I’ll pass my template script into a Kendo template, render it with the DataSource and then add the table to the page.
 
 		var chartData = new kendo.data.DataSource({
 		  data: [{
@@ -203,7 +203,7 @@ In the next section, we'll look at five steps you can take to improve the access
 
 	Generating a data table is nice, but you may not want to display the raw data on-screen with the chart for all users. In that case, you have two options. You can either: 1) place the table off-screen, invisible to sighted users, but available to screen readers; or, 2) provide all users with the ability to switch between the chart and table.
 
-	To make the first option work, I can start by creating a CSS class called `hidden,` which positions any element 10000px to the left, and off-screen. 
+	To make the first option work, I can start by creating a CSS class called `hidden,` which positions any element 10000px to the left, and off-screen.
 
 		.hidden {
 		  position:absolute;
@@ -222,19 +222,19 @@ In the next section, we'll look at five steps you can take to improve the access
 
 	For an alternate approach, I can place a link or button on the screen that allows the user to swap between the table and the chart. The advantage of this approach is that it enhances the experience for all users by giving them a choice as to which presentation of the data they prefer.
 
-	In this case, I’ll place a “Show Table” link on the screen. When the user clicks this link, the chart is hidden, the table is displayed and the link text changes to “Show Chart.” 
+	In this case, I’ll place a “Show Table” link on the screen. When the user clicks this link, the chart is hidden, the table is displayed and the link text changes to “Show Chart.”
 
 		var toggle = $('#toggle'); // HTML Link Element ID
 		toggle.on('click', function() {
 		  if (chartTable.hasClass('hidden')) {
 		    chart.addClass('hidden');
-		    chartTable.removeClass('hidden');		    
+		    chartTable.removeClass('hidden');
 		    toggle.text("Show Chart");
 		  } else {
 		    chartTable.addClass('hidden');
-		    chart.removeClass('hidden');		    
+		    chart.removeClass('hidden');
 		    toggle.text("Show Table");
-		  }  
+		  }
 		});
 
 	VoiceOver users can now choose which representation they wish to interact with, As depicted in the [following video](http://www.youtube.com/watch?v=kZNz1H2Zp3U&feature=relmfu):

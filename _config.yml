@@ -17,23 +17,32 @@ navigation:
         title: "Getting Started"
     "*tutorials":
         title: "Tutorials"
-    "*dataviz":
-        title: "DataViz"
-    "*wrappers":
-        title: "Wrappers"
-    "*framework":
+    "getting-started/using-kendo-with":
+        title: "Using Kendo With"
+        position: 5
+    "getting-started/web":
+        title: "Web"
+        position: 7
+    "getting-started/framework":
         title: "Framework"
-    "*mobile":
+        position: 8
+    "getting-started/dataviz":
+        title: "DataViz"
+        position: 9
+    "getting-started/mobile":
         title: "Mobile"
+        position: 10
+    "getting-started/wrappers":
+        title: "Wrappers"
+        position: 11
+    "getting-started/accessibility":
+        title: "Make your Kendo UI Project Accessible"
+        position: 14
     "getting-started/mobile/listview":
         title: "Mobile ListView"
         position: 9
-    "*web":
-        title: "Web"
     "*typescript":
         title: "TypeScript"
-    "*using-kendo-with":
-        title: "Using Kendo With"
     "*asp.net":
         title: "ASP.NET"
     "*widgets":
@@ -42,8 +51,6 @@ navigation:
         title: "View Helpers"
     "*tags":
         title: "Tags"
-    "*accessibility":
-        title: "Accessibility"
     "*aspnet-mvc":
         title: "ASP.NET MVC"
     "*php":
