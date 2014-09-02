@@ -156,6 +156,19 @@ Note that this *does not* constrain the window dragging within the given element
     });
     </script>
 
+### autoFocus `Boolean` *(default: true)*
+
+Determines whether the Window will be focused automatically when opened. The property also influences the focus behavior when the Window is clicked when already opened.
+
+#### Example - set the autoFocus property
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      autoFocus: false
+    });
+    </script>
+
 ### content `Object|String`
 
 Specifies a URL or request options that the window should load its content from.
