@@ -94,7 +94,7 @@ becomes editable.
 
     editable: true
 
-![grid_is_editable](/tutorials/asp.net/hello-kendo-ui/images/grid_is_editable.png)
+![grid_is_editable](/images/webforms/grid_is_editable.png)
 
 To get a better editing experience, use a [command column](http://demos.telerik.com/kendo-ui/web/grid/editing-inline.html) in the grid.
 
@@ -179,7 +179,7 @@ can't edit the **FirstName** column. If you try and null out the **LastName**
 field, the grid will display a popup message telling you that the **LastName**
 is required.
 
-![grid_is_editable_with_model](/tutorials/asp.net/hello-kendo-ui/images/grid_is_editable_with_model.png)
+![grid_is_editable_with_model](/images/webforms/grid_is_editable_with_model.png)
 
 If you wanted to tweak this validation message, you could change the model
 definition for the **LastName** to look like this:
@@ -312,7 +312,7 @@ it should be telling you that it was unable to convert the BirthDate to a
 valid DateTime. If you examine the parameters of the request, you will see
 that indeed a very strange date format has been sent back by the server.
 
-![grid_bad_datetime](/tutorials/asp.net/hello-kendo-ui/images/grid_bad_datetime.png)
+![grid_bad_datetime](/images/webforms/grid_bad_datetime.png)
 
 This is because Dates (which are notoriously awful to work with) are formatted
 for JavaScript. You need to get the date formatted correctly. To do this, add
@@ -470,7 +470,7 @@ In the above scenario, the error is simply thrown out to the screen. In fact,
 if you try to delete certain people from the **Employees** table - like Nancy
 Davalio - you will get an error back from the server.
 
-![sample_error](/tutorials/asp.net/hello-kendo-ui/images/sample_error.png)
+![sample_error](/images/webforms/sample_error.png)
 
 **DO NOT EVER EXPOSE THIS MUCH INFORMATION ABOUT YOUR DATABASE TO THE USER!**
 
