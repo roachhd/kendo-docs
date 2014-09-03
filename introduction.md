@@ -2,6 +2,7 @@
 title: Welcome to Kendo UI
 page_title: HTML5, jQuery-based framework | Kendo UI
 description: "Kendo UI framework overview: UI components, rich data visualization framework, auto-adaptive mobile widgets and all tools for building rich web applications."
+previous_url: /index
 position: 1
 ---
 

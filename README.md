@@ -1,5 +1,6 @@
 ---
 title: Kendo UI Documentation Repo
+publish: false
 ---
 
 # Kendo UI Public Documentation
@@ -46,6 +47,8 @@ There are two ways you can contribute to the public Kendo UI documentation: eith
          ---
 
     - When adding content or making changes, please use only standard Markdown syntax, and make to preview your additions or changes before sending us a pull request. You can use an online tool like [Dillinger.io](http://dillinger.io/) or [Marked](http://markedapp.com/) on OSX to view what your changes will look like when ported to HTML.
+
+    - The [documentation Wiki](https://github.com/telerik/kendo-docs/wiki) contains the latest authoring guidelines.
 
     Once you've made your changes, commit, pull, merge, push and [send us a pull request](https://help.github.com/articles/using-pull-requests)! We — and Kendo UI users everywhere — thank you for making our docs the best front-end library documentation on the web!
 

@@ -11,8 +11,9 @@ navigation:
     "*basics":
         title: "The Basics"
         position: 3
-    "*api":
-        title: "API"
+    "api":
+        title: "API Reference"
+        position: 2
     "using-kendo-with":
         title: "Using Kendo With"
         position: 5
@@ -238,16 +239,15 @@ baseurl: /kendo-ui
 defaults:
 -
     scope:
-        path: "getting-started"
+        path: ""
     values:
         layout: "page"
-        category: "getting-started"
+        category: "default"
 -
     scope:
         path: "api"
     values:
-        layout: "page"
-        category: "api"
+        kind: "api"
 
 type_links:
     "kendo.Class": "/api/framework/class"
