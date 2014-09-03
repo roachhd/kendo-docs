@@ -1,16 +1,18 @@
 ---
-title: Kendo UI Mobile FAQ
+title: Frequently Asked Questions
 page_title: Kendo UI Mobile Frequently Asked Questions
-description: Answers to Frequently Asked Questions about how Kendo UI Mobile works and behaves
+description: Answers to Frequently Asked Questions about how Kendo UI mobile works and behaves
+previous_url: /getting-started/kendo-mobile-faq
+position: 1000001
 ---
 
-# Kendo UI Mobile Frequently Asked Questions
+# Frequently Asked Questions
 
-This is a collection of frequently asked questions about how Kendo UI Mobile works and behaves.
+This is a collection of frequently asked questions about how Kendo UI mobile framework works and behaves.
 
 ## All platforms
 
-### Q: Can I use the Kendo UI Web mobile widget skins from Q1 2014 with Kendo UI Mobile platform themes.
+### Q: Can I use the Kendo UI Web mobile widget skins from Q1 2014 with Kendo UI Mobile platform themes?
 
 A: _**No. They are incompatible.**_ The reason for this is that Kendo UI Web skins don't have skin names as a class selector and their styling is affecting everything in your page/app. They will also partially
 override the existing Kendo UI Mobile platform themes. You can use them in Kendo UI Mobile only, if you don't use the Kendo UI Mobile platform themes at all, including the common CSS -
@@ -103,7 +105,9 @@ external CSS should load web fonts, but we were not able to confirm this. As a w
 A: By default Windows Phone 8 highlights all links when they are active (hold down). Stopping this behaviour requires manually adding a meta tag to your application/site -
 adding the tag through Javascript is ignored:
 
-#### Stop link highlighting in WP8
+#### Q: I want to Stop link highlighting in WP8?
+
+A: Add the following meta tag:
 
     <meta name="msapplication-tap-highlight" content="no" />
 
