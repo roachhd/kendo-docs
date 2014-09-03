@@ -1,5 +1,6 @@
 ---
 title: Shopping Cart Implementation
+position: 7
 ---
 
 # Shopping Cart Implementation - Kendo Music Store

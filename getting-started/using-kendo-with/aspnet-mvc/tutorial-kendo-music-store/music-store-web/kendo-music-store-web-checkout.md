@@ -1,5 +1,6 @@
 ---
 title: Creating the Checkout Page
+position: 9
 ---
 
 # Creating the Checkout Page - Kendo Music Store

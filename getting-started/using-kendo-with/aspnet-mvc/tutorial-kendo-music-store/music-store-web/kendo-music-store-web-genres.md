@@ -1,5 +1,6 @@
 ---
 title: Creating the Genre Page
+position: 4
 ---
 
 # Creating the Genre Page - Kendo Music Store

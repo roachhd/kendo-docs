@@ -1,5 +1,6 @@
 ---
 title: Project Setup
+position: 1
 ---
 
 # Project Setup - Kendo Music Store

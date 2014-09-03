@@ -1,5 +1,6 @@
 ---
 title: Creating the Main Menu
+position: 2
 ---
 
 # Creating the Main Menu - Kendo Music Store

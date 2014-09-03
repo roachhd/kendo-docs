@@ -1,5 +1,6 @@
 ---
 title: Creating the Home Page
+position: 3
 ---
 
 # Creating the Home Page - Kendo Music Store

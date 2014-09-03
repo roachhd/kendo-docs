@@ -1,5 +1,6 @@
 ---
 title: Creating the Album Search Box
+position: 6
 ---
 
 # Album Search - Kendo Music Store

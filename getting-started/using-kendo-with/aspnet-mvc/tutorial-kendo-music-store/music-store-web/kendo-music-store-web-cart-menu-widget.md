@@ -1,5 +1,6 @@
 ---
 title: Custom Shopping Cart Menu Widget
+position: 8
 ---
 
 # Custom Shopping Cart Menu Widget - Kendo Music Store

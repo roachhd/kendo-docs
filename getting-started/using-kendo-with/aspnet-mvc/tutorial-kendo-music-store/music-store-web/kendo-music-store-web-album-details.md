@@ -1,5 +1,6 @@
 ---
 title: Displaying Album Details
+position: 5
 ---
 
 # Displaying Album Details - Kendo Music Store
