@@ -2,6 +2,7 @@
 title: Changes and Backward Compatibility
 page_title: Changes and Backward Compatibility in Kendo UI
 description: Find all changes which are effective in Kendo UI 2012 Q2 from previous releases
+previous_url: /getting-started/changes-and-backward-compatibility
 ---
 
 # Kendo UI Framework Changes and Backwards Compatibility
