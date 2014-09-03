@@ -1,5 +1,6 @@
 ---
-title: Creating a Single-Page App with KendoUI
+title: Creating a Single-Page App with Kendo UI
+position: 2
 ---
 
 # Creating a Single-Page App with KendoUI - Music Dashboard

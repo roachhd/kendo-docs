@@ -1,5 +1,6 @@
 ---
 title: Creating the Dashboard Main Page
+position: 3
 ---
 
 # Creating the Dashboard Main Page - Music Dashboard

@@ -1,5 +1,6 @@
 ---
 title: Building the Social Stats Page
+position: 5
 ---
 
 # Building the Social Stats Page

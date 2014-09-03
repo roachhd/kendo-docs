@@ -1,5 +1,6 @@
 ---
 title: Building the Store Sales page
+position: 4
 ---
 
 
