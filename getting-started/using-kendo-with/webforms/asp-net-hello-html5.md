@@ -1,7 +1,8 @@
 ---
 title: Part 3 - Hello HTML5
-page_title: Tutorial for HTML5 Development in Visual Studio 
+page_title: Tutorial for HTML5 Development in Visual Studio
 description: This tutorial will introduce you to HTML5 development with ASP.NET. Learn the theory and look at the implementation of HTML5 development in Visual Studio.
+position: 3
 ---
 
 # Tutorial: HTML5 Development With ASP.NET Part 3, Hello HTML5
@@ -111,7 +112,7 @@ Open **Visual Studio** and create a blank **ASP.NET Web Application** called
 **Add New Item** dialgoue, select **Web Form**.  Call it **Default.aspx** and
 click **Add**.
 
-![New Web Form](/tutorials/asp.net/images/hello-html5-new-web-form.png)
+![New Web Form](/images/webforms/hello-html5-new-web-form.png)
 
 When the **Default.aspx **file is added, it will open in the designer.  If it
 doesn’t, open the file.  Make sure you are viewing the HTML source of the Web
@@ -144,9 +145,9 @@ The new HTML5 doctype is not case sensitive.
 On the line below the doctype, remove the **xmlns** attribute.  This is not
 necessary.
 
-![xmlns](/tutorials/asp.net/images/hello-html5-xmlns.png)
+![xmlns](/images/webforms/hello-html5-xmlns.png)
 
-![No XMLNS](/tutorials/asp.net/images/hello-html5-no-xmlns.png)
+![No XMLNS](/images/webforms/hello-html5-no-xmlns.png)
 
 Some of HTML5 involves simplifying the web development experience and removing
 all of the unnecessary and confusing configuration attributes.
@@ -158,12 +159,12 @@ demonstrate a hypothetical page structure.  Delete the empty **div **that is
 there by default.  Add **&lt;header&gt;, &lt;footer&gt;, &lt;section&gt; **and **&lt;article&gt;**
 tags.
 
-![Semantic Tags](/tutorials/asp.net/images/hello-html5-semantic-tags.png)
+![Semantic Tags](/images/webforms/hello-html5-semantic-tags.png)
 
 Notice that Visual Studio intellisense recognizes these as valid tags.  Ensure
 that the schema validation selection is set to **HTML5**.
 
-![HTML5 Schema Validation](/tutorials/asp.net/images/hello-html5-html5-schema-validation.png)
+![HTML5 Schema Validation](/images/webforms/hello-html5-html5-schema-validation.png)
 
 If **HTML5 **is not available in the select box, ensure that you are running
 at least Visual Studio 2008 SP 1.  If you cannot run at least Visual Studio
@@ -175,7 +176,7 @@ downloading these packages…
 Add some filler text to the article section.  You can use a **Lorem**
 **Ipsum** generator to do this for you.  My favorite one is [here][22].
 
-![Lorem Ipsum](/tutorials/asp.net/images/hello-html5-lorem-ipsum.png)
+![Lorem Ipsum](/images/webforms/hello-html5-lorem-ipsum.png)
 
 ### Run The Application
 
@@ -184,12 +185,12 @@ about the layout of the content.  **&lt;header&gt;, &lt;section&gt;, &lt;footer&
 **&lt;article&gt; **are all block level elements, so they are displayed vertically
 stacked on the page with a default margin between them.
 
-![F5 No Style](/tutorials/asp.net/images/hello-html5-f5-no-style.png)
+![F5 No Style](/images/webforms/hello-html5-f5-no-style.png)
 
 Press **F12 **to open the IE Developer Tools.  Change the rendering mode from
 IE 9 to IE 7.  Observe that there is virtually no change in the display.
 
-![Browser Mode IE 7 No Style](/tutorials/asp.net/images/hello-html5-browser-mode-ie-7-no-style.png)
+![Browser Mode IE 7 No Style](/images/webforms/hello-html5-browser-mode-ie-7-no-style.png)
 
 ### Breaking HTML5 In Older Browsershello-html
 
@@ -198,7 +199,7 @@ clicking the project and select **Add New Item**.  Select **Style Sheet** and
 name it **style.css**.  Link the stylesheet in the page by dragging it from
 the **Project Explorer **and dropping it just under the empty title tag.
 
-![Link Stylesheet](/tutorials/asp.net/images/hello-html5-link-stylesheet.png)
+![Link Stylesheet](/images/webforms/hello-html5-link-stylesheet.png)
 
 Open the **site.css**  file and add the following style to change the
 background color of the article to **salmon**.
@@ -233,7 +234,7 @@ Return to Visual Studio and stop the application if necessary.  Right-click
 the project and select **Add Library Package Reference**.  Select **online
 **from the left-hand side and search for **modernizr.**
 
-![Modernizr](/tutorials/asp.net/images/hello-html5-modernizr.png)
+![Modernizr](/images/webforms/hello-html5-modernizr.png)
 
 Add **Modernizr** to the head of the page by dragging it from the scripts
 folder into the **Default.aspx** page and drop it directly below the

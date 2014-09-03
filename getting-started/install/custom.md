@@ -13,8 +13,8 @@ The following combined scripts are available in the bundles or at the CDN in ord
 *  **kendo.ui.core.min.js** - contains all widgets available in the [Kendo UI Core project](https://github.com/telerik/kendo-ui-core). The script is available in the Kendo UI Core distribution.
 *  **kendo.all.min.js** - contains a minified version of all features provided by Kendo UI.
 
-> **Important**: kendo.all.min.js is available in the Kendo UI Professional, Telerik UI for ASP.NET MVC**, **Telerik UI for JSP** and **Telerik UI for PHP distributions. The contents of
-**kendo.aspnetmvc.min.js** are **not** included in kendo.all.min.js - you need to include **kendo.aspnetmvc.min.js** in addition to kendo.all.min.js or use the
+> **Important**: `kendo.all.min.js` is available in the Kendo UI Professional, Telerik UI for ASP.NET MVC, Telerik UI for JSP and Telerik UI for PHP bundles. The contents of
+`kendo.aspnetmvc.min.js` are **not** included in `kendo.all.min.js` - you need to include `kendo.aspnetmvc.min.js` in addition to `kendo.all.min.js` or use the
 [custom download builder tool](http://www.telerik.com/download/custom-download).
 
 * **kendo.web.min.js** Available in Kendo UI Professional, JSP, PHP and MVC. Includes the core framework and all desktop browser widgets (previously distributed as Kendo UI Web).

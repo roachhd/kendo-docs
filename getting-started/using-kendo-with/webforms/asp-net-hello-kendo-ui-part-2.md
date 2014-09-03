@@ -2,6 +2,7 @@
 title: Part 5 - Hello Kendo UI  - Grid CRUD
 page_title: Second tutorial for HTML5 development with ASP.NET - Crud Operations
 description: Learn how to enable CRUD operations in Kendo UI Grid widget, handle editing the grid and failed requests.
+position: 5
 ---
 
 In this tutorial, you will learn how to fully enable CRUD operations in the
@@ -281,7 +282,7 @@ what went wrong.
 
                 // set the server response to OK
                 response.StatusCode = HttpStatusCode.OK;
-            } 
+            }
             else {
                 // we couldn't find the employee with the passed in id
                 // set the response status to error and return a message
@@ -295,7 +296,7 @@ what went wrong.
             response.StatusCode = HttpStatusCode.InternalServerError;
             response.Content = new StringContent(string.Format("The database updated failed: {0}", ex.Message));
         }
-        
+
         // return the HTTP Response.
         return response;
     }
@@ -417,7 +418,7 @@ In the case that the update succeeds, you can return an empty
                 // otherwise set the error field of a response object and return it.
                 return new Models.Response(string.Format("The employee with id {0} was not found in the database", id.ToString()));
             }
-        } 
+        }
         catch (Exception ex) {
             // something went wrong. set the errors field of
             return new Models.Response(string.Format("There was an error updating employee with id {0}: {1}", id.ToString(), ex.Message));

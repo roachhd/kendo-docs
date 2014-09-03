@@ -2,6 +2,7 @@
 title: Part 2 - Hello Services
 page_title: Tutorial for HTML5 development with ASP.NET WebAPI and RESTful services
 description: In this HTML5 development tutorial you will learn how to install ASP.NET WebAPI, create service, supporting CRUD operations, and debug WebAPI Services.
+position: 2
 ---
 
 # Tutorial: HTML5 Development For ASP.NET Developers Part 2, Hello Services
@@ -53,7 +54,7 @@ buy JavaScript, but is also much easier for humans to read and debug.
 Open Visual Studio. Select **File** / **New Project** and select the **ASP.NET
 Web Application** template. Name the application **HelloServices**.
 
-![File New Project](/tutorials/asp.net/images/hello-services-file-new-project.png)
+![File New Project](/images/webforms/hello-services-file-new-project.png)
 
 Open the **Default.aspx** page and delete all the content.
 
@@ -65,7 +66,7 @@ project which will hold the data access layer. Create a second folder called
 **Controllers **which will hold the WebAPI service that will be created in
 this tutorial.
 
-![Data Controllers](/tutorials/asp.net/images/hello-services-data-controllers.png)
+![Data Controllers](/images/webforms/hello-services-data-controllers.png)
 
 ### Create A Data Access Layer
 
@@ -82,9 +83,9 @@ the left-hand side, or from the **View** menu. Expand the **Northwind**
 database and expand **Tables**. Drag the **Employees** table onto the design
 surface. Save the file.
 
-![Add Linq To Sql](/tutorials/asp.net/images/hello-services-add-linq-to-sql.png)
+![Add Linq To Sql](/images/webforms/hello-services-add-linq-to-sql.png)
 
-![Linq To Sql Table Added](/tutorials/asp.net/images/hello-services-linq-to-sql-table-added.png)
+![Linq To Sql Table Added](/images/webforms/hello-services-linq-to-sql-table-added.png)
 
 ### Install NuGet Packages
 
@@ -99,14 +100,14 @@ dialogue comes up, click the **online** tab on the left-hand side and enter
 result and click the **“install”** button. Accept the package dependencies and
 install those as well.
 
-![Nuget AspNetWebApi](/tutorials/asp.net/images/hello-services-nuget-aspnetwebapi.png)
+![Nuget AspNetWebApi](/images/webforms/hello-services-nuget-aspnetwebapi.png)
 
 **Install jQuery**
 
 Enter **“jquery”** in the search box. Select the **jQuery** result and select
 **“install”**.
 
-![Install jQuery](/tutorials/asp.net/images/hello-services-install-jquery.png)
+![Install jQuery](/images/webforms/hello-services-install-jquery.png)
 
 Close the **Add Library Package Reference** dialogue.
 
@@ -116,7 +117,7 @@ In order to create the WebAPI Service, an empty class is needed. Right-click
 the **Controllers **folder and select **Add** and then **Class**. Name the
 class **EmployeesController.cs**.
 
-![Employees Controller](/tutorials/asp.net/images/hello-services-employees-controller.png)
+![Employees Controller](/images/webforms/hello-services-employees-controller.png)
 
 In order to designate the **EmployeesController.cs** class that was just
 added as a WebAPI controller that will respond to requests, inherit from the
@@ -125,7 +126,7 @@ over the word until you get the context menu. This will give you the option to
 include **System.Web.Http**. Optionally, you can achieve the same result by
 click **Alt+Shift+F10**, which will bring up the same context menu.
 
-![Employee Controller Inherits ApiController Class](/tutorials/asp.net/images/hello-services-employee-controller-class-inherit.png)
+![Employee Controller Inherits ApiController Class](/images/webforms/hello-services-employee-controller-class-inherit.png)
 
 This class will contain methods that can be invoked from the web service that
 is being created. This service represents the **Employees** table in the
@@ -173,7 +174,7 @@ Since WebAPI operates on convention over configuration, simply naming this
 method [**Get**][27]**()** is enough to designate as the method that will
 respond to an HTTP **GET**.
 
-![Return A LinqToSql Object](/tutorials/asp.net/images/hello-services-return-linq-object.png)
+![Return A LinqToSql Object](/images/webforms/hello-services-return-linq-object.png)
 
 You can override this convention by specifying the verb you want a method to
 respond to by decorating the method with the correct attribute (i.e.
@@ -220,7 +221,7 @@ application throws an error that is somewhat obscure.  If you inspect the
 details of that error, it will tell you that it cannot serialize the LINQ To
 SQL object.
 
-![Serialization Error](/tutorials/asp.net/images/hello-services-serialization-error.png)
+![Serialization Error](/images/webforms/hello-services-serialization-error.png)
 
 This is because .NET cannot serialize the LINQ To SQL object that is being
 returned by the **Get()** method in the **EmployeesController.cs** file. LINQ
@@ -258,7 +259,7 @@ properties. One for the employee id, first name, and last name.
 
 
 
-![Employee Model](/tutorials/asp.net/images/hello-services-employee-model.png)
+![Employee Model](/images/webforms/hello-services-employee-model.png)
 
 Open up the **EmployeesController.cs** file in the **Controllers** folder.
 Alter the **Get()** method to return a list of **Model.Employee** objects
@@ -287,7 +288,7 @@ from the database.
 
 
 
-![Web Get](/tutorials/asp.net/images/hello-services-web-get.png)
+![Web Get](/images/webforms/hello-services-web-get.png)
 
 ### Test The Application
 
@@ -296,7 +297,7 @@ URL. Notice that WebAPI returns the records from the Northwind Employees table
 in XML format.  IE will try to download the file, but other browsers such as
 Chrome will display the results.
 
-![Employees XML](/tutorials/asp.net/images/hello-services-employees-xml.png)
+![Employees XML](/images/webforms/hello-services-employees-xml.png)
 
 ### Getting JSON Data With AJAX
 
@@ -314,7 +315,7 @@ Open the **Site.Master** file and drag the **jquery.min** file over to the
 page just below the **Site.css** link tag in the head of the page. At the time
 of this writing, the current version of jQuery is **jquery-1.9.1.min.js**.
 
-![Add jQuery To Master Page](/tutorials/asp.net/images/hello-services-add-jquery-to-master-page.png)
+![Add jQuery To Master Page](/images/webforms/hello-services-add-jquery-to-master-page.png)
 
 Open up the **Default.aspx** file. Create an HTML table element with the id
 **“employees”**.
@@ -521,12 +522,12 @@ Capturing”** button. Refresh the page. Notice the request that is made to
 **api/employees**. Double-click on the request. Notice that the **Content-
 Type** is set to **JSON**.
 
-![F12 Content Type Inspection](/tutorials/asp.net/images/hello-services-f12-content-type-json.png)
+![F12 Content Type Inspection](/images/webforms/hello-services-f12-content-type-json.png)
 
 Select the **Response body** tab. Inspect the JSON response returned from the
 server.
 
-![F12 Response Body](/tutorials/asp.net/images/hello-services-f12-response-body-json.png)
+![F12 Response Body](/images/webforms/hello-services-f12-response-body-json.png)
 
 ### Enable Deleting Of Employees
 
@@ -744,7 +745,7 @@ Notice that when the **delete** button is clicked, an AJAX request is fired to
 the server with a method of **DELETE**. The server is currently returning a
 404, because the **DELETE** method has not yet been created in the service.
 
-![Delete Not Implemented](/tutorials/asp.net/images/hello-services-delete-not-implemented-404.png)
+![Delete Not Implemented](/images/webforms/hello-services-delete-not-implemented-404.png)
 
 ## Add A Delete Method To The Employees Service
 
@@ -800,7 +801,7 @@ the delete button next to the name you added to the database. Notice that the
 This means that everything has happened OK and the item has been deleted from
 the database. Also notice that your name was removed from the page by jQuery.
 
-![Finally](/tutorials/asp.net/images/hello-services-finally.png)
+![Finally](/images/webforms/hello-services-finally.png)
 
 ### Further Reading / Resources
 

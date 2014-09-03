@@ -217,6 +217,8 @@ navigation:
         title: "Order Page"
     "*localization":
         title: "Localization"
+    "*webforms":
+        title: "ASP.NET Web Forms"
 ## The application virtual path
 baseurl: /kendo-ui
 
