@@ -193,6 +193,8 @@ navigation:
         title: "TimePicker"
     "*tooltip":
         title: "Tooltip"
+    "*toolbar":
+        title: "ToolBar"
     "*treeview":
         title: "TreeView"
     "*upload":

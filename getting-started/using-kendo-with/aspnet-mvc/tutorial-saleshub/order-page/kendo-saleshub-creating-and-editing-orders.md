@@ -19,7 +19,7 @@ previous_url: /tutorials/asp.net/saleshub/order-page/kendo-saleshub-creating-and
 Since there are many similarities between the create and edit views for an Order, we'll discuss how
 both of them work in this article.
 
-![kendo-saleshub-order-edit-screenshot](/tutorials/asp.net/saleshub/order-page/images/kendo-saleshub-order-edit-screenshot.png)
+![kendo-saleshub-order-edit-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/order-page/images/kendo-saleshub-order-edit-screenshot.png)
 
 ## Set up the Partial View for an Order
 
@@ -29,7 +29,7 @@ can be found in **Views/Order/_Order.cshtml**.
 
 ## Set up the basic Order fields
 
-![kendo-saleshub-order-info-screenshot](/tutorials/asp.net/saleshub/order-page/images/kendo-saleshub-order-info-screenshot.png)
+![kendo-saleshub-order-info-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/order-page/images/kendo-saleshub-order-info-screenshot.png)
 
 The first part of the form is where we declare the fields where the user can set the contract weight/amount,
 date, and the order number for the given order. For the sake of brevity, we'll only cover the fields which
@@ -73,7 +73,7 @@ as a parameter and will cause the extensions to generate the markup for the unde
 
 ## Set up the TabStrip
 
-![kendo-saleshub-order-tabstrip-screenshot](/tutorials/asp.net/saleshub/order-page/images/kendo-saleshub-order-tabstrip-screenshot.png)
+![kendo-saleshub-order-tabstrip-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/order-page/images/kendo-saleshub-order-tabstrip-screenshot.png)
 
 The next part of the Orders view is the [Kendo TabStrip](http://demos.telerik.com/kendo-ui/web/tabstrip/index.html), which contains
 the grids for Order details and notes.
@@ -303,7 +303,7 @@ DataSource.
 
 ## Set up the Panel Bar
 
-![kendo-saleshub-order-panelbar-screenshot](/tutorials/asp.net/saleshub/order-page/images/kendo-saleshub-order-panelbar-screenshot.png)
+![kendo-saleshub-order-panelbar-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/order-page/images/kendo-saleshub-order-panelbar-screenshot.png)
 
 After the tabstrip containing the order details and order notes grid we have a [Kendo PanelBar](http://demos.telerik.com/kendo-ui/web/panelbar/index.html) which contains
 the fields for editing the payment terms of an Order, along with setting invoice comments.

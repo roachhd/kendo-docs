@@ -16,7 +16,7 @@ previous_url: /tutorials/asp.net/saleshub/kendo-saleshub-intro
 
 In this tutorial, we will review portions of the SalesHub sample project.
 
-![kendo-saleshub-intro-home-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-intro-home-screenshot.png)
+![kendo-saleshub-intro-home-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/images/kendo-saleshub-intro-home-screenshot.png)
 
 ## Aims of the SalesHub sample project
 
@@ -59,7 +59,7 @@ The first time the application launches, it creates and seeds its database. Seed
 
 ## Solution Structure
 
-![kendo-saleshub-intro-project-structure-screenshot](/tutorials/asp.net/saleshub/images/kendo-saleshub-intro-project-structure-screenshot.png)
+![kendo-saleshub-intro-project-structure-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub/images/kendo-saleshub-intro-project-structure-screenshot.png)
 
 There are three main projects in this sample application. They are:
 
