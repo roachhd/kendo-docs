@@ -56,6 +56,25 @@ Multiple arguments are accepted.
 `kendo.dataviz.geometry.Rect` The new Rect instance.
 
 
+### union
+
+Creates a new Rect instance that encloses the two rectangles given as arguments.
+
+#### Parameters
+
+##### rectA `kendo.dataviz.geometry.Rect`
+
+The first rectangle.
+
+##### rectB `kendo.dataviz.geometry.Rect`
+
+The second rectangle.
+
+#### Returns
+
+`kendo.dataviz.geometry.Rect` The new Rect instance.
+
+
 ## Methods
 
 ### bbox
@@ -100,6 +119,30 @@ Gets the position of the center of the rectangle.
 #### Returns
 
 `kendo.dataviz.geometry.Point` The position of the center.
+
+
+### clone
+
+Creates a new instance with the same origin and size.
+
+#### Returns
+
+`kendo.dataviz.geometry.Rect` A new Rect instance with the same origin and size.
+
+
+### equals
+
+Compares this rectangle with another instance.
+
+#### Parameters
+
+##### other `kendo.dataviz.geometry.Rect`
+
+The rectangle to compare with.
+
+#### Returns
+
+`Boolean` true if the origin and size is the same for both rectangles; false otherwise.
 
 
 ### getOrigin

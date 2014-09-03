@@ -23,6 +23,30 @@ An utility class for building transformation matrices.
 
 ## Methods
 
+### clone
+
+Creates a new instance with the same transformation matrix.
+
+#### Returns
+
+`kendo.dataviz.geometry.Transformation` A new Transformation instance with the same matrix.
+
+
+### equals
+
+Compares this transformation with another instance.
+
+#### Parameters
+
+##### other `kendo.dataviz.geometry.Transformation`
+
+The transformation to compare with.
+
+#### Returns
+
+`Boolean` true if the transformation matrix is the same; false otherwise.
+
+
 ### matrix
 
 Gets the current transformation matrix for this transformation.
