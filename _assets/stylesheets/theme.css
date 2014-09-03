@@ -170,7 +170,7 @@ pre .dec { color: #3e526b; } /* decimal */
 .category {
     display: inline-block;
     vertical-align: top;
-    width: 27%;
+    width: 45%;
     overflow: hidden;
     margin: 2%;
     text-align: left;

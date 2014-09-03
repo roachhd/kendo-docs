@@ -15,8 +15,6 @@ navigation:
         title: "API"
     "*getting-started":
         title: "Getting Started"
-    "*tutorials":
-        title: "Tutorials"
     "getting-started/using-kendo-with":
         title: "Using Kendo With"
         position: 5
@@ -249,12 +247,6 @@ defaults:
     values:
         layout: "page"
         category: "api"
--
-    scope:
-        path: "tutorials"
-    values:
-        layout: "page"
-        category: "tutorials"
 
 type_links:
     "kendo.Class": "/api/framework/class"
