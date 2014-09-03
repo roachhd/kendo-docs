@@ -4,7 +4,7 @@ title: Creating the Album Search Box
 
 # Album Search - Kendo Music Store
 
-![kendo-search-overview](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-search-overview.png)
+![kendo-search-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-search-overview.png)
 
 The Music Store application provides an text box for searching the store by album title.
 To implement this, a [Kendo AutoComplete Widget](http://demos.telerik.com/kendo-ui/web/autocomplete/index.html) was used.
@@ -138,25 +138,25 @@ want to return every album title in the store to the client. A quick breakdown o
 to do this is:
 
         dataSource: {
-        
+
             // We will use OData format requests.
             type: "odata",
-            
+
             // Let paging and filtering happen on the server, not on the client.
             serverFiltering: true,
             serverPaging: true,
-            
+
             // Set the number of records for the server to return.
             // This will be our max number of search results,
             // since we will just show the 1st "page".
             pageSize: store.config.searchMaxResults,
-            
-            
+
+
             transport: {
                 // Set the URL to read data from
                 read: store.config.albumsWithArtistsUrl
             },
-            
+
             // This fixes some compatibility issues between Kendo and WCF Data Service OData
             schema: {
                 data: function (data) {

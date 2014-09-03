@@ -8,12 +8,12 @@ Inevitably at some point in a project you will come across a feature that you ne
 to fit a standard Kendo UI Widget. In the Music Store sample project, this was the case with the shopping cart
 embedded in a menu item. The UI designer for the project drafted this screen mockup:
 
-![kendo-cart-menu-mockup](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-cart-menu-mockup.png)
+![kendo-cart-menu-mockup](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-cart-menu-mockup.png)
 
 The first reaction was "That isn't any of the standard Kendo widgets... this is going to be hard!"
 It turns out, it wasn't actually too difficult.
 
-![kendo-cart-menu-mockup](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-cart-menu-screenshot.png)
+![kendo-cart-menu-mockup](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-cart-menu-screenshot.png)
 
 Instead of trying to use the standard Kendo Menu widget and getting the "Total" and "Checkout" as the last item,
 we took the approach of making a custom Kendo UI Widget. This "cart menu" widget is actually more of a
@@ -237,7 +237,7 @@ After manipulating the DOM elements we make standard Kendo method calls to initi
             });
 
 Note that we are binding our ListView to the same DataSource that was originally passed to the Cart Menu widget.
-    
+
 ## Updating the Display
 
 We update the displayed items to the user whenever the DataSource changes within the **\_refresh()** function.

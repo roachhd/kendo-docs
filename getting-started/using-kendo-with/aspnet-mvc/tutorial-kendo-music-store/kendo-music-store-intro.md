@@ -7,11 +7,11 @@ position: 1
 
 In this tutorial, we will review portions of the **Kendo Music Store** sample project.
 
-The Music Store sample is split into three seperate projects; Web, Dashboard and Mobile.
+The Music Store sample includes two projects: a web application and a dashboard.
 
 # Kendo Music Store Web
 
-![kendo-music-store-intro-web-screenshot](/tutorials/asp.net/kendo-music-store/images/kendo-music-store-intro-web-screenshot.png)
+![kendo-music-store-intro-web-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/images/kendo-music-store-intro-web-screenshot.png)
 
 This sample project was based on Microsoft's [MVC Music Store](http://mvcmusicstore.codeplex.com/), so much of the
 server-side processing and the data structure are reused in this project.
@@ -33,7 +33,7 @@ Please use the navigation tree at the left to navigate the sections of this tuto
 
 # Kendo Music Store Dashboard
 
-![kendo-music-store-intro-dashboard-screenshot](/tutorials/asp.net/kendo-music-store/images/kendo-music-store-intro-dashboard-screenshot.png)
+![kendo-music-store-intro-dashboard-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/images/kendo-music-store-intro-dashboard-screenshot.png)
 
 The Dashboard builds upon the music store theme, adding a conceptual management dashboard to track album performance.
 It focuses on [Kendo UI DataViz](http://www.telerik.com/kendo-ui-dataviz) and how Kendo and Sammy.js were used to create a visually rich single page application.

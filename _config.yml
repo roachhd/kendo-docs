@@ -203,12 +203,6 @@ navigation:
         title: "Window"
     "*hello-kendo-ui":
         title: "Hello Kendo UI"
-    "*kendo-music-store":
-        title: "Kendo UI Music Store"
-    "*music-store-dashboard":
-        title: "Music Store Dashboard"
-    "*music-store-web":
-        title: "Music Store Web"
     "*home-page":
         title: "Home Page"
     "*order-page":
@@ -229,6 +223,15 @@ navigation:
     "getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub":
         title: "Tutorial: Build the Sales Hub Project"
         position: 20
+    "getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store":
+        title: "Tutorial: Build the Kendo Music Store"
+        position: 20
+    "getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web":
+        title: "Build the Web Application"
+        position: 2
+    "getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-dashboard":
+        title: "Build the Dashboard"
+        position: 3
 ## The application virtual path
 baseurl: /kendo-ui
 

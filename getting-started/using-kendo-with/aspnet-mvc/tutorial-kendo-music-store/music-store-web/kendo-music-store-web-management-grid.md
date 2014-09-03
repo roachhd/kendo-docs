@@ -4,7 +4,7 @@ title: Creating the Store Management Grid
 
 # Creating the Store Management Grid - Kendo Music Store
 
-![kendo-manage-grid-screenshot](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-manage-grid-screenshot.png)
+![kendo-manage-grid-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-grid-screenshot.png)
 
 When logged in to the Music Store as an administrator an additional button titled "Manage Store" is made available in the upper right corner.
 This opens the management grid which can be used to add, remove and delete albums from the store.
@@ -40,7 +40,7 @@ For the Create Update and Delete operations, we define:
 
             dataSource: {
                 // ... basic settings omitted ...
-                
+
                 transport: {
                     type: "odata",
                     read: {
@@ -183,7 +183,7 @@ The **toolbar** property contains an array of commands to place along the top of
 **dataSource** is set to the data source that we defined above.
 
 **columns** is an array of columns to be displayed which we will look at in more detail.
-        
+
 ### Defining the Grid Columns.
 
 The **columns: []** property of the grid configuration takes an array of objects, each of which defines a column of data.

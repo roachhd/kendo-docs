@@ -16,7 +16,7 @@ The preferred method of getting KendoUI is to browse to [telerik.com](http://www
 Depending on whether you are using the Trial version or have purchased the full Commercial version,
 you will have a .zip file that follows one of these directory structures:
 
-![kendo-commecrial-zip-layout](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-commecrial-zip-layout.png)
+![kendo-commecrial-zip-layout](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-commecrial-zip-layout.png)
 
 The **\js** and **\styles** folders in the root of the .zip file contain the "minified" versions of the KendoUI .js and .css files.
 If you have the commercial version of Kendo UI, you may also notice the **\source** folder.
@@ -33,7 +33,7 @@ Kendo UI Web can also be fetched from a CDN instead of downloading the files. Fo
 Kendo UI Web is also avaiable using the NuGet package manager in Visual Studio.
 Simply search for 'kendo'.
 
-![kendo-nuget](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-nuget.png)
+![kendo-nuget](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-nuget.png)
 
 ### More Information
 

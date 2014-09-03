@@ -4,7 +4,7 @@ title: Creating the Store Management Charts
 
 # Creating the Store Management Charts - Kendo Music Store
 
-![kendo-manage-charts-screenshot](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-manage-charts-screenshot.png)
+![kendo-manage-charts-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-charts-screenshot.png)
 
 When logged in to the Music Store as an administrator an additional button titled "Manage Store" is made available in the upper right corner.
 This opens the management graphs which can be used to monitor the sales status of the store.
@@ -189,7 +189,7 @@ The default selected item is also saved to a separate variable.
         end: Date.today().add(1).days().toString("M/d/yyyy"),
         unit: "months"
     }];
-    
+
     var selectedDateRange = dateRanges[1];
 
 When we query the server for data, we want to add the start and end date of the selected date range as query string parameters.
@@ -198,14 +198,14 @@ To do this, we override the **transport.parameterMap** on the DataSource, refere
     var revenueChartDataSource = new kendo.data.DataSource({
         transport: {
             ...
- 
+
             parameterMap: function (options, type) {
                 return {
                     start: selectedDateRange.start,
                     end: selectedDateRange.end
                 };
             }
-            
+
             ...
 
 In the parameterMap function, we return an object that has **start** and **end** properties, which will be added to the request to the server.

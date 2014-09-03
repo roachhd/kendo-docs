@@ -4,7 +4,7 @@ title: Creating the Main Menu
 
 # Creating the Main Menu - Kendo Music Store
 
-![kendo-menu-overview](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-menu-overview.png)
+![kendo-menu-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-overview.png)
 
 The main menu of the Music Store application shows off some of the functionality of the [Kendo Menu Widget](http://demos.telerik.com/kendo-ui/web/menu/index.html).
 The **Genres** item uses a pull-down menu of items to show all the genres of music in the store.
@@ -45,7 +45,7 @@ Any **&lt;li&gt;** elements that in turn contain another list **&lt;ul&gt;** ele
 
 This creates the pull-down item:
 
-![kendo-menu-pulldown-placeholder](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-menu-pulldown-placeholder.png)
+![kendo-menu-pulldown-placeholder](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-pulldown-placeholder.png)
 
 We can replace our "placeholder" **&lt;li&gt;** elements with an MVC partial that loads the list of Genres:
 
@@ -91,4 +91,4 @@ For example, let's add this content for out "About" menu item:
 
 This creates the **&lt;div&gt;** content displayed in a drop-down menu item:
 
-![kendo-menu-pulldown-content](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-menu-pulldown-content.png)
+![kendo-menu-pulldown-content](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-pulldown-content.png)

@@ -8,7 +8,7 @@ When an Album is clicked from any page, the album details are shown in a popup w
 This window gives the user the ability to change the quantity to order, and add the album to the cart.
 More than one album details window can be opened at once, and they can be dragged around the screen.
 
-![kendo-album-details-window](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-album-details-window.png)
+![kendo-album-details-window](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-album-details-window.png)
 
 ## Calling a Common Function
 
@@ -34,7 +34,7 @@ The **viewAlbumDetails()** function makes a jQuery AJAX call to load the Album f
         }
 
 ## Create View Model
-        
+
 Upon completion of the AJAX request, the **store._createAlbumDetailsViewModel()** function is called.
 This method takes the Album record returned from the server, and returns an object that will be used as the view model for the details window.
 

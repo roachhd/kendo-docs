@@ -14,7 +14,7 @@ This page is contained in the files **Views\Home\Index.cshtml** and **Scripts\Ap
 
 ## Displaying items in a ListView (with MVVM, templates, and binding to a remote data source)
 
-![kendo-music-store-web-main-lists-screenshot](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-music-store-web-main-lists-screenshot.png)
+![kendo-music-store-web-main-lists-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-music-store-web-main-lists-screenshot.png)
 
 To implement our lists of "featured artist" and "top selling" albums,
 we can start with some simple HTML markup to represent the 2 ListView widgets:
@@ -47,7 +47,7 @@ We moved the template to an ASP.NET MVC partial to keep the code clean and allow
 reuse of the template between pages. The partial was then included with:
 
     @Html.Partial("_AlbumListTemplatePartial")
-	
+
 In the template, note the special **type="text/x-kendo-template"**. This is required for Kendo to be able to resolve the template.
 Also the **id** matches the template indicated by the &lt;div&gt; tags.
 More information on templates can be found [here](http://demos.telerik.com/kendo-ui/web/templates/index.html).
@@ -58,7 +58,7 @@ This means we need to create our view model in JavaScript, which is:
 
     var viewModel = kendo.observable({
         featuredArtistName: store.config.featuredArtist,
-        
+
         featuredArtistAlbums: new kendo.data.DataSource({
             // ...
         }),
@@ -67,7 +67,7 @@ This means we need to create our view model in JavaScript, which is:
             // ...
         })
     });
-	
+
 	kendo.bind("#body", viewModel);
 
 Our viewModel is a Kendo **Observable** object, which facilitates the updating of properties

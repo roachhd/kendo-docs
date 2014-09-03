@@ -9,7 +9,7 @@ The albums will be limited to 20 per page, and display paging navigation at both
 
 ## Displaying items in a ListView (with MVVM, templates, and binding to a remote data source)
 
-![kendo-genre-screenshot](/tutorials/asp.net/kendo-music-store/music-store-web/images/kendo-genre-screenshot.png)
+![kendo-genre-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-genre-screenshot.png)
 
 ### Create the HTML
 
@@ -49,12 +49,12 @@ the page changes. Instead, the DataSource uses the MVVM notification system to t
 This code is contained in **Scripts/App/store-browse.js**.
 
     var viewModel = kendo.observable({
-	
+
 	    // Load the albums for this genre from the server
         albums: new kendo.data.DataSource({
             ...
         }),
-		
+
 		// This will hold our Genre object, once loaded.
         genre: null,
 
