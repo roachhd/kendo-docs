@@ -3,7 +3,7 @@ title: Create the Store Management Charts
 position: 11
 ---
 
-# Create the Store Management Charts - Kendo Music Store
+# Create the Store Management Charts - Kendo UI Music Store
 
 ![kendo-manage-charts-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-charts-screenshot.png)
 

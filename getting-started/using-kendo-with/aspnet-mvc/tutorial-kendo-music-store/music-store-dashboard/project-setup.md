@@ -3,7 +3,7 @@ title: Project Setup
 position: 1
 ---
 
-# Project Setup - Kendo Music Store Dashboard
+# Project Setup - Kendo UI Music Store Dashboard
 
 ## Database
 

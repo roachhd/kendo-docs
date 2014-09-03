@@ -3,7 +3,7 @@ title: Display Album Details
 position: 5
 ---
 
-# Display Album Details - Kendo Music Store
+# Display Album Details - Kendo UI Music Store
 
 When an Album is clicked from any page, the album details are shown in a popup window.
 This window gives the user the ability to change the quantity to order, and add the album to the cart.

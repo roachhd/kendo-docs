@@ -1,9 +1,9 @@
 ---
-title: Building the Social Stats Page
+title: Build the Social Stats Page
 position: 5
 ---
 
-# Building the Social Stats Page
+# Build the Social Stats Page
 
 ![social-overview](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/social-overview.png)
 
@@ -13,9 +13,9 @@ The different social networks can be selected to show their data in the main gra
 
 This page is contained in the following files: **app/social-view.js**, **app/views/social.html**, and **Content/social-view.css**.
 
-## Constructing the Dynamic Chart
+## Construct the Dynamic Chart
 
-The chart itself is defined as a Kendo Chart in the Javascript, with some special considerations for the series and value axis (as these are the dynamic portions of the chart, along with the data source. The relevant portions of the chart's initilizer are below, cut down for brevity:
+The chart itself is defined as a Kendo UI Chart in the JavaScript, with some special considerations for the series and value axis (as these are the dynamic portions of the chart, along with the data source. The relevant portions of the chart's initializer are below, cut down for brevity:
 
     $('#social-stats-chart').kendoChart({
         title: {
@@ -30,13 +30,13 @@ The chart itself is defined as a Kendo Chart in the Javascript, with some specia
         ...
     });
 
-Note the functions **buildSocialStatsSeries** and **buildSocialStatsValueAxis**: these define which data views appear in the chart and their styles. It is these functions that perform the addition and removal of the dynamic content, and so are called when the chart is created and also whenever the user selects or deselects one of the social networks via the interactive elments located below the chart.
+Note the functions **buildSocialStatsSeries** and **buildSocialStatsValueAxis**: these define which data views appear in the chart and their styles. It is these functions that perform the addition and removal of the dynamic content, and so are called when the chart is created and also whenever the user selects or deselects one of the social networks via the interactive elements located below the chart.
 
 These "social tiles" are located below the chart:
 
 ![social-tiles](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/social-tiles.png)
 
-These tiles are constructed using standard declarative markup in HTML and Javascript events. The HTML is below:
+These tiles are constructed using standard declarative markup in HTML and JavaScript events. The HTML is below:
 
     <div class="social-tiles">
         <span class="social-tile-wrapper" data-selected="true">
@@ -54,7 +54,7 @@ These tiles are constructed using standard declarative markup in HTML and Javasc
         </span>
     </div>
 
-Each tile is its own **&lt;span&gt;**, each with class "**social-tile-wrapper**" that is used to associate a click event in the Javascript.
+Each tile is its own **&lt;span&gt;**, each with class "**social-tile-wrapper**" that is used to associate a click event in the JavaScript.
 
     $(".social-tile-wrapper").click(function (e) {
         changeChartData.call(this);
@@ -84,7 +84,7 @@ Each tile is its own **&lt;span&gt;**, each with class "**social-tile-wrapper**"
 
 jQuery does the heavy-lifting of locating the data and facilitating the actions, while the chart itself handles redrawing the new data.
 
-**buildSocialStatsValueAxis** builds the Javascript object the chart expects for defining the ValueAxis property, taking its information from the social tiles and if they have the **social-tile-selected** class attached. An excerpt of this function is below, snipped for brevity (as the use of the Facebook tile is representative of the use of the others):
+**buildSocialStatsValueAxis** builds the JavaScript object the chart expects for defining the ValueAxis property, taking its information from the social tiles and if they have the **social-tile-selected** class attached. An excerpt of this function is below, snipped for brevity (as the use of the Facebook tile is representative of the use of the others):
 
     function buildSocialStatsValueAxis() {
         var axis = [

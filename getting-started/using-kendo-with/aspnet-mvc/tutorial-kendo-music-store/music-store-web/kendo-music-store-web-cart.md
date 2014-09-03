@@ -3,9 +3,9 @@ title: Shopping Cart Implementation
 position: 7
 ---
 
-# Shopping Cart Implementation - Kendo Music Store
+# Shopping Cart Implementation - Kendo UI Music Store
 
-The shopping cart for the Kendo Music Store is in **Scripts\App\cart.js**.
+The shopping cart for the Kendo UI Music Store is in **Scripts\App\cart.js**.
 All the functionality for the cart is encapsulated in a single object, created by calling the **Cart()** constructor.
 
 ## Store Cart Data

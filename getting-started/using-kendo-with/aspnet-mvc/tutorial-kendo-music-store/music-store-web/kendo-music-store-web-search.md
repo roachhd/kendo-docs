@@ -3,7 +3,7 @@ title: Create the Album Search Box
 position: 6
 ---
 
-# Album Search - Kendo Music Store
+# Album Search - Kendo UI Music Store
 
 ![kendo-search-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-search-overview.png)
 

@@ -3,7 +3,7 @@ title: Create the Store Management Grid
 position: 10
 ---
 
-# Create the Store Management Grid - Kendo Music Store
+# Create the Store Management Grid - Kendo UI Music Store
 
 ![kendo-manage-grid-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-grid-screenshot.png)
 

@@ -3,7 +3,7 @@ title: Create the Genre Page
 position: 4
 ---
 
-# Create the Genre Page - Kendo Music Store
+# Create the Genre Page - Kendo UI Music Store
 
 The Genre listing will display all the albums in a selected genre.
 The albums will be limited to 20 per page, and display paging navigation at both the top and bottom.

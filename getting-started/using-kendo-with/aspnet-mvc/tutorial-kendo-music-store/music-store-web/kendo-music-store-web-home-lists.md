@@ -3,7 +3,7 @@ title: Create the Home Page
 position: 3
 ---
 
-# Create the Home Page - Kendo Music Store
+# Create the Home Page - Kendo UI Music Store
 
 For the main content of the "Home" page, we want to display a main banner image rotator, and 2 groups of Albums.
 One will be our "top sellers," and the other is a "featured artist."

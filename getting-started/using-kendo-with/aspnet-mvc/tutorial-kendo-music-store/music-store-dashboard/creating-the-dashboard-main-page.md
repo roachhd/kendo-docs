@@ -1,17 +1,17 @@
 ---
-title: Creating the Dashboard Main Page
+title: Create the Dashboard Main Page
 position: 3
 ---
 
-# Creating the Dashboard Main Page - Music Dashboard
+# Create the Dashboard Main Page - Music Dashboard
 
 ![dashboard-overview](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/dashboard-overview.png)
 
-The main page constitutes the landing page of the Dashboard, and the navigation strip, an overview of recent sales far various periods of time, top singles and albums, and a series of gauges showing hourly data. For this view, we use a declarative approach similar to the Kendo Music Store itself, also using the **data-** attributes, and the [Kendo MVVM](http://demos.telerik.com/kendo-ui/web/mvvm/index.html) framework.
+The main page constitutes the landing page of the Dashboard, and the navigation strip, an overview of recent sales far various periods of time, top singles and albums, and a series of gauges showing hourly data. For this view, we use a declarative approach similar to the Kendo UI Music Store itself, also using the **data-** attributes, and the [Kendo UI MVVM](http://demos.telerik.com/kendo-ui/web/mvvm/index.html) framework.
 
 This page is contained in the files **app/views/main.html**, **app/main-view.js**, and **Content/home-view.css**
 
-## Displaying the Sales tabs
+## Display the Sales tabs
 To implement the listings of Sales for the various times, we start with some simple HTML to define the categories to display:
 
 	<section class="store-tall-tabs">
@@ -67,7 +67,7 @@ The entirety of the view information in **main.html** is wrapped in the followin
 
 so that the binding of the sales totals passes back through to the view. **kendo.bind($("#home-view"), data.items[0]); makes use of standard jQuery syntax and performs the binding.
 
-## Displaying Top Singles and Albums List Views
+## Display Top Singles and Albums List Views
 These lists are created via a combination of HTML markup, templating, and MVVM binding, with the data provided by a remote DataSource. Starting with the markup:
 
 	<div class="top-singles-list">
@@ -78,7 +78,7 @@ These lists are created via a combination of HTML markup, templating, and MVVM b
         <h3 class="list-title">Top <span class="italic">Albums</span></h3>
         <div id="topAlbumsListView"></div>
 	</div>
-Each requires a Kendo template, to render the invididual items in the proper manner. The **Single** template is below:
+Each requires a Kendo UI template, to render the individual items in the proper manner. The **Single** template is below:
 
 	<script type="text/x-kendo-tmpl" id="top-single-template">
     	<div class="top-single-song-list-item">
@@ -91,7 +91,7 @@ Each requires a Kendo template, to render the invididual items in the proper man
 	    </div>
 	</script>
 
-There are several differences in this approach to that used in the Kendo Music Store - the use of a remote DataSource facilitates some of the detail be moved around.
+There are several differences in this approach to that used in the Kendo UI Music Store - the use of a remote DataSource facilitates some of the detail be moved around.
 
 The bindings are invoked in the JavaScript (int **main-view.js**); this is also where the templates are applied and the DataSource is bound.
 
@@ -118,7 +118,7 @@ The bindings are invoked in the JavaScript (int **main-view.js**); this is also 
 
 The **Albums** ListView is constructed similarly, with the same structure.
 
-## Creating a Gauge with a custom background
+## Create a Gauge with a custom background
 
 The radial gauges on this page use a custom background image of a record. EVery gauge is contained within its own **&lt;div&gt;**, as shown below:
 

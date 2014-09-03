@@ -3,7 +3,7 @@ title: Custom Shopping Cart Menu Widget
 position: 8
 ---
 
-# Custom Shopping Cart Menu Widget - Kendo Music Store
+# Custom Shopping Cart Menu Widget - Kendo UI Music Store
 
 Inevitably at some point in a project you will come across a feature that you need to implement that doesn't seem
 to fit a standard Kendo UI Widget. In the Music Store sample project, this was the case with the shopping cart

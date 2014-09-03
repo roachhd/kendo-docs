@@ -3,7 +3,7 @@ title: Create the Main Menu
 position: 2
 ---
 
-# Create the Main Menu - Kendo Music Store
+# Create the Main Menu - Kendo UI Music Store
 
 ![kendo-menu-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-overview.png)
 

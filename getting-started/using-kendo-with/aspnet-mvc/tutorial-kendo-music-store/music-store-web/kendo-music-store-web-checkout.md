@@ -3,7 +3,7 @@ title: Create the Checkout Page
 position: 9
 ---
 
-# Create the Checkout Page - Kendo Music Store
+# Create the Checkout Page - Kendo UI Music Store
 
 ![kendo-checkout-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-checkout-screenshot.png)
 

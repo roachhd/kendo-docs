@@ -3,7 +3,7 @@ title: Project Setup
 position: 1
 ---
 
-# Project Setup - Kendo Music Store
+# Project Setup - Kendo UI Music Store
 
 ## Add Kendo UI to the project
 

@@ -1,15 +1,15 @@
 ---
-title: Creating a Single-Page App with Kendo UI
+title: Create a Single-Page App with Kendo UI
 position: 2
 ---
 
-# Creating a Single-Page App with KendoUI - Music Dashboard
+# Create a Single-Page App with Kendo UI - Music Dashboard
 
 ![dashboard-overview](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/dashboard-overview.png)
 
 The Music Dashboard is constructed as a single page app, built to have smooth transitions and high performance. Using the Sammy.js framework, the various pages of the application are routed through this framework and in ASP.NET MVC.
 
-## Initializing the application in MVC
+## Initialize the application in MVC
 
 We start with the basic ASP.NET MVC **HomeController.cs**:
 	
@@ -32,7 +32,7 @@ We start with the basic ASP.NET MVC **HomeController.cs**:
 
 Each page of the app requires three components: an HTML page, a CSS stylesheet, and a JavaScript file. Additionally, a site-wide **Site.css**, **app.js**, and **main-view.js** are required. MVC provides the framework for the single page, but the plumbing must be included.
 
-A large amount of the structure is therefore included in **_Layout.cshtml** (portions ommitted for brevity):
+A large amount of the structure is therefore included in **_Layout.cshtml** (portions omitted for brevity):
 
 	<!DOCTYPE html>
 	<html>
@@ -78,9 +78,9 @@ anonymous function and added to the Window object:
 
     }(window));
 
-The musicDashboard object has a setup method that initilizes the router member to a new Kendo UI Router object.
+The musicDashboard object has a setup method that initializes the router member to a new Kendo UI Router object.
 The Router object allows you to define your application's URLs. This means they can be shared to provide deep linking to your application.
-You can read more about the [Kendo Router](http://blogs.telerik.com/kendoui/posts/13-05-09/a-day-at-the-spa-with-kendo.router "Kendo Router") object at http://blogs.telerik.com/kendoui/posts/13-05-09/a-day-at-the-spa-with-kendo.router
+You can read more about the [Kendo UI Router](http://blogs.telerik.com/kendoui/posts/13-05-09/a-day-at-the-spa-with-kendo.router "Kendo Router") object at http://blogs.telerik.com/kendoui/posts/13-05-09/a-day-at-the-spa-with-kendo.router
 
         //kendoui router object
         router: undefined,
@@ -101,11 +101,11 @@ the router is started by calling the start() method.
 
 Each route is defined by a URL and a callback method. The URL is the route or value defined after the hash, #. Single Page Apps
 rely on an old technique of using a # in a URL to define a unique URL. When the # value changes in a URL the browser does not 
-send the request to the server, instead is looks for the target on the page, it also fires a 'hashchange' event. The Kendo Router
+send the request to the server, instead is looks for the target on the page, it also fires a 'hashchange' event. The Kendo UI Router
 object is wired to the 'hashchange' event and executes the route's corresponding callback when the event fires. Here you see a truncated
 callback method and routes defined for each view in the Music Dashboard application.
 
-        //defined Routes for KendoUI
+        //defined Routes for Kendo UI
         setupRoutes: function () {
 
             var that = this;
@@ -142,9 +142,9 @@ make sure the top navigation has CSS classes applied correctly and finally creat
 
                 });
 
-# Managing Views
+# Manage Views
 
-The musicDashboard object's setup method calls another method, setupViews, to initilize the Kendo UI views:
+The musicDashboard object's setup method calls another method, setupViews, to initialize the Kendo UI views:
 
         setup: function () {
 
@@ -159,10 +159,10 @@ The musicDashboard object's setup method calls another method, setupViews, to in
 
 The setupViews method initializes each view: main, social and sales by selecting the elements from the page and passing their
 corresponding markup to the kendo.View 'constructor'. There is an additional, optional model parameter that can be provided, but
-is not needed for the Music Dashboard. The Kendo Views are used to help manage swaping the main content between views as the user
+is not needed for the Music Dashboard. The Kendo UI Views are used to help manage swapping the main content between views as the user
 navigates the application.
 
-        //define views for KendoUI
+        //define views for Kendo UI
         setupViews: function () {
 
             var that = this,
@@ -197,7 +197,7 @@ view's parent element. For the Music Dashboard this is the #main element.
 
 ![navigation-strip](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/navigation-strip.png)
 
-The various pages of the Music Dashboard are accessed through the nagivation strip along the top.
+The various pages of the Music Dashboard are accessed through the navigation strip along the top.
 
 ## Layout Placement
 
@@ -215,5 +215,5 @@ The **class** attributes in the **&lt;span&gt;** tags are defined in **Site.css*
 
 ## Clicks and Routing
 
-Because the routes are defined using the Kendo Router there is no real need to define click or touch event handlers to drive navigation.
+Because the routes are defined using the Kendo UI Router there is no real need to define click or touch event handlers to drive navigation.
 Instead simple anchors <a href=""> are defined for each menu item that change the URL # value.

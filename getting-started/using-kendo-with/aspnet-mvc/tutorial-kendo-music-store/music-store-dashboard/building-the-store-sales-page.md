@@ -1,20 +1,20 @@
 ---
-title: Building the Store Sales page
+title: Build the Store Sales page
 position: 4
 ---
 
 
-# Building the Store Sales page
+# Build the Store Sales page
 
 ![sales-overview](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/sales-overview.png)
 
-This page is constructed to show a collection of DataViz graphs, exposing several different views of store data. The page is domiated by a general sales graph, which can be filtered by five different dimensions, selectable by the buttons to the left of graph.
+This page is constructed to show a collection of DataViz graphs, exposing several different views of store data. The page is dominated by a general sales graph, which can be filtered by five different dimensions, selectable by the buttons to the left of graph.
 
 Two smaller graphs present data grouped by genre: Sales and Searches. These views provide a way to change the type of chart shown, changing the presentation of the data based on user selection of the graph type. The data can also be changed between Weekly, Monthly and Yearly data.
 
 This page is contained in the following files: **app/views/sales.html**, **app/sales-view.js**, and **Content/sales-view.css**.
 
-## Changing Chart Type Dynamically
+## Change Chart Type Dynamically
 
 The **Sales By Genre** chart allows for the chart type to be changed dynamically. The chart can be changed from, for instance, a bar graph
 
@@ -28,7 +28,7 @@ using the buttons down the right side.
 
 ![sales-by-genre-bar-button-highlight](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/sales-by-genre-bar-button-highlight.png)
 
-The **Sales By Genre** and **Searches By Genre** charts are built similarly, with simple declarative markup and powerful Javascript piping. The chart is contained within it's own **&lt;div&gt;**, with an accompanying **&lt;span&gt;** that contains the buttons for changing the chart type. The Sales By Genre chart is constructed like so:
+The **Sales By Genre** and **Searches By Genre** charts are built similarly, with simple declarative markup and powerful JavaScript piping. The chart is contained within it's own **&lt;div&gt;**, with an accompanying **&lt;span&gt;** that contains the buttons for changing the chart type. The Sales By Genre chart is constructed like so:
 
 	<div class="sales-by-genre-chart half-width-chart"></div>
     <span class="store-sales-chart-type change-genre-sales-chart-type">
@@ -87,7 +87,7 @@ The button that was called is marked as selected using the **$this** variable, p
 
 The chart's options are then changed to the selected chart type, and the chart is then commanded to redraw, showing the new chart.
 
-## Changing Temporal Data Dynamically
+## Change Temporal Data Dynamically
 
 The **Sales By Genre** and **Searches By Genre** charts also provide a method to dynamically change the temporal data in use. For example, using the buttons on top, the **Sales By Genre** chart can be changed from showing Weekly data
 
@@ -97,7 +97,7 @@ to showing Monthly data.
 
 ![sales-by-genre-bar-monthly](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/sales-by-genre-bar-monthly.png)
 
-As before, the two charts are constructed similarly, with declarative markup and Javascript. (And jQuery, of course!)
+As before, the two charts are constructed similarly, with declarative markup and JavaScript. (And jQuery, of course!)
 
 The chart is defined with the buttons in the previous section, and so aren't included here with the declaration of the tabs used as buttons for the temporal data:
 
