@@ -1,7 +1,8 @@
 ---
-title: Telerik UI for ASP.NET MVC Fundamentals
+title: Basic Usage
 page_title: Telerik UI for ASP.NET MVC Fundamentals
 description: Kendo UI server-side wrappers, configuration, fluent interface, initialization
+position: 0
 ---
 # Telerik UI for ASP.NET MVC Fundamentals
 
@@ -120,7 +121,7 @@ and obtain the reference in a document.ready handler. After you get the referenc
     <script>
     $(function(){
         var numeric = $("#age").data("kendoNumericTextBox");
-        numeric.value(10);    
+        numeric.value(10);
     });
     </script>
 
@@ -134,7 +135,7 @@ If you have deferred the initialization of the widget, make sure you get its ins
     <script>
     $(function(){
         var numeric = $("#age").data("kendoNumericTextBox");
-        numeric.value(10);    
+        numeric.value(10);
     });
     </script>
 

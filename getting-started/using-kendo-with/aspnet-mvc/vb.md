@@ -2,6 +2,7 @@
 title: VB Syntax
 page_title: Visual Basic syntax in Kendo UI MVC wrapper declarations
 description: Example of correct VB Syntax which is applicable to anonymous types and lambda expressions in Kendo UI MVC wrapper declarations.
+position: 7
 ---
 
 # VB Syntax
@@ -37,7 +38,7 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
         .Render()
 
     End Code
-	
+
 ## Grid
 
 ### View
@@ -63,7 +64,7 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
 					End Function) _
 		.Render()
 	End Code
-	
+
 ### Controller
 
 	Imports Kendo.Mvc.Extensions
@@ -74,9 +75,9 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
 
 		Function Person_Read(request As DataSourceRequest) As ActionResult
 			Dim result As List(Of Person) = New List(Of Person)
-			
+
 			'populate result
-			
+
 			Return Json(result.ToDataSourceResult(request))
 		End Function
 

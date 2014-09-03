@@ -47,8 +47,6 @@ navigation:
         title: "ASP.NET"
     "*widgets":
         title: "Widgets"
-    "*helpers":
-        title: "View Helpers"
     "*tags":
         title: "Tags"
     "*aspnet-mvc":
@@ -208,9 +206,7 @@ navigation:
     "*music-store-dashboard":
         title: "Music Store Dashboard"
     "*music-store-web":
-        title: "Musict Store Web"
-    "*saleshub":
-        title: "Sales Hub"
+        title: "Music Store Web"
     "*home-page":
         title: "Home Page"
     "*order-page":
@@ -219,6 +215,18 @@ navigation:
         title: "Localization"
     "*webforms":
         title: "ASP.NET Web Forms"
+    "getting-started/using-kendo-with/aspnet-mvc/vs-integration":
+        title: "Visual Studio Integration"
+        position: 9
+    "getting-started/using-kendo-with/aspnet-mvc/migration":
+        title: "Migrate From Telerik Extensions"
+        position: 12
+    "getting-started/using-kendo-with/aspnet-mvc/helpers":
+        title: "View Helpers"
+        position: 11
+    "getting-started/using-kendo-with/aspnet-mvc/tutorial-saleshub":
+        title: "Tutorial: Build the Sales Hub Project"
+        position: 20
 ## The application virtual path
 baseurl: /kendo-ui
 

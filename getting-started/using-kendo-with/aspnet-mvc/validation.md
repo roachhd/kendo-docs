@@ -2,6 +2,7 @@
 title: Validation
 page_title: Validation guide for Telerik UI for ASP.NET MVC
 description: Using Validation in MVC
+position: 7
 ---
 
 # Validation
