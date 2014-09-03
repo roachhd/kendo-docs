@@ -1,20 +1,20 @@
 ---
-title: Creating the Main Menu
+title: Create the Main Menu
 position: 2
 ---
 
-# Creating the Main Menu - Kendo Music Store
+# Create the Main Menu - Kendo Music Store
 
 ![kendo-menu-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-overview.png)
 
-The main menu of the Music Store application shows off some of the functionality of the [Kendo Menu Widget](http://demos.telerik.com/kendo-ui/web/menu/index.html).
+The main menu of the Music Store application shows off some of the functionality of the [Kendo UI Menu Widget](http://demos.telerik.com/kendo-ui/web/menu/index.html).
 The **Genres** item uses a pull-down menu of items to show all the genres of music in the store.
 The **About** item displays some static content within a panel that opens below the menu.
 The **Contact** item works like a hyperlink or button and navigates when clicked on, instead of displaying a sub-menu.
 
 ## Add the Main Menu
 
-Let's use the Kendo Menu control to add a navigation menu to the Music Store.
+Let's use the Kendo UI Menu control to add a navigation menu to the Music Store.
 To start, we can define the menu items as a **&lt;ul&gt;** with HTML and Razor:
 
     <ul id="menu">
@@ -23,14 +23,14 @@ To start, we can define the menu items as a **&lt;ul&gt;** with HTML and Razor:
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
     </ul>
 
-Converting this to a Kendo menu is easy. We just add the JavaScript:
+Converting this to a Kendo UI menu is easy. We just add the JavaScript:
 
     $(document).ready(function () {
         $("#menu").kendoMenu();
     });
 
 This uses a jQuery selector to get our **&lt;ul&gt;** tag with the id "menu," then turns it into a Kendo UI menu.
-This type of kendo usage is sometimes called "explicit" widget initialization, since the element is directly targeted in JavaScript (we will see examples of implicit initialization, **data-** attributes, and the MVVM pattern later on, but let's keep it simple for our first control.)
+This type of Kendo UI usage is sometimes called "explicit" widget initialization, since the element is directly targeted in JavaScript (we will see examples of implicit initialization, **data-** attributes, and the MVVM pattern later on, but let's keep it simple for our first control.)
 
 ## Add the Genres pull-down menu
 
@@ -72,7 +72,7 @@ This partial outputs a list of **&lt;li&gt;** elements that work as links to eac
 
 ## Add the About pull-down menu
 
-Another ability of the Kendo Menu control is adding any content into a drop-down menu item.
+Another ability of the Kendo UI Menu control is adding any content into a drop-down menu item.
 It does not have to be a list of selectable items, like the Genres.
 To add content to a menu item, include a **&lt;ul&gt;** element with a single **&lt;li&gt;** element.
 Within that element, use a **&lt;div&gt;** to specify the content.

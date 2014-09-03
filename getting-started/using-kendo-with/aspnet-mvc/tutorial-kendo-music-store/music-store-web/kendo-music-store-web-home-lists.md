@@ -1,19 +1,19 @@
 ---
-title: Creating the Home Page
+title: Create the Home Page
 position: 3
 ---
 
-# Creating the Home Page - Kendo Music Store
+# Create the Home Page - Kendo Music Store
 
 For the main content of the "Home" page, we want to display a main banner image rotator, and 2 groups of Albums.
 One will be our "top sellers," and the other is a "featured artist."
-For this, we will be using the [Kendo ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget.
+For this, we will be using the [Kendo UI ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget.
 For this view, we will also use a **"declarative"** approach to initializing the widgets,
-using the **data-** attributes, and the [Kendo MVVM](http://demos.telerik.com/kendo-ui/web/mvvm/index.html) framework.
+using the **data-** attributes, and the [Kendo UI MVVM](http://demos.telerik.com/kendo-ui/web/mvvm/index.html) framework.
 
 This page is contained in the files **Views\Home\Index.cshtml** and **Scripts\App\home-index.js**
 
-## Displaying items in a ListView (with MVVM, templates, and binding to a remote data source)
+## Display items in a ListView (with MVVM, templates, and binding to a remote data source)
 
 ![kendo-music-store-web-main-lists-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-music-store-web-main-lists-screenshot.png)
 
@@ -30,7 +30,7 @@ we can start with some simple HTML markup to represent the 2 ListView widgets:
 		<div data-role="listview" data-bind="source: topSellingAlbums" data-template="album-template"></div>
 	</section>
 
-We have set **data-role="listview"** of each &lt;div&gt; so that Kendo knows to transform these &lt;div&gt;s
+We have set **data-role="listview"** of each &lt;div&gt; so that Kendo UI knows to transform these &lt;div&gt;s
 into ListView widgets. Each album will look the same between the 2 lists, so we chose to share a template.
 Both &lt;div&gt;s get the attribute **data-template="album-template"**.
 In addition, we need to add the template itself:
@@ -49,7 +49,7 @@ reuse of the template between pages. The partial was then included with:
 
     @Html.Partial("_AlbumListTemplatePartial")
 
-In the template, note the special **type="text/x-kendo-template"**. This is required for Kendo to be able to resolve the template.
+In the template, note the special **type="text/x-kendo-template"**. This is required for Kendo UI to be able to resolve the template.
 Also the **id** matches the template indicated by the &lt;div&gt; tags.
 More information on templates can be found [here](http://demos.telerik.com/kendo-ui/web/templates/index.html).
 
@@ -71,9 +71,9 @@ This means we need to create our view model in JavaScript, which is:
 
 	kendo.bind("#body", viewModel);
 
-Our viewModel is a Kendo **Observable** object, which facilitates the updating of properties
+Our viewModel is a Kendo UI **Observable** object, which facilitates the updating of properties
 and notifying the view when it needs to be redrawn.
-The last line of JavaScript tells Kendo to apply bindings between the viewModel and the HTML
+The last line of JavaScript tells Kendo UI to apply bindings between the viewModel and the HTML
 element with the ID "body", using normal jQuery selector syntax.
 In our view model, we have set a featured artist on the **featuredArtistName** property.
 This text string will be shown in our &lt;h3&gt; header element, due to the data-binding:
@@ -81,15 +81,15 @@ This text string will be shown in our &lt;h3&gt; header element, due to the data
     <h3>Featured Artist: <span data-bind="text: featuredArtistName"></span></h3>
 
 The **featuredArtistAlbums** and **topSellingAlbums** properties of the view model are both set to
-[Kendo DataSources](http://demos.telerik.com/kendo-ui/web/datasource/index.html) that will pull remote data
+[Kendo UI DataSources](http://demos.telerik.com/kendo-ui/web/datasource/index.html) that will pull remote data
 from our WCF Data Service.
 In the case of the featuredArtistAlbums data source, there is additional code specified that enabled
 server-side filtering by artist name. This is using OData.
 
 ## Image Rotator (with a custom binding)
 
-The final item we need to add to the main page is an image rotator. Kendo does not actually provide an image rotator widget.
-However, the Kendo MVVM bindings are expendable, and so we will write our own custom binding to handle this.
+The final item we need to add to the main page is an image rotator. Kendo UI does not actually provide an image rotator widget.
+However, the Kendo UI MVVM bindings are expendable, and so we will write our own custom binding to handle this.
 
 ### Define the custom MVVM Binder
 
@@ -103,7 +103,7 @@ We can start by setting up a property on our view model to hold the URLs for the
     });
 
 The **bannerImages** property is just a simple array of image URLs. Next we will make our custom binding.
-The best practice is to separate your custom Kendo extensions into a separate file, or multiple files if they become large.
+The best practice is to separate your custom Kendo UI extensions into a separate file, or multiple files if they become large.
 In this case, we put our custom binder in **Scripts\App\kendo-custom-bindings.js**. The basic layout for the custom binder is:
 
 	kendo.data.binders.rotateImages = kendo.data.Binder.extend({

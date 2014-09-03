@@ -8,14 +8,14 @@ position: 7
 The shopping cart for the Kendo Music Store is in **Scripts\App\cart.js**.
 All the functionality for the cart is encapsulated in a single object, created by calling the **Cart()** constructor.
 
-## Storing Cart Data
+## Store Cart Data
 
 The data for the items in the cart is held in the browser's HTML5 Local Storage.
 No data is sent back to the server when items are added or removed from the cart.
 
 Anywhere in the Music Store that the cart needs to be accessed, the **cart.getCart()** method is called.
-This returns a Kendo DataSource object that contains the cart items.
-It also listens for the **change** event on the DataSource and on change recalculates the total price for each item.
+This returns a Kendo UI DataSource object that contains the cart items.
+It also listens for the **change** event on the DataSource and on change will recalculate the total price for each item.
 Once the totals are updated, the cart data is also updated in the local storage.
 
 ## Benefits of a Shared Cart DataSource

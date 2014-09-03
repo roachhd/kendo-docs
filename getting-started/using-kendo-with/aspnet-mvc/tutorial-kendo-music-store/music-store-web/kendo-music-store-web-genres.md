@@ -1,9 +1,9 @@
 ---
-title: Creating the Genre Page
+title: Create the Genre Page
 position: 4
 ---
 
-# Creating the Genre Page - Kendo Music Store
+# Create the Genre Page - Kendo Music Store
 
 The Genre listing will display all the albums in a selected genre.
 The albums will be limited to 20 per page, and display paging navigation at both the top and bottom.
@@ -16,12 +16,12 @@ The albums will be limited to 20 per page, and display paging navigation at both
 
 This view is contained in **Views/Store/Browse.cshtml**.
 
-We start with a [Kendo ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget that will
+We start with a [Kendo UI ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget that will
 become the container for the Albums.
 
     <div data-role="listview" data-bind="source: albums" data-template="album-template"></div>
 
-The **data-role="listview"** attribute tells Kendo that this element will be turned into a ListView widget.
+The **data-role="listview"** attribute tells Kendo UI that this element will be turned into a ListView widget.
 The **data-bind="source: albums"** tells the widget which property on the view model contains the data to list.
 The **data-template="album-template"** indicates the name of the template to use for each Album.
 
@@ -41,7 +41,7 @@ below the ListView:
     <div data-role="pager" data-bind="source: albums"></div>
 
 Both pagers have the attribute **data-bind="source: albums"** which is the same as the data source for the ListView.
-This means that all 3 of these widgets (both pagers and the list view) are all looking at the same Kendo DataSource.
+This means that all 3 of these widgets (both pagers and the list view) are all looking at the same Kendo UI DataSource.
 This is how the controls stay in sync with each other. The widgets do not communicate with each other to indicate when
 the page changes. Instead, the DataSource uses the MVVM notification system to tell the controls that the page changed.
 
@@ -65,7 +65,7 @@ This code is contained in **Scripts/App/store-browse.js**.
         }
     });
 
-Our viewModel contains 3 major pieces. The **albums** property is a Kendo DataSource that will read the Albums from the server.
+Our viewModel contains 3 major pieces. The **albums** property is a Kendo UI DataSource that will read the Albums from the server.
 In the code, there is a lot of configuration information passed to the DataSource constructor that sets up
 server-side filtering and paging using OData.
 
@@ -80,7 +80,7 @@ When a Genre is selected from the main menu, the Store/Browse view is navigated 
 is passed on the query string with the parameter **?Genre=n** where 'n' is the number of the genre.
 This GenreId is retrieved using a JavaScript function located in the "store.js" file, and then used to
 load the record for this GenreId from the server.
-This is done with a standard jQuery AJAX call, instead of using a Kendo DataSource:
+This is done with a standard jQuery AJAX call, instead of using a Kendo UI DataSource:
 
     // Load the Genre data from the server.
     $.ajax({

@@ -11,12 +11,12 @@ embedded in a menu item. The UI designer for the project drafted this screen moc
 
 ![kendo-cart-menu-mockup](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-cart-menu-mockup.png)
 
-The first reaction was "That isn't any of the standard Kendo widgets... this is going to be hard!"
+The first reaction was "That isn't any of the standard Kendo UI widgets... this is going to be hard!"
 It turns out, it wasn't actually too difficult.
 
 ![kendo-cart-menu-mockup](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-cart-menu-screenshot.png)
 
-Instead of trying to use the standard Kendo Menu widget and getting the "Total" and "Checkout" as the last item,
+Instead of trying to use the standard Kendo UI Menu widget and getting the "Total" and "Checkout" as the last item,
 we took the approach of making a custom Kendo UI Widget. This "cart menu" widget is actually more of a
 "composite widget" because it is one widget composed of others (a Menu and a ListView).
 
@@ -34,7 +34,7 @@ These are the features that we want the Cart Menu widget to support:
 
 ## Boilerplate Custom Widget
 
-> For more information on creating a custom widget, Burke Holland has a couple excellent blog posts on the KendoUI blog:
+> For more information on creating a custom widget, Burke Holland has a couple excellent blog posts on the Kendo UI blog:
 > [Creating Custom Kendo UI Plugins](http://blogs.telerik.com/kendoui/posts/12-04-03/creating_custom_kendo_ui_plugins)
 > and [Creating a DataSource Aware Kendo UI Widget](http://blogs.telerik.com/kendoui/posts/12-04-10/creating_a_datasource_aware_kendo_ui_widget)
 
@@ -61,13 +61,13 @@ First we need to extend the base Widget class in the kendo.ui namespace.
     })(jQuery);
 
 We start by calling **kendo.ui.Widget.extend()** and passing in an object with the properties and functions that we want our widget to contain.
-This kendo method builds a new Kendo Plugin object with the correct prototype that also contains the properties and functions we defined.
-This created widget object is then passed to **kendo.ui.plugin()** to register it in Kendo's collection of plugins.
+This Kendo UI method builds a new Kendo UI Plugin object with the correct prototype that also contains the properties and functions we defined.
+This created widget object is then passed to **kendo.ui.plugin()** to register it in Kendo UI collection of plugins.
 
-## Using the Widget in HTML.
+## Use the Widget in HTML.
 
-With our widget now registered with Kendo, we can create an HTML element that will become the Cart Menu to display to the user.
-We are basing the Cart Menu on a &lt;ul&gt; element, since it will behave much like a regular Kendo Menu widget.
+With our widget now registered with Kendo UI, we can create an HTML element that will become the Cart Menu to display to the user.
+We are basing the Cart Menu on a &lt;ul&gt; element, since it will behave much like a regular Kendo UI Menu widget.
 
     <ul id="cart-menu"></ul>
 
@@ -77,11 +77,11 @@ In the JavaScript for the page, we initialize the widget just like any other:
 
 Note that The function name to initialize the widget is "kendo" plus the widget name that was specified in **options.name** when the widget was defined.
 
-## Binding to a DataSource.
+## Bind to a DataSource.
 
 We need to use a DataSource that represents the shopping cart to display the cart items and the total.
 To do this, we will pass the datasource as an option when the JavaScript call is made to initialize the widget.
-To be consistent with the other Kendo widgets, this parameter is named **dataSource**.
+To be consistent with the other Kendo UI widgets, this parameter is named **dataSource**.
 
     $("#cart-menu").kendoCartMenu({
         dataSource: store.cart.getCart()
@@ -114,7 +114,7 @@ When the init function calls:
 
     kendo.ui.Widget.fn.init.call(that, element, options);
 
-Kendo takes the options parameter and uses it to extend the widget's defined options.
+Kendo UI takes the options parameter and uses it to extend the widget's defined options.
 When that method call returns, **this.options** will be:
 
         {
@@ -147,7 +147,7 @@ This function is defined in the widget:
         }
 
 This starts by making a call to **kendo.data.DataSource.create()** and passes in the options.
-This Kendo function will look at the options object and return the dataSource, if it contains one.
+This Kendo UI function will look at the options object and return the dataSource, if it contains one.
 If the options object did not contain a dataSource then a new empty DataSource is created and returned.
 
 Next we bind the **\_refresh()** function to the "change" event on the dataSource.
@@ -159,11 +159,11 @@ Implementing an option named **autoBind** is not required but is common practice
 At this point, a reference to the passed in data source is saved as **that.dataSource** and the **\_refresh()** function
 will be called whenever that data source changes.
 
-## Creating the Composite Widgets.
+## Create the Composite Widgets.
 
 Now we are ready to implement the widget's functionality.
 The **init** function is called when the widget is created, and should perform any work needed to create the widget including manipulating any DOM elements.
-For this widget, we are going to turn the targeted element into a normal Kendo Menu that contains a drop open item.
+For this widget, we are going to turn the targeted element into a normal Kendo UI Menu that contains a drop open item.
 We do this in the init function:
 
         // method called when a new widget is created
@@ -210,14 +210,14 @@ It then appends the rest of the contents for the menu to the element with **that
       </ul>
     </li>
 
-The appended HTML follows the normal layout for a Kendo Menu drop down panel.
+The appended HTML follows the normal layout for a Kendo UI Menu drop down panel.
 Inside that panel, we include the other elements we need to hold our displayed data:
 
 This element will be displayed as the menu item, and will be set to the number of items in the cart.
 
     <span class='cm-count'></span>
 
-This list element will become a Kendo ListView widget that lists each item in the cart:
+This list element will become a Kendo UI ListView widget that lists each item in the cart:
 
     <ul></ul>
 
@@ -229,7 +229,7 @@ This anchor tag is the Checkout button that will proceed to the store's checkout
 
     <a href='/ShoppingCart/' class='k-button'>Checkout</a>
 
-After manipulating the DOM elements we make standard Kendo method calls to initialize these elements as Kendo widgets:
+After manipulating the DOM elements we make standard Kendo UI method calls to initialize these elements as Kendo UI widgets:
 
             that._menu.kendoMenu();
             that._listView.kendoListView({
@@ -239,7 +239,7 @@ After manipulating the DOM elements we make standard Kendo method calls to initi
 
 Note that we are binding our ListView to the same DataSource that was originally passed to the Cart Menu widget.
 
-## Updating the Display
+## Update the Display
 
 We update the displayed items to the user whenever the DataSource changes within the **\_refresh()** function.
 This function is bound to the data source's "change" event.
@@ -265,16 +265,16 @@ This function is bound to the data source's "change" event.
 Here we use jQuery to update the text of our total price element, display the total number of items in the cart,
 and call **\_animate\_bg()** to cause the top level menu element to flash orange for a moment.
 
-## Removing Albums from the Cart.
+## Remove Albums from the Cart.
 
-Each cart item displayed in the cart is displayed in a Kendo ListView widget and is bound to the cart DataSource.
+Each cart item displayed in the cart is displayed in a Kendo UI ListView widget and is bound to the cart DataSource.
 They are rendered using the template:
 
     <li><span>#=Album.Title#</span><span class="k-icon k-i-close k-delete-button"></span></li>
 
 The second &lt;span&gt; element represents the remove button, and has the following css classes:
 
-**k-icon** and **k-i-close** indicate that this element will be a Kendo Icon and that the close icon is to be displayed in this element. See: [Styling / Icons](http://demos.telerik.com/kendo-ui/web/styling/icons.html)
+**k-icon** and **k-i-close** indicate that this element will be a Kendo UI Icon and that the close icon is to be displayed in this element. See: [Styling / Icons](http://demos.telerik.com/kendo-ui/web/styling/icons.html)
 
 **k-delete-button** indicates that this is a delete button.
 Within a ListView widget, elements of this special class *automatically* become a button that deletes the item from the bound DataSource.

@@ -1,21 +1,21 @@
 ---
-title: Creating the Store Management Grid
+title: Create the Store Management Grid
 position: 10
 ---
 
-# Creating the Store Management Grid - Kendo Music Store
+# Create the Store Management Grid - Kendo Music Store
 
 ![kendo-manage-grid-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-grid-screenshot.png)
 
 When logged in to the Music Store as an administrator an additional button titled "Manage Store" is made available in the upper right corner.
 This opens the management grid which can be used to add, remove and delete albums from the store.
-This page uses the [Kendo Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) widget.
+This page uses the [Kendo UI Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) widget.
 
 This code is located in **Scripts/App/storemanager-index.js**.
 
 > You can log in to the Music Store as the administrator by using the username "Owner" and the password "p@ssword123".
 
-## Defining the Data Source.
+## Define the Data Source.
 
 Let's first look at the data source for the grid. It has a large definition compared to the other DataSources we have used so far.
 This is largely because it is the only one to do full CRUD operations, and because we need to define the entire data model.
@@ -73,7 +73,7 @@ For the Create Update and Delete operations, we define:
 Each of these sets the **url** and **type** for the action.
 In the case of **destroy** and **update** we need to include the AlbumId in the URL itself, not as a parameter.
 To do this we defined a function instead of a string to act as the URL.
-Kendo automatically calls this function and passes in the data item that is being deleted.
+Kendo UI automatically calls this function and passes in the data item that is being deleted.
 This allowed us to get the AlbumID and append it to the base URL:
 
                         url: function (data) {
@@ -84,7 +84,7 @@ This allowed us to get the AlbumID and append it to the base URL:
 
 Unlike the other DataSources in the Music Store that only read data, when we are going to create new records
 it is best to include the **schema.model** property.
-The model defines the data layout of the record so when the Kendo DataSource is asked to create a new record it knows the
+The model defines the data layout of the record so when the Kendo UI DataSource is asked to create a new record it knows the
 fields and data types, as well as some basic validation information.
 This data is used by the Grid widget to define what editors each column will have when the "Create" button is clicked.
 
@@ -152,7 +152,7 @@ One of the important aspects of defining the model is setting default values usi
 For this sample, if we started with a GenreId and ArtistId of 0 then those values are not valid choices since no
 genre or artist exists with those IDs. Instead, we default to a value of 1.
 
-## Setting up the Grid.
+## Set up the Grid.
 
 Now that the DataSource is defined, we can define the grid.
 A single HTML element is used as the placeholder for the grid:
@@ -177,7 +177,7 @@ The **sortable**, **groupable** and **filterable** properties indicate that sort
 The **pageable** property indicates that the grid will support paging. The page size was defined on the DataSource and set to 50 items per page.
 
 **editable** defines the grid editing style. In this sample we are using "inline" which lets one entire row be shifted into edit mode, then saved or cancelled.
-Other edit modes (incell/inline/popup) can be seen in the [Grid demos](http://demos.telerik.com/kendo-ui/web/grid/editing.html).
+Other edit modes (incell/inline/popup) can be seen in the [Kendo UI Grid Demos](http://demos.telerik.com/kendo-ui/web/grid/editing.html).
 
 The **toolbar** property contains an array of commands to place along the top of the grid. In this sample we display a "create" button that can be used to add a new record.
 
@@ -185,7 +185,7 @@ The **toolbar** property contains an array of commands to place along the top of
 
 **columns** is an array of columns to be displayed which we will look at in more detail.
 
-### Defining the Grid Columns.
+### Define the Grid Columns.
 
 The **columns: []** property of the grid configuration takes an array of objects, each of which defines a column of data.
 The album edit grid contains these columns:
@@ -220,7 +220,7 @@ The format takes the same values as the [kendo.format() function](http:///api/fr
 **values** sets a collection of key-value pair objects that are used as a foreign key to look up cell values.
 This is discussed in more detail below.
 
-## Using a Custom Editor for the Artist Selection.
+## Use a Custom Editor for the Artist Selection.
 
 When an album grid row is edited, we use a custom editor for selecting an Artist.
 Instead of the normal DropDown widget we use an AutoComplete widget.
@@ -244,13 +244,13 @@ The **options** parameter passed in to the editor function is the data that the 
 For the auto complete example we bind its value to options.field which sets the auto complete box's
 current value to the artist set on the album, and if the artist is changed the selected artist is copied to the album.
 
-## Using the Foreign Key feature to show Genre and Artist Names.
+## Use the Foreign Key feature to show Genre and Artist Names.
 
 The Album objects returned from the server contain the GenreId and the ArtistId, not the genre and artist names.
 It would look very strange to just display these IDs in the grid, since no one will know what "Genre 1" or "Artist 27" is.
 Instead, we want to load all genre and artist names into a list of objects that can be used to map these IDs to their display names.
 
-In the Kendo Grid, this is called a [Foreign Key column](http://demos.telerik.com/kendo-ui/web/grid/foreignkeycolumn.html).
+In the Kendo UI Grid, this is called a [Foreign Key column](http://demos.telerik.com/kendo-ui/web/grid/foreignkeycolumn.html).
 
 In the Music Store, we use the jQuery **$.Deferred()** functionality to asynchronously load the lists of Genres and Albums from the server.
 Once they are retrieved they are mapped to lists of objects that follow the format:
@@ -262,7 +262,7 @@ Once they are retrieved they are mapped to lists of objects that follow the form
 
 where **value** is the ID of the item, and **text** is its display name.
 These lists need to be loaded before populating the grid, but the DataSource.read() method used to read the data is asynchronous.
-This is why deferreds were used to laod the data asynchronously and continue loading the grid when both genres and artists was finished loading.
+This is why deferreds were used to load the data asynchronously and continue loading the grid when both genres and artists was finished loading.
 Once these lists are loaded, we use the **column.values** property to set it as the foreign key lookup for a column.
 For example the Genre column is defined as:
 
@@ -281,11 +281,11 @@ Using a Foreign Key column also changes the default editor behavior for the cell
 Without it, the grid would put up a Numeric TextBox editor for the GenreId since it is numeric data.
 With the foreign key column, it instead uses a Dropdown box to select from the choices defined in the genres list.
 
-## Album Art Upload (with the Kendo Upload widget)
+## Album Art Upload (with the Kendo UI Upload widget)
 
 We use another custom editor for the album art column.
 This one is a little more complicated than the artist name because we need to support the ability to upload new album art.
-To facilitate this we used the [Kendo Upload](http://demos.telerik.com/kendo-ui/web/upload/index.html) widget.
+To facilitate this we used the [Kendo UI Upload](http://demos.telerik.com/kendo-ui/web/upload/index.html) widget.
 
 A custom editor is defined for the column by specifying **editor: albumArtEditor** and the editor function:
 
@@ -310,7 +310,7 @@ A custom editor is defined for the column by specifying **editor: albumArtEditor
 
 If the album being edited already has an AlbumArtUrl set then an &lt;img&gt; tag is appended to display the current album art.
 
-Then a &lt;input&gt; element is appended and defined as a Kendo Upload widget.
+Then a &lt;input&gt; element is appended and defined as a Kendo UI Upload widget.
 When this button is clicked the user will be presented with a file selection dialog where they can choose the art to upload.
 Because the **async.autoUpload** is set to **true** the image will be uploaded as soon as it is selected.
 On the server, after the file is uploaded a response is sent to the client that contains the url to the newly saved image.

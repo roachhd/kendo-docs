@@ -1,9 +1,9 @@
 ---
-title: Creating the Checkout Page
+title: Create the Checkout Page
 position: 9
 ---
 
-# Creating the Checkout Page - Kendo Music Store
+# Create the Checkout Page - Kendo Music Store
 
 ![kendo-checkout-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-checkout-screenshot.png)
 
@@ -13,7 +13,7 @@ The user can change quantities or remove items from the cart and review the subt
 
 ## Create the Grid
 
-We are using an MVVM bound [Kendo Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) widget to render the shopping cart contents on the checkout page.
+We are using an MVVM bound [Kendo UI Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) widget to render the shopping cart contents on the checkout page.
 This is done by defining a &lt;div&gt; element and specifying **data-role="grid"**
 
     <div id="cart-grid"
@@ -78,7 +78,7 @@ Finally, on page load the page is bound to the view model:
         kendo.bind($("#body"), viewModel);
     })(jQuery, kendo, store);
 
-## Removing Items from the Cart.
+## Remove Items from the Cart.
 
 When a "remove" button is clicked, the **remove()** function on the view model is called:
 The data record that is bound to that grid row is located in **e.data** and is used to remove it from the data source.
@@ -87,7 +87,7 @@ The data record that is bound to that grid row is located in **e.data** and is u
             this.cartItems.remove(e.data);
         },
 
-## Recalculating the total.
+## Recalculate the total.
 
 In the HTML at the bottom of the checkout page, we include an element to display the subtotal
 and bind it to the **total** property on the view model:

@@ -1,32 +1,32 @@
 ---
-title: Creating the Store Management Charts
+title: Create the Store Management Charts
 position: 11
 ---
 
-# Creating the Store Management Charts - Kendo Music Store
+# Create the Store Management Charts - Kendo Music Store
 
 ![kendo-manage-charts-screenshot](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-manage-charts-screenshot.png)
 
 When logged in to the Music Store as an administrator an additional button titled "Manage Store" is made available in the upper right corner.
 This opens the management graphs which can be used to monitor the sales status of the store.
-This page uses [Kendo DataViz](http://demos.telerik.com/kendo-ui/dataviz/overview/index.html) to render the graphs.
+This page uses [Kendo UI data vizualization](http://demos.telerik.com/kendo-ui/dataviz/overview/index.html) to render the graphs.
 
 This code is located in **Scripts/App/storemanager-graphs.js**.
 
 > You can log in to the Music Store as the administrator by using the username "Owner" and the password "p@ssword123".
 
-## Setting up the HTML
+## Set up the HTML
 
 The page contains a date range selector that can be used to choose whether to view a day, week, month, or year of data.
-This selector is represented by a [Kendo ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget.
-The main graph is represented by a [Kendo DataViz Chart](http://demos.telerik.com/kendo-ui/dataviz/overview/index.html).
+This selector is represented by a [Kendo UI ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget.
+The main graph is represented by a [Kendo UI Chart](http://demos.telerik.com/kendo-ui/dataviz/overview/index.html).
 The HTML used is:
 
     <ul id="date-range" class="selector" ></ul>
     <h3>Overall Sales</h3>
     <div id="revenue-chart"></div>
 
-## Initializing the Widgets
+## Initialize the Widgets
 
 We start by setting up the DataSource for the Revenue/Orders chart:
 
@@ -110,7 +110,7 @@ This demonstrates that we can mix chart types on a single chart.
 
 **color** is the color used to represent the series on the chart and in the legend.
 
-**tooltip** defines what will be displayed if the user mouses over a data point or column.
+**tooltip** defines what will be displayed if the user puts the mouse over a data point or column.
 The format string follows the parameters for the [kendo.format](http:///api/framework/kendo#format) function.
 
 ### Specify the Axis
@@ -160,9 +160,9 @@ To place the "Orders" vertical axis on the right side of the graph, a number has
 in the categoryAxis. Here our biggest collection will be when we display data for the "Month" time range, where we show the last 30 days,
 so any number higher than that could have been chosen.
 
-## Changing the Date Ranges
+## Change the Date Ranges
 
-To facilitate selecting a date range to display on the chart, we used a Kendo ListView widget to display the available date ranges.
+To facilitate selecting a date range to display on the chart, we used a Kendo UI ListView widget to display the available date ranges.
 First we defined an array of the date ranges, using **date.js** to get ranges appropriate date ranges.
 The default selected item is also saved to a separate variable.
 

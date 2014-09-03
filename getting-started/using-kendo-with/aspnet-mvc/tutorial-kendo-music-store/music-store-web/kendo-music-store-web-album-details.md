@@ -1,9 +1,9 @@
 ---
-title: Displaying Album Details
+title: Display Album Details
 position: 5
 ---
 
-# Displaying Album Details - Kendo Music Store
+# Display Album Details - Kendo Music Store
 
 When an Album is clicked from any page, the album details are shown in a popup window.
 This window gives the user the ability to change the quantity to order, and add the album to the cart.
@@ -11,7 +11,7 @@ More than one album details window can be opened at once, and they can be dragge
 
 ![kendo-album-details-window](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-album-details-window.png)
 
-## Calling a Common Function
+## Call a Common Function
 
 The album details can be opened from 3 places in the Music Store: the Main page, the Genre list, and the Search auto-complete dropdown.
 All 3 of them call one common function: **store.viewAlbumDetails()** and pass the ID of the album to display.
@@ -66,7 +66,7 @@ The View Model for the details popup window contains:
 **data** contains the Album object that was returned from the server.
 
 **total** is a calculated field, and returns the album price multiplied by the selected quantity. It uses the **.get()** method
-on the Kendo observable to retrieve the price and quantity; if either of those values changes, the bound view will be notified
+on the Kendo UI observable to retrieve the price and quantity; if either of those values changes, the bound view will be notified
 that the **total()** function needs to be re-executed to get an updated value. If we had simply used "return data.Price * this.quantity;"
 then the view would not have updated when quantity changed.
 
@@ -74,7 +74,7 @@ then the view would not have updated when quantity changed.
 
 ## Display the Window
 
-The **store._openWindow()** function is called with the created view model object, and performs the action of creating the Kendo Window widget.
+The **store._openWindow()** function is called with the created view model object, and performs the action of creating the Kendo UI Window widget.
 
 We want to be able to open more than 1 window at a time. Normally, we would have a &lt;div&gt; element for the window and create a Window widget by
 selecting it with a jQuery selector and calling **.kendoWindow()** on it. However, this would only work for creating a single window.
@@ -109,7 +109,7 @@ Instead, we had to add a new &lt;div&gt; element for each window that was opened
         }
 
 This function starts by creating our new &lt;div&gt; element.
-We then use a kendo template to put the contents of the window into the div element.
+We then use a Kendo UI template to put the contents of the window into the div element.
 The **template** parameter passed to this method is the element id for the template that will be used as the window contents.
 
     var templateHtml = $(template).html();
@@ -136,7 +136,7 @@ At this point the window element can be appended to the end of the page:
     $('body').append(window);
 
 Now the element and its contents are a part of the DOM, but they are still plain HTML.
-Next we turn it into a Kendo Window widget:
+Next we turn it into a Kendo UI Window widget:
 
             // Turn placeholder into a Window widget.
             window.kendoWindow({
@@ -159,10 +159,10 @@ We could have also calculated an actual X and Y coordinate to position the windo
             window.data("kendoWindow").center();
             window.data("kendoWindow").open();
 
-## Handle Changing the Quantity
+## Handle the Quantity change
 
 One of the features of the album details window is the ability to change the quantity with a
-[Kendo Numeric Text Box](http://demos.telerik.com/kendo-ui/web/numerictextbox/index.html) widget.
+[Kendo UI Numeric Text Box](http://demos.telerik.com/kendo-ui/web/numerictextbox/index.html) widget.
 This uses an MVVM bound input box as the base element for the number box:
 
     <input type="number" value="1" min="1" max="100" data-role="numerictextbox" data-decimals="0" data-format="n0" data-bind="value: quantity, events: { spin: updateQty }" />

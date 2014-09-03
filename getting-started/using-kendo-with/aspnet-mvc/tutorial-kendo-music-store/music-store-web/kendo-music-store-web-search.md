@@ -1,5 +1,5 @@
 ---
-title: Creating the Album Search Box
+title: Create the Album Search Box
 position: 6
 ---
 
@@ -8,8 +8,8 @@ position: 6
 ![kendo-search-overview](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-search-overview.png)
 
 The Music Store application provides an text box for searching the store by album title.
-To implement this, a [Kendo AutoComplete Widget](http://demos.telerik.com/kendo-ui/web/autocomplete/index.html) was used.
-The desire was to have the autocomplete box query the server for albums that match the user's entered text and have
+To implement this, a [Kendo UI AutoComplete Widget](http://demos.telerik.com/kendo-ui/web/autocomplete/index.html) was used.
+The desire was to have the AutoComplete box query the server for albums that match the user's entered text and have
 the filtering performed server-side, using a [remote DataSource](http://demos.telerik.com/kendo-ui/web/datasource/remote-data.html).
 The results would then be listed with the album art, title, and artist name, and be clickable to get details about the album.
 
@@ -58,20 +58,20 @@ Next we turn the input element into an AutoComplete widget with JavaScript:
 
 Let's look closer at what each part of this JavaScript is doing:
 
-**filter: 'contains'** - Specifies that autocomplete results just need to contain the entered text, anywhere. The default is 'starts with'.
+**filter: 'contains'** - Specifies that AutoComplete results just need to contain the entered text, anywhere. The default is 'starts with'.
 
-**minLength: 3** - Indicates that the autocomplete dropdown will not display until the user has entered at least 3 characters.
+**minLength: 3** - Indicates that the AutoComplete dropdown will not display until the user has entered at least 3 characters.
 
-**dataTextField: 'Title'** - The name of the field in the data that is searched to find autocomplete results. In this example, we are showing autocomplete results for albums whose titles contain the text entered by the user.
+**dataTextField: 'Title'** - The name of the field in the data that is searched to find AutoComplete results. In this example, we are showing AutoComplete results for albums whose titles contain the text entered by the user.
 
 **placeholder: 'Search music...'** - This is the text that is displayed in the text box as a placeholder until the user clicks into the input box.
 
-**dataSource: {}** - Here we configure the source for our autocomplete data. We have specified the URL of our Albums service as the source. There is a lot going on in this data source, but most of it is enabling server-side filtering using OData.
+**dataSource: {}** - Here we configure the source for our AutoComplete data. We have specified the URL of our Albums service as the source. There is a lot going on in this data source, but most of it is enabling server-side filtering using OData.
 
-## Customizing the Dropdown Items
+## Customize the Dropdown Items
 
-Each autocomplete item in the dropdown will be a &lt;li&gt; element. Within that element, a template is used to render the result.
-If not specified, Kendo will put the text of the field specified by the **dataTextField** property into the &lt;li&gt;.
+Each AutoComplete item in the dropdown will be a &lt;li&gt; element. Within that element, a template is used to render the result.
+If not specified, Kendo UI will put the text of the field specified by the **dataTextField** property into the &lt;li&gt;.
 We can use templates to make much nicer looking results. In this case, we are including the album cover art, title, and artist name.
 
     template: kendo.template($("#search-result-template").html())
@@ -131,10 +131,10 @@ It then calls **kendo.template()** to process the template.
 
     kendo.template($("#search-result-template").html())
 
-## Getting the data from the server, and server-side filtering.
+## Get data from the server, and server-side filtering.
 
-Ideally, we want the server to perform the filtering for our search autocomplete box.
-Kendo supports both client and server side filtering, but in a real music store, we would not
+Ideally, we want the server to perform the filtering for our search AutoComplete box.
+Kendo UI supports both client and server side filtering, but in a real music store, we would not
 want to return every album title in the store to the client. A quick breakdown of the code
 to do this is:
 
@@ -158,7 +158,7 @@ to do this is:
                 read: store.config.albumsWithArtistsUrl
             },
 
-            // This fixes some compatibility issues between Kendo and WCF Data Service OData
+            // This fixes some compatibility issues between Kendo UI and WCF Data Service OData
             schema: {
                 data: function (data) {
                     return data.value;
@@ -169,7 +169,7 @@ to do this is:
             }
         }
 
-The **schema.data** and **schema.total** functions overcome a JSON formatting difference between Kendo and WCF Data Services OData.
+The **schema.data** and **schema.total** functions overcome a JSON formatting difference between Kendo UI and WCF Data Services OData.
 For more information on each field set on the DataSource, also see the [DataSource documentation](http:///api/framework/datasource).
 
 ## Handling the selection of a search result
@@ -182,7 +182,7 @@ We do this by specifying a function to handle the **selected** event on the auto
             // ... code omitted ...
         }
 
-The first thing we will do in this case is override some of the default behavior for the autocomplete box.
+The first thing we will do in this case is override some of the default behavior for the AutoComplete box.
 Normally, when you select something from a standard auto-complete box, the selected text is moved up into the box.
 We don't need that behavior. Instead, we want to clear the user's entered text, resetting back to the "Search music..." placeholder text.
 To do this, we call **preventDefault()** on the event to suppress the normal handling and **e.sender.value("")** to clear the text:
@@ -192,7 +192,7 @@ To do this, we call **preventDefault()** on the event to suppress the normal han
             e.sender.value(""); // Clear the user entered search term.
 
 **e.sender** is the jQuery object representing the &lt;input&gt; element.
-The **.value()** method is also standard jQuery, and sets the value of the &lt;input&gt; element to an empty string. This triggers Kendo to put the placeholder message back in place.
+The **.value()** method is also standard jQuery, and sets the value of the &lt;input&gt; element to an empty string. This triggers Kendo UI to put the placeholder message back in place.
 
 Next we want to display the album details to the user. To do this, we need to get the album ID.
 This process was somewhat complicated. You may have noticed we added a **data-album-id** attribute to each search result on our template:

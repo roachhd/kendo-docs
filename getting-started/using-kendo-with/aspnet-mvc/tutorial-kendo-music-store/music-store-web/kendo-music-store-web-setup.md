@@ -5,33 +5,33 @@ position: 1
 
 # Project Setup - Kendo Music Store
 
-## Adding Kendo UI to the project
+## Add Kendo UI to the project
 
 Start by adding Kendo UI to the project. There are a lot of ways to accomplish this.
 Kendo UI can be downloaded from [telerik.com](http://www.telerik.com/download/kendo-ui-complete), referenced from the CDN, or fetched with NuGet.
 
-### Downloading Kendo UI
+### Download Kendo UI
 
-KendoUI is divided into three parts: Web, Mobile, and DataViz.
-The preferred method of getting KendoUI is to browse to [telerik.com](http://www.telerik.com/download/kendo-ui-complete) and download Kendo UI as a .zip file.
+Kendo UI is divided into three parts: Web, Mobile, and DataViz.
+The preferred method of getting Kendo UI is to browse to [telerik.com](http://www.telerik.com/download/kendo-ui-complete) and download Kendo UI as a .zip file.
 Depending on whether you are using the Trial version or have purchased the full Commercial version,
 you will have a .zip file that follows one of these directory structures:
 
 ![kendo-commecrial-zip-layout](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-commecrial-zip-layout.png)
 
-The **\js** and **\styles** folders in the root of the .zip file contain the "minified" versions of the KendoUI .js and .css files.
+The **\js** and **\styles** folders in the root of the .zip file contain the "minified" versions of the Kendo UI .js and .css files.
 If you have the commercial version of Kendo UI, you may also notice the **\source** folder.
 This folder also contains \js and \styles folders, but these are the full, non-minified versions of the .js and .css.
 These would typically be used for local development and debugging, but the minified versions are the ones that should be deployed in a real application.
 For that reason, we will use the minified files in the remainder of this example project.
 
-### Fetching from the CDN
+### Fetch from the CDN
 
-Kendo UI Web can also be fetched from a CDN instead of downloading the files. For more information and the CDN URLs, please see: **[Getting Started: Javascript Dependencies](http://docs.telerik.com/kendo-ui/getting-started/javascript-dependencies)**
+Kendo UI can also be fetched from a CDN instead of downloading the files. For more information and the CDN URLs, please see: **[Getting Started: Javascript Dependencies](http://docs.telerik.com/kendo-ui/getting-started/javascript-dependencies)**
 
-### Fetching from NuGet
+### Fetch from NuGet
 
-Kendo UI Web is also avaiable using the NuGet package manager in Visual Studio.
+Kendo UI is also available using the NuGet package manager in Visual Studio.
 Simply search for 'kendo'.
 
 ![kendo-nuget](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-nuget.png)
@@ -39,7 +39,7 @@ Simply search for 'kendo'.
 ### More Information
 
 In the Music Store project, we referenced the **kendo.all.min.js** file and the **Default** Kendo theme, because we were going to be using DataViz and a good number of the Kendo UI Widgets.
-If we were only going to be using a few select portions of Kendo, we would have taken individual JavaScript files and make a seperate bundle for them, reducing the download size for the end user.
+If we were only going to be using a few select portions of Kendo UI, we would have taken individual JavaScript files and make a separate bundle for them, reducing the download size for the end user.
 
 For more information on this topic, see: [Getting Started with Kendo UI](http://docs.telerik.com/kendo-ui/getting-started/introduction)
 
@@ -65,12 +65,12 @@ You can see and modify which files the ASP.NET bundler will ignore by inspecting
     // Do not include intellisense files
     bundles.IgnoreList.Ignore("*.intellisense.js");
 
-### Seperating Libs and App code into bundles
+### Separate Libs and App code into bundles
 
-Most sizable web applications will include a number of .js files. It is a good practice to seperate these into
+Most sizable web applications will include a number of .js files. It is a good practice to separate these into
 bundles for third-party libraries and your own application code.
 
-In the Music Store application, the only third-party library we are using (aside from Kendo) is Date.js.
+In the Music Store application, the only third-party library we are using (aside from Kendo UI) is Date.js.
 We set up a **libs** bundle for this third-party library, plus an **app** bundle for our own application code.
 
     bundles.Add(new ScriptBundle("~/bundles/libs").Include(
@@ -89,10 +89,10 @@ And render them in **_Layout.cshtml**:
     @Scripts.Render("~/bundles/libs")
     @Scripts.Render("~/bundles/app")
 
-### Easing debugging with the commercial version of Kendo
+### Easier debugging with the commercial version of Kendo UI
 
 While it is typically good practice to always include the minified versions of .js and .css files that you use, it makes debugging JavaScript errors more difficult.
-The commercial version of Kendo UI comes with the full non-minified source code. We can include these files instead, usin the ASP.NET bundler to bundle and minify them for production, while still keeping them un-minified for development.
+The commercial version of Kendo UI comes with the full non-minified source code. We can include these files instead, using the ASP.NET bundler to bundle and minify them for production, while still keeping them un-minified for development.
 
 To do this, include the non-minified .js and .css files from the **\source** folder of the downloaded Kendo UI .zip file in your project.
 Then configure the ASP.NET bundles to include these files. For example:
@@ -116,11 +116,11 @@ The **Release** version of the **web.config** file would set debug to false:
     <system.web>
       <compilation debug="false" targetFramework="4.5" />
 
-## Adding Kendo to the ASP.NET Layout Page
+## Add Kendo UI to the ASP.NET Layout Page
 
-We can now add Kendo and any other third-party libraries to the pages.
-The Music Store uses the **Views\Shared\_Layout.cshtml** master page, so we will add Kendo here.
-We need to make sure that Kendo's JavaScript files come after jQuery. For styling, we include
+We can now add Kendo UI and any other third-party libraries to the pages.
+The Music Store uses the **Views\Shared\_Layout.cshtml** master page, so we will add Kendo UI here.
+We need to make sure that Kendo UI JavaScript files come after jQuery. For styling, we include
 **kendo.common.min.css**, plus one of the Kendo UI Themes. In this example we are using
 **kendo.default.min.css**, which is the Default theme.
 
