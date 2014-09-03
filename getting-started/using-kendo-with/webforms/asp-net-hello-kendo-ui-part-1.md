@@ -9,12 +9,9 @@ position: 4
 
 ## Hello Kendo UI
 
-In this tutorial, you will work with the most complex widget, the **[Kendo UI
-Grid][4]** as well as one of the core components, the **[Kendo UI
-DataSource][5]**.  It is absolutely essential to understand how these two work
-in your app, and how they work together.  We will create a grid, and wire it
-up to an ASP.NET WebAPI service while doing some heavy server lifting along
-the way.
+In this tutorial, you will work with the most complex widget, the [Kendo UI Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) as well as one of the core components,
+the [Kendo UI DataSource](http://demos.telerik.com/kendo-ui/web/datasource/index.html).  It is absolutely essential to understand how these two work in your app, and how they work together.
+We will create a grid, and wire it up to an ASP.NET WebAPI service while doing some heavy server lifting along the way.
 
 ## Screencast
 
@@ -22,10 +19,10 @@ the way.
 
 ## Written Content
 
-This tutorial builds off of the [**Hello Services**][2] module, so it’s highly
-recommended that you download that project from GitHub [**here**][6] before we
+This tutorial builds off of the Hello Services module, so it's highly
+recommended that you download that project from GitHub [here](https://github.com/telerik/html5-dev-for-aspnet-devs) before we
 get started.  If you are interested in seeing the completed solution, you can
-download that **[here][6]**.
+download that [here](https://github.com/telerik/html5-dev-for-aspnet-devs).
 
 In the **Hello Services** project, delete the **Site.Master**, **About.aspx**
 and **Default.aspx** pages.  Add a new WebForm to the project and call it
@@ -33,22 +30,20 @@ and **Default.aspx** pages.  Add a new WebForm to the project and call it
 
 ![add-new-webform](/tutorials/asp.net/hello-kendo-ui/images/add-new-webform.png)
 
-When the document comes up, delete all of the unnecessary **DOCTYPE
-**declaration and HTML namespacing.  If you refer to [**Hello HTML5**][3], you
+When the document comes up, delete all of the unnecessary `DOCTYPE` declaration and HTML namespacing.  If you refer to Hello HTML5, you
 will remember that none of this is necessary and really just clutters up the
 code.
 
-**Removing the <form>**
+**Removing the `<form>`**
 
-I’m going to have you remove the form tag, but just a word about why before
-you actually do it.
+I'm going to have you remove the form tag, but just a word about why before you actually do it.
 
-The **<form>** tag in the page is what WebForms uses to post any data in the
+The `<form>` tag in the page is what WebForms uses to post any data in the
 page back to the server and then back again. By default, WebForms pages post
 back to themselves. The server then takes this form data (any .NET controls in
 the page) and manipulates their values based on methods you have defined in
-the code behind. There is a whole [**page lifecycle**][9] that goes into
-effect here. Since we are essentially building an [**SPA**][10], we don’t need
+the code behind. There is a whole [page lifecycle](http://msdn.microsoft.com/en-us/library/ms178472.aspx) that goes into
+effect here. Since we are essentially building an [SPA](http://en.wikipedia.org/wiki/Single-page_application), we don't need
 this form.
 
 Now that you have removed the form tag, the server tag at the top of the page
@@ -90,23 +85,23 @@ subfolder.
 
 ### Add Kendo UI To The Default Page
 
-In order to build with Kendo UI, you need to include it’s styles, jQuery and
+In order to build with Kendo UI, you need to include it's styles, jQuery and
 the Kendo UI JavaScript files.  Out of the **Content** folder and
-**kendo/version** subfolder, drag the **kendo.common.min.css** file to the
-head of the page, just below **&lt;title&gt;**.  This style sheet always needs to be
-included.  It’s used in all the themes.  Next, pick your favorite theme and
+**kendo/version** subfolder, drag the `kendo.common.min.css` file to the
+head of the page, just below `<title>`.  This style sheet always needs to be
+included.  It's used in all the themes.  Next, pick your favorite theme and
 drag that stylesheet to the head of the page.  For this example, I used the
-default style which is **kendo.default.min.css**.
+default style which is `kendo.default.min.css`.
 
-Expand the **Scripts **folder.  Select **jQuery-1.8.2.min.js** and drag it
+Expand the **Scripts **folder.  Select `jQuery-1.8.2.min.js` and drag it
 into the body of the page.  We put the script files in the body of the page
-because it’s best practice to load scripts last as they will delay loading of
-the whole page.  Loading them last ensures that your application doesn’t
+because it's best practice to load scripts last as they will delay loading of
+the whole page.  Loading them last ensures that your application doesn't
 suffer from seemingly poor performance while waiting on a JavaScript file.
 
 Next expand the **kendo** subfolder (and the appropriate version subfolder
-under that – 2012.2.710 at the time of this writing) and drag
-**kendo.web.min.js** out and drop it just below **jQuery**. It’s important to
+under that 2012.2.710 at the time of this writing) and drag
+`kendo.web.min.js` out and drop it just below **jQuery**. It's important to
 load jQuery BEFORE loading Kendo UI as Kendo UI takes a dependency on jQuery
 and expects it to be loaded.
 
@@ -114,10 +109,10 @@ and expects it to be loaded.
 
 It turns out that **Script **includes do not need a type.  If you do not
 specify a type, it is assumed to be JavaScript and parsed as such.  This is
-safe in every browser.  Go ahead and remove the **type** attribute off the
+safe in every browser.  Go ahead and remove the `type` attribute off the
 script tags.
 
-When you are done pruning, your code should be very simple and look like this…
+When you are done pruning, your code should be very simple and look like this:
 
 ### Kendo UI Added To The Page
 
@@ -146,12 +141,11 @@ When you are done pruning, your code should be very simple and look like this…
 
 We now have everything it takes to get started.  Since we already have an
 **employees** endpoint from the **[Hello Services][2]** modules, we will use
-the grid to display those employees.  Don’t worry.  This is going to get a lot
+the grid to display those employees.  Don't worry.  This is going to get a lot
 more complex as we go.  We are just starting out simple.
 
 Make a grid by adding an empty div to the page with an id of
-**employeesGrid**.  We will select this later with jQuery to turn it into a
-[**Kendo UI Grid**][4].
+**employeesGrid**.  We will select this later with jQuery to turn it into a Kendo UI Grid.
 
 ### Grid Markup
 
@@ -159,11 +153,11 @@ Make a grid by adding an empty div to the page with an id of
     <div id="employeesGrid"></div>
 
 
-Now we need to turn this grid into a [**Kendo UI Grid**][4] using JavaScript.
-To do that, select the **div** by it’s ID with a jQuery selector and then call
-the **kendoGrid** function.  Inside that function, you will need to create the
-[**Kendo UI DataSource**][5] for the grid and set its read endpoint to the
-**Get** method on the **EmployeesController**.  If you don’t recall, the
+Now we need to turn this grid into a Kendo UI Grid using JavaScript.
+To do that, select the `div` by it's ID with a jQuery selector and then call
+the `kendoGrid` function.  Inside that function, you will need to create the
+[Kendo UI DataSource](http://demos.telerik.com/kendo-ui/web/datasource/index.html) for the grid and set its read endpoint to the
+**Get** method on the **EmployeesController**.  If you don't recall, the
 **Get** method simply specifies that the controller should respond to a
 **GET** HTTP request at the **api/employees** endpoint.
 
@@ -182,13 +176,13 @@ the **kendoGrid** function.  Inside that function, you will need to create the
     });
 
 Now with that simple piece of markup and small bit of JavaScript, you have
-created a** [Kendo UI Grid][4]**.
+created a** Kendo UI Grid.
 
 ![kendo-grid-preview](/tutorials/asp.net/hello-kendo-ui/images/kendo-grid-preview.png)
 
 Kendo UI automatically creates columns for each of the data items and assigns
 the field name as the column header.  We want to change this to make it more
-user friendly. Specifically, we don’t need to display the Id, and we want to
+user friendly. Specifically, we don't need to display the Id, and we want to
 format the **First Name** and **Last Name** columns so they display headers in
 spaced title case.  Right now they are title cased, but there is no space.
 
@@ -198,8 +192,8 @@ spaced title case.  Right now they are title cased, but there is no space.
     $(function () {
         $("#employeesGrid").kendoGrid({
             columns: [
-                { field: “FirstName”, title: “First Name” },
-                { field: “LastName”, title: “Last Name” }
+                { field: "FirstName", title: "First Name" },
+                { field: "LastName", title: "Last Name" }
             ],
             dataSource: new kendo.data.DataSource({
                 transport: {
@@ -215,27 +209,26 @@ unnecessary **Id** column.
 
 ![grid-preview-with-columns-and-sorting](/tutorials/asp.net/hello-kendo-ui/images/grid-preview-with-columns-and-sorting.png)
 
-You can also enable drag-and-drop grouping by setting the **groupable: true
-**flag, as well as multi-column sorting, aggregating, and paging.
+You can also enable drag-and-drop grouping by setting the `groupable: true` flag, as well as multi-column sorting, aggregating, and paging.
 
 This is all great when there are only a few items in your grid.  But what
 happens when there are hundreds of items in the grid.  At some point, you want
-to push actions back to the server.  Let’s take a look at how to do that.
+to push actions back to the server.  Let's take a look at how to do that.
 
 ## Performing Grid Actions Server-Side
 
 Assume that this grid is backed by data with thousands of rows, not just 10.
 In this case, you would want to do some paging on the grid.  You could show
 possibly 10 rows per page.  Maybe 20.  While you could easily enable this in
-the grid client-side, you really need to do this paging on the server.  Let’s
+the grid client-side, you really need to do this paging on the server.  Let's
 wire up the grid to the server so that we can perform paging actions on the
 database which will really boost the performance of massive record sets.
 
 ### Setup Paging In The Grid
 
 You need to setup paging in the grid first.  To do that, simply set
-**pageable: true** on the grid, and then set the **pageSize **on the
-DataSource.  I’m setting the **pageSize **to 3 since I only have 10 records to
+`pageable: true` on the grid, and then set the `pageSize` on the
+DataSource.  I'm setting the `pageSize` to 3 since I only have 10 records to
 work with.
 
 ### Configure Grid For Paging
@@ -243,8 +236,8 @@ work with.
     $(function () {
         $("#employeesGrid").kendoGrid({
             columns: [
-                { field: “FirstName”, title: “First Name” },
-                { field: “LastName”, title: “Last Name” }
+                { field: "FirstName", title: "First Name" },
+                { field: "LastName", title: "Last Name" }
             ],
             dataSource: new kendo.data.DataSource({
                 transport: {
@@ -261,7 +254,7 @@ Now the grid is setup for paging.
 ![grid-preview-client-paging](/tutorials/asp.net/hello-kendo-ui/images/grid-preview-client-paging.png)
 
 You need to push this paging to the server.  To tell Kendo UI to do this,
-simply toggle the **serverPaging: true** on the DataSource in the grid.
+simply toggle the `serverPaging: true` on the DataSource in the grid.
 
 ### Tell Grid To Send Paging To The Server
 
@@ -269,8 +262,8 @@ simply toggle the **serverPaging: true** on the DataSource in the grid.
     $(function () {
         $("#employeesGrid").kendoGrid({
             columns: [
-                { field: “FirstName”, title: “First Name” },
-                { field: “LastName”, title: “Last Name” }
+                { field: "FirstName", title: "First Name" },
+                { field: "LastName", title: "Last Name" }
             ],
             dataSource: new kendo.data.DataSource({
                 transport: {
@@ -287,22 +280,22 @@ simply toggle the **serverPaging: true** on the DataSource in the grid.
 
 The grid now displays only 1 page.  The reason for this is that it is
 expecting the server to send it some information that we have not yet
-specified.  Open up the Dev Tools by pressing **ctrl+shift+i **in Chrome or
+specified.  Open up the Dev Tools by pressing `ctrl+shift+i` in Chrome or
 **F12** in IE.  You will have noticed that I switched to using Chrome as my
-primary browser.  The reason is simply the robust nature of it’s developer
+primary browser.  The reason is simply the robust nature of it's developer
 tools when compared to IE.  You will want to test your application on
 whichever browser you are targeting for deployment.
 
 An inspection of the request in the **DevTools** reveals that Kendo UI is now
-sending **take, skip **and **pageSize** parameters back to the WebAPI service.
+sending `take`, `skip` and `pageSize` parameters back to the WebAPI service.
 You need to handle these parameters in the method on the server.
 
 ![grid-preview-server-paging-broken-dev-tools](/tutorials/asp.net/hello-kendo-ui/images/grid-preview-server-paging-broken-dev-tools.png)
 
 ### Handling Request Parameters
 
-If you recall from the **[Hello Services][2]** post, you mapped a URL back to
-a method with an optional **id** parameter that may or may not be after
+If you recall from the Hello Services tutorial, you mapped a URL back to
+a method with an optional `id` parameter that may or may not be after
 **employees** in the URL path.  But these parameters for paging are in the
 query string.  How do we get to these parameters?
 
@@ -310,16 +303,15 @@ These parameters can be retrieved off of the **Request** object.  You can
 create a reference to this variable at the top of your **EmployeesController**
 class for brevity.  The you just need to look for the parameters by name.
 
-The **take** parameter tells you how many records you need to fetch (i.e. the
+The `take` parameter tells you how many records you need to fetch (i.e. the
 page size).
 
-The **skip **parameter tells you how many records to skip before you start
+The `skip` parameter tells you how many records to skip before you start
 fetching records.
 
 Luckily, LINQ has these functions built right in and they are dead simple to
 use.  Simply retrieve the values off of the **Request** parameter and  then
-call the **Skip** and **Take **methods on your query to the **Employees
-**table.
+call the `Skip` and `Take` methods on your query to the **Employees** table.
 
 ### Create A Kendo UI Grid
 
@@ -375,7 +367,7 @@ interfaces to force a type-safe container, but the simplest way to accomplish
 this is with an Array.  Remember that this object is strictly for you to
 interface with the JavaScript where arrays are first class citizens.
 
-Your **Reponse **model object should look like this…
+Your **Reponse** model object should look like this:
 
 ### Response Model Object
 
@@ -392,11 +384,11 @@ I also added a constructor so that I can build this object by passing values
 into it.  This keeps me from having to build the object in the method that
 executes the query, thus decreasing the amount of code in that block.
 
-Now alter the **Get** method to return **Model.Response** instead of
-**List<Model.Employee>**.  Also, instead of casting the returned query results
-to a list, cast them **ToArray()**; You can do this inline right off of the
-LINQ query.  The count can be ascertained from the **Data.Employee** LINQ
-object by calling its **Count() **method.
+Now alter the **Get** method to return `Model.Response` instead of
+`List<Model.Employee>`.  Also, instead of casting the returned query results
+to a list, cast them `ToArray()`; You can do this inline right off of the
+LINQ query.  The count can be ascertained from the `Data.Employee` LINQ
+object by calling its `Count()` method.
 
 ### Return The Models.Response Object
 
@@ -416,8 +408,7 @@ If you fire up the application now and have a look, you will see an empty
 grid.  This is because the collection of employees is no longer the top level
 element.  We need to tell Kendo UI about our new response structure.
 Specifically, it needs to know where the repeating data is (employees array)
-and where the total count of records is.  This is done in the **schema
-**configuration.
+and where the total count of records is.  This is done in the **schema** configuration.
 
 ### Specify The Schema
 
@@ -445,14 +436,14 @@ the developer tools, you can watch each request go to the server and watch the
 server return only the appropriate page of data.  If you watch closely,
 depending on your server latency, you might see the Kendo UI spinner come up
 indicating a server action.  You can add a
-**System.Threading.Thread.Sleep(1000); **to your **Get** method on the
+`System.Threading.Thread.Sleep(1000);` to your **Get** method on the
 **EmployeesController** if you want to see what your application will look
 like while the UI is waiting for the server to respond.  Kendo UI takes care
 of that too.
 
 ![grid-preview-paging-server-dev-tools](/tutorials/asp.net/hello-kendo-ui/images/grid-preview-paging-server-dev-tools.png)
 
-Download the full source for the project in this tutorial [**here**][6].  You
+Download the full source for the project in this tutorial [here](https://github.com/telerik/html5-dev-for-aspnet-devs).  You
 will build on this tutorial in the weeks to come as you add more and more
 advanced functionality to this application.
 
