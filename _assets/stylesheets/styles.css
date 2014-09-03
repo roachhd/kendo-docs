@@ -291,7 +291,7 @@ article, aside, footer {
     line-height: 1.5;
 
     position: absolute;
-    top: 51px;
+    top: 0;
     right: 0;
     bottom: 0;
     overflow: auto;
@@ -299,6 +299,10 @@ article, aside, footer {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+
+#markdown-toc + #page-article {
+    top: 51px;
 }
 
 #markdown-toc,
