@@ -20,8 +20,6 @@ Kendo UI comes in several different bundles:
 * Telerik UI for JSP - Kendo UI Professional plus JSP wrappers for the available web and dataviz widgets.
 * Telerik UI for PHP - Kendo UI Professional plus PHP wrappers for the available web and dataviz widgets.
 
-> You may watch the [comparison between Kendo UI Professional and Kendo UI Core video](https://www.youtube.com/watch?v=hR-NXv5Tma) for more details.
-
 ## Server-Side Wrappers
 
 Kendo UI provides server-side wrappers for ASP.NET, PHP and JSP. Those are classes (ASP.NET and PHP) or XML tags (JSP)

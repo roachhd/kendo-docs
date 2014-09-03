@@ -44,7 +44,7 @@ Kendo exposes methods which can format number or date object using specific form
 - [kendo.toString(object, format, [culture])](/api/framework/kendo#methods-toString) - returns a string representation of the current object taking into account the given format and culture.
 - [kendo.format(format, arguments)](/api/framework/kendo#methods-format) -  replaces each format item in a specified string with the text equivalent of a corresponding object's value.
 
-For more detail information check [this help topic](/getting-started/framework/globalization/formatting).
+For more detail information check [this help topic](/getting-started/framework/globalization/dateformatting).
 
 ## Parsing a string
 Kendo exposes methods which converts the specified string to date or number object:
@@ -53,7 +53,7 @@ Kendo exposes methods which converts the specified string to date or number obje
 - [kendo.parseFloat(string, [culture])](/api/framework/kendo#methods-parseFloat) - converts a string to a number with floating point using the specified culture (current culture by default).
 - [kendo.parseDate(string, [formats], [culture])](/api/framework/kendo#methods-parseDate) - converts a string to a JavaScript Date object, taking into account the given format/formats (or the given culture's set of default formats).
 
-For more detail information check [this help topic](/getting-started/framework/globalization/parsers).
+For more detail information check [this help topic](/getting-started/framework/globalization/dateparsing).
 
 ## globalize.js support
 

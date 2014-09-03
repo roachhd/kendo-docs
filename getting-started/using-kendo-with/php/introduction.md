@@ -18,7 +18,7 @@ Both extensions should be enabled in the PHP configuration (php.ini). The
 
 ## Downloading and Installing Telerik UI for PHP
 
-Yoiu can download Telerik UI for PHP from the [official download page](http://www.telerik.com/download/pho-ui). The distribution zip file
+Yoiu can download Telerik UI for PHP from the [official download page](http://www.telerik.com/download/php-ui). The distribution zip file
 contains the following directories:
 
 *   **/js** - minified JavaScript files.
