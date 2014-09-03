@@ -120,7 +120,7 @@ The **Albums** ListView is constructed similarly, with the same structure.
 
 ## Create a Gauge with a custom background
 
-The radial gauges on this page use a custom background image of a record. EVery gauge is contained within its own **&lt;div&gt;**, as shown below:
+The radial gauges on this page use a custom background image of a record. Every gauge is contained within its own **&lt;div&gt;**, as shown below:
 
 	<div class="gauge-container">
     	<div class="albums-per-hour home-gauge-box"></div>

@@ -31,7 +31,7 @@ behaving consistently between the two views.
 
     @Html.Partial("_AlbumListTemplatePartial")
 
-Next we will add paging support for the ListView. This is done using the **Pager** widget.
+Next we will add paging support for the ListView. This is done by using the **Pager** widget.
 The Pager widget is a separate widget from the ListView, which provides us the flexibility to put the pager
 controls anywhere on the page. In this case, we are actually going to include two pagers, one above and one
 below the ListView:

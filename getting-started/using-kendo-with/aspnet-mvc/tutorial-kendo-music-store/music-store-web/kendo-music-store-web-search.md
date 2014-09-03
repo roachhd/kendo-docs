@@ -77,11 +77,11 @@ We can use templates to make much nicer looking results. In this case, we are in
     template: kendo.template($("#search-result-template").html())
 
 The template property *could* be set to a string, for example **template: "foo"**, and each result would render &lt;li&gt;foo&lt;/li&gt;.
-To make more intricate templates, you can use '#...#' or '${...}' to put in JavaScript and calculated values.
+To make more intricate templates, you can use '#...#' to put in JavaScript and calculated values.
 
 For example, a better template than "foo" would be:
 
-    template: "<img src='${data.AlbumArtUrl}' /><span>${data.Title}</span><span>${data.Artist.Name}</span>"
+    template: "<img src='#:data.AlbumArtUrl#' /><span>#:data.Title#</span><span>#:data.Artist.Name#</span>"
 
 Here, the template is using the special value **data**.
 This variable is set to the JavaScript object that this template is being generated for.
@@ -106,16 +106,16 @@ inside the &lt;body&gt; of your document. The **type** is always **"text/x-kendo
 The HTML for your template then goes inside the &lt;script&gt; tags. For our auto-complete search box, out template is:
 
     <script id="search-result-template" type="text/x-kendo-template">
-        <div class="album-wide" data-album-id="${data.AlbumId}">
-            <img src="${data.AlbumArtUrl}" />
+        <div class="album-wide" data-album-id="#:data.AlbumId#">
+            <img src="#:data.AlbumArtUrl#" />
             <div>
-                <span>${data.Title}</span>
-                <span>${data.Artist.Name}</span>
+                <span>#:data.Title#</span>
+                <span>#:data.Artist.Name#</span>
             </div>
         </div>
     </script>
 
-You can see here that we are using the **${...}** notation to indicate fields that need to be pulled from the JS object that is being bound to the template.
+You can see here that we are using the **#:...#** notation to indicate fields that need to be pulled from the JS object that is being bound to the template.
 We also could have used the **#= #** notation; **&lt;span&gt;#=data.Title#&lt;/span&gt;** would have worked as well.
 
 We are also taking advantage of ASP.NET MVC's ability to render partial pages here, and including out templates as partial pages.
@@ -198,7 +198,7 @@ Next we want to display the album details to the user. To do this, we need to ge
 This process was somewhat complicated. You may have noticed we added a **data-album-id** attribute to each search result on our template:
 
     <script id="search-result-template" type="text/x-kendo-template">
-        <div class="album-wide" data-album-id="${data.AlbumId}">
+        <div class="album-wide" data-album-id="#:data.AlbumId#">
 
 In the event object **e**, **e.item** is the &lt;li&gt; element.
 Then we can use a jQuery selector to get the &lt;div&gt; element within the &lt;li&gt;, and jQuery's **.data()** method to get the value of the **data-album-id** attribute:

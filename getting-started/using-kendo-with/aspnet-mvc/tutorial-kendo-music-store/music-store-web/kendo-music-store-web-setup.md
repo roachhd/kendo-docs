@@ -12,8 +12,7 @@ Kendo UI can be downloaded from [telerik.com](http://www.telerik.com/download/ke
 
 ### Download Kendo UI
 
-Kendo UI is divided into three parts: Web, Mobile, and DataViz.
-The preferred method of getting Kendo UI is to browse to [telerik.com](http://www.telerik.com/download/kendo-ui-complete) and download Kendo UI as a .zip file.
+The preferred method of getting Kendo UI is to browse to [telerik.com](http://www.telerik.com/download/kendo-ui) and download Kendo UI as a .zip file.
 Depending on whether you are using the Trial version or have purchased the full Commercial version,
 you will have a .zip file that follows one of these directory structures:
 
@@ -38,7 +37,7 @@ Simply search for 'kendo'.
 
 ### More Information
 
-In the Music Store project, we referenced the **kendo.all.min.js** file and the **Default** Kendo theme, because we were going to be using DataViz and a good number of the Kendo UI Widgets.
+In the Music Store project, we referenced the **kendo.all.min.js** file and the **Default** Kendo theme, because we were going to be using data visualization widgets and a good number of the Kendo UI Widgets.
 If we were only going to be using a few select portions of Kendo UI, we would have taken individual JavaScript files and make a separate bundle for them, reducing the download size for the end user.
 
 For more information on this topic, see: [Getting Started with Kendo UI](http://docs.telerik.com/kendo-ui/getting-started/introduction)

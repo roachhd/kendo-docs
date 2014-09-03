@@ -3,12 +3,11 @@ title: Build the Store Sales page
 position: 4
 ---
 
-
 # Build the Store Sales page
 
 ![sales-overview](/tutorials/asp.net/kendo-music-store/music-store-dashboard/images/sales-overview.png)
 
-This page is constructed to show a collection of DataViz graphs, exposing several different views of store data. The page is dominated by a general sales graph, which can be filtered by five different dimensions, selectable by the buttons to the left of graph.
+This page is constructed to show a collection of data visualization graphs, exposing several different views of store data. The page is dominated by a general sales graph, which can be filtered by five different dimensions, selectable by the buttons to the left of graph.
 
 Two smaller graphs present data grouped by genre: Sales and Searches. These views provide a way to change the type of chart shown, changing the presentation of the data based on user selection of the graph type. The data can also be changed between Weekly, Monthly and Yearly data.
 

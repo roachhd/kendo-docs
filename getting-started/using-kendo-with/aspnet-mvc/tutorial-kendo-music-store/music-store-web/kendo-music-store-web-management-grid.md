@@ -13,7 +13,7 @@ This page uses the [Kendo UI Grid](http://demos.telerik.com/kendo-ui/web/grid/in
 
 This code is located in **Scripts/App/storemanager-index.js**.
 
-> You can log in to the Music Store as the administrator by using the username "Owner" and the password "p@ssword123".
+> You can log in to the Music Store as an administrator by using the username "Owner" and the password "p@ssword123".
 
 ## Define the Data Source.
 

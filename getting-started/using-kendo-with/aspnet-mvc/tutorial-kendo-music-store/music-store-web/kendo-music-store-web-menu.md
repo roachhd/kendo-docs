@@ -72,11 +72,11 @@ This partial outputs a list of **&lt;li&gt;** elements that work as links to eac
 
 ## Add the About pull-down menu
 
-Another ability of the Kendo UI Menu control is adding any content into a drop-down menu item.
+Another ability of the Kendo UI Menu control is adding any content into a dropdown menu item.
 It does not have to be a list of selectable items, like the Genres.
 To add content to a menu item, include a **&lt;ul&gt;** element with a single **&lt;li&gt;** element.
 Within that element, use a **&lt;div&gt;** to specify the content.
-For example, let's add this content for out "About" menu item:
+For example, let's add this content for our "About" menu item:
 
     <li>About
         <ul>
@@ -90,6 +90,6 @@ For example, let's add this content for out "About" menu item:
         </ul>
     </li>
 
-This creates the **&lt;div&gt;** content displayed in a drop-down menu item:
+This creates the **&lt;div&gt;** content displayed in a dropdown menu item:
 
 ![kendo-menu-pulldown-content](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-menu-pulldown-content.png)

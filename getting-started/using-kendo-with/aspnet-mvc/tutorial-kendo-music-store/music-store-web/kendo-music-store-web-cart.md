@@ -24,11 +24,11 @@ By providing a DataSource to bind against for cart data we give all parts of the
 of cart data updates.
 For example, since the cart menu widget and cart checkout view are bound to the same datasource, if you navigate
 to the checkout page and remove an item from the cart the cart menu widget will immediately update.
-No extra JavaScript had to be written to accomplish this. It is notified of the DataSource change and knows to update.
+No extra JavaScript has to be written to accomplish this. The widget is notified of the DataSource change and knows to update.
 
 ## Tracking the Total Price
 
-When the **getCart()** function creates a DataSource to represent the cart data it adds an aggregate for the totals.
+When the **getCart()** function creates a DataSource to represent the cart data and adds an aggregate for the totals.
 
     this.getCart = function () {
         if (!cartData) {

@@ -6,7 +6,7 @@ position: 8
 # Custom Shopping Cart Menu Widget - Kendo UI Music Store
 
 Inevitably at some point in a project you will come across a feature that you need to implement that doesn't seem
-to fit a standard Kendo UI Widget. In the Music Store sample project, this was the case with the shopping cart
+to fit a standard Kendo UI Widget. In the Music Store sample project, this is the case with the shopping cart
 embedded in a menu item. The UI designer for the project drafted this screen mockup:
 
 ![kendo-cart-menu-mockup](/getting-started/using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web/images/kendo-cart-menu-mockup.png)
@@ -66,7 +66,7 @@ This created widget object is then passed to **kendo.ui.plugin()** to register i
 
 ## Use the Widget in HTML.
 
-With our widget now registered with Kendo UI, we can create an HTML element that will become the Cart Menu to display to the user.
+With our widget now registered with Kendo UI, we can create an HTML element that will become the Cart Menu.
 We are basing the Cart Menu on a &lt;ul&gt; element, since it will behave much like a regular Kendo UI Menu widget.
 
     <ul id="cart-menu"></ul>
@@ -80,7 +80,7 @@ Note that The function name to initialize the widget is "kendo" plus the widget 
 ## Bind to a DataSource.
 
 We need to use a DataSource that represents the shopping cart to display the cart items and the total.
-To do this, we will pass the datasource as an option when the JavaScript call is made to initialize the widget.
+To do this, we will pass the DataSource as an option when the JavaScript call is made to initialize the widget.
 To be consistent with the other Kendo UI widgets, this parameter is named **dataSource**.
 
     $("#cart-menu").kendoCartMenu({
@@ -163,7 +163,7 @@ will be called whenever that data source changes.
 
 Now we are ready to implement the widget's functionality.
 The **init** function is called when the widget is created, and should perform any work needed to create the widget including manipulating any DOM elements.
-For this widget, we are going to turn the targeted element into a normal Kendo UI Menu that contains a drop open item.
+For this widget, we are going to turn the targeted element into a normal Kendo UI Menu that contains a drop down item.
 We do this in the init function:
 
         // method called when a new widget is created
@@ -267,7 +267,7 @@ and call **\_animate\_bg()** to cause the top level menu element to flash orange
 
 ## Remove Albums from the Cart.
 
-Each cart item displayed in the cart is displayed in a Kendo UI ListView widget and is bound to the cart DataSource.
+Each cart item displayed in the cart is displayed in a Kendo UI ListView widget and is bound to the cart's DataSource.
 They are rendered using the template:
 
     <li><span>#=Album.Title#</span><span class="k-icon k-i-close k-delete-button"></span></li>
