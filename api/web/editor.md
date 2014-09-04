@@ -892,6 +892,21 @@ The title of the tool that inserts tables.
     });
     </script>
 
+### messages.createTableHint `String` *(default: "Create a {0} x {1} table")*
+
+The status text of the tool that inserts tables, which indicates the dimensions of the inserted table.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      messages: {
+        createTableHint: "Create a {0} x {1} table"
+      }
+    });
+    </script>
+
 ### messages.addColumnLeft `String` *(default: "Add column on the left")*
 
 The title of the tool that adds table columns on the left of the selection.
