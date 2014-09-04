@@ -55,12 +55,12 @@ By default the Grid has no width and behaves like a block-level element, i.e. it
 
 If Grid **scrolling is enabled** and the sum of all column widths is greater than the Grid width, a horizontal scrollbar will appear.
 
-If Grid **scrolling is disabled** and the columns cannot fit, they will overflow the Grid `&lt;div&gt;`, which will result in the widget's right border passing through the data cells.
-This is because the Grid is basically a `&lt;table&gt;` element inside a `&lt;div&gt;` element. Tables can expand horizontally beyond 100% to enclose their content, while divs don't do that.
+If Grid **scrolling is disabled** and the columns cannot fit, they will overflow the Grid `<div>`, which will result in the widget's right border passing through the data cells.
+This is because the Grid is basically a `<table>` element inside a `<div>` element. Tables can expand horizontally beyond 100% to enclose their content, while divs don't do that.
 Possible resolutions to table overflowing include:
 
 * enable Grid scrolling (which is disabled by default when using the Kendo UI Grid MVC wrapper)
-* set a large-enough width or min-width style for the Grid wrapper - the `&lt;div class="k-widget k-grid"&gt;` element
+* set a large-enough width or min-width style for the Grid wrapper - the `<div class="k-widget k-grid">` element
 * float the Grid wrapper and clear the float right after the widget. Floated elements expand and shrink automatically to enclose their content, when needed.
 This approach should be used only if the previous two are unacceptable.
 
