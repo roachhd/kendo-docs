@@ -1202,7 +1202,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
 
 ### categoryAxis.labels.culture `String`
 
-The culture to use when formatting date values. See the [globalization overview](/getting-started/framework/globalization/overview) for more information.
+The culture to use when formatting date values. See the [globalization overview](/framework/globalization/overview) for more information.
 
 ### categoryAxis.labels.dateFormats `Object`
 
@@ -21746,7 +21746,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
 
 ### xAxis.labels.culture `String`
 
-The culture to use when formatting date values. See the [globalization overview](/getting-started/framework/globalization/overview) for more information.
+The culture to use when formatting date values. See the [globalization overview](/framework/globalization/overview) for more information.
 
 ### xAxis.labels.dateFormats `Object`
 
@@ -26297,7 +26297,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
 
 ### yAxis.labels.culture `String`
 
-The culture to use when formatting date values. See the [globalization overview](/getting-started/framework/globalization/overview) for more information.
+The culture to use when formatting date values. See the [globalization overview](/framework/globalization/overview) for more information.
 
 ### yAxis.labels.dateFormats `Object`
 

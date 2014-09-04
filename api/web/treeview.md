@@ -709,7 +709,7 @@ A string, DOM element or jQuery object which represents the node. A string is tr
     console.log(dataItem.text); // displays "foo"
     </script>
 
-See also: [getting the node data in the select event handler](/getting-started/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)
+See also: [getting the node data in the select event handler](/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)
 
 ### destroy
 

@@ -6,8 +6,8 @@ description: The documentation contains examples for the configuration of a new 
 
 # kendo.data.ObservableObject
 
-The `kendo.data.ObservableObject` is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition
-the items of the [kendo.dat.DataSource](/getting-started/framework/datasource/overview) are `kendo.data.ObservableObject` instances.
+The `kendo.data.ObservableObject` is the building block of [Kendo MVVM](/framework/mvvm/overview). In addition
+the items of the [kendo.dat.DataSource](/framework/datasource/overview) are `kendo.data.ObservableObject` instances.
 
 Inherits from [kendo.Observable](/api/framework/observable).
 

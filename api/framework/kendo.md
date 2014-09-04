@@ -416,7 +416,7 @@ Finds all Kendo widgets that are children of the specified element and calls the
 
 ##### force `Boolean`*(default: false)*
 
-Determines whether the resizing routine should be executed even if the respective widget's outer dimensions have not changed. The parameter will be passed to the [widget's `resize` method](/getting-started/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing).
+Determines whether the resizing routine should be executed even if the respective widget's outer dimensions have not changed. The parameter will be passed to the [widget's `resize` method](/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing).
 
 ### stringify
 
@@ -609,7 +609,7 @@ The format string which should be used to format the value.
 
 ##### culture `String`
 
-The name of the culture which should be used to format the value. [The culture should be registered on the page](/getting-started/framework/globalization/overview#add culture scripts to the page).
+The name of the culture which should be used to format the value. [The culture should be registered on the page](/framework/globalization/overview#add culture scripts to the page).
 
 ### unbind
 

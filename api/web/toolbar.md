@@ -30,7 +30,7 @@ If `resizable` is set to `true` the widget will detect changes in the viewport w
 
 A JavaScript array that contains the ToolBar's commands configuration. 
 
-> For more information regarding supported commands and their configration properties check the [Getting Started topic](/getting-started/web/toolbar/overview#command-types).
+> For more information regarding supported commands and their configration properties check the [Getting Started topic](/web/toolbar/overview#command-types).
 
 #### Example - initialize ToolBar with Button, Toggle Button and SplitButton
 
@@ -1056,7 +1056,7 @@ Specifies the url to navigate to.
 
 ### add
 
-Adds new command to the ToolBar widget. Accepts object with [valid command configuration options](/getting-started/web/toolbar/overview#command-types).
+Adds new command to the ToolBar widget. Accepts object with [valid command configuration options](/web/toolbar/overview#command-types).
 
 #### Parameters
 

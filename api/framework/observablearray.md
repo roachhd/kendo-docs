@@ -6,8 +6,8 @@ description: How to create a new ObservableArray, explanations how to use kendo.
 
 # kendo.data.ObservableArray
 
-The `ObservableArray` wraps an existing Array object with change tracking capabilities. It is used by [Kendo MVVM](/getting-started/framework/mvvm/overview) and
-the [kendo.data.DataSource](/getting-started/framework/datasource/overview). Inherits from [kendo.Observable](/api/framework/observable).
+The `ObservableArray` wraps an existing Array object with change tracking capabilities. It is used by [Kendo MVVM](/framework/mvvm/overview) and
+the [kendo.data.DataSource](/framework/datasource/overview). Inherits from [kendo.Observable](/api/framework/observable).
 
 ## Configuration
 

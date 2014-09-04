@@ -343,7 +343,7 @@ Provides a way to specify a custom editing UI for the column. Use the `container
 
 > The editing UI should contain an element whose `name` HTML attribute is set as the column [field](#configuration-columns.field).
 
-> Validation settings defined in the `model.fields` configuration will **not** be applied automatically. In order the validation to work, **the developer is responsible for attaching the corresponding validation attributes to the editor input**. In case the custom editor is a widget, the developer should [customize the validation warning tooltip position](/getting-started/framework/validator/overview#customizing-the-tooltip-position) in order to avoid visual issues.
+> Validation settings defined in the `model.fields` configuration will **not** be applied automatically. In order the validation to work, **the developer is responsible for attaching the corresponding validation attributes to the editor input**. In case the custom editor is a widget, the developer should [customize the validation warning tooltip position](/framework/validator/overview#customizing-the-tooltip-position) in order to avoid visual issues.
 
 #### Parameters
 
@@ -834,7 +834,7 @@ The fields which can be used in the template are:
 * sum - the value of the "sum" aggregate (if specified)
 * data - provides access to all available aggregates, e.g. `data.fieldName1.sum` or `data.fieldName2.average`
 
-> If the grid is bound using [source binding](/getting-started/framework/mvvm/bindings/source), it will initially be assigned with an empty [dataSource](/api/framework/datasource) without any aggregates. In order to avoid a JavaScript error for an undefined aggregate when the footer is rendered with the empty dataSource, you should check if the field is defined in the template data before accessing the value. If no groups are specified for the actual dataSource, then you will also need to use the field name to access the aggregate value.
+> If the grid is bound using [source binding](/framework/mvvm/bindings/source), it will initially be assigned with an empty [dataSource](/api/framework/datasource) without any aggregates. In order to avoid a JavaScript error for an undefined aggregate when the footer is rendered with the empty dataSource, you should check if the field is defined in the template data before accessing the value. If no groups are specified for the actual dataSource, then you will also need to use the field name to access the aggregate value.
 
 #### Example - specify column footer template
 
@@ -1080,7 +1080,7 @@ If set to `true` the column will not be displayed in the grid. By default all co
 
 ### columns.locked `Boolean` *(default: false)*
 
-If set to `true` the column will be displayed as locked in the grid. Also see [Frozen Columns](/getting-started/web/grid/walkthrough#frozen-columns-locked-columns).
+If set to `true` the column will be displayed as locked in the grid. Also see [Frozen Columns](/web/grid/walkthrough#frozen-columns-locked-columns).
 
 > Row template and detail features are not supported in combination with column locking.
 
@@ -1242,7 +1242,7 @@ The text that is displayed in the column header cell. If not set the [field](#co
 
 ### columns.width `String|Number`
 
-The width of the column. Numeric values are treated as pixels. **For more important information, please refer to [Column Widths](/getting-started/web/grid/walkthrough#column-widths)**.
+The width of the column. Numeric values are treated as pixels. **For more important information, please refer to [Column Widths](/web/grid/walkthrough#column-widths)**.
 
 #### Example - set the column width as a string
      <div id="grid"></div>
@@ -2024,9 +2024,9 @@ The editing mode to use. The supported editing modes are "incell", "inline" and 
 The [template](/api/framework/kendo#methods-template) which renders popup editor.
 
 The template should contain elements whose `name` HTML attributes are set as the editable fields. This is how the grid will know
-which field to update. The other option is to use [MVVM](/getting-started/framework/mvvm/overview) bindings in order to bind HTML elements to data item fields.
+which field to update. The other option is to use [MVVM](/framework/mvvm/overview) bindings in order to bind HTML elements to data item fields.
 
-> Use the `role` data attribute to initialize Kendo UI widgets in the template. Check [data attribute initialization](/getting-started/data-attribute-initialization) for more info.
+> Use the `role` data attribute to initialize Kendo UI widgets in the template. Check [data attribute initialization](/data-attribute-initialization) for more info.
 
 #### Example - customize the popup editor
 

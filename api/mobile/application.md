@@ -171,7 +171,7 @@ The skin to apply to the application. Currently, Kendo UI Mobile ships with a **
 Set the status bar style meta tag in iOS used to control the styling of the status bar in a pinned to the Home Screen app. Available as of Q2 2013 SP.
 
 > The default setting of "black" pushes down the content of the page, while the rest overlay it. To create seamless status bar in iOS7,
-check [Seamless Status Bar in iOS7](/getting-started/mobile/application#seamless-status-bar-in-ios7) section in Mobile Application's Getting Started page.
+check [Seamless Status Bar in iOS7](/mobile/application#seamless-status-bar-in-ios7) section in Mobile Application's Getting Started page.
 
 #### Example
 
@@ -185,7 +185,7 @@ check [Seamless Status Bar in iOS7](/getting-started/mobile/application#seamless
 
 ### transition `String`
 
-The default View transition. For a list of supported transitions, check the [Getting Started help topic](/getting-started/mobile/application#view-transitions).
+The default View transition. For a list of supported transitions, check the [Getting Started help topic](/mobile/application#view-transitions).
 
 #### Example
 
@@ -213,7 +213,7 @@ Whether to update the document title.
 By default, the mobile application uses flexbox for the mobile views layout. The content element is made scrollable, either by initializing a mobile scroller or with the browser supported `overflow: auto` and `-webkit-overflow-scrolling: touch` CSS declarations.
 When the `useNativeScrolling` configuration option is set to true, the view header and footer are positioned using `position: fixed` CSS declaration. The view content vertical padding is adjusted to match the header and footer height; The default browser scroller is utilized for the content scrolling.
 
-For more information regarding native scrolling check [this article](/getting-started/mobile/native-scrolling).
+For more information regarding native scrolling check [this article](/mobile/native-scrolling).
 
 #### Example
 
@@ -339,7 +339,7 @@ The id or url of the view.
 
 ##### transition `String`
 
-Optional. The transition to apply when navigating. See [View Transitions section](/getting-started/mobile/application#view-transitions) for more information.
+Optional. The transition to apply when navigating. See [View Transitions section](/mobile/application#view-transitions) for more information.
 
 ###### Example
 
@@ -366,7 +366,7 @@ The id or url of the view.
 
 ##### transition `String`
 
-Optional. The transition to apply when navigating. See [View Transitions section](/getting-started/mobile/application#view-transitions) for more information.
+Optional. The transition to apply when navigating. See [View Transitions section](/mobile/application#view-transitions) for more information.
 
 ###### Example
 

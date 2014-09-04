@@ -69,7 +69,7 @@ By setting already existing key the appropriate built-in message will be overrid
 
 ### rules `Object`
 
-Set of custom validation rules. Those rules will extend the [built-in ones](/getting-started/framework/validator/overview#default-validation-rules).
+Set of custom validation rules. Those rules will extend the [built-in ones](/framework/validator/overview#default-validation-rules).
 
 #### Defining custom rules
 

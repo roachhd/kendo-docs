@@ -38,7 +38,7 @@ The view instance that will be rendered.
 
 ##### transitionClass `string`
 
-Optional. If provided, the new view will replace the current one with a [replace effect](/getting-started/framework/fx/replace).
+Optional. If provided, the new view will replace the current one with a [replace effect](/framework/fx/replace).
 
 ###### Example
 

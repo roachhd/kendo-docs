@@ -1020,7 +1020,7 @@ Indicates whether the characters outside the ASCII range will be encoded as HTML
 
 ### stylesheets `Array`
 
-Allows custom stylesheets to be included within the editing area. This setting is applicable only when the [Editor is initialized from a `textarea`](/getting-started/web/editor/overview)
+Allows custom stylesheets to be included within the editing area. This setting is applicable only when the [Editor is initialized from a `textarea`](/web/editor/overview)
 and a contenteditable iframe is generated.
 
 #### Example

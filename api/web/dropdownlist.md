@@ -111,7 +111,7 @@ Controls whether to bind the widget to the data source on initialization.
 ### cascadeFrom `String`
 
 Use it to set the Id of the parent dropdownlist widget.
-[Help topic showing how cascading functionality works](/getting-started/web/dropdownlist/cascading)
+[Help topic showing how cascading functionality works](/web/dropdownlist/cascading)
 
 #### Example
 
@@ -527,7 +527,7 @@ The value of the widget.
 
 ### valuePrimitive `Boolean`*(default: false)*
 
-Spcifies the [value binding](/getting-started/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+Spcifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
 
 #### Example - specify that the View-Model field should be updated with the selected item value
 

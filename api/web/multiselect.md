@@ -523,7 +523,7 @@ The [template](/api/framework/kendo#methods-template) used to render the tags.
 
 ### valuePrimitive `Boolean`*(default: false)*
 
-Specifies the [value binding](/getting-started/framework/mvvm/bindings/value) behavior for the widget. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+Specifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
 
 #### Example - specify that the View-Model field should be updated with the selected item value
 

@@ -189,7 +189,7 @@ The id or URL of the view.
 
 ##### transition `String`
 
-The transition to apply when navigating. See [View Transitions](/getting-started/mobile/application#view-transitions) for more information.
+The transition to apply when navigating. See [View Transitions](/mobile/application#view-transitions) for more information.
 
 ### replace
 
@@ -203,7 +203,7 @@ The id or URL of the view.
 
 ##### transition `String`
 
-The transition to apply when navigating. See [View Transitions](/getting-started/mobile/application#view-transitions) for more information.
+The transition to apply when navigating. See [View Transitions](/mobile/application#view-transitions) for more information.
 
 ### Example
 

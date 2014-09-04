@@ -83,7 +83,7 @@ Supported types (case insensitive):
 - `vml`
 
 This option will be ignored if not supported by the browser.
-See [Supported Browsers](/getting-started/dataviz/drawing/supported-browsers)
+See [Supported Browsers](/dataviz/drawing/supported-browsers)
 
 ### height `String` *(default: "100%")*
 The height of the surface element.

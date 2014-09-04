@@ -279,7 +279,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
 
 ### navigator.categoryAxis.labels.culture `String`
 
-The culture to use when formatting date values. See the [globalization overview](/getting-started/framework/globalization/overview) for more information.
+The culture to use when formatting date values. See the [globalization overview](/framework/globalization/overview) for more information.
 
 ### navigator.categoryAxis.labels.dateFormats `Object`
 
@@ -2918,7 +2918,7 @@ This option is ignored if [categoryAxis.baseUnit](#configuration-categoryAxis.ba
 
 ### categoryAxis.labels.culture `String`
 
-Culture to use for formatting the dates. See [Globalization](/getting-started/framework/globalization/overview) for more information.
+Culture to use for formatting the dates. See [Globalization](/framework/globalization/overview) for more information.
 It defaults to the global culture.
 
 ### categoryAxis.labels.dateFormats `Object`
