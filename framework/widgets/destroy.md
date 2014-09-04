@@ -1,6 +1,5 @@
 ---
 title: Destroy Kendo UI Widgets
-previous_url: /howto/create-custom-kendo-widget
 ---
 
 # Destroy Kendo UI Widgets
