@@ -9,7 +9,7 @@ position: 2
 
 ## Scrolling
 
-Grid scrolling is enabled by default (except for the [MVC wrapper](/using-kendo-with/aspnet-mvc/helpers/grid/configuration#scrolling), for historical reasons).
+Grid scrolling is enabled by default (except for the [MVC wrapper](/aspnet-mvc/helpers/grid/configuration#scrolling), for historical reasons).
 
 Enabled scrolling does not guarantee that scrollbars will appear. This is because scrolling makes sense and works together with set dimensions.
 
@@ -68,7 +68,7 @@ When using hierarchy, the detail template content cannot be wider than the maste
 
 ## Height
 
-By default the Grid has no height and expands to fit all table rows. For historical reasons, the [Grid MVC wrapper](/using-kendo-with/aspnet-mvc/helpers/grid/configuration#scrolling)
+By default the Grid has no height and expands to fit all table rows. For historical reasons, the [Grid MVC wrapper](/aspnet-mvc/helpers/grid/configuration#scrolling)
 applies a default height of 200px to its data area when widget scrolling is enabled.
 
 A height can be set to the Grid in one of the following ways:
@@ -95,7 +95,7 @@ make the Grid wrapper `div` 100% high. According to web standards, **elements wi
 until an element with a pixel height is reached, or until the `html` element is reached. 100% high elements cannot have margins, paddings, borders or sibling elements,
 so the default border of the Grid should be removed as well.
 
-The second step is to subscribe to the browser window's `resize` event and execute the Grid's [`resize`](/using-kendo-with/using-kendo-in-responsive-web-pages) method.
+The second step is to subscribe to the browser window's `resize` event and execute the Grid's [`resize`](/using-kendo-in-responsive-web-pages) method.
 It will take care of measuring the height of the Grid and adjusting the height of the scrollable data area.
 
 The `resize` method doesn't have to be called if the Grid is placed inside a Kendo UI Splitter, because the Splitter will execute it automatically. It is also not needed if locked (frozen) columns are used.
@@ -122,7 +122,7 @@ Generally, Javascript size calculations don't work for elements, which are hidde
 Depending on the exact scenario, the following can be observed when the widget is eventually displayed:
 
 * the scrollable data area overflows the Grid's bottom border. This can be resolved by executing the Grid's
-[`resize()`](/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing) method. Alternatively, apply the desired height to the scrollable data area, instead of the Grid widget:
+[`resize()`](/using-kendo-in-responsive-web-pages#individual-widget-resizing) method. Alternatively, apply the desired height to the scrollable data area, instead of the Grid widget:
 
         #GridID .k-grid-content
         {

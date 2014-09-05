@@ -210,7 +210,7 @@ cannot have borders, margins or paddings. In a nested Splitters scenario, the in
 
 ## Resizing a Splitter manually
 
-The Splitter `div` can be resized manually by applying new width or height style with Javascript. Afterwards, the [`resize()`](/using-kendo-with/using-kendo-in-responsive-web-pages) method
+The Splitter `div` can be resized manually by applying new width or height style with Javascript. Afterwards, the [`resize()`](/using-kendo-in-responsive-web-pages) method
 should be executed, so that the widget readjusts its layout and pane sizes.
 
     var splitterElement = $("#SplitterID"),

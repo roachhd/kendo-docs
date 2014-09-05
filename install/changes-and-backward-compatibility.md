@@ -117,7 +117,7 @@ the new default import once functionality of @import directive).
 
 * **Core**: kendo.support.pointers now only shows support for IE11 pointer events - kendo.support.msPointers was added to indicate that IE10 pointer events are supported too.
 * **Splitter**: the internal method `trigger("resize")`, which has been provided as a workaround in certain scenarios, no longer works.
-It has been replaced with a [public API method `resize()`](/using-kendo-with/using-kendo-in-responsive-web-pages), which now all Kendo UI widgets have.
+It has been replaced with a [public API method `resize()`](/using-kendo-in-responsive-web-pages), which now all Kendo UI widgets have.
 Also see [`kendo.resize()`](/api/framework/kendo/#methods-resize).
 * **Splitter**: the `layoutChange` event is now obsolete and will be removed in the future. Please use the `resize` event instead.
 * **Kendo UI Scheduler for ASP.NET MVC**: "ISchedulerEvent" interface now includes two additional fields - "StartTimezone" and "EndTimezone" which stores the timezone information of the event.
@@ -224,7 +224,7 @@ Enabling endless scrolling or press to load more configuration options now puts 
 
 #### ASP.NET MVC
 
-Some ASP.NET MVC applications may be broken if using other libraries incompatible with jQuery 1.9.1. Further details available in the [troubleshooting guide](/using-kendo-with/aspnet-mvc/troubleshooting#javascript-error-that-live-method-is-unavailable,-undefined-or-unsupported)
+Some ASP.NET MVC applications may be broken if using other libraries incompatible with jQuery 1.9.1. Further details available in the [troubleshooting guide](/aspnet-mvc/troubleshooting#javascript-error-that-live-method-is-unavailable,-undefined-or-unsupported)
 
 ## Kendo UI 2012 Q3 SP1
 

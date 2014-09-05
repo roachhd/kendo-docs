@@ -3,7 +3,7 @@ title: Supported Browsers
 page_title: Suported Browsers
 previous_url: /technical-requirements.html, /getting-started/technical-requirements
 description: browser, platform support and prerequisites for best performance when working with Kendo UI.
-position: 4
+position: 2
 ---
 
 <style scoped>

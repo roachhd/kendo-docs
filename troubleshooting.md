@@ -2,6 +2,7 @@
 title: Troubleshooting
 page_title: Troubleshooting in Kendo UI JavaScript framework
 description: "Find solutions for common problems when working with Kendo UI widgets: JavaScript errors, versions availability on CDN, undefined widget object."
+position: 9
 ---
 
 # Troubleshooting

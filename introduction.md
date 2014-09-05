@@ -28,9 +28,9 @@ which generate the Kendo UI widgets from a server-side code.
 
 You can find more info about the server-side wrappers here:
 
-- [Get Started with Telerik UI for ASP.NET MVC](/using-kendo-with/aspnet-mvc/introduction)
-- [Get Started with Telerik UI for JSP](/using-kendo-with/jsp/introduction)
-- [Get Started with Telerik UI for PHP](/using-kendo-with/php/introduction)
+- [Get Started with Telerik UI for ASP.NET MVC](/aspnet-mvc/introduction)
+- [Get Started with Telerik UI for JSP](/jsp/introduction)
+- [Get Started with Telerik UI for PHP](/php/introduction)
 
 ## Next Steps
 

@@ -143,7 +143,7 @@ make the Grid `div` 100% high. According to web standards, elements with a perce
 until an element with a pixel height is reached, or until the `html` element is reached. 100% high elements cannot have margins, paddings, borders or sibling elements,
 so the default border of the Grid `div` should be removed as well.
 
-The second step is to subscribe to the browser window's `resize` event and execute the Grid's [`resize`](/using-kendo-with/using-kendo-in-responsive-web-pages) method.
+The second step is to subscribe to the browser window's `resize` event and execute the Grid's [`resize`](/using-kendo-in-responsive-web-pages) method.
 If Grid virtual scrolling is used, then execute the following instead of `resize`.
 
     $("#GridID").data("kendoGrid").dataSource.fetch();
@@ -177,7 +177,7 @@ If virtual scrolling is **not used**, there are several options:
 
 * The Grid should be initialized when its element becomes visible;
 * The Grid's layout must be adjusted manually. With old Kendo UI versions, use the code from the above example (there is no need to attach a window resize handler). Since Q3 2013,
-you can use [`kendo.resize()`](/api/framework/kendo/#methods-resize) or the Grid's [`resize()`](/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing) method.
+you can use [`kendo.resize()`](/api/framework/kendo/#methods-resize) or the Grid's [`resize()`](/using-kendo-in-responsive-web-pages#individual-widget-resizing) method.
 * Instead of setting an overall height for the Grid in its configuration, you can define height for the scrollable data area only. In this case no height calculations will be made:
 
         #GridID .k-grid-content
@@ -245,7 +245,7 @@ the widget `TABLE` may overflow the wrapper `DIV`, leading to a visual glitch. P
 
 ### Scrolling
 
-Grid scrolling is enabled by default (except for the [MVC wrapper](http://docs.telerik.com/kendo-ui/using-kendo-with/aspnet-mvc/helpers/grid/configuration#scrolling), for historical reasons).
+Grid scrolling is enabled by default (except for the [MVC wrapper](http://docs.telerik.com/kendo-ui/aspnet-mvc/helpers/grid/configuration#scrolling), for historical reasons).
 Scrolling can be disabled by setting the `scrollable` option to `false`.
 
 Enabling scrolling does not guarantee that scrollbars will appear. This is because scrolling makes sense and works together with set dimensions.

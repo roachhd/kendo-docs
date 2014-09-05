@@ -6,35 +6,44 @@ exclude: [readme.md, Gemfile, Gemfile.lock,api_sort.rb]
 navigation:
 ## List your directory names and order here, like this:
     "*install":
-        title: "Installation and Upgrade"
-        position: 2
+        title: "Install and Upgrade"
+        position: 3
     "*basics":
         title: "The Basics"
-        position: 3
-    "api":
-        title: "API Reference"
-        position: 2
-    "using-kendo-with":
-        title: "Using Kendo With"
-        position: 5
+        position: 4
     "web":
-        title: "Web"
+        title: "Web Widgets"
+        position: 5
+    "dataviz":
+        title: "Data Visualisation"
+        position: 6
+    "mobile":
+        title: "Mobile Framework and Widgets"
         position: 7
     "framework":
-        title: "Framework"
+        title: "Framework and Utilities"
         position: 8
-    "dataviz":
-        title: "DataViz"
-        position: 9
-    "mobile":
-        title: "Mobile"
+    "AngularJS":
+        title: "AngularJS Directives"
         position: 10
-    "wrappers":
-        title: "Wrappers"
+    "aspnet-mvc":
+        title: "UI for ASP.NET MVC"
         position: 11
-    "accessibility":
-        title: "Make your Kendo UI Project Accessible"
+    "jsp":
+        title: "UI for JSP"
+        position: 12
+    "php":
+        title: "UI for PHP"
+        position: 13
+    "webforms":
+        title: "Use in ASP.NET Web Forms"
         position: 14
+    "accessibility":
+        title: "Accessibility Features"
+        position: 16
+    "api":
+        title: "API Reference"
+        position: 23
     "mobile/listview":
         title: "Mobile ListView"
         position: 9
@@ -42,16 +51,12 @@ navigation:
         title: "TypeScript"
     "*asp.net":
         title: "ASP.NET"
+    "*wrappers":
+        title: "Wrappers"
     "*widgets":
         title: "Widgets"
     "*tags":
         title: "Tags"
-    "*aspnet-mvc":
-        title: "ASP.NET MVC"
-    "*php":
-        title: "PHP"
-    "*jsp":
-        title: "JSP"
     "*mobileactionsheet":
         title: "MobileActionSheet"
     "*mobileapplication":
@@ -206,32 +211,27 @@ navigation:
         title: "Order Page"
     "*localization":
         title: "Localization"
-    "*webforms":
-        title: "ASP.NET Web Forms"
-    "using-kendo-with/aspnet-mvc/vs-integration":
+    "aspnet-mvc/vs-integration":
         title: "Visual Studio Integration"
         position: 9
-    "using-kendo-with/aspnet-mvc/migration":
+    "aspnet-mvc/migration":
         title: "Migrate From Telerik Extensions"
         position: 12
-    "using-kendo-with/aspnet-mvc/helpers":
+    "aspnet-mvc/helpers":
         title: "View Helpers"
         position: 11
-    "using-kendo-with/aspnet-mvc/tutorial-saleshub":
+    "aspnet-mvc/tutorial-saleshub":
         title: "Tutorial: Build the Sales Hub Project"
         position: 20
-    "using-kendo-with/aspnet-mvc/tutorial-kendo-music-store":
+    "aspnet-mvc/tutorial-kendo-music-store":
         title: "Tutorial: Build the Kendo Music Store"
         position: 20
-    "using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-web":
+    "aspnet-mvc/tutorial-kendo-music-store/music-store-web":
         title: "Build the Web Application"
         position: 2
-    "using-kendo-with/aspnet-mvc/tutorial-kendo-music-store/music-store-dashboard":
+    "aspnet-mvc/tutorial-kendo-music-store/music-store-dashboard":
         title: "Build the Dashboard"
         position: 3
-    "api":
-        title: "API Reference"
-        position: 1000002
 ## The application virtual path
 baseurl: /kendo-ui
 

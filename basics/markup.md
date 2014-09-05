@@ -17,7 +17,7 @@ In addition to the [jQuery plugin syntax](/basics/jquery-initialization), the Ke
 
 * The [View](/framework/spa/view) and the [mobile Application](/getting-started/mobile/application) instantiate widgets based on `role` **HTML 5 data attributes**. Both use the [MVVM](/getting-started/framework/mvvm/overview) internally;
 * The `kendo.bind` method will scan the passed DOM element contents for `data-role` attributes and will instantiate the respective widgets;
-* The Kendo UI [**AngularJS**](/using-kendo-with/AngularJS/introduction) directives support declarative initialization based on **custom element attributes** or **custom tag names**.
+* The Kendo UI [**AngularJS**](/AngularJS/introduction) directives support declarative initialization based on **custom element attributes** or **custom tag names**.
 
 ## A SPA View With an AutoComplete Widget in the Template
 
@@ -95,4 +95,4 @@ You can find out more about the supported data attributes and how to bind to wid
         });
     </script>
 
-To learn more about the features of the Kendo UI AngularJS directives, please visit the [AngularJS](/using-kendo-with/AngularJS/introduction) help topic.
+To learn more about the features of the Kendo UI AngularJS directives, please visit the [AngularJS](/AngularJS/introduction) help topic.

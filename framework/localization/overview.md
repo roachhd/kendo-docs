@@ -55,4 +55,4 @@ A [language code identifier list](http://msdn.microsoft.com/en-us/library/cc2339
 ## Applying localization to widgets rendered by server-side wrappers
 
 The server-side wrappers render some of the needed widgets' markup (and the respective messages) from the server; applying the UI localization on the client side may not work as expected.
-Currently, the ASP.NET MVC wrappers come with localization resource files, which work with the default localization mechanism provided by ASP.NET MVC. For more details, check the [ASP.NET MVC Globalization article](/using-kendo-with/aspnet-mvc/globalization#localized-user-interface).
+Currently, the ASP.NET MVC wrappers come with localization resource files, which work with the default localization mechanism provided by ASP.NET MVC. For more details, check the [ASP.NET MVC Globalization article](/aspnet-mvc/globalization#localized-user-interface).

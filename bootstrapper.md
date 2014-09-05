@@ -1,7 +1,7 @@
 ---
-title: Bootstrapper
-page_title: HTML5, jQuery-based framework | Kendo UI
-description: "Kendo UI framework overview: UI components, rich data vizualization framework, auto-adaptive mobile widgets and all tools for building rich web apps."
+title: Kendo UI Bootstrapper Tool
+page_title: Kendo UI Bootstrapper Tool
+position: 22
 ---
 
 # Getting Started with the Kendo UI Bootstrapper
