@@ -5,9 +5,9 @@ position: 18
 
 # Using Kendo UI with RequireJS
 
-The production (minified) builds of Kendo UI are designed to work with [RequireJS](http://requirejs.org/).  Therefore if you need to use only a few components instead of loading the full "kendo.all.js", you can now declare only the components you need and RequireJS will take care to load any needed dependencies.
+The production (minified) builds of Kendo UI are designed to work with [RequireJS](http://requirejs.org/).  Therefore if you need to use only a few components instead of loading the full `kendo.all.js`, you may now declare only the components you need and RequireJS will take care to load any needed dependencies.
 
-For example, supposing you need to use a grid and a menu, your code could look like this (replace VERSION with the Kendo UI version that you want to use):
+For example, supposing you need to use a grid and a menu, your code could look like this (replace *VERSION* with the Kendo UI version that you want to use):
 
     <script data-main="http://cdn.kendostatic.com/VERSION/js/jquery.min.js"
             src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
@@ -22,7 +22,7 @@ and you don't need to worry about which other files are necessary for the grid a
 
 ## Configuring RequireJS
 
-Above we load RequireJS from a CDN, and configure it to load Kendo UI files from the Kendo CDN by using the "data-main" attribute (which also loads jQuery).
+Above we load RequireJS from a CDN, and configure it to load Kendo UI files from the Kendo CDN by using the `data-main` attribute (which also loads jQuery).
 
 In practice, if you use RequireJS you will probably have some files of your own that need to be loaded and those will reside in a different location than Kendo files.  Here is a more complete example of how you could organize things:
 

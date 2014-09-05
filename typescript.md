@@ -25,7 +25,7 @@ You can optionally include the latest jQuery TypeScript definition file as well:
 
 ### Get instance of existing Kendo UI widgets
 
-![Get instante of existing Kendo UI widget](/images/get-instance.png)
+![Get instance of existing Kendo UI widget](/images/get-instance.png)
 
 ### Initialize and configure any Kendo UI widget
 

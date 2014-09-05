@@ -8,7 +8,9 @@ position: 22
 
 ## What Is The Kendo UI Bootstrapper
 
-The Kendo UI Bootstrapper is a free and open source tool designed to enhance your development workflow with Kendo UI by taking care of code linting, static analysis, minification, bundling and easy access to documentation.  It is not an IDE.  It is not intended for you to use to edit code.  It exists to augment your current IDE by taking care of many of the more advanced and manual tasks of application development that your IDE may not handle out of the box.
+The Kendo UI Bootstrapper is a free and open source tool designed to enhance your development workflow with Kendo UI by taking care of code linting, 
+static analysis, minification, bundling and easy access to documentation.  It is not an IDE.  It is not intended for you to use to edit code.
+It exists to augment your current IDE by taking care of many of the more advanced and manual tasks of application development that your IDE may not handle out of the box.
 
 ### Video Overview
 
@@ -25,7 +27,7 @@ The Kendo UI Bootstrapper is a free and open source tool designed to enhance you
 
 #### GitHub Download
 
-The Kendo UI Bootstrapper requires NodeJS and Google Chrome to run.  Once you have installed both of these dependencies, you can [download the latest version of the Bootstrapper from the Github repository](https://github.com/kendo-labs/kendo-bootstrapper/releases).
+The Kendo UI Bootstrapper **requires NodeJS and Google Chrome** to run.  Once you have installed both of these dependencies, you can [download the latest version of the Bootstrapper from the Github repository](https://github.com/kendo-labs/kendo-bootstrapper/releases).
 
 #### GitHub Clone
 
@@ -62,7 +64,7 @@ Create a new project by clicking on the `+` icon in the "Projects" sidebar menu,
 
 By default, the Bootstrapper puts all of your projects into a `PROJECTS` folder in the root of the Bootstrapper install location.  You also have the option to specify a [RequireJS](http://blogs.telerik.com/kendoui/posts/13-05-08/requirejs-fundamentals) project configuration if you want.  For now, leave that box unchecked.
 
-The Bootstrapper will now scaffold you a simple project.  You can see the different project files in the main area of the Bootstrapper.  The files in your project are devided up into two types, **Project Files** and **Library Files**.  The **Project Files** are those which comprise the code that you are writing.  The **Library Files** are those third party libraries that you are using with your project.  Even if you don't have the library  files included in your HTML pages, the Bootstrapper will detect them and show them here if they exist in your project.
+The Bootstrapper will now scaffold you a simple project.  You can see the different project files in the main area of the Bootstrapper.  The files in your project are divided up into two types, **Project Files** and **Library Files**.  The **Project Files** are those which comprise the code that you are writing.  The **Library Files** are those third party libraries that you are using with your project.  Even if you don't have the library  files included in your HTML pages, the Bootstrapper will detect them and show them here if they exist in your project.
 
 ![Project Files vs Library Files](/images/bootstrapper3.jpeg)
 
@@ -188,7 +190,7 @@ While the Bootstrapper refreshes the page for JavaScript and HTML changes, it ap
 
 ## Ready For Production
 
-Now the application is ready to be deployed.  The Kendo UI Bootstrapper is well equiped to help you out here.
+Now the application is ready to be deployed.  The Kendo UI Bootstrapper is well equipped to help you out here.
 
 ### Compile
 
@@ -204,7 +206,7 @@ You may notice that you are currently using the entire `kendo.web.js` file.  Tha
 
 ![Kendo UI Web Is Large](/images/bootstrapper16.jpeg)
 
-It's entirely uncessary to have all of Kendo UI in an application that is only using one widget.  Really you just want the ListView and any other files it depends on.  The problem is that you don't know what files the ListView depends on, and it's kind of a pain to go hunt all of them down and copy and paste them in, hoping to get them in the right order.
+It's entirely unnecessary to have all of Kendo UI in an application that is only using one widget.  Really you just want the ListView and any other files it depends on.  The problem is that you don't know what files the ListView depends on, and it's kind of a pain to go hunt all of them down and copy and paste them in, hoping to get them in the right order.
 
 The Bootstrapper now takes care of all of this for you.  Simply click the Build Kendo button.
 

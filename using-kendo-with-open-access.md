@@ -8,7 +8,7 @@ In this article you will learn how [OpenAccess ORM](http://www.telerik com/produ
 
 ## Getting Set Up
 
-To get started create a new **ASP.Net** **Empty Web Application. **
+To get started create a new **ASP.Net Empty Web Application.**
 
 ![New Web Project](/images/oa1.png)
 
@@ -20,7 +20,7 @@ Add JQuery to the project using the command:
 
     Install-Package jQuery
 
-Add KendoUI to the project using the command:
+Add Kendo UI to the project using the command:
 
     Install-Package KendoUIWeb
 
@@ -35,8 +35,7 @@ add the needed files manually. Kendo UI is available [here](http://www.telerik.c
 ## Building The Model
 
 To build an OpenAccess ORM data model, right click on the web project,
-navigate to **Add** > **New Item**, then select **Telerik OpenAccess Domain
-Model**.
+navigate to **Add** > **New Item**, then select **Telerik OpenAccess Domain Model**.
 
 *Note: If you do not have OpenAccess ORM installed, you can get the trial
 edition [here](http://www.telerik.com/download-trial-file.aspx?pid=638).*
@@ -64,8 +63,8 @@ next step is to expose this data model through a service layer.
 
 ## Building The Service Layer
 
-Perform a **build** on the application, and right click on the .rlinq file in the
-solution explorer. Select **Generate OpenAccess Domain Model Service…**, and the domain service wizard will fire up.
+Perform a **build** on the application, and right click on the `.rlinq` file in the
+solution explorer. Select **Generate OpenAccess Domain Model Service**, and the domain service wizard will fire up.
 
 ![Generate OpenAccess Domain Model](/images/oa7.png)
 
@@ -85,7 +84,7 @@ In about 3 clicks you created an OData service which exposes the domain model.
 
 ## Connecting the OData Service to a Kendo Grid
 
-Now all that is left to do is configure the front end.  For now we will wire up the Orders to a KendoUI grid, but feel free to take it even further! KendoUI has a lot of cool features to play around with.
+Now all that is left to do is configure the front end.  For now we will wire up the Orders to a Kendo UI grid, but feel free to take it even further! Kendo UI has a lot of cool features to play around with.
 
 First thing we need to do is add a new *html* page to the project. So once again, right click on the project in the solution explorer, select **Add** > **New Item**, only this time choose HTML Page and name the page **default.htm** and then click **Add.**
 
@@ -99,7 +98,7 @@ Now we need to add the needed Kendo files, so add the following lines in the hea
     <script src="Scripts/jquery-1.7.1.min.js"></script>
     <script src="Scripts/2012.3.1114/kendo.all.min.js"></script>
 
-Next, we need to set up the grid.  KendoUI’s web site provides many [great examples](http://demos.telerik.com/kendo-ui/web/grid/index.html) of how to configure binding; so I won’t go into too much detail here.  The basic idea is that we need a div that will be used as the container for the KendoUI grid, and then we just have to configure the grid in script.
+Next, we need to set up the grid.  Kendo UI's web site provides many [great examples](http://demos.telerik.com/kendo-ui/web/grid/index.html) of how to configure binding; so I won't go into too much detail here.  The basic idea is that we need a div that will be used as the container for the Kendo UI grid, and then we just have to configure the grid in script.
 
 The code needed is here:
 
@@ -168,14 +167,13 @@ The code needed is here:
 
     </script>
 
-Now run the application, and navigate to default.htm.  If all went well you should be presented with a great looking *empty* grid:
+Now run the application, and navigate to `default.htm`.  If all went well you should be presented with a great looking *empty* grid:
 
 ![Empty Grid](/images/oa12.png)
 
-So what gives?!  Why is there no data in the grid?  Well if you take a look at firebug/Chrome/F12 tools you should see something like:
+So what gives?!  Why is there no data in the grid?  Well if you take a look at Firebug/Chrome/F12 tools you should see something like:
 
-Failed to load resource: the server responded with a status of 400 (Bad
-Request)
+Failed to load resource: the server responded with a status of 400 (Bad Request)
 
 This error by itself is not very helpful, but if you navigate to the page it tried to retrieve, something like:
 
@@ -187,11 +185,11 @@ The query parameter '$format' begins with a system-reserved '$' character but is
 
 ## We Need JSON
 
-KendoUI uses JSON to communicate with an OData service; but WCF Data Services does not support JSON *out of the box.*  To enable support for JSON, you can download the needed code from the [Microsoft Code Gallery](http://archive.msdn.microsoft com/DataServicesJSONP).
+Kendo UI uses JSON to communicate with an OData service; but WCF Data Services does not support JSON *out of the box.*  To enable support for JSON, you can download the needed code from the [Microsoft Code Gallery](http://archive.msdn.microsoft com/DataServicesJSONP).
 
-Once you have added the needed code to the project, and you add the needed reference to **System.Runtime.Serialization.dll**, navigate to NorthwindService.svc.cs (Your name might be different).
+Once you have added the needed code to the project, and you add the needed reference to `System.Runtime.Serialization.dll`, navigate to `NorthwindService.svc.cs` (Your name might be different).
 
-In the service add the **JSONPSupportBehavior** attribute:
+In the service add the `JSONPSupportBehavior` attribute:
 
     [System.ServiceModel.ServiceBehavior(IncludeExceptionDetailInFaults=true)]
     [JSONPSupportBehavior]
@@ -206,6 +204,6 @@ Run the application one more time, and this time, you should be greeted by a gre
 
 ## Conclusions
 
-The OpenAccess ORM Visual Designer and Service Layer Generator make it extremely easy to get started working with KendoUI.  In fact, we only had to write 1 line of server side code thanks to these great tools!
+The OpenAccess ORM Visual Designer and Service Layer Generator make it extremely easy to get started working with Kendo UI.  In fact, we only had to write 1 line of server side code thanks to these great tools!
 
 You can see complete code sample in this [gist](https://gist.github.com/1755775).
