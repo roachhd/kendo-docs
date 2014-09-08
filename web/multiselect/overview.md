@@ -14,7 +14,7 @@ local and remote data binding, item and tag templates, and configurable options 
 
 ## Getting Started
 
-There are two ways to create a MultiSelect from a `<select>` element:
+There are two ways to create a MultiSelect from a `SELECT` element:
 
 1.  Using its `<option>` tag to define a list of items.
 2.  With databinding to remote data service.
