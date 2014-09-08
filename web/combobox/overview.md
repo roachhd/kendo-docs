@@ -25,7 +25,7 @@ The ComboBox will look and operate consistently regardless of the initialization
 ### Creating a ComboBox from an existing &lt;input&gt; element
 
 The ComboBox should be initialized after the DOM is fully loaded. It is recommended
-that initialization the ComboBox occur within $(document).ready() statement.
+that initialization is done within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the visible input and the wrapper element.
 
@@ -176,7 +176,7 @@ You can reference an existing ComboBox widget via
 
 ## Customizing the width of the drop-down list
 
-Width of ComboBox' drop-down list can be changed via jQuery width method.
+jQuery width() method can be used for changing the widget dimensions.
 
 ### Example
     
@@ -192,5 +192,5 @@ Width of ComboBox' drop-down list can be changed via jQuery width method.
 ## Support for label element
 
 Because of its complex rendering, focusing the widget using a `LABEL` element requires additional implementation.
-Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/uSeho), which shows how to achieve this.
+Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/uSeho), which shows how its done.
 

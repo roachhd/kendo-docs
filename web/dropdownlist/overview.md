@@ -25,7 +25,7 @@ The DropDownList will look and operate consistently regardless of the initializa
 ### Create a DropDownList from existing &lt;input&gt; element
 
 The DropDownList should be initialized after the DOM is fully loaded. It is recommended
-that initialization the ComboBox occur within $(document).ready() statement.
+that initialization is done within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
@@ -191,7 +191,7 @@ The DropDownList provides the ability to render a popup header.
 
 ## Customize the width of the DropDownList
 
-jQuery width() method can be used for changing the widget dimension.
+jQuery width() method can be used for changing the widget dimensions.
 
 ### Example
 

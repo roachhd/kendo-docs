@@ -6,47 +6,57 @@ description: Create MultiSelect UI widget, use Kendo UI templates, instructions 
 
 # MultiSelect Overview
 
-The **MultiSelect** displays a list of values and allows the selection of multiple values from this
-list.
+The MultiSelect widget displays a list of options and allows multiple selection from this list.
 
-The **MultiSelect** represents a richer version of a `<select>` element, providing support for
+The MultiSelect represents a richer version of the `SELECT` element, providing support for
 local and remote data binding, item and tag templates, and configurable options for controlling the list behavior.
 
 
 ## Getting Started
 
-There are two ways to create a **MultiSelect** from a `<select>` element:
+There are two ways to create a MultiSelect from a `<select>` element:
 
-1.  Using its `<option>` list as a list of items
-2.  With databinding to define the list items
+1.  Using its `<option>` tag to define a list of items.
+2.  With databinding to remote data service.
 
 
-A **MultiSelect** will look and operate consistently regardless of the way in which it was created.
+The MultiSelect will look and operate consistently regardless of the initialization type.
 
 ### Creating a MultiSelect from an existing &lt;select&gt; element with defined data items
 
-    <select id="multiselect"></select>
+    <select id="multiselect">
+        <option>Item 1</option>
+        <option>Item 2</option>
+        <option>Item 3</option>
+    </select>
+    
+    <script>
+        $('#multiselect').kendoMultiSelect();
+    </script>
 
-Initialization of a **MultiSelect** should occur after the DOM is fully loaded. It is recommended
-that initialization the **MultiSelect** occur within a handler is provided to
-$(document).ready().
+The MultiSelect should be initialized after the DOM is fully loaded. It is recommended
+that initialization is done within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element and visible input.
 
 ### Initialize a MultiSelect using a selector within $(document).ready()
-
-    $(document).ready(function(){
+    
+    <select id="multiselect"></select>
+    
+    <script>
+      $(document).ready(function(){
         $("#multiselect").kendoMultiSelect({
-            dataTextField: "text",
-            dataValueField: "value",
-            dataSource: [
-                { text: "Item1", value: "1" },
-                { text: "Item2", value: "2" }
-            ]
+          dataTextField: "text",
+          dataValueField: "value",
+          dataSource: [
+            { text: "Item1", value: "1" },
+            { text: "Item2", value: "2" }
+          ]
         });
-    });
+      });
+    </script>
 
-### Creating a MultiSelect from existing `<select>` element with a pre-defined structure
+### Create a MultiSelect from existing `<select>` element with a pre-defined structure
 
     <select id="multiselect" multiple>
         <option>Item 1</option>
@@ -60,20 +70,19 @@ $(document).ready().
         });
     </script>
 
-## Binding to Local or Remote Data
+## Bind to Local or Remote Data
 
-The **MultiSelect** can be bound to both local arrays and remote data via the
-**DataSource** component; an abstraction for local and
+The MultiSelect can be bound to both local arrays and remote data via the
+DataSource component; an abstraction for local and
 remote data. Local arrays are appropriate for limited value options, while remote data binding is better for
 larger data sets. With remote data-binding, items will be loaded on-demand; when they are displayed.
-The **DataSource**
-component can be used to serve data from a variety of data services,
+The DataSource component can be used to serve data from a variety of data services,
 such as
 [XML](http://en.wikipedia.org/wiki/XML),
 [JSON](http://en.wikipedia.org/wiki/JSON), and
 [JSONP](http://en.wikipedia.org/wiki/JSONP).
 
-### Binding to a remote service
+### Bind to a remote service
 
     <select id="multiselect" multiple></select>
 
@@ -94,15 +103,13 @@ such as
     });
     </script>
 
-## Customizing Templates
+## Customize Templates
 
-The **MultiSelect** uses Kendo UI templates to enable you to control how item, tag or header is rendered. For a
+The MultiSelect uses Kendo UI templates to enable you to control how item, tag or header is rendered. For a
 detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
-[documentation](/framework/templates/overview).
+[Kendo UI Templates documentation](/framework/templates/overview).
 
 ### Item template customization
-
-The **MultiSelect** uses Kendo UI templates to control how *drop-down items* are rendered.
 
 #### Example - define an item template
 
@@ -133,8 +140,6 @@ The **MultiSelect** uses Kendo UI templates to control how *drop-down items* are
 
 ### Tag template customization
 
-The **MultiSelect** uses Kendo UI templates to control how selected tag is rendered.
-
 #### Example - define a tag template
 
     <select id="multiselect" multiple></select>
@@ -164,7 +169,7 @@ The **MultiSelect** uses Kendo UI templates to control how selected tag is rende
 
 ### Header template customization
 
-The **MultiSelect** gives the ability to render a popup header.
+The MultiSelect gives you the ability to render a pop-up header.
 
 #### Example - define a header template
 
@@ -193,22 +198,26 @@ The **MultiSelect** gives the ability to render a popup header.
         });
     </script>
 
-## Customizing the width of the drop-down list
+## Customize the width of the drop-down list
 
-Width of MultiSelect' drop-down list can be changed via jQuery width method.
+jQuery width() method can be used for changing the widget dimension.
 
 ### Example
+    <select id="multiselect"></select>
+    
+    <script>
+        var multiselect = $("#multiselect").data("kendoMultiSelect");
 
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-    // set width of the drop-down list
-    multiselect.list.width(400);
+        // set width of the drop-down list
+        multiselect.list.width(400);
+    </script>
 
 ## Pre-select values on initial loading
 
-When deffered binding (autoBind: false) is used you will need to specify a list of data items instead of just list of strings.
+When autoBind option is set to false you will need to specify a list of data items instead of just list of strings.
 This functionality is supported in Q1 SP1 2013 release and later versions of Kendo UI.
-
+    
+    <select id="multiselect"></select>
     <!-- MultiSelect initialization -->
     <script>
         $(document).ready(function() {
@@ -233,51 +242,11 @@ This functionality is supported in Q1 SP1 2013 release and later versions of Ken
         });
     </script>
 
-## Make the MultiSelect scrollable
+## How to make the MultiSelect widget scrollable
 
-By design, the MultiSelect expands vertically when adding more items that do not fit in the existing free space. Limited expansion and scrolling can be achieved with some CSS and Javascript code.
-
-Add a custom CSS class to the MultiSelect wrapper element after initialization.
-
-    $(document).ready(function() {
-        $("#multiselect").kendoMultiSelect({
-            select: onSelect
-        });
-
-        $("#multiselect").data("kendoMultiSelect").wrapper.addClass("myClass");
-    });
-
-Use the following CSS rule to limit the MultiSelect expansion (with a `min-height` style) or set a fixed height (with a `height` style).
-
-    .myClass .k-multiselect-wrap
-    {
-        overflow: auto;
-
-        max-height: 100px;
-        /* or */
-        /* height: 100px; */
-    }
-
-You may want to scroll the widget automatically to the bottom when new items are added, so that they are visible to the user. Use the `select` event handler.
-
-    function onSelect(e) {
-        setTimeout(function() {
-            var container = e.sender.wrapper.children(".k-multiselect-wrap");
-            container.scrollTop(container[0].scrollHeight);
-        });
-    }
+By design, the MultiSelect expands vertically when adding more items that do not fit in the existing free space. Limited expansion and scrolling can be achieved with some CSS and Javascript code. Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/axeMa), which shows how its done.
 
 ## Support for label element
 
-Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
-Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
-
-## Accessing an Existing MultiSelect
-
-You can reference an existing **MultiSelect** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/). Objectnce a reference has been established, you
-can use the API to control its behavior.
-
-### Accessing an existing MultiSelect instance
-
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
+Because of its complex rendering, focusing the widget using a `LABEL` element requires additional implementation.
+Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/uSeho), which shows how its done.
