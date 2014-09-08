@@ -7,47 +7,45 @@ position: 1
 
 # ComboBox Overview
 
-The **ComboBox** displays a list of values and allows the selection of a single value from this
-list. Custom values may also be entered via keyboard input. If you do not wish permit keyboard input - that is,
-custom values are not permitted - use the **DropDownList**.
+The ComboBox is a widget that displays a list of values and allows single selection from the list. Custom values may also be entered via keyboard input. If you want to restrict the user input then you can use the Kendo UI DropDownList widget.
 
-The **ComboBox** represents a richer version of a `<select>` element, providing support for
+The ComboBox represents a richer version of a `<select>` element, providing support for
 local and remote data binding, item templates, and configurable options for controlling the list behavior.
 
 
 ## Getting Started
 
-There are two ways to create a **ComboBox**:
+There are two ways to create a ComboBox:
 
 1.  From a `<select>` element with HTML to define the list items
 2.  From an `<input>` element with databinding to define the listitems
 
-A **ComboBox** will look and operate consistently regardless of the way in which it was created.
+The ComboBox will look and operate consistently regardless of the initialization type.
 
 ### Creating a ComboBox from an existing &lt;input&gt; element
 
-    <input id="comboBox" />
-
-Initialization of a **ComboBox** should occur after the DOM is fully loaded. It is recommended
-that initialization the **ComboBox** occur within a handler is provided to
-$(document).ready().
+ComboBox should be initialized after the DOM is fully loaded. It is recommended
+that initialization the ComboBox occur within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the visible input and the wrapper element.
 
-### Initialize a ComboBox using a selector within $(document).ready()
+### Initialize a ComboBox using a jQuery selector
+    
+    <input id="comboBox" />
 
-    $(document).ready(function(){
+    <script>
+      $(document).ready(function(){
         $("#comboBox").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            dataSource: [
-                { text: "Item1", value: "1" },
-                { text: "Item2", value: "2" }
-            ]
+          dataTextField: "text",
+          dataValueField: "value",
+          dataSource: [
+            { text: "Item1", value: "1" },
+            { text: "Item2", value: "2" }
+          ]
         });
-    });
+      });
 
-### Creating a ComboBox from existing `<select>` element with a pre-defined structure
+### Initialize a ComboBox from existing `<select>` element with a pre-defined structure
 
     <select id="comboBox">
         <option>Item 1</option>
@@ -63,12 +61,11 @@ $(document).ready().
 
 ## Binding to Local or Remote Data
 
-The **ComboBox** can be bound to both local arrays and remote data via the
-**DataSource** component; an abstraction for local and
+The ComboBox can be bound to both local arrays and remote data service via the
+DataSource component; an abstraction for local and
 remote data. Local arrays are appropriate for limited value options, while remote data binding is better for
 larger data sets. With remote data-binding, items will be loaded on-demand; when they are displayed.
-The **DataSource**
-component can be used to serve data from a variety of data services,
+The DataSource component can be used to serve data from a variety of data services,
 such as
 [XML](http://en.wikipedia.org/wiki/XML),
 [JSON](http://en.wikipedia.org/wiki/JSON), and
@@ -76,7 +73,9 @@ such as
 
 
 ### Binding to a remote service
+    <input id="comboBox" />
 
+    <script>
     $(document).ready(function() {
         $("#comboBox").kendoComboBox({
             index: 0,
@@ -93,18 +92,19 @@ such as
             }
         });
     });
+    </script>
 
 ## Customizing Templates
 
-The **ComboBox** uses Kendo UI templates to enable control over how item and popup header is rendered. For a
+The ComboBox uses Kendo UI templates to enable control over how item and popup header is rendered. For a
 detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
-[documentation](/framework/templates/overview).
+[Kendo UI Templates documentation](/framework/templates/overview).
 
 ### Item template customization
 
-The **ComboBox** uses Kendo UI templates to control how *drop-down items* are rendered.
+The ComboBox uses Kendo UI templates to control how pop-up items are rendered.
 
-#### Example - define an item template
+#### Example - using an item template
 
     <input id="comboBox" />
     <!-- Template -->
@@ -133,7 +133,7 @@ The **ComboBox** uses Kendo UI templates to control how *drop-down items* are re
 
 ### Header template customization
 
-The **ComboBox** gives the ability to render a popup header.
+The ComboBox gives the ability to render a pop-up header.
 
 #### Example - define a header template
 
@@ -161,30 +161,36 @@ The **ComboBox** gives the ability to render a popup header.
             });
         });
     </script>
+    
+
+## Accessing an existing ComboBox instance
+
+You can reference an existing ComboBox widget via
+[jQuery.data()](http://api.jquery.com/jQuery.data/).
+    
+    <input id="comboBox" />
+
+    <script>
+        var comboBox = $("#comboBox").data("kendoComboBox");
+    </script>
 
 ## Customizing the width of the drop-down list
 
 Width of ComboBox' drop-down list can be changed via jQuery width method.
 
 ### Example
+    
+     <input id="comboBox" />
 
-    var combobox = $("#combobox").data("kendoComboBox");
+    <script>
+        var combobox = $("#combobox").data("kendoComboBox");
 
-    // set width of the drop-down list
-    combobox.list.width(400);
+        // set width of the drop-down list
+        combobox.list.width(400);
+    </script>
 
 ## Support for label element
 
-Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
-Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
+Because of its complex rendering, focusing the widget using a `LABEL` element requires additional implementation.
+Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/uSeho), which shows how to achieve this.
 
-## Accessing an Existing ComboBox
-
-
-You can reference an existing **ComboBox** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/). Objectnce a reference has been established, you
-can use the API to control its behavior.
-
-### Accessing an existing ComboBox instance
-
-    var comboBox = $("#comboBox").data("kendoComboBox");

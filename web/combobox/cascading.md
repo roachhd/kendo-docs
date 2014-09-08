@@ -36,11 +36,11 @@ The "child" combobox will cascade from the "parent" combobox if the [cascadeFrom
 
 Here is a list of the actions which the child combobox makes during the initialization:
 
-- Checks if the "cascadeFrom" property is set. If not then the cascading is not enabled.
+- Checks if the "cascadeFrom" property is set. If not then the cascading is disabled.
 - Tries to find the parent combobox object. If the result is null, then the functionality is omitted.
 - The child combobox will listen to any changes of the parent's value.
 - If the parent does not have a value, then the child will be disabled.
-- If the parent has a value, then the child will be enabled and will filter its data depending on it. Here how the filter options will look like:
+- If the parent has a value, then the child will be enabled and will filter its data depending on it. Here is how the filter options will look like:
 
 
         field: "parentID",  //the dataValueField of the parent
@@ -58,7 +58,7 @@ And here are the paramenters of this request:
 
 ####FAQ
 
-Q: I am using cascading comboboxes with a `"autoBind: true"` option and I need to pre-set the selected items. How to do that?
+Q: I am using cascading comboboxes with `"autoBind: true"` option set and I need to pre-set the selected items. How to do that?
 
 A: You need to set the value of the comboboxes. For instance, you can define it before initialization:
 
@@ -66,14 +66,18 @@ A: You need to set the value of the comboboxes. For instance, you can define it 
     <input id="child" value="36" />
 
     <script>
-       //initialization of the comboboxes
+       $("#parent").kendoComboBox();
+       
+       $("#child").kendoComboBox({
+                cascadeFrom: "parent"
+       });
     </script>
 
 You also can use the [value](/api/web/combobox#configuration) option.
 
 Q: I am using comboboxes with load on demand (autoBind: false) and I need to pre-set the selected items. How to do that?
 
-A: You need to set the value and the text of the combobox. You can use the [value](/api/web/combobox#configuration) and [text](/api/web/combobox#configuration) options.
+A: You need to set the [value](/api/web/combobox#configuration) and [text](/api/web/combobox#configuration) options.
 
     <input id="parent" value="1" />
     <input id="child" value="36" />
@@ -107,26 +111,30 @@ A: You need to set the value and the text of the combobox. You can use the [valu
 
 Q: The serverFiltering is disabled and the child combobox does not work?
 
-A: When the [serverFiltering](/api/framework/datasource#configuration) is disabled, then the combobox will not make any additional requests to the server. Hence it will filter the initial data using the parent's dataValueField property. If no items are found, then the child combobox will be empty. If you need to use child combobox with disabled server filtering, then you will need to provide all neccessary data on the client.
+A: When [serverFiltering](/api/framework/datasource#configuration) is disabled, then the combobox will not make any additional requests to the server. Hence it will filter the initial data using the parent's dataValueField property. If no items are found, then the child combobox will be left empty. If you need to use child combobox with disabled server filtering, then you will need to provide all neccessary data on the client.
 
 Q: Cannot get the request parameters on the server?
 
 A: Check the format of the request parameters in the end of the "How it works?" section. Modify your server code in order to get them correctly.
 Other option is to pass the ID of the parent combobox manually, using the data callback of the DataSource's Transport.Read object:
 
-    $("#child").kendoComboBox({
-       cascadeFrom: "parent",
-       dataTextField: "childName",
-       dataValueField: "childID",
-       dataSource: {
-           transport: {
-               read: {
-                   url: "",
-                   data: function() {
-                       return { parentID: $("#parent").val() };
-                   }
-               }
-           }
-       }
-    });
+    <input id="child" />
+
+    <script>
+      $("#child").kendoComboBox({
+        cascadeFrom: "parent",
+        dataTextField: "childName",
+        dataValueField: "childID",
+        dataSource: {
+          transport: {
+            read: {
+              url: "",
+              data: function() {
+                return { parentID: $("#parent").val() };
+              }
+            }
+          }
+        }
+      });
+    </script>
 

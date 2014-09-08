@@ -193,13 +193,10 @@ The AutoComplete gives the ability to render a pop-up header.
 
 ## Accessing an Existing AutoComplete
 
-
 You can reference an existing AutoComplete widget via
 [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the API to control
-the widget behavior.
-
-### Accessing an existing AutoComplete instance
+the widget behavior:
     
     <input id="autoComplete" />
     
