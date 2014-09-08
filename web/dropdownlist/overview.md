@@ -7,49 +7,48 @@ position: 1
 
 # DropDownList Overview
 
-A **DropDownList** displays a list of values and allows the selection of a single value from the
-list.Custom values may not be entered via keyboard input.If you wish permit keyboard input - that is, custom
-values are allowed - use the **ComboBox**.
+The Kendo UI DropDownList widget displays a list of values and allows a single selection from the
+list. User input is restricted. If keyboard input is needed, then you should use the Kendo UI ComboBox component.
 
 
 ## Getting Started
 
-There are two ways to create a **DropDownList**:
+There are two ways to create a DropDownList
 
 1.  From a &lt;select&gt; element with HTML to define the list items
-2.  From an &lt;input&gt; element with databinding to define the listitems
+2.  From an &lt;input&gt; element with databinding to define the list items
 
 
 
-A **DropDownList** will look and operate consistently regardless of the way in which it was
-created.
+The DropDownList will look and operate consistently regardless of the initialization type.
 
-### Creating a DropDownList from existing &lt;input&gt; element
+### Create a DropDownList from existing &lt;input&gt; element
 
-    <input id="dropDownList" />
-
-Initialization of a **DropDownList** should occur after the DOM is fully loaded. It is recommended
-that initialization the **DropDownList** occur within a handler is provided to
-$(document).ready().
+The DropDownList should be initialized after the DOM is fully loaded. It is recommended
+that initialization the ComboBox occur within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
-### Initialize a DropDownList using a selector within $(document).ready()
-
-    $(document).ready(function() {
-        $("#dropDownList").kendoDropDownList({
-            dataTextField: "text",
-            dataValueField: "value",
-            dataSource: [
-                { text: "Item1", value: "1" },
-                { text: "Item2", value: "2" }
-            ]
+### Initialize a DropDownList using a jQuery selector
+    
+    <input id="dropdownlist">
+    
+    <script>
+      $(document).ready(function() {
+        $("#dropdownlist").kendoDropDownList({
+          dataTextField: "text",
+          dataValueField: "value",
+          dataSource: [
+            { text: "Item1", value: "1" },
+            { text: "Item2", value: "2" }
+          ]
         });
-    });
+      });
+    </script>
 
 ### Create a DropDownList from existing &lt;select&gt; element with a pre-defined structure
 
-    <select id="dropDownList">
+    <select id="dropdownlist">
         <option>Item 1</option>
         <option>Item 2</option>
         <option>Item 3</option>
@@ -57,48 +56,49 @@ $(document).ready().
 
     <script>
         $(document).ready(function(){
-            $("#dropDownList").kendoDropDownList();
+            $("#dropdownlist").kendoDropDownList();
         });
     </script>
 
 ## Binding to Local or Remote Data
 
-The **DropDownList** can be bound to both local arrays and remote data via the
-**DataSource** component; an abstraction for local and
+The DropDownList can be bound to both local array and remote data service via the
+DataSource component; an abstraction for local and
 remote data. Local arrays are appropriate for limited value options, while remote data binding is better for
 larger data sets. With remote data-binding, items will be loaded on-demand; when they are displayed.
-The **DataSource**
-component can be used to serve data from a variety of data services,
+The DataSource component can be used to serve data from a variety of data services,
 such as
 [XML](http://en.wikipedia.org/wiki/XML),
 [JSON](http://en.wikipedia.org/wiki/JSON), and
 [JSONP](http://en.wikipedia.org/wiki/JSONP).
 
 ### Binding to a remote OData service
-
-    $(document).ready(function() {
-        $("#titles").kendoDropDownList({
-            index: 0,
-            dataTextField: "ContactName",
-            dataValueField: "CustomerID",
-            dataSource: {
-                type: "odata", // specifies data protocol
-                transport: {
-                    read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+    
+    <input id="dropdownlist">
+    
+    <script>    
+        $(document).ready(function() {
+            $("#dropdownlist").kendoDropDownList({
+                index: 0,
+                dataTextField: "ContactName",
+                dataValueField: "CustomerID",
+                dataSource: {
+                    type: "odata", // specifies data protocol
+                    transport: {
+                        read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                    }
                 }
-            }
+            });
         });
-    });
+    </script>
 
-## Customizing Templates
+## Customize Templates
 
-The **DropDownList** uses Kendo UI templates to enable control over how item, popup header and selected value is rendered. For a
+The DropDownList uses Kendo UI templates to enable control over how item, popup header and selected value is rendered. For a
 detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
-[documentation](/framework/templates/overview).
+[Kendo UI Templates documentation](/framework/templates/overview).
 
 ### Item template customization
-
-The **DropDownList** uses Kendo UI templates to control how *drop-down items* are rendered.
 
 #### Example - define an item template
 
@@ -129,9 +129,7 @@ The **DropDownList** uses Kendo UI templates to control how *drop-down items* ar
 
 ### Value template customization
 
-The **DropDownList** uses Kendo UI templates to control how the selected value is rendered.
-
-> Note that value template should be consisted only of **inline** HTML elements.
+> Note that value template should be consisted only of inline HTML elements.
 
 #### Example - define a value template
 
@@ -162,7 +160,7 @@ The **DropDownList** uses Kendo UI templates to control how the selected value i
 
 ### Header template customization
 
-The **DropDownList** gives the ability to render a popup header.
+The DropDownList provides the ability to render a popup header.
 
 #### Example - define a header template
 
@@ -191,24 +189,17 @@ The **DropDownList** gives the ability to render a popup header.
         });
     </script>
 
-## Customizing the width of the drop-down list
+## Customize the width of the DropDownList
 
-Width of widget's drop-down list can be changed via jQuery width method.
+jQuery width() method can be used for changing the widget dimension.
 
 ### Example
 
-    var dropdownlist = $("#dropdown").data("kendoDropDownList");
-
-    // set width of the drop-down list
-    dropdownlist.list.width(400);
-
-## Accessing an Existing DropDownList
-
-
-You can reference an existing **DropDownList** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/). Once a reference has been established, you can
-use the API to control its behavior.
-
-### Accessing an existing DropDownList instance
-
-    var dropDownList = $("#dropDownList").data("kendoDropDownList");
+    <input id="dropDownList">
+    <script>
+      $(document).ready(function() {
+        $("#dropDownList").kendoDropDownList();
+        var dropdownlist = $("#dropDownList").data("kendoDropDownList");
+        dropdownlist.list.width(400);
+      });
+    </script>

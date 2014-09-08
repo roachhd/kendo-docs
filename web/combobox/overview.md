@@ -24,7 +24,7 @@ The ComboBox will look and operate consistently regardless of the initialization
 
 ### Creating a ComboBox from an existing &lt;input&gt; element
 
-ComboBox should be initialized after the DOM is fully loaded. It is recommended
+The ComboBox should be initialized after the DOM is fully loaded. It is recommended
 that initialization the ComboBox occur within $(document).ready() statement.
 
 > Widget copies any styles and CSS classes from the input element to the visible input and the wrapper element.

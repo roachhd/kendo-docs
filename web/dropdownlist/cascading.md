@@ -7,4 +7,4 @@ position: 2
 
 # Cascading DropDownLists
 
-Cascading functionality described in the [ComboBox](/web/combobox/cascading) are applicable to the DropDownList.
+Cascading functionality described in the [ComboBox](/web/combobox/cascading) is applicable to the DropDownList.

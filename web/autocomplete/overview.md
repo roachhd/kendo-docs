@@ -191,20 +191,9 @@ The AutoComplete gives the ability to render a pop-up header.
         });
     </script>
 
-## Accessing an Existing AutoComplete
+## Customize the width of the drop-down list
 
-You can reference an existing AutoComplete widget via
-[jQuery.data()](http://api.jquery.com/jQuery.data/):
-    
-    <input id="autoComplete" />
-    
-    </script>
-        var autoComplete = $("#autoComplete").data("kendoAutoComplete");
-    </script>
-
-## Customizing the width of the drop-down list
-
-Width of AutoComplete's drop-down list can be changed via jQuery width method.
+jQuery width() method can be used for changing the widget dimension.
 
 ### Example
     <input id="autoComplete" />

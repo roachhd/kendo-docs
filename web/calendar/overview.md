@@ -108,16 +108,3 @@ example of the object passed to the template function:
         value: date.getDate(),
         dateString: "2011/0/1" // formatted date using yyyy/MM/dd format and month is zero-based
     };
-
-## Accessing an Existing Calendar
-
-
-You can reference an existing Calendar instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/):
-
-    <div id="calendar"></div>
-    
-    <script>
-    var calendar = $("#calendar").data("kendoCalendar");
-    </script>
-

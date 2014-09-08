@@ -25,7 +25,7 @@ depth of the navigation.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
-## Configuring DatePicker Behavior
+## Configure DatePicker Behavior
 
 
 The DatePicker provides configuration options that can be set
@@ -54,7 +54,7 @@ during initialization. Some the properties that can be controlled are:
 DatePicker will set the value only if the entered date is valid and
 within the defined range.
 
-## Defining a Start View and Navigation Depth
+## Define a Start View and Navigation Depth
 
 
 The first rendered view can be defined with "start" option.
@@ -75,16 +75,4 @@ views are:
             start: "year",
             depth: "year"
         });
-    </script>
-
-## Accessing an Existing DatePicker
-
-
-You can reference an existing **DatePicker** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/):
-    
-    <input id="datePicker" />
-    
-    <script>
-    var datePicker = $("#datePicker").data("kendoDatePicker");
     </script>

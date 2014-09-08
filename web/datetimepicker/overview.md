@@ -26,7 +26,7 @@ of the calendar, start view and the depth of the navigation.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
-## Configuring DateTimePicker Behavior
+## Configure DateTimePicker Behavior
 
 The DateTimePicker widget provides configuration options that can be set
 during initialization. Among the properties that can be controlled:
@@ -65,7 +65,7 @@ within the defined range.
     </script>
 
 The DateTimePicker value is parsed when the user changes the content via typing. This means that if, for example, the format contains only a time portion, the date will be reset to today.
-To support such a DateTimePicker format, you should make the widget textbox readonly after the widget is initialized and not via the widget's readonly() method (otherwise the Date and Time pop-ups will be disabled).
+To support such a DateTimePicker format, you should make the widget textbox read-only after the widget is initialized and not via the widget's readonly() method (otherwise the Date and Time pop-ups will be disabled).
     
     <input id="dateTimePicker"> 
 
@@ -85,7 +85,7 @@ To support such a DateTimePicker format, you should make the widget textbox read
         });
     </script>     
 
-## Defining a Start View and Navigation Depth
+## Define a Start View and Navigation Depth
 
 
 The first rendered view can be defined with the "start" option.
@@ -116,16 +116,4 @@ views are:
         $("#dateTimePicker").kendoDateTimePicker({
             interval: 15
         })
-    </script>
-
-## Accessing an Existing DateTimePicker
-
-
-You can reference an existing **DateTimePicker** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/):
-
-    <input id="dateTimePicker"> 
-    
-    <script>
-        var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
     </script>
