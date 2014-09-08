@@ -13,8 +13,11 @@ The Window widget is an exception, as it represents a detached popup on its own.
 
 ## When to destroy widgets manually
 
-A widget can be destroyed if it is no longer needed, or if it is placed inside a container, which will be updated via an Ajax request.
-Destroying widgets inside an Ajax container is strongly recommended to prevent memory leaks or other unexpected side effects.
+A widget can be destroyed in several possible cases:
+
+* it is no longer needed;
+* it is placed inside a container, which will be updated via an Ajax request. Destroying widgets inside an Ajax container is strongly recommended to prevent memory leaks or other unexpected side effects;
+* the widget settings and behavior must be drastically changed, which cannot be achieved via available API methods;
 
 Kendo UI widgets are destroyed automatically when the web page is unloaded.
 
