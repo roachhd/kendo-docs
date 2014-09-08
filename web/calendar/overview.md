@@ -113,9 +113,7 @@ example of the object passed to the template function:
 
 
 You can reference an existing Calendar instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the API to control
-its behavior:
+[jQuery.data()](http://api.jquery.com/jQuery.data/):
 
     <div id="calendar"></div>
     

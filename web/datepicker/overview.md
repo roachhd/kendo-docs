@@ -6,7 +6,7 @@ description: Help guide for the basics of Kendo UI DatePicker widget.
 
 # DatePicker Overview
 
-The DatePicker widget allows the end user to select a date from a
+The DatePicker widget allows the user to select a date from a
 calendar or by direct input. It supports custom templates for the "month"
 view, configurable options for min and max date, start view and the
 depth of the navigation.
@@ -25,7 +25,7 @@ depth of the navigation.
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
-## Configuring DatePicker Behaviors
+## Configuring DatePicker Behavior
 
 
 The DatePicker provides configuration options that can be set
@@ -81,9 +81,7 @@ views are:
 
 
 You can reference an existing **DatePicker** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the API to control
-its behavior:
+[jQuery.data()](http://api.jquery.com/jQuery.data/):
     
     <input id="datePicker" />
     

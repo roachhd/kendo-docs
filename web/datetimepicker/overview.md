@@ -6,34 +6,29 @@ description: Overview of Kendo UI DateTimePicker widget. Get familiar with the c
 
 # DateTimePicker Overview
 
-The **DateTimePicker** allows the end user to select a value from a
-calendar or a time drop-down list. Direct input is also allowed.
-It supports configurable options for minimum and maximum value, the format,
-the interval between predefined hours in the time view, custom templates for "month" view
+The DateTimePicker widget allows the user to select a value from a
+calendar or a time drop-down list as well as direct input.
+It supports configurable options for minimum and maximum value, format, interval between predefined hours in the time view, custom templates for "month" view
 of the calendar, start view and the depth of the navigation.
 
 
 ## Getting Started
 
-### Creating a DateTimePicker from existing input element
-
-    <input id="dateTimePicker" />
-
 ### DateTimePicker initialization
+    
+    <input id="dateTimePicker"> 
 
-    $(document).ready(function(){
+    <script>
+      $(document).ready(function(){
         $("#dateTimePicker").kendoDateTimePicker();
-    });
-
-When a **DateTimePicker** is initialized, it will be displayed at the
-location of the target HTML element.
+      });
+    </script>
 
 > Widget copies any styles and CSS classes from the input element to the wrapper element.
 
-## Configuring DateTimePicker Behaviors
+## Configuring DateTimePicker Behavior
 
-
-The **DateTimePicker** provides configuration options that can be set
+The DateTimePicker widget provides configuration options that can be set
 during initialization. Among the properties that can be controlled:
 
 
@@ -41,45 +36,59 @@ during initialization. Among the properties that can be controlled:
 *   Minimum/Maximum datetime
 *   Define format
 *   Start view
-*   Navigation depth (last view to which end user can navigate)
+*   Navigation depth (last view to which the user can navigate)
 *   Define interval between predefined values in the time drop-down list
 
 ### Create DateTimePicker with a selected value and a defined minimum and maximum datetime
+    <input id="dateTimePicker"> 
 
-    $(document).ready(function(){
-        $("#dateTimePicker").kendoDateTimePicker({
-           value: new Date(2000, 10, 10, 10, 0, 0),
-           min: new Date(1950, 0, 1, 8, 0, 0),
-           max: new Date(2049, 11, 31, 18, 0, 0)
-        })
-    });
+    <script>
+        $(document).ready(function(){
+            $("#dateTimePicker").kendoDateTimePicker({
+                value: new Date(2000, 10, 10, 10, 0, 0),
+                min: new Date(1950, 0, 1, 8, 0, 0),
+                max: new Date(2049, 11, 31, 18, 0, 0)
+            })
+        });
+    </script>
 
 DateTimePicker will set the value only if the entered datetime is valid and
 within the defined range.
 
 ### Define the format
+    <input id="dateTimePicker"> 
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        format: "MM/dd/yyyy hh:mm tt" //format is used to format the value of the widget and to parse the input.
-    });
+    <script>
+        $("#dateTimePicker").kendoDateTimePicker({
+            format: "MM/dd/yyyy hh:mm tt" //format is used to format the value of the widget and to parse the input.
+        });
+    </script>
 
-The DateTimePicker textbox content is always parsed from scratch when the user changes it via typing. This means that if, for example, the format contains only a time portion, the date will be reset to today.
-To support such a DateTimePicker format, you should make the widget textbox readonly, but **after the widget is initialized** and **not via the widget readonly() method** (otherwise the Date and Time popups will be disabled).
+The DateTimePicker value is parsed when the user changes the content via typing. This means that if, for example, the format contains only a time portion, the date will be reset to today.
+To support such a DateTimePicker format, you should make the widget textbox readonly after the widget is initialized and not via the widget's readonly() method (otherwise the Date and Time pop-ups will be disabled).
+    
+    <input id="dateTimePicker"> 
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        /*...*/
-    }).attr("readonly", "readonly");
+    <script>
+        $("#dateTimePicker").kendoDateTimePicker({
+            /*...*/
+        }).attr("readonly", "readonly");
+    </script>
 
 ### Define the time format
-
-    $("#dateTimePicker").kendoDateTimePicker({
-        timeFormat: "hh:mm:ss tt" //this format will be used to format the predefined values in the time list.
-    });
+    
+    <input id="dateTimePicker"> 
+    
+    <script>
+        $("#dateTimePicker").kendoDateTimePicker({
+            timeFormat: "hh:mm:ss tt" //this format will be used to format the predefined values in the time list.
+        });
+    </script>     
 
 ## Defining a Start View and Navigation Depth
 
 
-The first rendered view can be defined with "start" option.
+The first rendered view can be defined with the "start" option.
 Navigation depth can be controlled with "depth" option. Predefined
 views are:
 
@@ -90,26 +99,33 @@ views are:
 *   "century" - shows the decades from the century
 
 ### Create a DateTimePicker for selecting a month
-
-    $("#dateTimePicker").kendoDateTimePicker({
-        start: "year",
-        depth: "year"
-    });
+    <input id="dateTimePicker"> 
+    
+    <script>
+        $("#dateTimePicker").kendoDateTimePicker({
+            start: "year",
+            depth: "year"
+        });
+    </script>
 
 ### Define the interval (in minutes) between values in the time drop-down list
-
-    $("#dateTimePicker").kendoDateTimePicker({
-        interval: 15
-    })
+    
+    <input id="dateTimePicker"> 
+    
+    <script>
+        $("#dateTimePicker").kendoDateTimePicker({
+            interval: 15
+        })
+    </script>
 
 ## Accessing an Existing DateTimePicker
 
 
 You can reference an existing **DateTimePicker** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the API to control
-its behavior.
+[jQuery.data()](http://api.jquery.com/jQuery.data/):
 
-### Accessing an existing DateTimePicker instance
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
+    <input id="dateTimePicker"> 
+    
+    <script>
+        var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
+    </script>
