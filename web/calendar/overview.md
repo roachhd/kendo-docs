@@ -6,61 +6,61 @@ description: Initialize Calendar UI widget, configure the behaviour of the contr
 
 # Calendar Overview
 
-The **Calendar** renders a graphical calendar that supports
-navigation and selection. It supports custom templates for its
-"month" view, configurable options for a minimum and maximum date,
+The Kendo UI Calendar widget renders a graphical calendar that supports
+navigation and selection. It also supports custom templates for its
+"month" view and configuration options for minimum and maximum date,
 start view and the depth of the navigation.
 
 ## Getting Started
 
-### Create a div element
-
-    <div id="calendar"></div>
 
 ### Initialize the Calendar via a jQuery ID selector
-
-    $(document).ready(function(){
-        $("#calendar").kendoCalendar();
-    });
-
-When a **Calendar** is initialized, it will automatically be
-displayed near the location of the used HTML element.
-
+    
+    <div id="calendar"></div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#calendar").kendoCalendar();
+        });
+    </script>
 
 ## Configuring Calendar Behaviors
 
 
-The **Calendar** provides many configuration options that can be
-easily set during initialization. Among the properties that can be
-controlled:
+The Calendar provides many configuration options that can be
+set during initialization. Among the properties that can be
+controlled are:
 
 
 *   Selected date
 *   Minimum and/or maximum date
 *   Start view
-*   Define the navigation depth (last view to which end user can
+*   Define the navigation depth (last view to which the user can
 navigate)
 *   Day template
 *   Footer template
+    
+### Create Calendar with selected date and a defined minimum and maximum date
+    
+    <div id="calendar"></div>
+    
+    <script>
+        $("#calendar").kendoCalendar({
+            value: new Date(),
+            min: new Date(1950, 0, 1),
+            max: new Date(2049, 11, 31)
+        });
+    </script>
 
-### Create Calendar with selected date and a defined minimum
-and maximum date
-
-    $("#calendar").kendoCalendar({
-        value: new Date(),
-        min: new Date(1950, 0, 1),
-        max: new Date(2049, 11, 31)
-    });
-
-The **Calendar** will not navigate before than the minimum
-date specified. It will also not navigate ahead the maximum date
+The Calendar will not navigate before the specified minimum
+date. It will also restrict the navigation to the maximum date
 specified.
 
 ## Define start view and navigation depth
 
 
-The first rendered view can be defined with "start" option.
-Navigation depth can be controlled with "depth" option. Predefined
+The first view rendered can be defined with the "start" option.
+Navigation depth can be controlled with the "depth" option. Predefined
 views are:
 
 
@@ -70,30 +70,37 @@ views are:
 *   "century" - shows the decades from the century
 
 ### Create a Calendar, which allows a user to select a month
-
-    $("#calendar").kendoCalendar({
-        start: "year",
-        depth: "year"
-    });
+    
+    <div id="calendar"></div>
+    
+    <script>
+        $("#calendar").kendoCalendar({
+            start: "year",
+            depth: "year"
+        });
+    </script>
 
 ## Customize day template
 
 
-The **Calendar** allows to customize content of the rendered day
-in the "month" view.
+The Calendar allows rendered day customization for the "month" view.
 
 ### Create a Calendar with custom template
+    
+    <div id="calendar"></div>
+    
+    <script>
+        $("#calendar").kendoCalendar({
+            month: {
+                content: '<div class="custom"><#=data.value#></div>'
+            }
+        });
+    </script>
 
-    $("#calendar").kendoCalendar({
-        month: {
-            content: '<div class="custom"><#=data.value#></div>'
-        }
-    });
-
-This templates wraps the "value" in a div HTML element. Here is an
+The template wraps the "value" in a div HTML element. Here is an
 example of the object passed to the template function:
 
-### Structure of the data object passed to the template
+**Structure of the data object passed to the template**
 
     data = {
         date: date, // Date object corresponding to the current cell
@@ -105,12 +112,15 @@ example of the object passed to the template function:
 ## Accessing an Existing Calendar
 
 
-You can reference an existing **Calendar** instance via
+You can reference an existing Calendar instance via
 [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the API to control
 its behavior.
 
 ### Accessing an existing Calendar instance
-
+    <div id="calendar"></div>
+    
+    <script>
     var calendar = $("#calendar").data("kendoCalendar");
+    </script>
 
