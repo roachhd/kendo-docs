@@ -105,7 +105,7 @@ such as
 
 ## Customize Templates
 
-The MultiSelect uses Kendo UI templates to enable you to control how item, tag or header is rendered. For a
+The MultiSelect uses Kendo UI templates to enable you to control how item, tag or header is rendered. For more
 detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
 [Kendo UI Templates documentation](/framework/templates/overview).
 
@@ -244,7 +244,7 @@ This functionality is supported in Q1 SP1 2013 release and later versions of Ken
 
 ## How to make the MultiSelect widget scrollable
 
-By design, the MultiSelect expands vertically when adding more items that do not fit in the existing free space. Limited expansion and scrolling can be achieved with some CSS and Javascript code. Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/axeMa), which shows how its done.
+By design, the MultiSelect expands vertically when adding more items that do not fit in the existing free space. Limited expansion and scrolling can be achieved with some CSS and JavaScript code. Check [this Kendo UI Dojo snippet](http://dojo.telerik.com/axeMa), which shows how its done.
 
 ## Support for label element
 
