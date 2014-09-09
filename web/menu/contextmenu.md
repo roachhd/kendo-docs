@@ -6,14 +6,14 @@ description: Steps that help you initialize the ContextMenu widget using JSON da
 
 # ContextMenu Overview
 
-The ContextMenu displays hierarchical data as a multi-level menu in a popup. It provides rich styling for unordered lists
+The Kendo UI ContextMenu displays hierarchical data as a multi-level menu in a popup. It provides rich styling for unordered lists
 of items, and can be used for both navigation and executing JavaScript commands. Items can be defined and
 initialized from HTML, or the API can be used to add and remove items. A ContextMenu target can be specified along with filter
 for multiple targets and an event to which the ContextMenu will listen in order to pop up.
 
 ## Getting Started
 
-### Initialize a ContextMenu using HTML markup
+### Initialize a Kendo UI ContextMenu using HTML markup
 
     <ul id="context-menu">
         <li>Item 1</li>
@@ -25,7 +25,7 @@ for multiple targets and an event to which the ContextMenu will listen in order 
         });
     </script>
 
-### Initialize the ContextMenu using JSON data object
+### Initialize a Kendo UI ContextMenu using JSON data object
 
     <ul id="context-menu"></ul>
     <script>
