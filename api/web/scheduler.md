@@ -2778,6 +2778,8 @@ Constraints the minimum date which can be selected via the scheduler navigation.
 
 The number of time slots to display per major tick.
 
+> Note that the minorTickCount value should set to number heigher than 0.
+
 #### Example - set the number of time slots
 
     <div id="scheduler"></div>
