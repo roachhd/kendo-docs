@@ -13,7 +13,7 @@ each tab.
 
 ## Getting Started
 
-### Initialize the TabStrip using HTML markup
+### Initialize the Kendo UI TabStrip using HTML markup
 
     <div id="tabstrip">
         <ul>
@@ -30,7 +30,7 @@ each tab.
         });
     </script>
 
-### Initialize the TabStrip using JSON data object
+### Initialize the Kendo UI TabStrip using JSON data object
      <div id="tabstrip"></div>
 
     <script>

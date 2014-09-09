@@ -13,7 +13,7 @@ initialized from HTML, or through the configuration options. The Kendo UI Menu A
 
 ## Getting Started
 
-### Initialize a Menu using HTML markup
+### Initialize the Kendo UI Menu using HTML markup
 
     <ul id="menu">
         <li>Normal Item
@@ -37,7 +37,7 @@ initialized from HTML, or through the configuration options. The Kendo UI Menu A
         });
     </script>
 
-### Initialize the Menu using JSON data object
+### Initialize the Kendo UI Menu using JSON data object
     
     <ul id="menu"></ul>
 

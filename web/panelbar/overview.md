@@ -14,7 +14,7 @@ The Kendo UI PanelBar displays hierarchical data as a multi-level, expandable wi
 A PanelBar can be created by targeting the root element of a HTML list. A
 PanelBar will utilize this list to define its structure and content.
 
-### Initialize the PanelBar using HTML markup
+### Initialize the Kendo UI PanelBar using HTML markup
 
     <ul id="panelbar">
         <li>
@@ -51,7 +51,7 @@ element. Text content located outside nested content will be used as the title o
         });
     </script>
 
-### Initialize a PanelBar using JSON data object
+### Initialize the Kendo UI PanelBar using JSON data object
 
     <ul id="panelbar"></ul>
 
