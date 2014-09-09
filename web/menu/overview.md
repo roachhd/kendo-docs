@@ -99,11 +99,8 @@ or removing Menu items. To add items, you need to provide the new item as a JSON
 object along with a reference item.
 
 
-A reference item is a target Menu item HTML element that
-already exists in the Menu. The reference item will be used to determine the
-placement in the hierarchy of the new item. Any valid jQuery selector can be used to
-obtain a reference to the target item. For examples, see the
-[Menu API demos](http://demos.telerik.com/kendo-ui/web/menu/api.html).
+A reference item is a target Menu item HTML element that already exists in the Menu. The reference item will be used to determine the
+placement in the hierarchy of the new item. Any valid jQuery selector can be used to obtain a reference to the target item. For examples, see the [Menu API demos](http://demos.telerik.com/kendo-ui/web/menu/api.html).
 
 ### How to add a new root Menu item
     <ul id="menu"></ul>

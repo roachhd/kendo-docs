@@ -6,8 +6,7 @@ description: Read when the initialization of PanelBar UI widget should occur and
 
 # PanelBar Overview
 
-The PanelBar displays hierarchical data as a multi-level, expandable widget. Its structure may be defined in HTML or configured dynamically through its API. The
-content for items can also be loaded via AJAX by specifying a content URL.
+The Kendo UI PanelBar displays hierarchical data as a multi-level, expandable widget. Its structure may be defined in HTML or configured dynamically through its API. The content for items can also be loaded via AJAX by specifying a content URL.
 
 
 ## Getting Started
@@ -92,11 +91,13 @@ element. Text content located outside nested content will be used as the title o
         ]
       });
     </script>
+    
+Initialization of a PanelBar should occur after the DOM is fully loaded. It is recommended that initialization the PanelBar is done within a $(document).ready() statement.
 
 ## Load Content with AJAX
 
 The PanelBar provides built-in support for asynchronously loading content from remote URLs. These URLs should return HTML content that can be
-loaded in the PanelBar item content area. Content DIVs should be completely empty for AJAX loading to work.
+loaded in the PanelBar item content area. Content DIVs should be empty for AJAX loading to work.
 
 ### Load a PanelBar item content asynchronously via AJAX
 
