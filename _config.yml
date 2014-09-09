@@ -48,12 +48,8 @@ navigation:
         title: "Mobile ListView"
         position: 9
     "*typescript":
-    "*javascript":
-        title: "JavaScript"
     "*asp.net":
         title: "ASP.NET"
-    "*wrappers":
-        title: "Wrappers"
     "*widgets":
         title: "Widgets"
     "*tags":
@@ -227,6 +223,19 @@ navigation:
     "aspnet-mvc/tutorial-kendo-music-store/music-store-dashboard":
         title: "Build the Dashboard"
         position: 3
+    "wrappers/javascript"
+        title: "JavaScript"
+        position: 2
+    "wrappers/aspnet-mvc"
+        title: "ASP.NET MVC"
+        position: 3
+    "wrappers/jsp"
+        title: "JSP"
+        position: 4
+    "wrappers/php"
+        title: "PHP"
+        position: 5
+
 ## The application virtual path
 baseurl: /kendo-ui
 
