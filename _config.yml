@@ -223,16 +223,16 @@ navigation:
     "aspnet-mvc/tutorial-kendo-music-store/music-store-dashboard":
         title: "Build the Dashboard"
         position: 3
-    "wrappers/javascript":
+    "api/javascript":
         title: "JavaScript"
         position: 2
-    "wrappers/aspnet-mvc":
+    "api/aspnet-mvc":
         title: "ASP.NET MVC"
         position: 3
-    "wrappers/jsp":
+    "api/jsp":
         title: "JSP"
         position: 4
-    "wrappers/php":
+    "api/php":
         title: "PHP"
         position: 5
 
