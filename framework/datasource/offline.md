@@ -4,16 +4,16 @@ page_title: Work offline with the Kendo DataSource
 description: Kendo offline support
 ---
 
-# Work offline with the Kendo DataSource
+# Work offline with the Kendo UI DataSource
 
-The Kendo DataSource provides offline storage support since the 2014 Q2 SP1 release. Offline support allows data-bound Kendo UI widgets to function without Internet connection -
-the user can continue working with data without Internet access. The Kendo DataSource syncs all changes with the remote service when Internet connection is available.
+The Kendo UI DataSource provides offline storage support since the 2014 Q2 SP1 release. Offline support allows data-bound Kendo UI widgets to function without Internet connection -
+the user can continue working with data without Internet access. The Kendo UI DataSource syncs all changes with the remote service when Internet connection is available.
 
 ## Configure offline storage
 
 Set the [offlineStorage](/api/framework/datasource#configuration-offlineStorage) option to enable offline storage. The DataSource uses this value as a key when saving and loading its state.
 
-By default the Kendo DataSource uses [localStorage](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage) to persist its offline state.
+By default the Kendo UI DataSource uses [localStorage](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage) to persist its offline state.
 
 ### Example - set offline storage key
 
@@ -145,7 +145,7 @@ To use custom offline storage set the `offlineStorage` option to a JavaScript ob
 At the time of this writing there isn't a cross-browser way to determine whether a web application has Internet access or not. In addition some browsers treat online mode differently than the rest.
 More info about browser online mode is available in [MDN](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine.onLine).
 
-This is why the Kendo DataSource does not attempt to automatically detect offline mode. The developer could implement that by either handlng the ["online" and "offline"](https://developer.mozilla.org/en-US/docs/Online_and_offline_events) events or via Ajax polling.
+This is why the Kendo UI DataSource does not attempt to automatically detect offline mode. The developer could implement that by either handlng the ["online" and "offline"](https://developer.mozilla.org/en-US/docs/Online_and_offline_events) events or via Ajax polling.
 
 ### Example - detect offline mode via the online and offline events
 
