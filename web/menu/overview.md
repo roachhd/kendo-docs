@@ -6,14 +6,14 @@ description: Steps that help you initialize the Menu widget using JSON data obje
 
 # Menu Overview
 
-The **Menu** displays hierarchical data as a multi-level menu. It provides rich styling for unordered lists
+The Kendo UI Menu displays hierarchical data as a multi-level menu. It provides rich styling for unordered lists
 of items, and can be used for both navigation and executing JavaScript commands. Items can be defined and
-initialized from HTML, or the API can be used to add and remove items.
+initialized from HTML, or through the configuration options. The Kendo UI Menu API can be used to add and remove items.
 
 
 ## Getting Started
 
-### Create a HTML hierarchical list of items
+### Initialize a Menu using HTML markup
 
     <ul id="menu">
         <li>Normal Item
@@ -31,106 +31,95 @@ initialized from HTML, or the API can be used to add and remove items.
         </li>
     </ul>
 
-Initialization of a **Menu** should occur after the DOM is fully loaded. It is recommended that
-initialization the **Menu** occur within a handler is provided to $(document).ready().
-
-### Initialize a Menu using a selector within $(document).ready()
-
-    $(document).ready(function() {
-        $("#menu").kendoMenu();
-    });
+    <script>
+        $(document).ready(function() {
+            $("#menu").kendoMenu();
+        });
+    </script>
 
 ### Initialize the Menu using JSON data object
+    
+    <ul id="menu"></ul>
 
-    $(document).ready(function() {
-     $("#menu").kendoMenu({
-      dataSource:
-        [{
+    <script>
+      $(document).ready(function() {
+        $("#menu").kendoMenu({
+          dataSource:
+          [{
             text: "Item 1",
             cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
             url: "http://www.telerik.com"                // Link URL if navigation is needed, optional.
-        },
-        {
-            text: "<b>Item 2</b>",
-            encoded: false,                              // Allows use of HTML for item text
-            content: "text"                              // content within an item
-        },
-        {
-            text: "Item 3",
-            imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
-            items: [{                                    // Sub item collection
-                 text: "Sub Item 1"
+          },
+           {
+             text: "<b>Item 2</b>",
+             encoded: false,                              // Allows use of HTML for item text
+             content: "text"                              // content within an item
+           },
+           {
+             text: "Item 3",
+             imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
+             items: [{                                    // Sub item collection
+               text: "Sub Item 1"
+             },
+                     {
+                       text: "Sub Item 2"
+                     }]
+           },
+           {
+             text: "Item 4",
+             spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
+           }]
+        })
+      });
+    </script>
+
+Initialization of a Menu should occur after the DOM is fully loaded. It is recommended that initialization the Menu is done within a $(document).ready() statement.
+
+## Customize Menu Animations
+
+By default, the Menu uses a slide animation to expand sub-items on mouse hover event. Animations can be changed using configuration properties, along with the animation style and delay. Menu items can also be configured to open on click instead of on hover.
+
+### Change Menu animation and open behavior
+    <ul id="menu"></ul>
+
+    <script>
+        $("#menu").kendoMenu({
+            animation: {
+                open: { effects: "fadeIn" },
+                duration: 500
             },
-            {
-                 text: "Sub Item 2"
-            }]
-        },
-        {
-            text: "Item 4",
-            spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
-        }]
-     })
-    });
+            openOnClick: true
+        });
+    </script>
 
-## Customizing Menu Animations
+## Configure dynamic Menu items
+
+The Menu API provides methods for dynamic adding
+or removing Menu items. To add items, you need to provide the new item as a JSON
+object along with a reference item.
 
 
-By default, the **Menu** uses a slide animation to expand and
-reveal sub-items as the mouse hovers. Animations can be easily
-customized using configuration properties, changing the animation
-style and delay. Menu items can also be configured to open on click
-instead of on hover.
-
-### Changing Menu animation and open behavior
-
-    $("#menu").kendoMenu({
-        animation: {
-            open: { effects: "fadeIn" },
-            duration: 500
-        },
-        openOnClick: true
-    });
-
-## Dynamically configuring Menu items
-
-
-The **Menu** API provides several methods for dynamically adding
-or removing Items. To add items, provide the new item as a JSON
-object along with a reference item that will be used to determine the
-placement in the hierarchy.
-
-
-
-A reference item is simply a target Menu Item HTML element that
-already exists in the Menu. Any valid jQuery selector can be used to
+A reference item is a target Menu item HTML element that
+already exists in the Menu. The reference item will be used to determine the
+placement in the hierarchy of the new item. Any valid jQuery selector can be used to
 obtain a reference to the target item. For examples, see the
 [Menu API demos](http://demos.telerik.com/kendo-ui/web/menu/api.html).
-Removing an item only requires a reference to the target element that
-should be removed.
 
-### Dynamically add a new root Menu item
+### How to add a new root Menu item
+    <ul id="menu"></ul>
 
-    var menu = $("#menu").kendoMenu().data("kendoMenu");
-    menu.insertAfter(
-        { text: "New Menu Item" },
-        menu.element.children("li:last")
-    );
-
-## Accessing an Existing Menu
-
-
-You can reference an existing **Menu** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the API to control
-its behavior.
-
-### Accessing an existing Menu instance
-
-    var menu = $("#menu").data("kendoMenu");
+    <script>
+        var menu = $("#menu").kendoMenu().data("kendoMenu");
+        menu.insertAfter(
+            { text: "New Menu Item" },
+            menu.element.children("li:last")
+        );
+    </script>
 
 ## Keyboard Navigation
 
-The Menu provides keyboard navigation once it gains focus (either programmatically or as a result of a user click). Initially, the first root item is activated.
+The Menu provides keyboard navigation functionality. When focused the first root item is activated.
+
 The following keys and user actions are supported:
 
 * Left and right arrow keys move the active item left and right on the root level of horizontal Menus.
@@ -144,8 +133,8 @@ The following keys and user actions are supported:
 
 ## Shrink the Menu to exactly fit the root items
 
-The Menu renders as an `<ul>`, which is a [block element](http://quirksmode.org/css/css2/display.html) and expands horizontally by default.
-If a horizontal Menu is wider than then total width of its root items, a blank space will remain visible on the right. In order to remove this space, you can use CSS:
+The Menu renders as a `UL` element and expands horizontally by default.
+If a horizontal Menu is wider than the total width of its root items, a blank space will remain visible on the right. In order to remove this space, you can use the following CSS rules:
 
 
     #menu-id /* for a specific menu instance */

@@ -6,35 +6,14 @@ description: Steps that help you initialize the ContextMenu widget using JSON da
 
 # ContextMenu Overview
 
-The **ContextMenu** displays hierarchical data as a multi-level menu in a popup. It provides rich styling for unordered lists
+The ContextMenu displays hierarchical data as a multi-level menu in a popup. It provides rich styling for unordered lists
 of items, and can be used for both navigation and executing JavaScript commands. Items can be defined and
-initialized from HTML, or the API can be used to add and remove items. Also a ContextMenu target can be specified, a filter
+initialized from HTML, or the API can be used to add and remove items. A ContextMenu target can be specified along with filter
 for multiple targets and an event to which the ContextMenu will listen in order to pop up.
 
 ## Getting Started
 
-### Create a HTML hierarchical list of items
-
-    <ul id="context-menu">
-        <li>Normal Item
-            <ul>
-                <li><span class="k-sprite icon-class"></span>Item with a Sprite</li>
-                <li><img src="Icons/contacts.gif" />Item with an Icon</li>
-            </ul>
-        </li>
-        <li><a href="http://www.google.com">Navigation Item</a></li>
-        <li class="k-state-active">Active Item</li>
-        <li>Template Item
-            <div class="k-group k-content">
-                Test button - <a class="k-button">Button</a>
-            </div>
-        </li>
-    </ul>
-
-Initialization of a **ContextMenu** should occur after the DOM is fully loaded. It is recommended that
-initialization the **ContextMenu** occur within a handler provided to $(document).ready().
-
-### Initialize a ContextMenu using a selector within $(document).ready()
+### Initialize a ContextMenu using HTML markup
 
     <ul id="context-menu">
         <li>Item 1</li>
@@ -81,13 +60,14 @@ initialization the **ContextMenu** occur within a handler provided to $(document
         });
     </script>
 
-## Customizing ContextMenu Animations
+Initialization of a ContextMenu should occur after the DOM is fully loaded. It is recommended that initialization the Menu is done within a $(document).ready() statement.
 
-By default, the **ContextMenu** uses a slide animation to expand and reveal sub-items as the mouse hovers. Animations can be easily
-customized using configuration properties, changing the animation style and delay. ContextMenu can be also configured to use a different
+## Customize ContextMenu Animations
+
+By default, the ContextMenu uses a slide animation to expand sub-items on mouse hover event. Animations can be changed using configuration properties, along with the animation style and delay. Menu items can also be configured to open on click instead of on hover. ContextMenu can also be configured to use a different
 open event than the default "contextmenu" (right click).
 
-### Changing ContextMenu animation and open event
+### Change ContextMenu animation and open event
 
     <ul id="context-menu">
         <li>Item 1</li>
@@ -103,19 +83,19 @@ open event than the default "contextmenu" (right click).
         });
     </script>
 
-## Dynamically configuring ContextMenu items
+## Dynamic configuration of ContextMenu items
 
-The **ContextMenu** API provides several methods for dynamically adding
-or removing Items. To add items, provide the new item as a JSON
-object along with a reference item that will be used to determine the
-placement in the hierarchy.
+The ContextMenu API provides methods for dynamic adding
+or removing ContextMenu items. To add items, you need to provide the new item as a JSON
+object along with a reference item.
 
-A reference item is simply a target ContextMenu Item HTML element that
-already exists in the ContextMenu. Any valid jQuery selector can be used to
-obtain a reference to the target item. Removing an item only requires a reference to the target element that
-should be removed.
 
-### Dynamically add a new root ContextMenu item
+A reference item is a target ContextMenu item HTML element that
+already exists in the ContextMenu. The reference item will be used to determine the
+placement in the hierarchy of the new item. Any valid jQuery selector can be used to
+obtain a reference to the target item.
+
+### How to add a new root ContextMenu item
 
     <ul id="context-menu">
         <li>Item 1</li>
@@ -128,27 +108,3 @@ should be removed.
             contextMenu.element.children("li:last")
         );
     </script>
-
-## Accessing an Existing ContextMenu
-
-You can reference an existing **ContextMenu** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the API to control
-its behavior.
-
-### Accessing an existing ContextMenu instance
-
-    <ul id="context-menu" data-role="contextmenu" data-target="body">
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
-    <script>
-        kendo.bind(document.body);
-    </script>
-
-    ...
-
-    <script>
-        var contextMenu = $("#context-menu").data("kendoContextMenu");
-    </script>
-
