@@ -1,5 +1,6 @@
 ---
 title: Destroy Kendo UI Widgets
+position: 2
 ---
 
 # Destroy Kendo UI Widgets
