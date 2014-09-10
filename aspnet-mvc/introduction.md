@@ -35,7 +35,7 @@ To download Telerik UI for ASP.NET MVC follow these steps.
 2. Click **Products & Subscriptions**  in the top navigation.
 3. Click **UI for ASP.NET MVC**. If this option is not available click one of the following: **DevCraft UI Edition**, **DevCraft Complete**  or **DevCraft Ultimate**.
 4. Click **Download Installer and other resources**.
-5. Find the **UI for ASP.NET MVC**  item and click **Download** next to it. This will download the product installer. Alternatively you may click **Browse all product files** and download the zip file.
+5. Find the **UI for ASP.NET MVC**  item, click **Browse all product files** and select to download the Telerik online installer (exe file), the msi installer file directly, or the zip file.
 
 ## Installation
 
