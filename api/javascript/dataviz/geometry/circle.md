@@ -100,7 +100,7 @@ Gets the location of a point on the circle's circumference at a given angle.
 
 ##### angle `Number`
 
-Angle in decimal degrees. Measured in clockwise direction with 0 pointing "up".
+Angle in decimal degrees. Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 #### Returns

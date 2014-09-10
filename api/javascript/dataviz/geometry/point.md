@@ -171,7 +171,7 @@ Rotates the point around the given center.
 
 ##### angle `Number`
 
-Angle in decimal degrees. Measured in clockwise direction with 0 pointing "up".
+Angle in decimal degrees. Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 ##### center `kendo.dataviz.geometry.Point|Array` *(default: [0, 0])*

@@ -36,7 +36,7 @@ The location of the arc center.
 ### endAngle `Number`
 
 The end angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 
@@ -53,7 +53,7 @@ The y radius of the arc.
 ### startAngle `Number`
 
 The start angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 
@@ -95,7 +95,7 @@ Gets the arc center location.
 ### getEndAngle
 
 Gets the end angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 
 #### Returns
 
@@ -123,7 +123,7 @@ Gets the y radius of the arc.
 ### getStartAngle
 
 Gets the start angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 
 #### Returns
 
@@ -138,7 +138,7 @@ Gets the location of a point on the arc's circumference at a given angle.
 
 ##### angle `Number`
 
-Angle in decimal degrees. Measured in clockwise direction with 0 pointing "up".
+Angle in decimal degrees. Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 #### Returns
@@ -179,7 +179,7 @@ The new arc center.
 ### setEndAngle
 
 Sets the end angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 
 #### Parameters
 
@@ -225,7 +225,7 @@ The new arc y radius.
 ### setStartAngle
 
 Sets the start angle of the arc in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 
 #### Parameters
 

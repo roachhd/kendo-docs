@@ -62,7 +62,7 @@ Creates a transformation matrix for rotation with the specified parameters.
 ##### angle `Number`
 
 The angle of rotation in decimal degrees.
-Measured in clockwise direction with 0 pointing "up".
+Measured in clockwise direction with 0 pointing "right".
 Negative values or values greater than 360 will be normalized.
 
 ##### x `Number`

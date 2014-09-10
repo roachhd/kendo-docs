@@ -24,6 +24,9 @@ Draws a single line of text at the given position.
 ### content `String`
 The content of the text. Special characters are not supported.
 
+### position `kendo.dataviz.geometry.Point`
+The position of the text upper left corner.
+
 ### options `Object`
 The configuration options.
 
