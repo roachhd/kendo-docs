@@ -767,8 +767,8 @@ JavaScript function which will customize how the input for the filter value is c
                     field: "color",
                     filterable: {
                         cell: {
-                            template: function (input) {
-                                input.kendoColorPicker();
+                            template: function (args) {
+                                args.element.kendoColorPicker();
                             },
                             showOperators: false
                         }
