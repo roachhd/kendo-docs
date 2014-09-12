@@ -405,6 +405,36 @@ blockquote th, blockquote td {
     text-align: left;
 }
 
+#page-toc+ul {
+    padding-left: 0;
+}
+
+#page-toc+ul li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#page-toc+ul li a {
+    text-decoration: none;
+}
+
+#page-toc+ul li a:hover {
+    text-decoration: underline;
+}
+
+#page-toc+ul>li {
+    margin-bottom: 7px;
+}
+
+#page-toc+ul ul {
+    padding-left: 10px;
+}
+
+#page-toc+ul ul>li {
+    margin-bottom: 0;
+}
+
+
 /* Footer */
 footer
 {
