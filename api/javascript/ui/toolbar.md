@@ -30,7 +30,7 @@ If `resizable` is set to `true` the widget will detect changes in the viewport w
 
 A JavaScript array that contains the ToolBar's commands configuration. 
 
-> For more information regarding supported commands and their configration properties check the [Getting Started topic](/web/toolbar/overview#command-types).
+> For more information regarding supported commands and their configuration properties check the [Getting Started topic](/web/toolbar/overview#command-types).
 
 #### Example - initialize ToolBar with Button, Toggle Button and SplitButton
 

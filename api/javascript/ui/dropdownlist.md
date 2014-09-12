@@ -110,7 +110,7 @@ Controls whether to bind the widget to the data source on initialization.
 
 ### cascadeFrom `String`
 
-Use it to set the Id of the parent dropdownlist widget.
+Use it to set the Id of the parent DropDownList widget.
 [Help topic showing how cascading functionality works](/web/dropdownlist/cascading)
 
 #### Example
@@ -142,7 +142,7 @@ Use it to set the Id of the parent dropdownlist widget.
 
 ### cascadeFromField `String`
 
-Defines the field to be used to filter the data source. If not defiend the [parent's dataValueField option will be used](/api/web/dropdownlist#configuration-dataValueField).
+Defines the field to be used to filter the data source. If not defined the [parent's dataValueField option will be used](/api/web/dropdownlist#configuration-dataValueField).
 [Help topic showing how cascading functionality works](/web/dropdownlist/cascading)
 
 #### Example
@@ -366,9 +366,9 @@ The minimum number of characters the user must type before a filter is performed
  Define the text of the default empty item. If the value is an object, then the widget will use it a valid data item.
  Note that the optionLabel will not be available if the widget is empty.
 
-> **Important:** If optionLabel is an object, it needs to have atleast dataValueField and dataTextField properties. Otherwise, widget will show `undefined`.
+> **Important:** If `optionLabel` is an object, it needs to have at least `dataValueField` and `dataTextField` properties. Otherwise, widget will show `undefined`.
 
-> **Important:** Widget's value will be equal to the optionLabel if the dataValueField and dataTextField options are equal or not defined
+> **Important:** Widget's value will be equal to the `optionLabel` if the `dataValueField` and `dataTextField` options are equal or not defined
 
 #### Example - specify optionLabel as a string
 
@@ -527,7 +527,7 @@ The value of the widget.
 
 ### valuePrimitive `Boolean`*(default: false)*
 
-Spcifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+Specifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
 
 #### Example - specify that the View-Model field should be updated with the selected item value
 
@@ -640,7 +640,7 @@ A jQuery object of the drop-down list element.
     <script>
 
 ### ul `jQuery`
-A jQuery object of the ul element, which holds the available options.
+A jQuery object of the `ul` element, which holds the available options.
 
 #### Example - get ul element
 
@@ -685,7 +685,7 @@ The zero-based index of the data record.
 
 #### Returns
 
-`Object` The raw data record. Returns <i>undefined</i> if no data.
+`Object` The raw data record. Returns *undefined* if no data.
 
 #### Example
 
@@ -803,7 +803,7 @@ Controls whether the widget is editable or readonly.
 
 ##### readonly `Boolean`
 
-The argument, which defines whether the datepicker should be readonly or editable.
+The argument, which defines whether the DropDownList should be readonly or editable.
 
 ### refresh
 
@@ -972,7 +972,7 @@ Sets the dataSource of an existing DropDownList and rebinds it.
 
 ### text
 
-Gets or sets the text of the dropdownlist.
+Gets or sets the text of the DropDownList.
 
 #### Parameters
 
@@ -982,7 +982,7 @@ The text to set.
 
 #### Returns
 
-`String` The text of the dropdownlist.
+`String` The text of the DropDownList.
 
 #### Example - set text of the widget
 
@@ -1022,7 +1022,7 @@ Defines the whether to open/close the drop-down list.
 
 ### value
 
-Gets or sets the value of the dropdownlist. The value will not be set if there is no item with such value. If value is undefined, text of the data item is used.
+Gets or sets the value of the DropDownList. The value will not be set if there is no item with such value. If value is undefined, text of the data item is used.
 
 > **Important:** If the widget is not bound, value method will pre-fetch the data before continue with the value setting.
 
@@ -1034,7 +1034,7 @@ The value to set.
 
 #### Returns
 
-`String` The value of the dropdownlist.
+`String` The value of the DropDownList.
 
 #### Example - set value of the widget
 

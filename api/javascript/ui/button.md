@@ -109,7 +109,7 @@ Enables or disables the Button.
 
 ##### toggle `Boolean`
 
-Indicates whether the **Button** should be enabled or disabled. Truthy and falsy arguments are accepted. If no argument is supplied, the **Button** will assume `true` and will be enabled.
+Indicates whether the **Button** should be enabled or disabled. `true` and `false` arguments are accepted. If no argument is supplied, the **Button** will assume `true` and will be enabled.
 
 #### Example
 

@@ -30,8 +30,7 @@ for more details.
 
 ### async.autoUpload `Boolean`*(default: true)*
 
-The selected files will be uploaded immediately by default. You can change this behavior by setting
-autoUpload to false.
+The selected files will be uploaded immediately by default. You can change this behavior by setting `autoUpload` to false.
 
 #### Example
 
@@ -900,7 +899,7 @@ List of the files that were uploaded or removed . Each file has:
 
 ##### e.response `String`
 
-the response object returned by the server.
+The response object returned by the server.
 
 ##### e.XMLHttpRequest `Object`
 

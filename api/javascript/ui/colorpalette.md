@@ -112,7 +112,7 @@ Specifies the initially selected color.
 
 Get or set the selected color. If no argument is given, this returns the currently selected color as a string in format `#FFFFFF`.
 
-If one argument is given, it selects the new color and updates the UI. The argument can be a string in hex, rgb or rgba format, or a [`kendo.Color` object](/api/framework/color) object.
+If one argument is given, it selects the new color and updates the UI. The argument can be a string in **hex**, **rgb** or **rgba** format, or a [`kendo.Color` object](/api/framework/color) object.
 
 > This method does not trigger the "change" event.
 

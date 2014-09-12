@@ -930,7 +930,7 @@ The format that is applied to the value before it is displayed. Takes the form "
 
 ### columns.groupable `Boolean` *(default: true)*
 
-If set to false the column will not be groupable (requires Grid groupable property to be enabled). By default all columns are groupable
+If set to false the column will not be groupable (requires Grid groupable property to be enabled). By default all columns are groupable.
 
 #### Example - disable grouping for individual column
 
@@ -1919,7 +1919,7 @@ If the grid is in mobile mode this text will be used for the cancel button.
 If confirmation is enabled the grid will display a confirmation dialog when the user clicks the "destroy" command button.
 If the grid is in mobile mode this text will be used for the confirm button.
 
-#### Example - change the cofirm delete button text
+#### Example - change the confirm delete button text
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
@@ -2414,7 +2414,7 @@ The text of the option which represents the "or" logical operation.
 
 ### filterable.messages.selectValue `String` *(default: "-Select value-")*
 
-The text of the dropdownlist displayed in the filter menu for columns whose [values](#configuration-columns.values) option is set.
+The text of the DropDownList displayed in the filter menu for columns whose [values](#configuration-columns.values) option is set.
 
 #### Example - set the "selectValue" message
 
@@ -2539,7 +2539,7 @@ The text of the filter operators displayed in the filter menu.
 
 The texts of the filter operators displayed for columns bound to string fields.
 
-> Omitting an operator will exclude it from the dropdown list with the available operators.
+> Omitting an operator will exclude it from the DropDownList with the available operators.
 
 #### Example - set string operators
     <div id="grid"></div>
@@ -2563,7 +2563,7 @@ The texts of the filter operators displayed for columns bound to string fields.
     });
     </script>
 
-In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+In this example only two operators would be displayed in the DropDownList - "Equal to" and "Not equal to".
 
 ### filterable.operators.string.eq `String` *(default: "Is equal to")*
 
@@ -2724,7 +2724,7 @@ The text of the "ends with" filter operator.
 
 The texts of the filter operators displayed for columns bound to number fields.
 
-> Omitting an operator will exclude it from the dropdown list with the available operators.
+> Omitting an operator will exclude it from the DropDownList with the available operators.
 
 #### Example - set number operators
 
@@ -2759,7 +2759,7 @@ The texts of the filter operators displayed for columns bound to number fields.
     });
     </script>
 
-In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+In this example only two operators would be displayed in the DropDownList - "Equal to" and "Not equal to".
 
 ### filterable.operators.number.eq `String` *(default: "Is equal to")*
 
@@ -2982,7 +2982,7 @@ The text of the "less than" filter operator.
 
 The texts of the filter operators displayed for columns bound to date fields.
 
-> Omitting an operator will exclude it from the dropdown list with the available operators.
+> Omitting an operator will exclude it from the DropDownList with the available operators.
 
 #### Example - set date operators
     <div id="grid"></div>
@@ -3015,7 +3015,7 @@ The texts of the filter operators displayed for columns bound to date fields.
     });
     </script>
 
-In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+In this example only two operators would be displayed in the DropDownList - "Equal to" and "Not equal to".
 
 ### filterable.operators.date.eq `String` *(default: "Is equal to")*
 
@@ -3232,7 +3232,7 @@ The text of the "less than" filter operator.
 
 The texts of the filter operators displayed for columns which have their [values](#configuration-columns.values) option set.
 
-> Omitting an operator will exclude it from the dropdown list with the available operators.
+> Omitting an operator will exclude it from the DropDownList with the available operators.
 
 #### Example - set enum operators
 
@@ -3935,11 +3935,11 @@ If set to `true` the pager will display an input element which allows the user t
 
 ### pageable.pageSizes `Boolean|Array` *(default: false)*
 
-If set to `true` the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.
+If set to `true` the pager will display a DropDownList which allows the user to pick a page size. By default the page size DropDownList is not displayed.
 
 Can be set to an array with the available page sizes.
 
-#### Example - show the page size dropdown
+#### Example - show the page size DropDownList
 
     <div id="grid"></div>
     <script>
@@ -4156,9 +4156,9 @@ The label displayed before the pager input. Uses [kendo.format](/api/framework/k
 
 ### pageable.messages.itemsPerPage `String` *(default: "items per page")*,
 
-The label displayed after the page size dropdown list.
+The label displayed after the page size DropDownList.
 
-#### Example - set the label after the page size dropdown list
+#### Example - set the label after the page size DropDownList
 
     <div id="grid"></div>
     <script>
@@ -4187,7 +4187,7 @@ The label displayed after the page size dropdown list.
 
 The tooltip of the button which goes to the first page.
 
-#### Example - set the tooltip of the first page button
+#### Example - set the Tooltip of the first page button
 
     <div id="grid"></div>
     <script>
@@ -4215,7 +4215,7 @@ The tooltip of the button which goes to the first page.
 
 The tooltip of the button which goes to the last page.
 
-#### Example - set the tooltip of the last page button
+#### Example - set the Tooltip of the last page button
 
     <div id="grid"></div>
     <script>
@@ -4241,9 +4241,9 @@ The tooltip of the button which goes to the last page.
 
 ### pageable.messages.next `String` *(default: "Go to the next page")*,
 
-The tooltip of the button which goes to the next page.
+The Tooltip of the button which goes to the next page.
 
-#### Example - set the tooltip of the next page button
+#### Example - set the Tooltip of the next page button
 
     <div id="grid"></div>
     <script>
@@ -4269,9 +4269,9 @@ The tooltip of the button which goes to the next page.
 
 ### pageable.messages.previous `String` *(default: "Go to the previous page")*,
 
-The tooltip of the button which goes to the previous page.
+The Tooltip of the button which goes to the previous page.
 
-#### Example - set the tooltip of the previous page button
+#### Example - set the Tooltip of the previous page button
 
     <div id="grid"></div>
     <script>
@@ -4297,9 +4297,9 @@ The tooltip of the button which goes to the previous page.
 
 ### pageable.messages.refresh `String` *(default: "Refresh")*,
 
-The tooltip of the refresh button.
+The Tooltip of the refresh button.
 
-#### Example - set the tooltip of the refresh button
+#### Example - set the Tooltip of the refresh button
 
     <div id="grid"></div>
     <script>
@@ -4326,9 +4326,9 @@ The tooltip of the refresh button.
 
 ### pageable.messages.morePages `String` *(default: "More pages")*,
 
-The tooltip of the ellipsis ("...") button, which appears when the number of pages is greater than the buttonCount.
+The Tooltip of the ellipsis ("...") button, which appears when the number of pages is greater than the `buttonCount`.
 
-#### Example - set the tooltip of the ellipsis button
+#### Example - set the Tooltip of the ellipsis button
 
     <div id="grid"></div>
     <script>
@@ -4586,12 +4586,12 @@ The sorting mode. If set to "single" the user can sort by one column. If set to 
 
 ### toolbar `String|Function|Array`
 
-If a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid toolbar,
+If a `String` value is assigned to the `toolbar` configuration option, it will be treated as a single string template for the whole Grid Toolbar,
 and the string value will be passed as an argument to a [`kendo.template()`](/api/framework/kendo#methods-template) function.
 
-If a `Function` value is assigned (it may be a kendo.template() function call or a generic function reference), then the return value of the function will be used to render the Grid toolbar contents.
+If a `Function` value is assigned (it may be a kendo.template() function call or a generic function reference), then the return value of the function will be used to render the Grid Toolbar contents.
 
-If an `Array` value is assigned, it will be treated as the list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
+If an `Array` value is assigned, it will be treated as the list of commands displayed in the Grid Toolbar. Commands can be custom or built-in ("cancel", "create", "save").
 
 The "cancel" built-in command reverts any data changes done by the end user.
 
@@ -4599,7 +4599,7 @@ The "create" command adds an empty data item to the grid.
 
 The "save" command persists any data changes done by the end user.
 
-#### Example - configure the grid toolbar as a string template
+#### Example - configure the Grid Toolbar as a string template
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
@@ -4621,7 +4621,7 @@ The "save" command persists any data changes done by the end user.
     });
     </script>
 
-#### Example - configure the grid toolbar template with a function
+#### Example - configure the Grid Toolbar template with a function
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
@@ -4643,7 +4643,7 @@ The "save" command persists any data changes done by the end user.
     });
     </script>
 
-#### Example - configure the grid toolbar as an array of commands
+#### Example - configure the Grid Toolbar as an array of commands
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({

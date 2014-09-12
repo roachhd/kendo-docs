@@ -227,7 +227,7 @@ The width of the table columns. Value is treated as pixels.
 
 ### height `Number|String`
 
-The height of the pivotgrid. Numeric values are treated as pixels.
+The height of the PivotGrid. Numeric values are treated as pixels.
 
 #### Example - set the height as a number
 
@@ -878,7 +878,7 @@ The text of the clear filter expressions button.
 
 ### messages.fieldMenu.ok `String` *(default: "Ok")*
 
-The text of the ok button in the include fields dialog.
+The text of the OK button in the include fields dialog.
 
 #### Example
 
@@ -1575,7 +1575,7 @@ The event handler function context (available via the `this` keyword) will be se
 
 ##### e.preventDefault `Function`
 
-If invoked prevents the data bind action. The pivotgrid will remain unchanged and `dataBound` event will not fire.
+If invoked prevents the data bind action. The PivotGrid will remain unchanged and `dataBound` event will not fire.
 
 ##### e.sender `kendo.ui.PivotGrid`
 
@@ -1733,7 +1733,7 @@ The widget instance which fired the event.
 
 ### expandMember
 
-Fired before column or row field is expaneded.
+Fired before column or row field is expanded.
 
 The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
@@ -1846,7 +1846,7 @@ The axis that will be collapsed. Possible values `columns` or `rows`.
 
 ##### e.path `String`
 
-The path to the field that will be collapseed.
+The path to the field that will be collapsed.
 
 #### Example - subscribe to the "collapseMember" event during initialization
 

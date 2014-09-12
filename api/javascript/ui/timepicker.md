@@ -301,7 +301,7 @@ Toggles the readonly state of the widget. When the widget is readonly it doesn't
 
 ##### readonly `Boolean`
 
-The argument, which defines whether the timepicker should be readonly or editable.
+The argument, which defines whether the TimePicker should be readonly or editable.
 
 #### Example - make TimePicker widget readonly
 
@@ -339,7 +339,7 @@ The maximum time value to set for a TimePicker, expressed as a Date object or as
 
 `Date` The maximum time value of a TimePicker.
 
-#### Example - get the max value of the timepicker
+#### Example - get the max value of the TimePicker 
 
     <input id="timepicker" />
     <script>
@@ -352,7 +352,7 @@ The maximum time value to set for a TimePicker, expressed as a Date object or as
     console.log(max);
     </script>
 
-#### Example - set the max value of the timepicker
+#### Example - set the max value of the TimePicker
 
     <input id="timepicker" />
     <script>
@@ -377,7 +377,7 @@ The minimum time value to set for a TimePicker, expressed as a Date object or as
 
 `Date` The minimum time value of a TimePicker.
 
-#### Example - get the min value of the timepicker
+#### Example - get the min value of the TimePicker
 
     <input id="timepicker" />
     <script>
@@ -390,7 +390,7 @@ The minimum time value to set for a TimePicker, expressed as a Date object or as
     console.log(min);
     </script>
 
-#### Example - set the min value of the timepicker
+#### Example - set the min value of the TimePicker
 
     <input id="timepicker" />
     <script>

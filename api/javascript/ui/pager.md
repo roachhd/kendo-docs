@@ -241,9 +241,9 @@ Defines if numeric portion of the pager will be shown.
     </script>
 
 ### pageSizes `Boolean|Array` *(default: false)*
-Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automatically selected in created selectbox.
+Displays a list with predefined page sizes. An array of values to be displayed can be provided. If `pageSize` option is provided for DataSource then this `pageSize` value will be automatically selected in created selectbox.
 
-#### Example - show the page size dropdown
+#### Example - show the page size DropDownList
     <div id="pager"></div>
 
     <script>
@@ -265,7 +265,7 @@ Displays a list with predefined page sizes. An array of values to be displayed c
         dataSource.read();
     </script>
 
-#### Example - show the page size dropdown with custom values
+#### Example - show the page size DropDownList with custom values
     <div id="pager"></div>
 
     <script>
@@ -457,9 +457,9 @@ The label displayed before the pager input. Uses [kendo.format](/api/framework/k
     </script>
 
 ### messages.itemsPerPage `String`*(default: "items per page")*,
-The label displayed after the page size dropdown list.
+The label displayed after the page size DropDownList.
 
-#### Example - set the label after the page size dropdown list
+#### Example - set the label after the page size DropDownList
     <div id="pager"></div>
 
     <script>

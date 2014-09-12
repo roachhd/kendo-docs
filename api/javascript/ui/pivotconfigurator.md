@@ -689,7 +689,7 @@ The text of the clear filter expressions button.
 
 ### messages.fieldMenu.ok `String` *(default: "Ok")*
 
-The text of the ok button in the include fields dialog.
+The text of the OK button in the include fields dialog.
 
 #### Example
 

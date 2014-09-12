@@ -66,7 +66,7 @@ The fields which can be used in the template are:
 
 If set to `true` the scheduler will display a slot for "all day" events.
 
-> The option is a shorthand to the view's allDaySlot option. To define the daySlot visibility using a **data-** attribute set the [views.allDaySlot](#configuration-views.allDaySlot) option directly.
+> The option is a shorthand to the view's `allDaySlot` option. To define the `daySlot` visibility using a **data-** attribute set the [views.allDaySlot](#configuration-views.allDaySlot) option directly.
 
 #### Example - hide the all day slot
     <div id="scheduler"></div>
@@ -685,7 +685,7 @@ If set to `false` the footer of the scheduler would not be displayed.
 
 ### footer.command `String|Boolean` *(default: "workDay")*
 
-Sets the command which will be displayed in the scheduler footer. Currently only "workDay" option is supported. If the option is set  to false, the "workDay" button will be removed from the footer.
+Sets the command which will be displayed in the scheduler footer. Currently only "workDay" option is supported. If the option is set to `false`, the "workDay" button will be removed from the footer.
 
 #### Example - disable workDay command in the footer
     <div id="scheduler"></div>
@@ -1998,7 +1998,7 @@ The text similar to "Repeat on: " displayed in the scheduler recurrence editor.
 
 ### messages.recurrenceEditor.offsetPositions `Object`
 
-The configuration of the scheduler recurrence editor offsetPositions messages. Use this option to customize or localize the scheduler recurrence editor offsetPositions messages.
+The configuration of the scheduler recurrence editor `offsetPositions` messages. Use this option to customize or localize the scheduler recurrence editor `offsetPositions` messages.
 
 ### messages.recurrenceEditor.offsetPositions.first `String`
 
@@ -3120,7 +3120,7 @@ By default only one resource instance can be assigned to an event.
 
 ### resources.name `String`
 
-Tha name of the resource used to distinguish resource. If not set the value of the [field](#configuration-resources.field) option is used.
+The name of the resource used to distinguish resource. If not set the value of the [field](#configuration-resources.field) option is used.
 
 #### Example - set the resource title
 
@@ -3263,7 +3263,7 @@ If set to true the user would be able to select scheduler cells and events. By d
 
 ### showWorkHours `Boolean` *(default: false)*
 
-If set to true the view will be initially shown in business hours mode. By default view is displyed in full day mode.
+If set to true the view will be initially shown in business hours mode. By default view is displayed in full day mode.
 
 > The `showWorkHours` option is supported when [views.type](#configuration-views.type) is set to "day" or "week".
 
@@ -3572,7 +3572,7 @@ The fields which can be used in the template are:
     });
     </script>
 
-#### Exampe - modify the all day slot based on resources
+#### Example - modify the all day slot based on resources
     <div id="scheduler"></div>
     <script id="allDaySlotTemplate" type="text/x-kendo-template">
         # var resources = data.resources(); #
@@ -3675,7 +3675,7 @@ The fields which can be used in the template are:
     });
     </script>
 
-#### Exampe - modify the day slot based on resources
+#### Example - modify the day slot based on resources
     <div id="scheduler"></div>
     <script id="dayTemplate" type="text/x-kendo-template">
         # var resources = data.resources(); #
@@ -4250,7 +4250,7 @@ Contains two placeholders - "{0}" and "{1}" which represent the start and end da
 
 ### views.showWorkHours `Boolean` *(default: false)*
 
-If set to true the view will be initially shown in business hours mode. By default view is displyed in full day mode.
+If set to true the view will be initially shown in business hours mode. By default view is displayed in full day mode.
 
 > The `showWorkHours` option is supported when [views.type](#configuration-views.type) is set to "day" or "week".
 
@@ -4307,7 +4307,7 @@ The fields which can be used in the template are:
     });
     </script>
 
-#### Exampe - modify the slot based on resources
+#### Example - modify the slot based on resources
     <div id="scheduler"></div>
     <script id="slotTemplate" type="text/x-kendo-template">
         # var resources = data.resources(); #
@@ -4777,7 +4777,7 @@ Gets the event occurrence with the specified [uid](/api/framework/model#fields-u
 
 ##### uid `String`
 
-The uid of the occurrence to look for.
+The `uid` of the occurrence to look for.
 
 #### Returns
 
@@ -4913,7 +4913,7 @@ Get the relevant resources for a given slot.
 
 #### Returns
 
-`Object` The relevant resouces.
+`Object` The relevant resources.
 
 #### Exampe - get the relevant resources
     <div id="scheduler"></div>
@@ -5088,7 +5088,7 @@ The view type to select.
 
 ### add
 
-Fired when the a new event is about to be added.
+Fired when a new event is about to be added.
 
 The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
@@ -5731,7 +5731,7 @@ The event handler function context (available via the `this` keyword) will be se
 
 Name of the action. Possible values are:
 
-* changeView - navigate to diffrent view
+* changeView - navigate to different view
 * next - navigate to next time period
 * previous - navigate to previous time period
 * today - select today's date

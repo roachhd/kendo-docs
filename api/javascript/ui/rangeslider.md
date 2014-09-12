@@ -13,7 +13,7 @@ Represents the Kendo UI RangeSlider widget. Inherits from [Widget](/api/framewor
 ### largeStep `Number`*(default: 5)*
 
 The delta with which the value will change when the user presses the Page Up or Page Down key (the drag
-handle must be focused). Note: The allied largeStep will also set large tick for every large step.
+handle must be focused). Note: The allied `largeStep` will also set large tick for every large step.
 
 ### max `Number`*(default: 10)*
 
@@ -170,7 +170,7 @@ Adjusts the RangeSlider layout to match the size of the container.
 
 ### change
 
-Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
+Fires when the RangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
 
 #### Event Data
 

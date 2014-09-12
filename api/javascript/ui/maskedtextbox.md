@@ -78,7 +78,7 @@ Specifies the character used to represent the absence of user input in the widge
     });
     </script>
 
-> Note that the promptChar should not be equal to any of the used mask literals in the mask value.
+> Note that the `promptChar` should not be equal to any of the used mask literals in the mask value.
 
 ### rules `Object`
 
@@ -214,7 +214,7 @@ If set to `true` the widget will not allow user input. If set to `false` the wid
 
 ### value
 
-Gets or sets the value of the maskedtextbox.
+Gets or sets the value of the MaskedTextBox.
 
 #### Parameters
 
@@ -226,7 +226,7 @@ The value to set.
 
 `String` The value of the widget.
 
-#### Example - get the value of the maskedtextbox
+#### Example - get the value of the MaskedTextBox
 
     <input id="maskedtextbox" />
     <script>
@@ -242,7 +242,7 @@ The value to set.
     console.log(value);
     </script>
 
-#### Example - set the value of the maskedtextbox
+#### Example - set the value of the MaskedTextBox
 
     <input id="maskedtextbox" />
     <script>

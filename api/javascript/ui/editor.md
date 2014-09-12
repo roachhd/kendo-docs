@@ -159,7 +159,7 @@ The title of the tool that underlines text.
 
 ### messages.strikethrough `String` *(default: "Strikethrough")*
 
-The title of the tool that stirkes through text.
+The title of the tool that strikes through text.
 
 #### Example
 
@@ -804,7 +804,7 @@ The caption for the link text in the createLink dialog.
 
 ### messages.linkToolTip `String` *(default: "ToolTip")*
 
-The caption for the link tooltip in the createLink dialog.
+The caption for the link Tooltip in the createLink dialog.
 
 #### Example
 
@@ -3021,7 +3021,7 @@ Serializes the currently selected text to a XHTML string.
 
 #### Returns
 
-`String` The selectied text as valid XHTML.
+`String` The selected text as valid XHTML.
 
 #### Example
 
@@ -3342,7 +3342,7 @@ Fires when the Editor selection has changed.
 
 An array of tool definitions that are used for initializing the default tools. Note: Editors that are already initialized will not be affected by changes to this array.
 
-#### Example - insert paragraphts on Shift+Enter, line breaks on Enter
+#### Example - insert paragraphs on Shift+Enter, line breaks on Enter
 
     <textarea id="editor"></textarea>
     <script>

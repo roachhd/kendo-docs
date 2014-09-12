@@ -220,7 +220,7 @@ Specifies ListView item template.
 
 ### altTemplate `Function`
 
-Template to be used for rendering the alternate items in the listview.
+Template to be used for rendering the alternate items in the ListView.
 
 #### Example of alternate item template
 
@@ -468,7 +468,7 @@ Saves edited ListView item. Triggers [save](#events-save) event. If save event i
 
 ### select
 
-Get/set the selected listview item(s).
+Get/set the selected ListView item(s).
 
 #### Example
 

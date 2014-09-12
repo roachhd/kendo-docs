@@ -11,9 +11,9 @@ Represents the Kendo UI Tooltip. Inherits from [Widget](/api/framework/widget).
 
 ### autoHide `Boolean`*(default: true)*
 
-Specifies if the tooltip will be hidden when mouse leaves the target element. If set to false a close button will be shown within tooltip. If set to false, showAfter is specified and the showOn is set to "mouseenter" the Tooltip will be displayed after the given timeout even if the element is no longer hovered.
+Specifies if the Tooltip will be hidden when mouse leaves the target element. If set to false a close button will be shown within Tooltip. If set to false, showAfter is specified and the showOn is set to "mouseenter" the Tooltip will be displayed after the given timeout even if the element is no longer hovered.
 
-#### Example - prevent the tooltip from closing automatically
+#### Example - prevent the Tooltip from closing automatically
 
     <span id="target" title="Tooltip content">
         Some Content
@@ -70,7 +70,7 @@ The animation that will be used when a Tooltip closes.
 
 ### animation.close.effects `String`
 
-Effect to be used for closing of the tooltip.
+Effect to be used for closing of the Tooltip.
 
 #### Example - set close animation effect
 
@@ -181,8 +181,8 @@ Defines the animation duration.
 
 ### content `Object|String|Function`
 
-The text or a function which result will be shown within the tooltip.
-By default the tooltip will display the target element title attribute content.
+The text or a function which result will be shown within the Tooltip.
+By default the Tooltip will display the target element title attribute content.
 
 #### Example - extract the content from target element content
 
@@ -219,7 +219,7 @@ By default the tooltip will display the target element title attribute content.
 
 ### content.url `String`
 
-Specifies a URL or request options that the tooltip should load its content from.
+Specifies a URL or request options that the Tooltip should load its content from.
 
 >Note: For URLs starting with a protocol (e.g. http://),
 a container iframe element is automatically created. This behavior may change in future
@@ -245,9 +245,9 @@ versions, so it is advisable to always use the [iframe configuration option](#if
 
 ### callout `Boolean`*(default:true)*
 
-Specifies if the tooltip callout will be displayed.
+Specifies if the Tooltip callout will be displayed.
 
-#### Example - hide the tooltip callout
+#### Example - hide the Tooltip callout
 
     <span id="target" title="Tooltip content">
         Some content
@@ -263,9 +263,9 @@ Specifies if the tooltip callout will be displayed.
 
 ### filter `String`
 
-Specifies a selector for elements, within the container, for which the tooltip will be displayed.
+Specifies a selector for elements, within the container, for which the Tooltip will be displayed.
 
-#### Example - show tooltip only for strong elements in a text
+#### Example - show Tooltip only for strong elements in a text
 
     <div id="container">
         I'm a <strong title="First target">tooltip target</strong>. I'm also a
@@ -286,9 +286,9 @@ Explicitly states whether content iframe should be created.
 
 ### height `Number`*(default: Infinity)*
 
-The height (in pixels) of the tooltip.
+The height (in pixels) of the Tooltip.
 
-#### Example - set the height of the tooltip
+#### Example - set the height of the Tooltip
 
     <span id="target" title="Tooltip long content">
       Some content
@@ -304,9 +304,9 @@ The height (in pixels) of the tooltip.
 
 ### width `Number`*(default: Infinity)*
 
-The width (in pixels) of the tooltip.
+The width (in pixels) of the Tooltip.
 
-#### Example - set the width of the tooltip
+#### Example - set the width of the Tooltip
 
     <span id="target" title="Tooltip long content">
       Some content
@@ -322,9 +322,9 @@ The width (in pixels) of the tooltip.
 
 ### position `String`*(default: "bottom")*
 
-The position relative to the target element, at which the tooltip will be shown. Predefined values are "bottom", "top", "left", "right", "center".
+The position relative to the target element, at which the Tooltip will be shown. Predefined values are "bottom", "top", "left", "right", "center".
 
-#### Example - set tooltip position
+#### Example - set Tooltip position
 
     <span id="target" title="Tooltip content">
       Some content
@@ -340,7 +340,7 @@ The position relative to the target element, at which the tooltip will be shown.
 
 ### showAfter `Number`*(default: 100)*
 
-Specify the delay in milliseconds before the tooltip is shown. This option is ignored if showOn is set to "click" or "focus".
+Specify the delay in milliseconds before the Tooltip is shown. This option is ignored if `showOn` is set to "click" or "focus".
 
 #### Example - set show delay
 
@@ -358,9 +358,9 @@ Specify the delay in milliseconds before the tooltip is shown. This option is ig
 
 ### showOn `String`*(default: "mouseenter")*
 
-The event on which the tooltip will be shown. Predefined values are "mouseenter", "click" and "focus".
+The event on which the Tooltip will be shown. Predefined values are "mouseenter", "click" and "focus".
 
-#### Example - set event on which the tooltip will be shown
+#### Example - set event on which the Tooltip will be shown
 
     <span id="target" title="Tooltip content">
       Click Me
@@ -378,9 +378,9 @@ The event on which the tooltip will be shown. Predefined values are "mouseenter"
 
 ### show
 
-Shows the tooltip for given target.
+Shows the Tooltip for given target.
 
-#### Example - show tooltip for target element
+#### Example - show Tooltip for target element
 
     <div id="container">
       <span id="target" title="Tooltip content">Tooltip target</span>
@@ -397,13 +397,13 @@ Shows the tooltip for given target.
 
 ##### element `jQuery`
 
-The target element for which the tooltip should be shown.
+The target element for which the Tooltip should be shown.
 
 ### hide
 
-Hides the tooltip.
+Hides the Tooltip.
 
-#### Example - manually close the tooltip
+#### Example - manually close the Tooltip
 
     <div id="container">
       <span title="Tooltip content">Tooltip target</span>
@@ -427,9 +427,9 @@ Hides the tooltip.
 
 ### refresh
 
-Refresh the tooltip content.
+Refresh the Tooltip content.
 
-#### Example force refresh of the tooltip content
+#### Example force refresh of the Tooltip content
 
     <div id="container">
       <span id="target" title="Tooltip content">Tooltip target</span>
@@ -456,7 +456,7 @@ Refresh the tooltip content.
 
 ### target
 
-Gets the tooltip current target.
+Gets the Tooltip current target.
 
 #### Example
 
@@ -577,7 +577,7 @@ Triggered when a Tooltip is shown.
       });
     </script>
 
-#### Example - force refresh every time the tooltip is shown
+#### Example - force refresh every time the Tooltip is shown
 
     <div id="container">
       <span id="target" title="Tooltip content">Tooltip target</span>
@@ -688,7 +688,7 @@ Triggered before an AJAX request started. Note that this event is triggered only
 
 ##### e.target `jQuery`
 
-The target element, for which the tooltip is shown.
+The target element, for which the Tooltip is shown.
 
 ##### e.options `Object`
 

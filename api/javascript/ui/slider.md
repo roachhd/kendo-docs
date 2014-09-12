@@ -21,7 +21,7 @@ The title of the increase button of the **Slider**.
 ### largeStep `Number`*(default: 5)*
 
 The delta with which the value will change when the user presses the Page Up or Page Down key (the drag
-handle must be focused). Note: The allied largeStep will also set large tick for every large step.
+handle must be focused). Note: The allied `largeStep` will also set large tick for every large step.
 
 ### max `Number`*(default: 10)*
 

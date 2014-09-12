@@ -186,7 +186,7 @@ Triggers when a new color has been selected.
 
 ##### e.value `String`
 
-The value of the colorpicker.
+The value of the ColorPicker.
 
 #### Example - subscribe to the "change" event during initialization
 

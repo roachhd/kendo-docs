@@ -38,10 +38,10 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### columns `Array`
 
-The configuration of the gantt columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
-[field](#configuration-columns.field) to which the column is bound. The gantt will create a column for every item of the array.
+The configuration of the Gantt columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
+[field](#configuration-columns.field) to which the column is bound. The Gantt will create a column for every item of the array.
 
-> If this setting is **not** specified the gantt will create a single column for the task title.
+> If this setting is **not** specified the Gantt will create a single column for the task title.
 
 #### Example - two columns bound to the "title" and "start" fields
 
@@ -838,7 +838,7 @@ The span of an hour slot.
 
 ### snap `Boolean` *(default: true)*
 
-If set to true the gantt will snap tasks to the nearest slot during dragging (resizing or moving). Set it to false to allow free moving and resizing of tasks.
+If set to true the Gantt will snap tasks to the nearest slot during dragging (resizing or moving). Set it to false to allow free moving and resizing of tasks.
 
 #### Example
 
@@ -901,15 +901,15 @@ The width of the task list. Numeric values are treated as pixels.
 
 ### messages `Object`
 
-The configuration of the gantt messages. Use this option to customize or localize the gantt messages.
+The configuration of the Gantt messages. Use this option to customize or localize the Gantt messages.
 
 ### messages.views `Object`
 
-The configuration of the gantt view messages. Use this option to customize or localize the gantt view messages.
+The configuration of the Gantt view messages. Use this option to customize or localize the Gantt view messages.
 
 ### messages.views.day `String` *(default: "Day")*
 
-The text similar to "Day" displayed as gantt "day" view title.
+The text similar to "Day" displayed as Gantt "day" view title.
 
 #### Example
 
@@ -934,7 +934,7 @@ The text similar to "Day" displayed as gantt "day" view title.
 
 ### messages.views.week `String` *(default: "Week")*
 
-The text similar to "Week" displayed as gantt "week" view title.
+The text similar to "Week" displayed as Gantt "week" view title.
 
 #### Example
 
@@ -959,7 +959,7 @@ The text similar to "Week" displayed as gantt "week" view title.
 
 ### messages.views.month `String` *(default: "Month")*
 
-The text similar to "Month" displayed as gantt "month" view title.
+The text similar to "Month" displayed as Gantt "month" view title.
 
 #### Example
 
@@ -984,11 +984,11 @@ The text similar to "Month" displayed as gantt "month" view title.
 
 ### messages.actions `Object`
 
-The configuration of the gantt action messages. Use this option to customize or localize the gantt action messages.
+The configuration of the Gantt action messages. Use this option to customize or localize the Gantt action messages.
 
 ### messages.actions.append `String` *(default: "Add Task")*
 
-The text similar to "Append" displayed as gantt "append" buttons.
+The text similar to "Append" displayed as Gantt "append" buttons.
 
 #### Example
 
@@ -1013,7 +1013,7 @@ The text similar to "Append" displayed as gantt "append" buttons.
 
 ### messages.actions.addChild `String` *(default: "Add Child")*
 
-The text similar to "Add child" displayed as gantt "add child" buttons.
+The text similar to "Add child" displayed as Gantt "add child" buttons.
 
 #### Example
 
@@ -1038,7 +1038,7 @@ The text similar to "Add child" displayed as gantt "add child" buttons.
 
 ### messages.actions.insertBefore `String` *(default: "Add Above")*
 
-The text similar to "Add above" displayed as gantt "add above" buttons.
+The text similar to "Add above" displayed as Gantt "add above" buttons.
 
 #### Example
 
@@ -1063,7 +1063,7 @@ The text similar to "Add above" displayed as gantt "add above" buttons.
 
 ### messages.actions.insertAfter `String` *(default: "Add Below")*
 
-The text similar to "Add below" displayed as gantt "add below" buttons.
+The text similar to "Add below" displayed as Gantt "add below" buttons.
 
 #### Example
 
@@ -1088,7 +1088,7 @@ The text similar to "Add below" displayed as gantt "add below" buttons.
 
 ### selectable `Boolean` *(default: true)*
 
-If set to `false` the user won't be able to select tasks in the gantt. By default selection is enabled and triggers the [change event](#events-change).
+If set to `false` the user won't be able to select tasks in the Gantt. By default selection is enabled and triggers the [change event](#events-change).
 
 #### Example
 
@@ -1109,7 +1109,7 @@ If set to `false` the user won't be able to select tasks in the gantt. By defaul
 
 ### showWorkDays `Boolean` *(default: true)*
 
-If set to `false`, gantt views will show all days of the week. By default the views display only business days.
+If set to `false`, Gantt views will show all days of the week. By default the views display only business days.
 
 #### Example
 
@@ -1151,7 +1151,7 @@ If set to `false`, the day view will show all hours of the day. By default the v
 
 ### views `Array`
 
-The views displayed by the gantt and their configuration. The array items can be either objects specifying the view configuration or strings representing the view types (assuming default configuration).
+The views displayed by the Gantt and their configuration. The array items can be either objects specifying the view configuration or strings representing the view types (assuming default configuration).
 By default the Kendo UI Gantt widget displays all three ("day", "week", and "month") views.
 
 ### views.type `String`
@@ -1160,7 +1160,7 @@ The type of the view. The built-in views are: "day", "week", and "month".
 
 ### views.selected `Boolean` *(default: false)*
 
-If set to `true` the view will be initially selected by the gantt widget. The default selected view is "day".
+If set to `true` the view will be initially selected by the Gantt widget. The default selected view is "day".
 
 > If more than one view is selected then last of them will prevail.
 
@@ -1379,7 +1379,7 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
 
 > Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
 
-#### Example - add a gantt task to the data source
+#### Example - add a Gantt task to the data source
 
     <div id="gantt"></div>
     <script>
@@ -1402,7 +1402,7 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
     });
     </script>
 
-#### Example - update a gantt task in the data source
+#### Example - update a Gantt task in the data source
 
     <div id="gantt"></div>
     <script>
@@ -1423,7 +1423,7 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
     task.set("title", "Project start");
     </script>
 
-#### Example - update multiple gantt task fields with the update method
+#### Example - update multiple Gantt task fields with the update method
 
     <div id="gantt"></div>
     <script>
@@ -1448,7 +1448,7 @@ The [data source](/api/framework/ganttdatasource) of the widget. Configured via 
     });
     </script>
 
-#### Example - remove a gantt task from the data source
+#### Example - remove a Gantt task from the data source
 
     <div id="gantt"></div>
     <script>
@@ -1583,7 +1583,7 @@ Clears the currently selected task or dependency.
 
 ### dataItem
 
-Returns the data item to which the specified table row from the treelist is bound
+Returns the data item to which the specified table row from the TreeList is bound
 
 #### Parameters
 
@@ -1707,7 +1707,7 @@ Renders all dependencies using the current data items.
 
 ### removeDependency
 
-Removes the specified gantt dependency.
+Removes the specified Gantt dependency.
 
 #### Parameters
 
@@ -1753,7 +1753,7 @@ The dependency which should be removed. Also accepts a string which is the `uid`
 
 ### removeTask
 
-Removes the specified gantt task.
+Removes the specified Gantt task.
 
 #### Parameters
 
@@ -1896,7 +1896,7 @@ The dependencies data source to which the widget should be bound.
 
 ### view
 
-Gets or sets the current gantt view.
+Gets or sets the current Gantt view.
 
 #### Parameters
 
@@ -1906,7 +1906,7 @@ The view type to select.
 
 #### Returns
 
-`kendo.ui.GanttView` the current gantt view.
+`kendo.ui.GanttView` the current Gantt view.
 
 #### Example - set the current view
 
@@ -2309,7 +2309,7 @@ The GanttTask which has been edited.
 
 ##### e.preventDefault `Function`
 
-If invoked prevents the cancel action and keeps the cel in edit mode.
+If invoked prevents the cancel action and keeps the cell in edit mode.
 
 ##### e.sender `kendo.ui.Gantt`
 
@@ -2431,7 +2431,7 @@ The widget instance which fired the event.
 
 ### change
 
-Fired when the user selects a task in the gantt.
+Fired when the user selects a task in the Gantt.
 
 The event handler function context (available via the this keyword) will be set to the widget instance.
 
@@ -2515,7 +2515,7 @@ The widget instance which fired the event.
 
 ### navigate
 
-Fired when the user changes the selected view of the gantt.
+Fired when the user changes the selected view of the Gantt.
 
 The event handler function context (available via the this keyword) will be set to the widget instance.
 

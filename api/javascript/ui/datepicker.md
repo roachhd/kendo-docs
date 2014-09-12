@@ -287,7 +287,7 @@ The template used for rendering cells in the "month" view, which are outside the
 
 ### parseFormats `Array`
 
- Specifies a lis of date formats used to parse the value set with `value()` method or by direct user input. If not set the value of the format will be used.
+ Specifies a list of date formats used to parse the value set with `value()` method or by direct user input. If not set the value of the format will be used.
  Note that format option is always used parsing process.
 
 #### Example
@@ -438,7 +438,7 @@ Toggles the readonly state of the widget. When the widget is readonly it doesn't
 
 ##### readonly `Boolean`
 
-The argument, which defines whether the datepicker should be readonly or editable.
+The argument, which defines whether the DatePicker should be readonly or editable.
 
 #### Example - make DatePicker widget readonly
 
@@ -476,7 +476,7 @@ The max date to set.
 
 `Date` The max value of the DatePicker.
 
-#### Example - get the max value of the datepicker
+#### Example - get the max value of the DatePicker
 
     <input id="datepicker" />
     <script>
@@ -489,7 +489,7 @@ The max date to set.
     console.log(max);
     </script>
 
-#### Example - set the max value of the datepicker
+#### Example - set the max value of the DatePicker
 
     <input id="datepicker" />
     <script>
@@ -514,7 +514,7 @@ The min date to set.
 
 `Date` The min value of the DatePicker.
 
-#### Example - get the min value of the datepicker
+#### Example - get the min value of the DatePicker
 
     <input id="datepicker" />
     <script>
@@ -527,7 +527,7 @@ The min date to set.
     console.log(min);
     </script>
 
-#### Example - set the min value of the datepicker
+#### Example - set the min value of the DatePicker
 
     <input id="datepicker" />
     <script>
@@ -558,7 +558,7 @@ Opens the calendar.
 
 ### setOptions
 
-Changes the initial DatePicker configuration. **Will be included in Q3 2013 SP1. Currently available in Q3 2013 internal builds only.**
+Changes the initial DatePicker configuration.
 
 #### Parameters
 

@@ -286,7 +286,7 @@ The max value to set.
 
 `Number` The max value of the widget.
 
-#### Example - get the max value of the numerictextbox
+#### Example - get the max value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -299,7 +299,7 @@ The max value to set.
     console.log(max);
     </script>
 
-#### Example - set the max value of the numerictextbox
+#### Example - set the max value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -326,7 +326,7 @@ The min value to set.
 
 `Number` The min value of the widget.
 
-#### Example - get the min value of the numerictextbox
+#### Example - get the min value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -339,7 +339,7 @@ The min value to set.
     console.log(min);
     </script>
 
-#### Example - set the min value of the numerictextbox
+#### Example - set the min value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -366,7 +366,7 @@ The step value to set.
 
 `Number` The step value of the widget.
 
-#### Example - get the step value of the numerictextbox
+#### Example - get the step value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -379,7 +379,7 @@ The step value to set.
     console.log(step);
     </script>
 
-#### Example - set the step value of the numerictextbox
+#### Example - set the step value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -394,7 +394,7 @@ The step value to set.
 
 ### value
 
-Gets or sets the value of the numerictextbox.
+Gets or sets the value of the NumericTextBox.
 
 #### Parameters
 
@@ -406,7 +406,7 @@ The value to set.
 
 `Number` The value of the widget.
 
-#### Example - get the value of the numerictextbox
+#### Example - get the value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>
@@ -419,7 +419,7 @@ The value to set.
     console.log(value);
     </script>
 
-#### Example - set the value of the numerictextbox
+#### Example - set the value of the NumericTextBox
 
     <input id="numerictextbox" />
     <script>

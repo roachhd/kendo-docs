@@ -365,7 +365,7 @@ The [template](/api/framework/kendo#methods-template) used to render the suggest
 
 ### valuePrimitive `Boolean`*(default: false)*
 
-Spcifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item text field. If set to false, the View-Model field will be updated with the selected item.
+Specifies the [value binding](/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item text field. If set to false, the View-Model field will be updated with the selected item.
 
 #### Example - specify that the View-Model field should be updated with the selected item text
 
@@ -445,7 +445,7 @@ A jQuery object of the drop-down list element.
     <script>
 
 ### ul `jQuery`
-A jQuery object of the ul element, which holds the available options.
+A jQuery object of the `ul` element, which holds the available options.
 
 #### Example - get ul element
 

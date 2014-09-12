@@ -301,7 +301,7 @@ The template used for rendering cells in the calendar "month" view, which are ou
 
 ### parseFormats `Array`
 
- Specifies the formats, which are used to parse the value set with value() method or by direct input. If not set the value of the options.format and options.timeFormat will be used. Note that value of the format option is always used.
+ Specifies the formats, which are used to parse the value set with value() method or by direct input. If not set the value of the `options.format` and `options.timeFormat` will be used. Note that value of the format option is always used.
 
 #### Example
 
@@ -486,7 +486,7 @@ Toggles the readonly state of the widget. When the widget is readonly it doesn't
 
 ##### readonly `Boolean`
 
-The argument, which defines whether the datetimepicker should be readonly or editable.
+The argument, which defines whether the DateTimePicker should be readonly or editable.
 
 #### Example - make DateTimePicker widget readonly
 
@@ -524,7 +524,7 @@ The maximum time value to set for a DateTimePicker, expressed as a Date object o
 
 `Date` The maximum time value of a DateTimePicker.
 
-#### Example - get the max value of the datetimepicker
+#### Example - get the max value of the DateTimePicker
 
     <input id="datetimepicker" />
     <script>
@@ -537,7 +537,7 @@ The maximum time value to set for a DateTimePicker, expressed as a Date object o
     console.log(max);
     </script>
 
-#### Example - set the max value of the datetimepicker
+#### Example - set the max value of the DateTimePicker
 
     <input id="datetimepicker" />
     <script>
@@ -562,7 +562,7 @@ The minimum time value to set for a DateTimePicker, expressed as a Date object o
 
 `Date` The minimum time value of a DateTimePicker.
 
-#### Example - get the min value of the datetimepicker
+#### Example - get the min value of the DateTimePicker
 
     <input id="datetimepicker" />
     <script>
@@ -575,7 +575,7 @@ The minimum time value to set for a DateTimePicker, expressed as a Date object o
     console.log(min);
     </script>
 
-#### Example - set the min value of the datetimepicker
+#### Example - set the min value of the DateTimePicker
 
     <input id="datetimepicker" />
     <script>
@@ -629,7 +629,7 @@ Available views are "time" and "date".
 
 #### Parameters
 
-Changes the initial DateTimePicker configuration. **Will be included in Q3 2013 SP1. Currently available in Q3 2013 internal builds only.**
+Changes the initial DateTimePicker configuration.
 
 ##### options `Object`
 

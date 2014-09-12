@@ -235,7 +235,7 @@ The field of the data item that provides the value of the widget.
 
 ### delay `Number`*(default: 200)*
 
- Specifies the delay in milliseconds after which the multiselect will start filtering dataSource.
+ Specifies the delay in milliseconds after which the MultiSelect will start filtering dataSource.
 
 #### Example - set the delay
 
@@ -617,7 +617,7 @@ A jQuery object of the drop-down list element.
     <script>
 
 ### ul `jQuery`
-A jQuery object of the ul element, which holds the available options.
+A jQuery object of the `ul` element, which holds the available options.
 
 #### Example - get ul element
 
@@ -631,7 +631,7 @@ A jQuery object of the ul element, which holds the available options.
     <script>
 
 ### tagList `jQuery`
-A jQuery object of the ul element, which holds the selected tags.
+A jQuery object of the `ul` element, which holds the selected tags.
 
 #### Example - get tagList element
 
@@ -876,7 +876,7 @@ Defines the whether to open/close the drop-down list.
 
 ### value
 
-Gets or sets the value of the multiselect. Accepts <i>string</i> value or <i>Array of strings</i>.
+Gets or sets the value of the MultiSelect. Accepts <i>string</i> value or <i>Array of strings</i>.
 
 > **Important:** If no items, value method will pre-fetch the data before continue with the value setting.
 
@@ -888,7 +888,7 @@ The value to set.
 
 #### Returns
 
-`Array` The value of the multiselect.
+`Array` The value of the MultiSelect.
 
 #### Example - set value
 

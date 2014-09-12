@@ -57,7 +57,7 @@ Selector that determines the container to which boundaries the hint movement wil
 
 ### connectWith `String | jQuery`*(default: null)*
 
-Selector which determines if items from the current Sortable widget can be accepted from another Sortable container(s). The connectWith option describes **one way** relationship, if the developer wants a two way connection then the connectWith option should be set on both widgets.
+Selector which determines if items from the current Sortable widget can be accepted from another Sortable container(s). The `connectWith` option describes **one way** relationship, if the developer wants a two way connection then the connectWith option should be set on both widgets.
 
 > By default when the Sortable widget is left with no items its height will become zero. This will prevent the user from being able to drop items back into it. To avoid this behaviour the developer should set the min-height CSS property of the sortable container.
 

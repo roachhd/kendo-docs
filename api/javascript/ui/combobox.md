@@ -142,7 +142,7 @@ Use it to set the Id of the parent ComboBox widget.
 
 ### cascadeFromField `String`
 
-Defines the field to be used to filter the data source. If not defiend the [parent's dataValueField option will be used](/api/web/combobox#configuration-dataValueField).
+Defines the field to be used to filter the data source. If not defined the [parent's dataValueField option will be used](/api/web/combobox#configuration-dataValueField).
 [Help topic showing how cascading functionality works](/web/combobox/cascading)
 
 #### Example
@@ -591,7 +591,7 @@ A jQuery object of the drop-down list element.
     <script>
 
 ### ul `jQuery`
-A jQuery object of the ul element, which holds the available options.
+A jQuery object of the `ul` element, which holds the available options.
 
 #### Example - get ul element
 
@@ -636,7 +636,7 @@ The zero-based index of the data record.
 
 #### Returns
 
-`Object` The raw data record. Returns <i>undefined</i> if no data.
+`Object` The raw data record. Returns *undefined* if no data.
 
 #### Example
 
@@ -808,7 +808,7 @@ The filter value.
 
 ### select
 
-Gets or sets the selected item. Slects the item provided as an argument and updates the value and text of the widget.
+Gets or sets the selected item. Selects the item provided as an argument and updates the value and text of the widget.
 
 #### Parameters
 
@@ -954,7 +954,7 @@ The text to set.
 
 #### Returns
 
-`String` The text of the combobox.
+`String` The text of the ComboBox.
 
 #### Example - set text of the widget
 
@@ -994,7 +994,7 @@ Defines the whether to open/close the drop-down list.
 
 ### value
 
-Gets or sets the value of the combobox.
+Gets or sets the value of the ComboBox.
 
 > **Important:** If the widget is not bound, value method will pre-fetch the data before continue with the value setting.
 
@@ -1006,7 +1006,7 @@ The value to set.
 
 #### Returns
 
-`String` The value of the combobox.
+`String` The value of the ComboBox.
 
 #### Example - set value of the widget
 

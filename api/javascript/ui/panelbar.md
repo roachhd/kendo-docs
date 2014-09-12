@@ -349,7 +349,7 @@ Display multiple values at one time; opening an item has no visual impact on any
 
 ### append
 
-Appends an item/s to the PanelBar.
+Appends an item(s) to the PanelBar.
 
 #### Example
 
@@ -396,8 +396,8 @@ Appends an item/s to the PanelBar.
 
 ##### item `String|Element|jQuery|Array`
 
-Target item, specified as the JSON representation of an object. You can pass item text, content or
-contentUrl here. Can handle an HTML string or array of such strings or JSON.
+Target item, specified as the JSON representation of an object. You can pass item `text`, `content` or
+`contentUrl` here. Can handle an HTML string or array of such strings or JSON.
 
 ##### referenceItem `String|Element|jQuery`
 
@@ -666,7 +666,7 @@ Inserts a PanelBar item after the specified referenceItem
 
 ##### item `String|Element|jQuery|Array`
 
-Target item, specified as a JSON object. You can pass item text, content or contentUrl here. Can handle an HTML string or array of such strings or JSON.
+Target item, specified as a JSON object. You can pass item `text`, `content` or `contentUrl` here. Can handle an HTML string or array of such strings or JSON.
 
 ##### referenceItem `String|Element|jQuery`
 
@@ -732,7 +732,7 @@ Inserts a PanelBar item before the specified referenceItem
 
 ##### item `String|Element|jQuery|Array`
 
-Target item, specified as a JSON object. You can pass item text, content or contentUrl here. Can handle an
+Target item, specified as a JSON object. You can pass item `text`, `content` or `contentUrl` here. Can handle an
 TML string or array of such strings or JSON.
 
 ##### referenceItem `String|Element|jQuery`

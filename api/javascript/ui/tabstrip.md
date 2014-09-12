@@ -242,8 +242,7 @@ Sets an array with the URLs from which the tabs content to be loaded from. If on
 
 ### dataContentField `String`*(default: "")*
 
- Sets the field of the data item that provides the text content of
-the tab content element.
+Sets the field of the data item that provides the text content of the tab content element.
 
 #### Example
 
@@ -259,8 +258,7 @@ the tab content element.
 
 ### dataContentUrlField `String`*(default: "")*
 
- Sets the field of the data item that provides the URL for
-the ajax loaded tab content.
+Sets the field of the data item that provides the URL for the Ajax loaded tab content.
 
 #### Example
 
@@ -276,8 +274,7 @@ the ajax loaded tab content.
 
 ### dataImageUrlField `String`*(default: "")*
 
- Sets the field of the data item that provides the image URL of
-the tab.
+Sets the field of the data item that provides the image URL of the tab.
 
 #### Example
 
@@ -293,8 +290,7 @@ the tab.
 
 ### dataSpriteCssClass `String`*(default: "")*
 
- Sets the field of the data item that provides the CSS class of
-the tab.
+Sets the field of the data item that provides the CSS class of the tab.
 
 #### Example
 
@@ -310,7 +306,7 @@ the tab.
 
 ### dataTextField `String`*(default: "")*
 
- Sets the field of the data item that provides the text name of the tab.
+Sets the field of the data item that provides the text name of the tab.
 
 #### Example
 
@@ -325,8 +321,7 @@ the tab.
 
 ### dataUrlField `String`*(default: "")*
 
- Sets the field of the data item that provides the link URL for the
-tab.
+Sets the field of the data item that provides the link URL for the tab.
 
 #### Example
 
@@ -365,7 +360,7 @@ Specifies whether the TabStrip should be keyboard navigatable.
 
 ### tabGroup `jQuery`
 
-The jQuery object which contains the tabstrip items.
+The jQuery object which contains the TabStrip items.
 
 ## Methods
 
@@ -435,8 +430,7 @@ Appends a tab to the collection of tabs in a **TabStrip**.
 
 ##### tab `Array|Object`
 
-Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
-HTML string or array of such strings or JSON.
+Target tab, specified as a JSON object. You can pass tab `text`, `content` or `contentUrl` here. Can handle an HTML string or array of such strings or JSON.
 
 #### Returns
 
@@ -477,7 +471,7 @@ The index of the tab in the TabStrip.
 ### contentHolder
 
 Obtains the DOM element that holds tab content by its tab index in the **TabStrip**.
-The difference between contentElement and contentHolder is that contentHolder returns the DOM element that really holds the content, which on mobile is the scroll container.
+The difference between `contentElement` and `contentHolder` is that `contentHolder` returns the DOM element that really holds the content, which on mobile is the scroll container.
 
 > **Important:** To remove the tab contents safely, use this method to get the element to empty.
 
@@ -668,7 +662,7 @@ Inserts a newly-created tab after a specified tab.
 
 ##### item `String|Element|jQuery`
 
-Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
+Target tab, specified as a JSON object. You can pass tab `text`, `content` or `contentUrl` here. Can handle an
 HTML string or array of such strings or JSON.
 
 ##### referenceTab `String|Element|jQuery`
@@ -724,7 +718,7 @@ Inserts a newly-created tab before a specified tab.
 
 ##### item `String|Element|jQuery`
 
-Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
+Target tab, specified as a JSON object. You can pass tab `text`, `content` or `contentUrl` here. Can handle an
 HTML string or array of such strings or JSON.
 
 ##### referenceTab `String|Element|jQuery`

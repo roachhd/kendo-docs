@@ -1,7 +1,7 @@
 ---
 title: TreeView
 page_title: Configuration, methods and events of Kendo UI TreeView
-description: Documentation guide that helps the developer configure TreeView UI widget in a few quick steps, apply methdos and trigger events.
+description: Documentation guide that helps the developer configure TreeView UI widget in a few quick steps, apply methods and trigger events.
 ---
 
 # kendo.ui.TreeView
@@ -243,12 +243,12 @@ also enables tri-state checkboxes with an indeterminate state.
 ### checkboxes.template `String|Function`
 
 The [template](/api/framework/kendo#methods-template) which renders the checkboxes. Can be used to allow posting of
-additional information along the treeview checkboxes.
+additional information along the TreeView checkboxes.
 
 The fields which can be used in the template are:
 
 * item - the data item of the given node
-* treeview - the treeview options
+* treeview - the TreeView options
 
 #### Example - specify a different name for each checkbox, bound to the item id
 
@@ -268,7 +268,7 @@ The fields which can be used in the template are:
 
 ### dataImageUrlField `String` *(default: null)*
 
-Sets the field of the data item that provides the image URL of the treeview nodes.
+Sets the field of the data item that provides the image URL of the TreeView nodes.
 
 #### Example - specify custom image URL field
 
@@ -449,8 +449,8 @@ Disables (**false**) or enables (**true**) drag-and-drop of the nodes.
 
 ### loadOnDemand `Boolean` *(default: true)*
 
-Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
-Setting this to false causes all child dataSources to be loaded at initialization time.
+Indicates whether the child DataSources should be fetched lazily when parent groups get expanded.
+Setting this to false causes all child DataSources to be loaded at initialization time.
 Note: when initializing the widget from an array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
 
 #### Example - force lazy loading of sublevels
@@ -471,7 +471,7 @@ Note: when initializing the widget from an array (rather than from a Hierarchica
 
 The text messages displayed in the widget. Use it to customize or localize the messages.
 
-#### Example - customize treeview messages
+#### Example - customize TreeView messages
 
     <div id="treeview"></div>
     <script>
@@ -592,7 +592,7 @@ Template for rendering each node.
 
 ### append
 
-Appends a node to any level of the treeview. This method may also be used to reorder nodes.
+Appends a node to any level of the TreeView . This method may also be used to reorder nodes.
 
 #### Example
 
@@ -627,7 +627,7 @@ Appends a node to any level of the treeview. This method may also be used to reo
 
 A JSON-formatted string or selector that specifies the node to be appended.
 If the argument is a plain JavaScript object, a new item will be created.
-If the argument is a jQuery element that holds a node, the treeview node will be moved.
+If the argument is a jQuery element that holds a node, the TreeView node will be moved.
 If the argument is an array of objects, each item of the array will be appended.
 
 ##### parentNode `jQuery` *(optional)*
@@ -1245,7 +1245,7 @@ The node that should be toggled.
 
 ### updateIndeterminate
 
-Updates the indeterminate state of the treeview checkboxes.
+Updates the indeterminate state of the TreeView checkboxes.
 Call it after using the insert / remove API on TreeViews with [checkChildren: true](#configuration-checkboxes.checkChildren).
 Use to improve performance when checking multiple checkboxes through code.
 
@@ -1253,7 +1253,7 @@ Use to improve performance when checking multiple checkboxes through code.
 
 ##### node `jQuery`
 
-Optional. The root of the hierarchy that will be looped through. Allows only a subtree to be processed. The default value is the treeview root.
+Optional. The root of the hierarchy that will be looped through. Allows only a subtree to be processed. The default value is the TreeView root.
 
 #### Example
 
