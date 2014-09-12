@@ -12,7 +12,7 @@ Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/api/framew
 
 ### clearPromptChar `Boolean`*(default: false)*
 
-Specifies whether the widget will replace the prompt characters with spaces on blur. Prompt chars will be shown again on focus.
+Specifies whether the widget will replace the prompt characters with spaces on blur. Prompt chars will be shown again on focus (available since Q2 2014 SP1).
 
 #### Example - specify different prompt char
 
