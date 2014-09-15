@@ -484,7 +484,7 @@ Returns the data item at the specified index.
 
 #### Parameters
 
-##### index `Number` *(optional)*
+##### index `Number` *(required)*
 
 The zero-based index of of the data item.
 
