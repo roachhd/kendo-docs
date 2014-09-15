@@ -51,15 +51,17 @@ solution explorer. Select **Add Telerik Data Access Service**, and the domain se
 
 ![Generate OpenAccess Domain Model](/images/oa7.png)
 
-Select the NorthwindOA context in the wizard, and click Next.
+Select the EntitiesModel context in the wizard, and click Next.
 
 ![Select Northwind OA](/images/oa9.png)
 
 This screen allows you to configure the service that will be created.  Select the ** WCF Service - OData v3**, option and then click Next.
 
-![Configure The Service](/images/oa11.png)
+![Configure The Service](/images/oa10.png)
 
 On this screen you can change the name of the service and select which tables to be included. Click **Finish** and your service will be created.
+
+![Configure The entitites](/images/oa11.png)
 
 ## Connect the OData Service to a Kendo Grid
 
