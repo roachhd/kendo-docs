@@ -250,35 +250,39 @@ Refer to the example below for a list of the supported properties.
 
 #### Example
 
-    $(document).ready(function() {
-     $("#menu").kendoMenu({
-      dataSource:
-        [{
+    <ul id="menu"></ul>
+    <script>
+      var imgUrl = "http://demos.telerik.com/kendo-ui/content/shared/icons/sports/swimming.png";
+      $(document).ready(function() {
+        $("#menu").kendoMenu({
+          dataSource:
+          [{
             text: "Item 1",
             cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
             url: "http://www.kendoui.com"                // Link URL if navigation is needed, optional.
-        },
-        {
-            text: "<b>Item 2</b>",
-            encoded: false,                              // Allows use of HTML for item text
-            content: "text"                              // content within an item
-        },
-        {
-            text: "Item 3",
-            imageUrl: "http://www.kendoui.com/test.jpg", // Item image URL, optional.
-            items: [{                                    // Sub item collection
-                 text: "Sub Item 1"
-            },
-            {
-                 text: "Sub Item 2"
-            }]
-        },
-        {
-            text: "Item 4",
-            spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
-        }]
-     })
-    });
+          },
+           {
+             text: "<b>Item 2</b>",
+             encoded: false,                              // Allows use of HTML for item text
+             content: "text"                              // content within an item
+           },
+           {
+             text: "Item 3",
+             imageUrl: imgUrl, // Item image URL, optional.
+             items: [{                                    // Sub item collection
+               text: "Sub Item 1"
+             },
+                     {
+                       text: "Sub Item 2"
+                     }]
+           },
+           {
+             text: "Item 4",
+             spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
+           }]
+        })
+      });
+    </script>
 
 ### direction `String`*(default: "default")*
 
@@ -434,11 +438,13 @@ Appends an item to a **Menu** in the specified referenceItem's sub menu.
 
     <ul id="menu"></ul>
     <script>
+        //initialize the menu widget
+        $("#menu").kendoMenu()
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
-        //
-        menu.append(
-            [{
+
+        menu.append([
+            {
                 text: "Item 1",
                 cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
                 url: "http://www.telerik.com"                // Link URL if navigation is needed, optional.
@@ -450,20 +456,13 @@ Appends an item to a **Menu** in the specified referenceItem's sub menu.
             },
             {
                 text: "Item 3",
-                imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
-                items: [{                                    // Sub item collection
-                     text: "Sub Item 1"
-                },
-                {
-                     text: "Sub Item 2"
-                }]
+                items: [{text: "Sub Item 1"},{text: "Sub Item 2"}] //Sub items
             },
             {
                 text: "Item 4",
                 spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
-            }],
-            referenceItem
-        );
+            }
+        ]);
     </script>
 
 #### Parameters
@@ -503,8 +502,11 @@ Closes a sub-menu of a specified item(s) in a **Menu**.
         </li>
     </ul>
     <script>
+        //intialize the menu widget
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
+
         // close the sub menu of "Item1"
         menu.close("#Item1");
     </script>
@@ -543,6 +545,7 @@ Prepares the **Menu** for safe removal from DOM. Detaches all event handlers and
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         var menu = $("#menu").data("kendoMenu");
 
         // detach events
@@ -573,6 +576,7 @@ initialization by setting the **disabled="disabled"** on the desired menu item h
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
         // disable the li menu item with the id "secondItem"
@@ -616,6 +620,7 @@ Inserts an item into a **Menu** after the specified referenceItem.
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
         //
@@ -631,7 +636,6 @@ Inserts an item into a **Menu** after the specified referenceItem.
             },
             {
                 text: "Item 3",
-                imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
                 items: [{                                    // Sub item collection
                      text: "Sub Item 1"
                 },
@@ -684,6 +688,7 @@ Inserts an item into a **Menu** before the specified referenceItem.
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
         //
@@ -752,6 +757,7 @@ Opens a sub-menu of a specified item(s) in a **Menu**.
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
         // open the sub menu of "Item1"
@@ -791,6 +797,7 @@ Removes a specified item(s) from a **Menu**.
         </li>
     </ul>
     <script>
+        $("#menu").kendoMenu();
         // get a reference to the menu widget
         var menu = $("#menu").data("kendoMenu");
         // remove the item with the id "Item1"
@@ -864,12 +871,13 @@ The closed item
         </li>
     </ul>
     <script>
-         // get a reference to the menu widget
-         var menu = $("#menu").data("kendoMenu");
-         // bind to the close event
-         menu.bind("close", function(e) {
-             // handle event
-         });
+        $("#menu").kendoMenu();
+        // get a reference to the menu widget
+        var menu = $("#menu").data("kendoMenu");
+        // bind to the close event
+        menu.bind("close", function(e) {
+            // handle event
+        });
     </script>
 
 ### open
@@ -927,12 +935,13 @@ The opened item
         </li>
     </ul>
     <script>
-         // get a reference to the menu widget
-         var menu = $("#menu").data("kendoMenu");
-         // bind to the open event
-         menu.bind("open", function(e) {
-             // handle event
-         });
+        $("#menu").kendoMenu();
+        // get a reference to the menu widget
+        var menu = $("#menu").data("kendoMenu");
+        // bind to the open event
+        menu.bind("open", function(e) {
+            // handle event
+        });
     </script>
 
 ### activate
@@ -990,12 +999,13 @@ The activated item
         </li>
     </ul>
     <script>
-         // get a reference to the menu widget
-         var menu = $("#menu").data("kendoMenu");
-         // bind to the activate event
-         menu.bind("activate", function(e) {
-             // handle event
-         });
+        $("#menu").kendoMenu();
+        // get a reference to the menu widget
+        var menu = $("#menu").data("kendoMenu");
+        // bind to the activate event
+        menu.bind("activate", function(e) {
+            // handle event
+        });
     </script>
 
 ### deactivate
@@ -1053,12 +1063,13 @@ The deactivated item
         </li>
     </ul>
     <script>
-         // get a reference to the menu widget
-         var menu = $("#menu").data("kendoMenu");
-         // bind to the deactivate event
-         menu.bind("deactivate", function(e) {
-             // handle event
-         });
+        $("#menu").kendoMenu();
+        // get a reference to the menu widget
+        var menu = $("#menu").data("kendoMenu");
+        // bind to the deactivate event
+        menu.bind("deactivate", function(e) {
+            // handle event
+        });
     </script>
 
 ### select
@@ -1116,11 +1127,12 @@ The selected item
         </li>
     </ul>
     <script>
-         // get a reference to the menu widget
-         var menu = $("#menu").data("kendoMenu");
-         // bind to the select event
-         menu.bind("select", function(e) {
-             // handle event
-         });
+        $("#menu").kendoMenu();
+        // get a reference to the menu widget
+        var menu = $("#menu").data("kendoMenu");
+        // bind to the select event
+        menu.bind("select", function(e) {
+            // handle event
+        });
     </script>
 

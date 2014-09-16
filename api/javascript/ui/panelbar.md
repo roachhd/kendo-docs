@@ -253,6 +253,7 @@ Sets an array with the URLs from which the **PanelBar** items content to be load
 
     <ul id="panelbar">
         <li>Item 1
+          <div>Content 1</div>
         </li>
         <li>
             Ajax Item
@@ -262,7 +263,10 @@ Sets an array with the URLs from which the **PanelBar** items content to be load
 
     <script>
         $("#panelbar").kendoPanelBar({
-            contentUrls: [null, "ajaxContent.html"]
+            contentUrls: [
+              null,
+              "http://demos.telerik.com/kendo-ui/content/web/panelbar/ajax/ajaxContent1.html"
+            ]
         });
     </script>
 
@@ -273,40 +277,44 @@ Refer to the example below for a list of the supported properties.
 
 #### Example
 
-    $("#panelbar").kendoPanelBar({
-        dataSource: [
-            {
-                text: "Item 1",
-                cssClass: "myClass",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
-                url: "http://www.kendoui.com/"                  // link URL if navigation is needed (optional)
-            },
-            {
-                text: "<b>Item 2</b>",
-                encoded: false,                                 // Allows use of HTML for item text
-                content: "text"                                 // content within an item
-            },
-            {
-                text: "Item 3",
-                contentUrl: "partialContent.html"               // content URL to load within an item
-            },
-            {
-                text: "Item 4",
-                imageUrl: "http://www.kendoui.com/test.jpg",    // item image URL, optional
-                expanded: true,                                 // item is rendered expanded
-                items: [{                                       // Sub item collection.
-                    text: "Sub Item 1"
-                },
-                {
-                    text: "Sub Item 2"
-                }]
-            },
-            {
-                text: "Item 5",
-                // item image sprite CSS class, optional
-                spriteCssClass: "imageClass3"
-            }
-        ]
-    });
+    <ul id="panelbar"></ul>
+
+    <script>
+      $("#panelbar").kendoPanelBar({
+          dataSource: [
+              {
+                  text: "Item 1 (link)",
+                  cssClass: "myClass",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
+                  url: "http://www.kendoui.com/"                  // link URL if navigation is needed (optional)
+              },
+              {
+                  text: "<b>Item 2</b>",
+                  encoded: false,                                 // Allows use of HTML for item text
+                  content: "text"                                 // content within an item
+              },
+              {
+                  text: "Item 3",
+                  // content URL to load within an item
+                  contentUrl: "http://demos.telerik.com/kendo-ui/content/web/panelbar/ajax/ajaxContent1.html"
+              },
+              {
+                  text: "Item 4",
+                  // item image URL, optional
+                  imageUrl: "http://demos.telerik.com/kendo-ui/content/shared/icons/sports/baseball.png",
+                  expanded: true,                                 // item is rendered expanded
+                  items: [{                                       // Sub item collection.
+                      text: "Sub Item 1"
+                  },
+                  {
+                      text: "Sub Item 2"
+                  }]
+              },
+              {
+                  text: "Item 5"
+              }
+          ]
+      });
+    </script>
 
 ### expandMode `String`*(default: "multiple")*
 
@@ -355,6 +363,8 @@ Appends an item(s) to the PanelBar.
 
     <ul id="panelbar"></ul>
     <script>
+        $("#panelbar").kendoPanelBar();
+
         var panelBar = $("#panelbar").data("kendoPanelBar");
         panelBar.append(
             [
@@ -370,11 +380,11 @@ Appends an item(s) to the PanelBar.
                 },
                 {
                     text: "Item 3",
-                    contentUrl: "partialContent.html"               // content URL to load within an item
+                    contentUrl: "http://demos.telerik.com/kendo-ui/content/web/panelbar/ajax/ajaxContent1.html"
                 },
                 {
                     text: "Item 4",
-                    imageUrl: "http://www.telerik.com/test.jpg",    // item image URL, optional
+                    imageUrl: "http://demos.telerik.com/kendo-ui/content/shared/icons/sports/baseball.png",
                     expanded: true,                                 // item is rendered expanded
                     items: [{                                       // Sub item collection.
                         text: "Sub Item 1"
@@ -420,12 +430,17 @@ Clears the currently selected PanelBar items.
     <script>
         // create a PanelBar instance and get it.
         var panelBar = $("#panelbar").kendoPanelBar().data("kendoPanelBar");
+
         // select the element with ID "item1"
         panelBar.select($("#item1"));
+
         // select the element with ID "item2"
         panelBar.select($("#item2"));
+
         // clear all selection
-        panelBar.clearSelection();
+        setTimeout(function() {
+          panelBar.clearSelection();
+        }, 2000);
     </script>
 
 ### collapse
@@ -451,6 +466,7 @@ Collapses the specified item(s) of a **PanelBar**.
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // access an existing PanelBar instance
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // collapse the element with ID, "item1"
@@ -503,6 +519,7 @@ Prepares the **PanelBar** for safe removal from DOM. Detaches all event handlers
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         var panelBar = $("#panelbar").data("kendoPanelBar");
 
         // detach events
@@ -533,6 +550,7 @@ Enables (**true**) or disables (**false**) the specified item(s) of the
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // access an existing PanelBar instance
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // enable the item of the PanelBar with ID, "item1"
@@ -580,6 +598,7 @@ Expands the specified item(s) of a **PanelBar**.
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // access an existing PanelBar instance
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // expand the element with ID, "item1"
@@ -629,6 +648,7 @@ Inserts a PanelBar item after the specified referenceItem
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         panelBar.insertAfter(
             [{
                 text: "Item 1",
@@ -641,11 +661,11 @@ Inserts a PanelBar item after the specified referenceItem
             },
             {
                 text: "Item 3",
-                contentUrl: "partialContent.html"            // From where to load the item content
+                contentUrl: "http://demos.telerik.com/kendo-ui/content/web/panelbar/ajax/ajaxContent1.html"
             },
             {
                 text: "Item 4",
-                imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
+                imageUrl: "http://demos.telerik.com/kendo-ui/content/shared/icons/sports/baseball.png",
                 expanded: true,                              // item is rendered expanded
                 items: [{                                    // Sub item collection.
                      text: "Sub Item 1"
@@ -655,8 +675,7 @@ Inserts a PanelBar item after the specified referenceItem
                 }]
             },
             {
-                text: "Item 5",
-                spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
+                text: "Item 5"
             }],
             "li:first-child"
         );
@@ -695,6 +714,7 @@ Inserts a PanelBar item before the specified referenceItem
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         panelBar.insertBefore(
             [{
                 text: "Item 1",
@@ -707,11 +727,11 @@ Inserts a PanelBar item before the specified referenceItem
             },
             {
                 text: "Item 3",
-                contentUrl: "partialContent.html"            // From where to load the item content
+                contentUrl: "http://demos.telerik.com/kendo-ui/content/web/panelbar/ajax/ajaxContent1.html"
             },
             {
                 text: "Item 4",
-                imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
+                imageUrl: "http://demos.telerik.com/kendo-ui/content/shared/icons/sports/baseball.png",
                 expanded: true,                              // item is rendered expanded
                 items: [{                                    // Sub item collection.
                      text: "Sub Item 1"
@@ -721,8 +741,7 @@ Inserts a PanelBar item before the specified referenceItem
                 }]
             },
             {
-                text: "Item 5",
-                spriteCssClass: "imageClass3"                // Item image sprite CSS class, optional.
+                text: "Item 5"
             }],
             "li:last-child"
         );
@@ -766,6 +785,7 @@ Reloads the content of a **PanelBar** from an AJAX request.
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // get a reference to the panel bar
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // reload the panel bar
@@ -801,6 +821,7 @@ Removes the specified PanelBar item(s).
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // get a reference to the panel bar
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // remove Item 1
@@ -836,6 +857,7 @@ Gets or sets the selected item.
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // access an existing PanelBar instance
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // select the item with ID, "item1"
@@ -1133,6 +1155,7 @@ The returned status.
         </li>
     </ul>
     <script>
+        $("#panelbar").kendoPanelBar();
         // get a reference to the panel bar
         var panelBar = $("#panelbar").data("kendoPanelBar");
         // bind the error ajax event
