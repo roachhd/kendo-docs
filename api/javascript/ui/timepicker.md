@@ -183,6 +183,8 @@ Specifies the start value in the popup list.
 
  Specifies the formats, which are used to parse the value set with the value method or by direct input. If not set the value of the options.format will be used. Note that value of the format option is always used.
 
+ > Order of the provided parse formats is important and it should from stricter to less strict.
+
 #### Example
 
     <input id="timepicker" />
@@ -339,7 +341,7 @@ The maximum time value to set for a TimePicker, expressed as a Date object or as
 
 `Date` The maximum time value of a TimePicker.
 
-#### Example - get the max value of the TimePicker 
+#### Example - get the max value of the TimePicker
 
     <input id="timepicker" />
     <script>
@@ -444,8 +446,8 @@ The new configuration options.
         min: new Date(2013, 0, 1, 11, 30, 0),
         max: new Date(2013, 0, 1, 16, 30, 0)
     });
-    </script>    
-    
+    </script>
+
 ### value
 
 Gets or sets the value of the TimePicker.

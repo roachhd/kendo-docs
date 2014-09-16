@@ -290,6 +290,8 @@ The template used for rendering cells in the "month" view, which are outside the
  Specifies a list of date formats used to parse the value set with `value()` method or by direct user input. If not set the value of the format will be used.
  Note that format option is always used parsing process.
 
+ > Order of the provided parse formats is important and it should from stricter to less strict.
+
 #### Example
 
     <input id="datepicker" />
