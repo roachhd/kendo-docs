@@ -12,9 +12,9 @@
         <script src="http://cdn.kendostatic.com/2014.2.716/js/kendo.web.min.js"></script>
         {% javascript prettify %}
         {% javascript app %}
-        {% if page.kind == "api" %}{% unless page.dir contains 'wrappers' %}
+        {% if page.editableExample == "true" %}
         {% javascript dojo %}
-        {% endunless %}{% endif %}
+        {% endif %}
 
         <!--[if lt IE 9]>
         <script>

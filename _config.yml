@@ -252,6 +252,11 @@ defaults:
         path: "api"
     values:
         kind: "api"
+-
+    scope:
+        path: "api/javascript"
+    values:
+        editableExample: "true"
 
 type_links:
     "kendo.Class": "/api/framework/class"
