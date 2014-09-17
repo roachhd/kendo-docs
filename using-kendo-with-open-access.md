@@ -67,7 +67,7 @@ On this screen you can change the name of the service and select which tables to
 
 Now all that is left to do is configure the front end.  For now we will wire up the Orders to a Kendo UI grid, but feel free to take it even further! Kendo UI has a lot of cool features to play around with.
 
-First thing we need to do is edit the *Global.asax* file and add the following route configuration:
+First thing we need to do is edit the *Global.asax.cs* file and add the following route configuration in RegisterRoutes method:
 
     routes.IgnoreRoute("EntitiesModelService.svc/{*pathInfo}"); //here you need to specify the correct service path
 
