@@ -56,3 +56,7 @@ A [language code identifier list](http://msdn.microsoft.com/en-us/library/cc2339
 
 The server-side wrappers render some of the needed widgets' markup (and the respective messages) from the server; applying the UI localization on the client side may not work as expected.
 Currently, the ASP.NET MVC wrappers come with localization resource files, which work with the default localization mechanism provided by ASP.NET MVC. For more details, check the [ASP.NET MVC Globalization article](/aspnet-mvc/globalization#localized-user-interface).
+
+## Changing the Kendo UI Widgets language at run-time in AngularJS application
+
+Check [this code library](http://www.telerik.com/support/code-library/kendo-globalization-localization-with-angular-translate) for working example that demonstrates changing the culture, language and widget messages in AngularJS application.
