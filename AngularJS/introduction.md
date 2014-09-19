@@ -110,6 +110,22 @@ If you need to get the actual `widget.value()` you can use `k-ng-model`:
 
 The directive will update the `birthday` variable with the selected `Date` object whenever the `change` event occurs on the widget.
 
+#### Changed in Kendo UI 2014.2.919
+
+Starting with internal version 2014.2.919, `k-ng-model` will also do the right thing for DropDownList, ComboBox, MultiSelect and AutoComplete widgets: instead of binding the widget's value (which would be a field as indicated by the `dataValueField` config option), for these widgets it will bind into the scope the currently selected data item(s) (for MultiSelect it will always be an array).
+
+A possibly surprising result is that when you initialize your widgets from plain HTML instead of using a DataSource you will still get an object in your scope:
+
+    <select kendo-dropdownlist k-ng-model="data">
+      <option value="1">Foo</option>
+      <option value="2">Bar</option>
+    </select>
+
+When "Foo" is selected, `$scope.data` will contain `{ text: "Foo", value: 1 }`, instead of just `1`.
+
+To get the previous behavior, just use `ng-model` instead of `k-ng-model` for these cases (`k-ng-model` doesn't really make sense for these widgets when there is no data source).
+
+
 ### Event handlers
 
 If you store the whole configuration in the controller, then adding an event handler is done the same you would do with plain Kendo:
