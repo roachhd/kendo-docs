@@ -157,7 +157,7 @@ You can also use the `value` binding with a View-Model field which is of primiti
     kendo.bind($("select"), viewModel);
     </script>
 
-By default the value binding for the select widgets(`AutoComplete`, `DropDownList`, `ComboBox`, `MultiSelect`) uses the selected item from the data to update the View-Model field when the initial value is null. The `data-primitive-field` attribute can be used to specify that the View-Model field should be updated with the item value field instead.
+By default the value binding for the select widgets(`AutoComplete`, `DropDownList`, `ComboBox`, `MultiSelect`) uses the selected item from the data to update the View-Model field when the initial value is `null`. The `data-value-primitive` attribute can be used to specify that the View-Model field should be updated with the item value field instead.
 
 ### Use the value binding with a select whose options are created by the source binding
 
