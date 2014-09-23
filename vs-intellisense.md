@@ -3,7 +3,7 @@ title: Enable Intellisense in Visual Studio
 page_title: Kendo UI Visual Studio Intellisense Documentation
 previous_url: /howto/vsdoc/vs-intellisense
 description: Learn how to reference Kendo UI Visual Studio Intellisense by using an additional vsdoc or intellisense JavaScript file.
-position: 19
+position: 220
 ---
 
 # Kendo UI Visual Studio Intellisense

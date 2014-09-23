@@ -38,12 +38,12 @@ navigation:
     "webforms":
         title: "Use in ASP.NET Web Forms"
         position: 14
-    "accessibility":
-        title: "Accessibility Features"
-        position: 16
     "api":
         title: "API Reference"
-        position: 23
+        position: 15
+    "accessibility":
+        title: "Accessibility Features"
+        position: 18
     "mobile/listview":
         title: "Mobile ListView"
         position: 9

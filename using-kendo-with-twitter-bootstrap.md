@@ -1,6 +1,6 @@
 ---
 title: Twitter Bootstrap Integration
-position: 15
+position: 16
 ---
 
 # Using Kendo with Twitter Bootstrap

@@ -1,7 +1,7 @@
 ---
 title: Kendo UI and Responsive Web Design
 description: How to auto-resize kendo widgets when put in resizable containers (splitter or window).
-position: 16
+position: 190
 ---
 
 # Using Kendo with In Responsive Web Pages

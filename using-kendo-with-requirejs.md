@@ -1,6 +1,6 @@
 ---
 title: Use with RequireJS
-position: 18
+position: 210
 ---
 
 # Using Kendo UI with RequireJS

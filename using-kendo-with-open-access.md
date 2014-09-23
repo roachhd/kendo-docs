@@ -1,7 +1,7 @@
 ---
 title: Bind to Open Access ORM using OData
 page_title: Use Kendo UI With The Open Access ORM Tool
-position: 21
+position: 240
 ---
 
 In this article you will learn how [OpenAccess ORM](http://www.telerik com/products/orm.aspx) can be leveraged on the backend, and [Kendo UI](http://www.telerik.com/kendo-ui) can take care of the UI.
@@ -77,14 +77,14 @@ The code needed is here:
 
     <!--Will be turned into a kendo-ized grid! -->
     <div id="grid"></div>
-    
+
     <!-- configure grid-->
     <script>
-    
+
         // document ready fires when the whole page is ready
         // and all elements, scripts, styles have been loaded
         $(function () {
-    
+
             // regex for some date parsing
             // select the div and create the grid element
             $("#grid").kendoGrid({
@@ -127,9 +127,9 @@ The code needed is here:
                     "ShipCity"
                 ]
             });
-    
+
         });
-    
+
     </script>
 
 Now run the application. If all went well you should be presented with a great looking grid:

@@ -1,14 +1,14 @@
 ---
 title: Kendo UI Bootstrapper Tool
 page_title: Kendo UI Bootstrapper Tool
-position: 22
+position: 250
 ---
 
 # Getting Started with the Kendo UI Bootstrapper
 
 ## What Is The Kendo UI Bootstrapper
 
-The Kendo UI Bootstrapper is a free and open source tool designed to enhance your development workflow with Kendo UI by taking care of code linting, 
+The Kendo UI Bootstrapper is a free and open source tool designed to enhance your development workflow with Kendo UI by taking care of code linting,
 static analysis, minification, bundling and easy access to documentation.  It is not an IDE.  It is not intended for you to use to edit code.
 It exists to augment your current IDE by taking care of many of the more advanced and manual tasks of application development that your IDE may not handle out of the box.
 

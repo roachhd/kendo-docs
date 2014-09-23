@@ -2,7 +2,7 @@
 title: Kendo UI ThemeBuilder Overview
 page_title: Modify Kendo UI themes with Kendo UI ThemeBuilder
 description: Modify Kendo UI Themes to make them fit the look and feel of your application or website, using the handy ThemeBuilder tool.
-position: 17
+position: 200
 ---
 
 ### What is the Kendo UI ThemeBuilder?

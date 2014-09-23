@@ -2,7 +2,7 @@
 title: TypeScript Definitions
 page_title: Kendo UI TypeScript Definitions
 previous_url: /howto/typescript/overview
-position: 20
+position: 230
 ---
 
 # Kendo UI TypeScript Support
