@@ -7,7 +7,7 @@ position: 7
 
 # VB Syntax
 
-The following example shows the correct Visual Basic (VB) syntax when using [lamba expressions](http://msdn.microsoft.com/en-us/library/bb531253.aspx) and
+The following examples show the correct Visual Basic (VB) syntax when using [lamba expressions](http://msdn.microsoft.com/en-us/library/bb531253.aspx) and
 [anonymous types](http://msdn.microsoft.com/en-us/library/bb384767.aspx) inside Kendo UI MVC wrapper declarations.
 
 ## Editor
@@ -75,9 +75,6 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
 
 		Function Person_Read(request As DataSourceRequest) As ActionResult
 			Dim result As List(Of Person) = New List(Of Person)
-
-			'populate result
-
 			Return Json(result.ToDataSourceResult(request))
 		End Function
 
