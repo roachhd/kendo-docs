@@ -15,9 +15,16 @@ In most cases the Grid is not the only content on the page, however, there are c
 
 The example below shows how to implement the second option. There are some other important things to keep in mind, which are also addressed by the provided example.
 
-* If the Grid is scrollable, some rows or columns may not be visible on the printed paper. You need to ensure that the Grid has no height during printing, and the scrollability of the data area is disabled.
+* If the Grid is scrollable, some rows or columns may not be visible on the printed paper. You need to ensure that the Grid has no height during printing,
+and the scrollability of the data area is disabled.
+* Depending on the column width, some cell content may not be fully visible.
+This problem is resolved by forcing an automatic `table-layout` to the Grid table, which disables the ellipsis (...).
 * Browsers repeat table headers on each printed page automatically. However, when the Grid is scrollable, it renders a separate table for the header area.
-Since the browser cannot understand the relationship between the two Grid tables, it will not repeat the header row. This problem is resolved by cloning the header row inside the data table.
+Since the browser cannot understand the relationship between the two Grid tables, it will not repeat the header row.
+This problem is resolved by cloning the header row inside the data table.
+
+Printing a Grid with locked (frozen) columns is likely to produce misaligned columns or rows, or a broken overall layout.
+In such cases it is advisable to use a separate print-friendly page with no frozen columns.
 
 ### Example
 
@@ -49,6 +56,7 @@ Since the browser cannot understand the relationship between the two Grid tables
 				'.k-grid { border-top-width: 0; }' +
 				'.k-grid, .k-grid-content { height: auto !important; }' +
 				'.k-grid-content { overflow: visible !important; }' +
+				'div.k-grid table { table-layout: auto; width: 100% !important; }' +
 				'.k-grid .k-grid-header th { border-top: 1px solid; }' +
 				'.k-grid-toolbar, .k-grid-pager > .k-link { display: none; }' +
 				'</style>' +
