@@ -9,7 +9,7 @@ previous_url: /howto/bind-the-grid-to-remote-data
 
 Love them or hate them, grids are a staple of user interfaces. While jQuery has made UI engineering remarkably easier on most of us, the grid is still a very iffy scenario when designing for the web.
 
-Fortunately, the [Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) makes this much easier on us. With to the rapid templating engine that is included with Kendo UI, and the built-in datasource, we can get up and running with our grid very quickly.
+Fortunately, the [Grid](http://demos.telerik.com/kendo-ui/grid/index) makes this much easier on us. With to the rapid templating engine that is included with Kendo UI, and the built-in datasource, we can get up and running with our grid very quickly.
 
 To start with, we need a data source. Due to my work on [instasharp.org](http://instasharp.org/) recently, I have become quite familiar with the Instagram API. We can use their "Popular" feeds endpoint without having to go through an authorization process. We still need a client_id, but it is easy to sign up for one of those at [http://instagram.com/developer/register/#](http://instagram.com/developer/register/#).
 
@@ -33,7 +33,7 @@ We can turn the div into a grid in the document.ready() jQuery function.
 
 ## Add Some Awesome Data
 
-It's not much to look at, so lets add some data to it. Kendo UI provides a very powerful [data binding framework](http://demos.telerik.com/kendo-ui/framework/datasource/index.html) we can use right inline with our grid. We simply need to define the data source of the grid and supply our remote endpoint. Kendo UI is still in beta so some of the naming may change slightly, but I'll explain what each one of these attributes / objects does.</p>
+It's not much to look at, so lets add some data to it. Kendo UI provides a very powerful [data binding framework](http://demos.telerik.com/kendo-ui/datasource/index) we can use right inline with our grid. We simply need to define the data source of the grid and supply our remote endpoint. Kendo UI is still in beta so some of the naming may change slightly, but I'll explain what each one of these attributes / objects does.</p>
 
 <iframe style="width: 700px; height: 350px;" src="http://jsfiddle.net/65kWY/12/embedded/js,html,css,result"></iframe>
 
@@ -68,6 +68,6 @@ If you check out the "html" tab on the previous fiddle, you can see the templati
 
 ## Wrap Up
 
-I hope you were able to see the power of the Kendo UI [Grid](http://demos.telerik.com/kendo-ui/grid/index.html), [Data Source](http://demos.telerik.com/kendo-ui/datasource/index.html) and [Templating](http://demos.telerik.com/kendo-ui/framework/templates/index.html) engine in this article. As well as providing you with a complete toolkit for your jQuery / HTML5 development, it helps you write cleaner JavaScript and lets the markup remain where it belongs.
+I hope you were able to see the power of the Kendo UI [Grid](http://demos.telerik.com/kendo-ui/grid/index), [Data Source](http://demos.telerik.com/kendo-ui/datasource/index) and [Templating](http://demos.telerik.com/kendo-ui/templates/index) engine in this article. As well as providing you with a complete toolkit for your jQuery / HTML5 development, it helps you write cleaner JavaScript and lets the markup remain where it belongs.
 
 Download the toolkit [here](http://www.telerik.com/download/kendo-ui-complete), or use the CDN references. Make sure you also hit up the [forums](http://www.telerik.com/forums/kendo-ui-framework) if you have any questions or suggestions for Kendo UI.
