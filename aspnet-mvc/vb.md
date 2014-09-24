@@ -82,3 +82,13 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
 		End Function
 
 	End Class
+
+## Editor Template
+
+    @ModelType Nullable(Of Integer)
+     
+    @Code
+        Html.Kendo().NumericTextBoxFor(Function(m) m) _
+          .HtmlAttributes(New With {.style = "width:100%"}) _
+        .Render()
+    End Code
