@@ -76,6 +76,8 @@ If the view `evalTemplate` configuration option is set to `true`, the template w
 > Changing the viewModel fields will not re-render the view template. If you want to display dynamic data, you should use the `data-bind` syntax.
 
 ## MVVM Bound View with an evaluated template
+    <div id="container"></div>
+
     <script id="index" type="text/x-kendo-template">
         #: foo #
         <div>Hello <span data-bind="text:foo"></span>!</div>
@@ -83,7 +85,8 @@ If the view `evalTemplate` configuration option is set to `true`, the template w
 
     <script>
         var model = kendo.observable({foo: "World"});
-        var index = new kendo.View('index', {model: model});
+        var index = new kendo.View('index', {model: model, evalTemplate: true});
+        index.render("#container");
     </script>
 
 ## Removing/Destroying Views
