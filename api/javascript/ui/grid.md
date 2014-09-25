@@ -3344,7 +3344,7 @@ Can also be set to the following string values:
                     { field: "age" }
                 ],
                 filterable: {
-                    mode: "cell, menu"
+                    mode: "menu"
                 },
                 dataSource: [
                     { name: "Jane Doe", age: 30 },
