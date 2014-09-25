@@ -17,15 +17,18 @@ The following example demonstrates the necessary links to these stylesheets (rep
     <link rel="stylesheet" href="http://cdn.kendostatic.com/VERSION/styles/kendo.common-bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.kendostatic.com/VERSION/styles/kendo.bootstrap.min.css">
 
-While these files will ensure that Kendo UI looks a lot like Bootstrap, it is not mandatory to use them. The default Kendo UI common.css and any other theme will style the widgets differently, but they will continue to function properly.
+While these files will ensure that Kendo UI looks a lot like Bootstrap, it is not mandatory to use them.
+The default Kendo UI common.css and any other theme will style the widgets differently, but they will continue to function properly.
 
 ## Using the responsive features of Bootstrap
 
-Using the responsive features of Bootstrap does not differ from other responsive sites; refer to the help topic on [how to use Kendo UI in responsive web pages](./using-kendo-in-responsive-web-pages).
+Using the responsive features of Bootstrap does not differ from other responsive sites;
+refer to the help topic on [how to use Kendo UI in responsive web pages](./using-kendo-in-responsive-web-pages).
 
 ## Using a customized version of Bootstrap
 
-If you have customized the colors of Bootstrap before using it, and need Kendo UI to match the newly chosen colors, you will need to customize Kendo UI's bootstrap theme through the [Kendo UI ThemeBuilder](http://demos.telerik.com/kendo-ui/themebuilder/web.html).
+If you have customized the colors of Bootstrap before using it, and need Kendo UI to match the newly chosen colors,
+you will need to customize Kendo UI's bootstrap theme through the [Kendo UI ThemeBuilder](http://demos.telerik.com/kendo-ui/themebuilder/web.html).
 
 ## Nesting Kendo UI widgets and Bootstrap Grid layout
 
@@ -35,7 +38,7 @@ forcing us to override the Bootstrap CSS and reapply the `content-box` box model
 will not work as expected. In general, multiple level nesting of the two products is bound to break the one that is on the inside, unless an additional CSS rule is used for each new level of nesting.
 
 A possible easy workaround is to override the Bootstrap CSS, apply `content-box` box model to all elements on the page and use a `border-box` box model only to selected Bootstrap elements, which need it
-(these are all `.col-...` classes, `.row`, `.container` and `.container-fluid`). You can add the following CSS rules **after** the Bootstrap and Kendo UI stylesheets.
+(these are all `.col-...` classes, `.row`, `.container`, `.container-fluid` and `form-control`). You can add the following CSS rules **after** the Bootstrap and Kendo UI stylesheets.
 
 	/* reset everything to the default box model */
 
@@ -107,3 +110,14 @@ A possible easy workaround is to override the Bootstrap CSS, apply `content-box`
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+
+## Using the form-control Bootstrap CSS class with Kendo UI widgets
+
+The `form-control` Bootstrap CSS class is normally added to textboxes in order to apply some border, padding, background and font styles.
+The problem is that some Kendo UI widgets copy the custom CSS classes of their originating `<input>` elements to the widget wrapper element.
+This results in an incorrect padding style applied to a widget element that should not have a padding. The resolution is to use:
+
+    .form-control.k-widget
+    {
+        padding: 0;
+    }
