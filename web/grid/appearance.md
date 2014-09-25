@@ -227,3 +227,11 @@ The Grid supports frozen columns on one side of the table. In order to work prop
 The above ensures that at least one non-locked column is always visible and horizontal scrolling of the non-locked columns is possible.
 
 Row template and detail features are not supported in combination with column locking.
+
+Frozen columns rely on row height synchronization between the frozen and non-frozen parts.
+Some browsers, such as IE9 and Firefox require a `line-height` style set in pixels, otherwise the synchronization may not work properly, probably due to some sub-pixel quirks.
+
+    div.k-grid td
+    {
+        line-height: 18px;
+    }
