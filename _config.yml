@@ -40,7 +40,7 @@ navigation:
         position: 14
     "api":
         title: "API Reference"
-        position: 15
+        position: -15
     "accessibility":
         title: "Accessibility Features"
         position: 18
