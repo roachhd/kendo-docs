@@ -1070,6 +1070,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       change: function(e) {
         var value = this.value();
         // Use the value of the widget
@@ -1085,7 +1086,10 @@ The widget instance which fired the event.
       var value = this.value();
       // Use the value of the widget
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
+
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("change", dropdownlist_change);
     </script>
@@ -1107,6 +1111,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       close: function(e) {
         // handle the event
       }
@@ -1120,7 +1125,10 @@ The widget instance which fired the event.
     function dropdownlist_close(e) {
       // handle the event
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
+
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("close", dropdownlist_close);
     </script>
@@ -1142,6 +1150,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       dataBound: function(e) {
           // handle the event
       }
@@ -1155,7 +1164,9 @@ The widget instance which fired the event.
     function dropdownlist_dataBound(e) {
       // handle the event
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("dataBound", dropdownlist_dataBound);
     </script>
@@ -1177,6 +1188,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       open: function(e) {
         // handle the event
       }
@@ -1190,7 +1202,9 @@ The widget instance which fired the event.
     function dropdownlist_open(e) {
       // handle the event
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("open", dropdownlist_open);
     </script>
@@ -1216,6 +1230,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       select: function(e) {
         var item = e.item;
         var text = item.text();
@@ -1233,7 +1248,9 @@ The widget instance which fired the event.
       var text = item.text();
       // Use the selected item or its text
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("select", dropdownlist_select);
     </script>
@@ -1253,6 +1270,7 @@ The widget instance which fired the event.
     <input id="dropdownlist" />
     <script>
     $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ],
       cascade: function() {
         // Handle the event
       }
@@ -1266,7 +1284,10 @@ The widget instance which fired the event.
     function dropdownlist_cascade(e) {
         // Handle the event
     }
-    $("#dropdownlist").kendoDropDownList();
+    $("#dropdownlist").kendoDropDownList({
+      dataSource: [ "Apples", "Oranges" ]
+    });
+
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
     dropdownlist.bind("cascade", dropdownlist_cascade);
     </script>

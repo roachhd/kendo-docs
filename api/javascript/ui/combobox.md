@@ -1043,6 +1043,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       change: function(e) {
         var value = this.value();
         // Use the value of the widget
@@ -1058,7 +1059,9 @@ The widget instance which fired the event.
       var value = this.value();
       // Use the value of the widget
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("change", combobox_change);
     </script>
@@ -1080,6 +1083,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       close: function(e) {
         // handle the event
       }
@@ -1093,7 +1097,9 @@ The widget instance which fired the event.
     function combobox_close(e) {
       // handle the event
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("close", combobox_close);
     </script>
@@ -1115,6 +1121,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       dataBound: function(e) {
           // handle the event
       }
@@ -1128,7 +1135,9 @@ The widget instance which fired the event.
     function combobox_dataBound(e) {
       // handle the event
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("dataBound", combobox_dataBound);
     </script>
@@ -1150,6 +1159,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       open: function(e) {
         // handle the event
       }
@@ -1163,7 +1173,9 @@ The widget instance which fired the event.
     function combobox_open(e) {
       // handle the event
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("open", combobox_open);
     </script>
@@ -1189,6 +1201,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       select: function(e) {
         var item = e.item;
         var text = item.text();
@@ -1206,7 +1219,9 @@ The widget instance which fired the event.
       var text = item.text();
       // Use the selected item or its text
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("select", combobox_select);
     </script>
@@ -1226,6 +1241,7 @@ The widget instance which fired the event.
     <input id="combobox" />
     <script>
     $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ],
       cascade: function() {
         // Handle the event
       }
@@ -1239,7 +1255,9 @@ The widget instance which fired the event.
     function combobox_cascade(e) {
         // Handle the event
     }
-    $("#combobox").kendoComboBox();
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
     combobox.bind("cascade", combobox_cascade);
     </script>

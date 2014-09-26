@@ -770,6 +770,7 @@ The widget instance which fired the event.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ],
       close: function(e) {
         // handle the event
       }
@@ -783,7 +784,9 @@ The widget instance which fired the event.
     function autocomplete_close(e) {
       // handle the event
     }
-    $("#autocomplete").kendoAutoComplete();
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.bind("close", autocomplete_close);
     </script>
@@ -805,6 +808,7 @@ The widget instance which fired the event.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ],
       dataBound: function(e) {
           // handle the event
       }
@@ -818,7 +822,9 @@ The widget instance which fired the event.
     function autocomplete_dataBound(e) {
       // handle the event
     }
-    $("#autocomplete").kendoAutoComplete();
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.bind("dataBound", autocomplete_dataBound);
     </script>
@@ -840,6 +846,7 @@ The widget instance which fired the event.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ],
       open: function(e) {
         // handle the event
       }
@@ -853,7 +860,9 @@ The widget instance which fired the event.
     function autocomplete_open(e) {
       // handle the event
     }
-    $("#autocomplete").kendoAutoComplete();
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.bind("open", autocomplete_open);
     </script>
@@ -879,6 +888,7 @@ The widget instance which fired the event.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ],
       select: function(e) {
         var item = e.item;
         var text = item.text();
@@ -896,7 +906,9 @@ The widget instance which fired the event.
       var text = item.text();
       // Use the selected item or its text
     }
-    $("#autocomplete").kendoAutoComplete();
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.bind("select", autocomplete_select);
     </script>
