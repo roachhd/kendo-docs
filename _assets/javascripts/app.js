@@ -98,3 +98,21 @@ $(function(){
         ul.appendTo(this);
     });
 });
+
+$(function(){
+    $(".toggle-nav").click(function() {
+        $("#page-search").removeClass("search-visibility");                  
+        $("#page-inner-content").removeClass("move-inner-content");                  
+        $("#page-nav").toggleClass("nav-visibility");
+    });
+});
+
+$(function(){
+    $(".show-search").click(function() {
+        $("#page-nav").removeClass("nav-visibility");
+        $("#page-search").toggleClass("search-visibility");
+        $("#page-inner-content").toggleClass("move-inner-content");
+    });
+});
+
+$

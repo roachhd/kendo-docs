@@ -7,9 +7,13 @@
 
 #page-inner-content {
     position: absolute;
-    top: 80px;
+    top: 78px;
     bottom: 44px;
     width: 100%;
+}
+
+#page-inner-content.move-inner-content {
+    top: 126px;
 }
 
 #page-header,
