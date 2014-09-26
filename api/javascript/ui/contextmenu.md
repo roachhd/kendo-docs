@@ -598,9 +598,14 @@ Appends an item to a **ContextMenu** in the specified referenceItem's sub menu (
     <div id="target">Target</div>
     <ul id="context-menu"></ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
+
         // get a reference to already initialized ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
-        //
+
         contextMenu.append(
             [{
                 text: "Item 1",
@@ -667,6 +672,10 @@ Closes the **ContextMenu**. This method can be prevented to stop the closure.
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         // close the ContextMenu
@@ -708,6 +717,11 @@ Prepares the **ContextMenu** for safe removal from DOM. Detaches all event handl
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
+
         var contextMenu = $("#context-menu").data("kendoContextMenu");
 
         // detach events
@@ -739,6 +753,10 @@ initialization by setting the **disabled="disabled"** on the desired menu item h
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         // disable the li menu item with the id "secondItem"
@@ -783,6 +801,10 @@ Inserts an item into a **ContextMenu** after the specified referenceItem.
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         //
@@ -852,6 +874,10 @@ Inserts an item into a **ContextMenu** before the specified referenceItem.
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         //
@@ -921,6 +947,10 @@ Shows the **ContextMenu** at the specified coordinates in pixels or aligned to t
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         // open the ContextMenu at 100px, 100px
@@ -965,6 +995,10 @@ Removes a specified item(s) from a **ContextMenu**.
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
         // get a reference to the ContextMenu widget
         var contextMenu = $("#context-menu").data("kendoContextMenu");
         // remove the item with the id "Item1"
@@ -1053,6 +1087,10 @@ The jQuery event that triggered this one - only available for the close event of
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
          // get a reference to the ContextMenu widget
          var contextMenu = $("#context-menu").data("kendoContextMenu");
          // bind to the close event
@@ -1131,6 +1169,10 @@ The jQuery event that triggered this one - only available for the open event of 
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
          // get a reference to the ContextMenu widget
          var contextMenu = $("#context-menu").data("kendoContextMenu");
          // bind to the open event
@@ -1205,6 +1247,10 @@ The current target of the ContextMenu - either the init target or the current el
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
          // get a reference to the ContextMenu widget
          var contextMenu = $("#context-menu").data("kendoContextMenu");
          // bind to the activate event
@@ -1279,6 +1325,10 @@ The current target of the ContextMenu - either the init target or the current el
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
          // get a reference to the ContextMenu widget
          var contextMenu = $("#context-menu").data("kendoContextMenu");
          // bind to the deactivate event
@@ -1353,6 +1403,10 @@ The current target of the ContextMenu - either the init target or the current el
         </li>
     </ul>
     <script>
+        // initialize the ContextMenu
+        $("#context-menu").kendoContextMenu({
+            target: "#target"
+        });
          // get a reference to the ContextMenu widget
          var contextMenu = $("#context-menu").data("kendoContextMenu");
          // bind to the select event
@@ -1360,4 +1414,3 @@ The current target of the ContextMenu - either the init target or the current el
              // handle event
          });
     </script>
-
