@@ -46,7 +46,12 @@ Shows or hides a semi-transparent overlay with a loading image, with styling, wh
 
 ##### element `jQuery`
 
-The container, which will be overlaid. **The element must have non-zero dimensions, and `position` style applied with one of the following values: `relative`, `absolute`, or `fixed`.**
+The container, which will be overlaid. There are several requirements for this element:
+
+* it must be visible on the page
+* it must have non-zero width and height
+* it must have a `position` style applied with one of the following values: `relative`, `absolute`, or `fixed`
+* it must be a block element, which allows nesting of `div` elements (for example `div`, `li`, `td`, `dt`, `dd`, `section`, etc)
 
 ##### toggle `Boolean`
 
