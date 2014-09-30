@@ -5,7 +5,7 @@ position: 16
 
 # Using Kendo with Twitter Bootstrap
 
-Kendo UI widgets can be used seamlessly alongside [Twitter Bootstrap](http://getbootstrap.com/).
+Kendo UI widgets can be used seamlessly alongside [Twitter Bootstrap](http://getbootstrap.com/). This can be seen in the [Kendo UI + Twitter Bootstrap demo](http://demos.telerik.com/kendo-ui/bootstrap) ([source on GitHub](https://github.com/telerik/kendo-bootstrap-demo)).
 
 To replicate the look and feel of Bootstrap in Kendo UI, take the following steps:
 
