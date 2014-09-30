@@ -32,6 +32,8 @@ The two tables may need to be taken into account when making some manual Javascr
         </div>
     </div>
 
+> In order to ensure maximum Grid accessibility with assistive technology, disable the scrolling feature.
+
 ### Remove the vertical scrollbar
 
 When Grid scrolling is enabled, its vertical scrollbar is always visible even when not active. This simplifies the implementation and improves performance. In cases when it is certain that a vertical scrollbar will not be
