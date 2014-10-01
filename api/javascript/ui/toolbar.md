@@ -28,7 +28,7 @@ If `resizable` is set to `true` the widget will detect changes in the viewport w
 
 ### items `Array`
 
-A JavaScript array that contains the ToolBar's commands configuration. 
+A JavaScript array that contains the ToolBar's commands configuration.
 
 > For more information regarding supported commands and their configuration properties check the [Getting Started topic](/web/toolbar/overview#command-types).
 
@@ -1079,7 +1079,7 @@ An object with valid command configuration options.
             type: "button",
             text: "Just added",
             togglable: true
-        });)
+        });
     </script>
 
 ### destroy
@@ -1159,7 +1159,7 @@ The name of the group.
     <script>
         $("#toolbar").kendoToolBar({
             items: [
-                { 
+                {
                     type: "buttonGroup",
                     items: [
                         { type: "button", id: "btn1", text: "Button 1", togglable: true, group: "radio" },
