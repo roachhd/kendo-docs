@@ -146,7 +146,7 @@ The array of data items which the data source contains. The data source will wra
 Can be set to a string value if the [schema.type](#configuration-schema.type) option is set to "xml".
 
 #### Example - set the data items of a data source
-
+    <script>
     var dataSource = new kendo.data.DataSource({
       data: [
         { name: "Jane Doe", age: 30 },
@@ -157,6 +157,7 @@ Can be set to a string value if the [schema.type](#configuration-schema.type) op
       var janeDoe = dataSource.at(0);
       console.log(janeDoe.name); // displays "Jane Doe"
     });
+    </script>
 
 #### Example - set the data items as an XML string
     <script>
