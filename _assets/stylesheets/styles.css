@@ -73,7 +73,6 @@ article, aside, footer {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 300px;
     width: 20%;
     height: 100%;
     overflow: auto;
@@ -596,6 +595,10 @@ footer
     #page-tabs,
     #page-top #page-search {
         display: none;
+    }
+
+    #page-nav {
+        min-width: 250px;
     }
 
     div#page-inner-content {
