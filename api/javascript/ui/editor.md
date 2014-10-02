@@ -1018,6 +1018,26 @@ Indicates whether the characters outside the ASCII range will be encoded as HTML
     console.log($("#editor").data("kendoEditor").value()); // logs "The character &auml; is an umlaut"
     </script>
 
+### serialization.scripts `Boolean` *(default: true)*
+
+Indicates whether inline scripts will be serialized and posted to the server.
+
+> Setting this option does not prevent cross-site scripting (XSS) attacks; you need server sanitization, too.
+> See the [preventing cross-site-scripting](/web/editor/preventing-xss) help topic for more information.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      value: "<input onclick='alert(1)' />",
+      serialization: {
+        scripts: false
+      }
+    });
+    console.log($("#editor").data("kendoEditor").value()); // logs "<input />"
+    </script>
+
 ### stylesheets `Array`
 
 Allows custom stylesheets to be included within the editing area. This setting is applicable only when the [Editor is initialized from a `textarea`](/web/editor/overview)
