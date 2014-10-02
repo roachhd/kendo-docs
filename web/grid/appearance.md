@@ -36,8 +36,9 @@ The two tables may need to be taken into account when making some manual Javascr
 
 ### Remove the vertical scrollbar
 
-When Grid scrolling is enabled, its vertical scrollbar is always visible even when not active. This simplifies the implementation and improves performance. In cases when it is certain that a vertical scrollbar will not be
-needed, and only horizontal scrolling will be used, the vertical scrollbar can be removed with CSS:
+When Grid scrolling is enabled, its vertical scrollbar is always visible even when not active. This simplifies the implementation and improves performance.
+In cases when it is certain that a vertical scrollbar will not be needed, and only horizontal scrolling will be used, the vertical scrollbar can be removed with CSS, as shown below.
+When using this technique, the Grid and its data area **must not have fixed heights applied**, so that they are able to shrink and expand, according to the number of table rows.
 
     #GridID .k-grid-header
     {
@@ -70,8 +71,8 @@ When using hierarchy, the detail template content cannot be wider than the maste
 
 ## Height
 
-By default the Grid has no height and expands to fit all table rows. For historical reasons, the [Grid MVC wrapper](/aspnet-mvc/helpers/grid/configuration#scrolling)
-applies a default height of 200px to its data area when widget scrolling is enabled.
+By default the Grid has no height and expands to fit all table rows. For historical reasons, the Grid MVC wrapper
+[applies a default height of 200px to its data area]](/aspnet-mvc/helpers/grid/configuration#scrolling) when widget scrolling is enabled.
 
 A height can be set to the Grid in one of the following ways:
 
