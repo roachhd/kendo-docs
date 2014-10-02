@@ -7,18 +7,39 @@ position: 210
 
 The production (minified) builds of Kendo UI are designed to work with [RequireJS](http://requirejs.org/).  Therefore if you need to use only a few components instead of loading the full `kendo.all.js`, you may now declare only the components you need and RequireJS will take care to load any needed dependencies.
 
-For example, supposing you need to use a grid and a menu, your code could look like this (replace *VERSION* with the Kendo UI version that you want to use):
+For example, supposing you need to use a grid and a dropdownlist, your code could look like this:
 
-    <script data-main="http://cdn.kendostatic.com/VERSION/js/jquery.min.js"
-            src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
+    <div id="grid"></div>
+    <br>
+    <select id="ddl"></select>
+    
+    <!-- Load the jQuery and RequireJS files from CDN -->
+    
+    <script data-main="http://cdn.kendostatic.com/2014.2.903/js/jquery.min.js"
+            src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script> 
+
     <script>
-      require([ "kendo.menu.min", "kendo.grid.min" ], initApp);
+      require([ "kendo.dropdownlist.min", "kendo.grid.min" ], initApp); //include the needed Kendo UI widgets scripts
+
       function initApp() {
-          // here it's safe to use kendo.menu and kendo.grid widgets
+        //you can initialzie the Kendo UI components here
+        $('#grid').kendoGrid({
+          dataSource:{
+            data: [{name: "John Doe"}]
+          }
+        })
+
+        $('#ddl').kendoDropDownList({
+          dataSource: {
+            data: [{name:"Jane Doe", value: 1}, {name:"John Doe", value: 2}]
+          },
+          dataTextField: "name",
+          dataValueField: "value"
+        })
       }
     </script>
 
-and you don't need to worry about which other files are necessary for the grid and menu widgets.
+and you don't need to worry about which other files are necessary for the grid and dropdownlist widgets.
 
 ## Configuring RequireJS
 
