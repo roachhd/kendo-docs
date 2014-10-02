@@ -72,7 +72,7 @@ When using hierarchy, the detail template content cannot be wider than the maste
 ## Height
 
 By default the Grid has no height and expands to fit all table rows. For historical reasons, the Grid MVC wrapper
-[applies a default height of 200px to its data area]](/aspnet-mvc/helpers/grid/configuration#scrolling) when widget scrolling is enabled.
+[applies a default height of 200px to its data area](/aspnet-mvc/helpers/grid/configuration#scrolling) when widget scrolling is enabled.
 
 A height can be set to the Grid in one of the following ways:
 
