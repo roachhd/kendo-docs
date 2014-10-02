@@ -88,8 +88,18 @@ article, aside, footer {
     overflow: hidden;
 }
 
+#page-nav .k-icon,
+#page-nav .k-sprite {
+    width: 18px;
+}
 #page-nav .k-plus { background: url(../images/close.png); }
 #page-nav .k-minus { background: url(../images/open.png); }
+#page-nav .article {
+    background: url(../images/file.png);
+    position: absolute;
+    margin-left: -22px;
+    margin-top: 2px;
+}
 
 #page-nav .k-in {
     line-height: 20px;
@@ -100,7 +110,7 @@ article, aside, footer {
 }
 
 #page-nav .k-in a {
-    margin: -1px -.3333em -1px -.25em;
+    margin: -1px -.3333em -1px -.15em;
     padding: 1px .3333em 1px .25em;
     display: inline-block;
 }

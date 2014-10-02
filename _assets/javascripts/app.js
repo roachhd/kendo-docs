@@ -101,8 +101,8 @@ $(function(){
 
 $(function(){
     $(".toggle-nav").click(function() {
-        $("#page-search").removeClass("search-visibility");                  
-        $("#page-inner-content").removeClass("move-inner-content");                  
+        $("#page-search").removeClass("search-visibility");
+        $("#page-inner-content").removeClass("move-inner-content");
         $("#page-nav").toggleClass("nav-visibility");
     });
 });
