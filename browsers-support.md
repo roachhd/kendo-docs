@@ -79,6 +79,15 @@ It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/arch
 
 * Kendo UI uses progressive enhancement for its CSS styling. As a result, old and obsolete browsers may ignore CSS3 styles, such as rounded corners and linear gradients.
 
+## Internet Explorer as an Embedded Browser in a Desktop Application
+
+Internet Explorer behaves differently when being embedded inside a desktop (WinForms) application. It reports to support pointer events, but actually doesn't.
+As a result, some events, on which Kendo UI relies, are not fired. In order to avoid this problem, the following Javascript code must be executed
+**before the Kendo UI scripts are registered**:
+
+    window.MSPointerEvent = null;
+    window.PointerEvent = null;
+
 # Supported Operating Systems
 
 <table class="devices-platforms stripes" style="margin-top: 1.2em;">
