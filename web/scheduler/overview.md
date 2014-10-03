@@ -351,7 +351,8 @@ The above will work in Internet Explorer and Google Chrome. Firefox will ignore 
 
 `17px` is a hard-coded value, which should match the scrollbar width. It can be calculated and set with Javascript before printing, if desired.
 
-In addition, the Scheduler needs a fixed pixel width for itself or some of its ancestors, otherwise it may resize during printing, which will cause the displayed absolutely positioned events to become misaligned.
+In addition, the Scheduler needs a fixed pixel width for itself or some of its ancestors, otherwise it may resize during printing,
+which will cause the displayed absolutely positioned events to become misaligned.
 If the widget is part of a fluid layout, a fixed width can be set only for the printing task, and then removed:
 
     <button id="printPage" type="button">Print</button>
@@ -376,3 +377,5 @@ If the widget is part of a fluid layout, a fixed width can be set only for the p
         });
 
     </script>
+    
+>Due to an Internet Explorer bug related to absolutely positioned elements inside tables, the Scheduler events will be printed over their correct time slots only if the widget fits on one page!
