@@ -916,6 +916,67 @@ The text similar to "all day" displayed in day,week and agenda views.
     });
     </script>
 
+### messages.ariaEventLabel `String`*(default: "{0} on {1:D} at {2:t}")*
+
+Specifies the format string used to populate the aria-label attribute value of the selected event element.
+
+The arguments which can be used in the format string are:
+
+* {0} - represents the title of the selected event.
+* {1} - represents the start date of the event.
+* {2} - represents the start time of the event.
+
+#### Example - set the "ariaSlotLabel" scheduler message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      selectable: true,
+      date: new Date("2013/6/6"),
+      messages: {
+        ariaEventLabel: "Selected event is {0}. It starts on {1:d} {2:t}"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.ariaSlotLabel `String`*(default: "Selected from {0:t} to {1:t}")*
+
+Specifies the format string used to populate the aria-label attribute value of the selected slot element.
+
+The arguments which can be used in the format string are:
+
+* {0} - represents the start date of the slot.
+* {1} - represents the end date of the slot.
+
+#### Example - set the "ariaSlotLabel" scheduler message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      selectable: true,
+      date: new Date("2013/6/6"),
+      messages: {
+        ariaSlotLabel: "Selected from {0:g} to {0:g}"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
 ### messages.cancel `String`
 
 The text similar to "Cancel" displayed in scheduler.
