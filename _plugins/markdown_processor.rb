@@ -182,8 +182,8 @@ module Jekyll
             link = type_links[type];
 
             # White-list namespaces with auto-linking enabled
-            if !link && type =~ /^kendo\.dataviz\.(drawing|geometry)/
-                link = type.gsub('kendo.', '/api/')
+            if !link && type =~ /^kendo\.dataviz\.(drawing|geometry|map)/
+                link = type.gsub('kendo.', '/api/javascript/')
                 link.gsub!(/[a-z][A-Z]/) { |c| c[0] + '-' + c[1] }
                 link.gsub!('.', '/')
                 link.downcase!
