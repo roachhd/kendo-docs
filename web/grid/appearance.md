@@ -94,14 +94,15 @@ In this case, please do not set height to the Grid.
 This section is applicable to **scrollable** Grids only.
 
 In order to configure the Grid to be 100% high and resize together with its parent element on browser window resize, the first and most important thing to do is
-make the Grid wrapper `div` 100% high. According to web standards, **elements with a percentage height require their parent to have an explicit height**. This requirement applies recursively
-until an element with a pixel height is reached, or until the `html` element is reached. 100% high elements cannot have margins, paddings, borders or sibling elements,
-so the default border of the Grid should be removed as well.
+make the Grid wrapper `div` 100% high. According to web standards, **elements with a percentage height require their parent to have an explicit height**.
+This requirement applies recursively until an element with a pixel height is reached, or until the `html` element is reached.
+100% high elements cannot have margins, paddings, borders or sibling elements, so the default border of the Grid should be removed as well.
 
 The second step is to subscribe to the browser window's `resize` event and execute the Grid's [`resize`](/using-kendo-in-responsive-web-pages) method.
 It will take care of measuring the height of the Grid and adjusting the height of the scrollable data area.
 
-The `resize` method doesn't have to be called if the Grid is placed inside a Kendo UI Splitter, because the Splitter will execute it automatically. It is also not needed if locked (frozen) columns are used.
+The `resize` method doesn't have to be called if the Grid is placed inside a Kendo UI Splitter, because the Splitter will execute it automatically.
+It is also not needed if locked (frozen) columns are used.
 
 The `resize` method will work for Kendo UI versions **Q3 2013 or later**. For older versions, the following Javascript code must be used instead or `resize`, which practically does the same:
 
@@ -210,6 +211,8 @@ It cannot be used together with grouping, hierarchy, keyboard navigation, batch 
 
 Virtual scrolling relies on a fake scrollbar. Its size is not determined by the browser, but calculated based on the average row height of already loaded data.
 As a result, variable row heights may cause unexpected behavior, such as inability to scroll to the last rows on the last page.
+
+> The Grid page size must be large-enough, so that the table rows do not fit in the scrollable data area. Otherwise the virtual vertical scrollbar will not be created.
 
 Due to height-related browser limitations, which cannot be avoided, virtual scrolling works with up to a couple of million records (depending on the browser).
 Using a larger row count than that can produce unexpected behavior or Javascript errors.
