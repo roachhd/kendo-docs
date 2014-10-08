@@ -587,7 +587,7 @@ Disables a tab(s) of a **TabStrip**.
 
     <script>
         var tabStrip = $("#tabstrip").kendoTabStrip().data("kendoTabStrip");
-        tabStrip.disable(tabStrip.tabGroup.eq(0));
+        tabStrip.disable(tabStrip.tabGroup.children().eq(0));
     </script>
 
 #### Parameters
@@ -617,8 +617,8 @@ Disables (**false**) or enables (**true**) a tab(s) of a **TabStrip**.
 
     <script>
         var tabStrip = $("#tabstrip").kendoTabStrip().data("kendoTabStrip");
-        tabStrip.enable(tabStrip.tabGroup.eq(0), false);
-        tabStrip.enable(tabStrip.tabGroup.eq(0), true);
+        tabStrip.enable(tabStrip.tabGroup.children().eq(0), false);
+        tabStrip.enable(tabStrip.tabGroup.children().eq(0), true);
     </script>
 
 #### Parameters
