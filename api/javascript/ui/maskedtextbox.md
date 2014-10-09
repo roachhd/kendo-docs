@@ -30,6 +30,16 @@ Specifies the culture info used by the widget.
 
 #### Example - specify German culture internationalization
 
+    <!--
+        TODO: Add the kendo.culture.de-DE.min.js file as it is required!
+
+        Here is a sample script tag:
+        <script src="http://cdn.kendostatic.com/{kendo version}/js/cultures/kendo.culture.de-DE.min.js"></script>
+
+        For more information check this help topic:
+        http://docs.telerik.com/kendo-ui/framework/globalization/overview
+    -->
+
     <input id="maskedtextbox" />
     <script>
     $("#maskedtextbox").kendoMaskedTextBox({
