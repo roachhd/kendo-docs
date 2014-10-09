@@ -30,7 +30,7 @@ Next we will define a function, which will return a list of generated data:
         //generate local data
         function getData() {
             var data = [], idx = 0;
-            for (; idx < 1000; idx) {
+            for (; idx < 1000; idx++) {
                 data.push({
                     name: "Name" + idx
                 });
