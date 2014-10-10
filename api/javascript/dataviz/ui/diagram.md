@@ -1262,6 +1262,9 @@ Whether the addition should be recorded in the undo-redo stack.
      diagram.addShape(shape);
     </script>
 
+#### Returns
+`kendo.dataviz.diagram.Shape` The newly created diagram shape.
+
 ### undo
 
 Undoes the previous action.
