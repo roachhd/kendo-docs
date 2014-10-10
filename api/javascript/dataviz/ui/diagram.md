@@ -639,29 +639,33 @@ Example - custom shape with custom connectors
 
 The following defines a custom shape with connectors adapted to the shape's outline. Note in particular the various helpful methods (right(), left(), top()) to define positions relative to the shape.
 
-    $("#diagram").kendoDiagram({
-        shapeDefaults: [{
-            path: "m1,53.69333l17.5647,-17.56445l0,8.78235l23.15292,0l0,-26.34678l-8.78181,0l17.56417,-17.56444l17.5647,17.56444l-8.78238,0l0,26.34678l23.15297,0l0,-8.78235l17.56473,17.56445l-17.56473,17.56466l0,-8.78231l-63.87057,0l0,8.78231l-17.5647,-17.56466l0,0z",
-            connectors: [{
-                name: "Upstream",
-                position: function(shape) {
-                    return shape._transformPoint(shape.bounds().top());
-                }
-            }, {
-                name: "SideLeft",
-                position: function(shape) {
-                    var p = shape.bounds().left();
-                    return shape._transformPoint(new kendo.diagram.Point(p.x, p.y+17));
-                }
-            }, {
-                name: "SideRight",
-                position: function(shape) {
-                    var p = shape.bounds().right();
-                    return shape._transformPoint(new kendo.diagram.Point(p.x, p.y + 17));
-                }
-            }]
-        }]
-    });
+    <div id="diagram"></div>
+    <script>
+      $("#diagram").kendoDiagram({
+        dataSource: [{name: "item1"}],
+        shapeDefaults: {
+          path: "m1,53.69333l17.5647,-17.56445l0,8.78235l23.15292,0l0,-26.34678l-8.78181,0l17.56417,-17.56444l17.5647,17.56444l-8.78238,0l0,26.34678l23.15297,0l0,-8.78235l17.56473,17.56445l-17.56473,17.56466l0,-8.78231l-63.87057,0l0,8.78231l-17.5647,-17.56466l0,0z",
+          connectors: [{
+            name: "Upstream",
+            position: function(shape) {
+              return shape._transformPoint(shape.bounds().top());
+            }
+          }, {
+            name: "SideLeft",
+            position: function(shape) {
+              var p = shape.bounds().left();
+              return shape._transformPoint(new kendo.dataviz.diagram.Point(p.x, p.y+17));
+            }
+          }, {
+            name: "SideRight",
+            position: function(shape) {
+              var p = shape.bounds().right();
+              return shape._transformPoint(new kendo.dataviz.diagram.Point(p.x, p.y + 17));
+            }
+          }]
+        }
+      });
+    </script>
 
 ### shapeDefaults.connectors.name `String`
 
