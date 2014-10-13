@@ -49,7 +49,7 @@ The `read` method of the `transport` should pass a local variable. It can even m
     }
 
 Executing the `success` method of the `read` function argument will populate the DataSource instance and fire its `change` event.
-Executing the `error` method will fire the `error` event of the DataSource, which can be handled.
+Executing the `error` method will fire the `error` event of the DataSource, which can be handled - see [Error Handling with Local Transport](#error-handling-with-local-transport).
 
 ### Update (Local)
 
@@ -124,7 +124,7 @@ The function should remove the provided items from the original datasource and r
 
 If any of the transport actions (read, update, create, destroy) fails, then information about this can and should be passed to the Kendo UI DataSource instance.
 This is achieved by executing `e.error()` instead of `e.success()` in the respective transport function. The `error` method accepts three parameters -
-Ajax request response, status code and custom error message.
+Ajax request object, status code and custom error message.
 
     var dataSource = new kendo.data.DataSource({
         transport: {
@@ -347,6 +347,9 @@ so that a correct paging interface can be generated, if needed.
         serverPaging: true
     });
 
+If an error in the server code occurs, the server response can notify the client-side DataSource instance.
+See [Error Handling with Remote Transport](#error-handling-with-remote-transport).
+
 ### Update (Remote)
 
 The update service expects the edited data item(s) and should return the same item(s) as a confirmation of the successful save operation.
@@ -444,10 +447,54 @@ or any other field, specified in [`schema.errors`](/api/javascript/data/datasour
 
 <!-- exit list -->
 
+The two techniques cannot be combined, i.e. custom errors can be provided only with a 200 HTTP status code.
+
+Here is a standard error example:
+
+    /* Server response:
+    
+    HTTP status code: 401 Unathorized
+    Response body: empty
+    
+    */
     var dataSource = new kendo.data.DataSource({
         error: function (e) {
-            // handle data operation error
+            /* the e event argument will represent the following object:
+            
+            {
+                errorThrown: "Unauthorized",
+                sender: {... the Kendo UI DataSource instance ...}
+                status: "error"
+                xhr: {... the Ajax request object ...}
+            }
+            
+            */
             alert("Status: " + e.status + "; Error message: " + e.errorThrown);
+        }
+    });
+
+Here is a custom error example:
+
+    /* Server response:
+    
+    HTTP status code: 200 OK
+    Response body: { "errors": ["foo", "bar"] }
+    
+    */
+    var dataSource = new kendo.data.DataSource({
+        error: function (e) {
+            /* the e event argument will represent the following object:
+            
+            {
+                errorThrown: "custom error",
+                errors: ["foo", "bar"]
+                sender: {... the Kendo UI DataSource instance ...}
+                status: "customerror"
+                xhr: null
+            }
+            
+            */
+            alert("Errors: " + e.errors.join("; "));
         }
     });
 
