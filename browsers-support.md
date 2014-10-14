@@ -70,8 +70,9 @@ position: 2
 **NOTES:**
 
 * Browsers in beta stage are not supported;
-* [Quirks mode](http://www.quirksmode.org/css/quirksmode.html) is not supported. Always specify a [DOCTYPE](http://reference.sitepoint.com/html/doctypes). Supported DOCTYPES include `HTML5`, `XHTML 1.1`, `XHTML 1.0` (`Transitional` or `Strict`) and `HTML4 Strict`.
-Note that `HTML4 Transitional` triggers quirks mode;
+* [Quirks mode](http://www.quirksmode.org/css/quirksmode.html) is not supported. Always specify a [DOCTYPE](http://reference.sitepoint.com/html/doctypes).
+Supported DOCTYPES include `HTML5`, `XHTML 1.1`, `XHTML 1.0` (`Transitional` or `Strict`) and `HTML4 Strict`. Note that `HTML4 Transitional` triggers quirks mode.
+A [full list of DOCTYPES](http://www.w3.org/QA/2002/04/valid-dtd-list.html) is provided on the W3C website.
 * **Internet Explorer compatibility modes are not supported**. These modes can exhibit different behavior and rendering bugs, compared to the browser versions they emulate.
 It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/archive/2010/06/16/ie-s-compatibility-features-for-site-developers.aspx) via META tag or HTTP header.
 
