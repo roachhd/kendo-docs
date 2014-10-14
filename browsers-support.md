@@ -71,7 +71,8 @@ position: 2
 
 * Browsers in beta stage are not supported;
 * [Quirks mode](http://www.quirksmode.org/css/quirksmode.html) is not supported. Always specify a [DOCTYPE](http://reference.sitepoint.com/html/doctypes).
-Supported DOCTYPES include `HTML5`, `XHTML 1.1`, `XHTML 1.0` (`Transitional` or `Strict`) and `HTML4 Strict`. Note that `HTML4 Transitional` triggers quirks mode.
+Recommended DOCTYPES include `HTML5`, `XHTML 1.1`, `XHTML 1.0 Strict` and `HTML4 Strict`. The `HTML4 Transitional` DOCTYPE triggers quirks mode and should not be used.
+`XHTML 1.0 Transitional` works well in most cases, but may cause issues with vertical positioning of icons.
 The correct syntax for [all DOCTYPES](http://www.w3.org/QA/2002/04/valid-dtd-list.html) is provided on the W3C website.
 * **Internet Explorer compatibility modes are not supported**. These modes can exhibit different behavior and rendering bugs, compared to the browser versions they emulate.
 It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/archive/2010/06/16/ie-s-compatibility-features-for-site-developers.aspx) via META tag or HTTP header.
