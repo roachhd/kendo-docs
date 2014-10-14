@@ -234,9 +234,10 @@ The above ensures that at least one non-locked column is always visible and hori
 
 Row template and detail features are not supported in combination with column locking.
 
-The [Grid API](/api/javascript/ui/grid) allows columns to be locked and unlocked on the fly.
+> The [Grid API](/api/javascript/ui/grid) allows columns to be locked and unlocked on the fly.
 However, this is possible only if at least one column is locked initially during initialization.
-The HTML output and script behavior of the Grid is very different when frozen columns are used, that's why the widget cannot switch between frozen and unfrozen mode after initialization.
+The HTML output and script behavior of the Grid are very different when frozen columns are used,
+that's why the widget cannot switch between "frozen" and "unfrozen" mode after initialization.
 
 Frozen columns rely on row height synchronization between the frozen and non-frozen parts.
 Some browsers, such as IE9 and Firefox require a `line-height` style set in pixels, otherwise the synchronization may not work properly, probably due to some sub-pixel quirks.
