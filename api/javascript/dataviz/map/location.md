@@ -18,7 +18,7 @@ The location longitude in decimal degrees.
 ## Class methods
 
 ### create
-Creates a Location instance from a various input of types.
+Creates a Location instance from various input types.
 
 #### Parameters
 
@@ -31,7 +31,7 @@ an existing Location instance.
 The location longitude in decimal degrees.
 
 #### Returns
-`kendo.dataviz.map.Location` The Location instance.
+`kendo.dataviz.map.Location` The Location instance, if valid.
 
 
 ### fromLngLat

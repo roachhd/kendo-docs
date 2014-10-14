@@ -4873,12 +4873,15 @@ The DOM or jQuery mouse event.
 
 ### extent
 
-Gets the map current [map extent](/api/dataviz/map/extent).
+Gets or sets the [map extent](/api/dataviz/map/extent) or visible area.
+The setter is chainable, i.e. returns the map instance.
 
 #### Parameters
 
-#### Returns
+##### extent `kendo.dataviz.map.Extent`
+The new extent of the map.
 
+#### Returns
 `kendo.dataviz.map.Extent` The current map extent.
 
 #### Example - get the map extent
@@ -4897,6 +4900,28 @@ Gets the map current [map extent](/api/dataviz/map/extent).
 
         alert("North West corner: " + extent.nw.toString());
     </script>
+
+#### Example - set the map extent to show Australia
+      <div id="map"></div>
+      <script>
+        $("#map").kendoMap({
+          zoom: 4,
+          layers: [{
+            type: "tile",
+            urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+            subdomains: ["a", "b", "c"],
+            attribution: "© <a href='http://osm.org/copyright'>OpenStreetMap contributors</a>"
+          }]
+        });
+
+        var aus = new kendo.dataviz.map.Extent(
+          [-10.683333, 113.155],   // North West location
+          [-39.138889, 153.638889] // South East location
+        );
+
+        $("#map").getKendoMap().extent(aus);
+      </script>
+
 
 ### layerToLocation
 
