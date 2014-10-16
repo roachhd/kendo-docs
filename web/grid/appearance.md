@@ -127,7 +127,7 @@ which are hidden with a `display:none` style and the Grid can also be affected.
 Depending on the exact scenario, the following can be observed when the widget is eventually displayed:
 
 * the scrollable data area overflows the Grid's bottom border. This can be resolved by executing the Grid's
-[`resize()`](/using-kendo-in-responsive-web-pages#individual-widget-resizing) method when the widget becomes visible.
+[`resize`](/using-kendo-in-responsive-web-pages#individual-widget-resizing) method when the widget becomes visible.
 Alternatively, apply the desired height to the scrollable data area, instead of the Grid widget:
 
         #GridID .k-grid-content
@@ -137,7 +137,8 @@ Alternatively, apply the desired height to the scrollable data area, instead of 
 * the virtual scrollbar is not visible. This can be resolved by executing the following script when the Grid becomes visible:
 
         $("#GridID").data("kendoGrid").dataSource.fetch();
-* frozen columns are too narrow and non-frozen columns are not visible. This can be resolved by executing the Grid's `resize` method when the widget becomes visible.
+* frozen columns are too narrow and non-frozen columns are not visible. This can be resolved by executing the Grid's
+[`resize`](/using-kendo-in-responsive-web-pages#individual-widget-resizing) method when the widget becomes visible.
 
 In some cases it may be possible to delay the Grid initialization, or change the order in which various Kendo UI widgets are initialized, so that the Grid is initialized while visible.
 
