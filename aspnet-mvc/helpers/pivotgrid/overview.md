@@ -12,10 +12,17 @@ from server-side code, helps with data binding.
 
 ## Introduction
 
-Kendo UI PivotGrid for ASP.NET MVC supports **only** ajax data-binding to HTTP accessible OLAP cube. More information about OLAP concepts can be found in the following links:
+Kendo UI PivotGrid for ASP.NET MVC supports ajax data-binding to HTTP accessible OLAP cube.
+More information about OLAP concepts can be found in the following links:
 
 - [PivotGrid Fundamentals](/web/pivotgrid/fundamentals)
 - [Setup an OLAP cube](/web/pivotgrid/olap-cube-setup) or use our OLAP service ([http://demos.telerik.com/olap/msmdpump.dll](http://demos.telerik.com/olap/msmdpump.dll))
+
+It also supports server/ajax data-binding to a flat data. Widget will create a *cube* client-side allowing to categorize the flat data.
+Refer to these demos for more information:
+
+- [Local binding](http://demos.telerik.com/aspnet-mvc/pivotgrid/local-flat-data-binding)
+- [Remote binding](http://demos.telerik.com/aspnet-mvc/pivotgrid/remote-flat-data-binding)
 
 ## Getting started
 The following tutorial shows how to configure Kendo UI PivotGrid for ASP.NET MVC to do ajax binding to an **Adventure Works** cube hosted on [http://demos.telerik.com/olap/msmdpump.dll](http://demos.telerik.com/olap/msmdpump.dll)
