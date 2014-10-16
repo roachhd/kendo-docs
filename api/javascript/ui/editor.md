@@ -1283,7 +1283,7 @@ Configuration for image browser dialog.
           destroy: "imagebrowser/destroy",
           create: "imagebrowser/createDirectory",
           uploadUrl: "imagebrowser/upload",
-          thumbnailUrl: "imagebrowser/thumbnail"
+          thumbnailUrl: "imagebrowser/thumbnail",
           imageUrl: "/content/images/{0}",
         },
         path: "/myInitialPath/"
