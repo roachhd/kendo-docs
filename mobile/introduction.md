@@ -165,6 +165,9 @@ Nothing too fancy in this update. We've once again used the `data-role` attribut
 
 We can put anything inside of a view, including other Kendo UI widgets. For now, we've used some simple Hello World text.
 
+Instead of `<a href="#home">Home</a>`, you can also use `<a href="#/">Home</a>`. By definition, the `#/` URL will point to the first view,
+which is defined in the HTML file or the so-called **root view**.
+
 If you try to run the app now, you'll see a bunch of HTML, but nothing will look right. We need to take one more step to initialize the app.
 
 ### Step 5: Initialize the Mobile Application
