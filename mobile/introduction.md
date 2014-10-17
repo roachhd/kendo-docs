@@ -225,7 +225,7 @@ To enable our app to navigate to this page, let's update the **TabStrip** added 
 
 When Kendo UI encounters a link to an external view, it will automatically load and cache the view with Ajax and provide a seamless navigation experience.
 
-> If you do not want a link in Kendo UI mobile to be treated as a view, be sure to include the `data-rel="external"` attribute.
+> If you do not want a link in Kendo UI Mobile TabStrip to be treated as a view, be sure to include the `data-rel="external"` attribute.
 
 If we did want to maintain multiple views in a single page, we would simply navigate the `id` of the view, like this:
 
