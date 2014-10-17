@@ -316,7 +316,7 @@ Now, if we want to create styles for our app that will only be applied to iOS de
 
 This added degree of control makes it a cinch to precisely style apps for different target platforms. You can also target styles at specific device orientations. Kendo UI mobile will update the orientation CSS class as the device position changes.
 
-## Next Steps: Polish and Preparing for App Stores
+## Next Steps: Polish and Prepare for App Stores
 We've covered a lot of ground so far. You should now be able to:
 
 - Create a basic Kendo UI mobile application with layouts and views
