@@ -579,7 +579,7 @@ The data item field to group by.
 The offline storage key or custom offline storage implementation.
 
 #### Example - set offline storage key
-
+    <script>
     var dataSource = kendo.data.DataSource({
         offlineStorage: "products-offline",
         transport: {
@@ -589,9 +589,10 @@ The offline storage key or custom offline storage implementation.
             }
         }
     });
+    </script>
 
 #### Example - set custom offline storage implementation
-
+    <script>
     var dataSource = kendo.data.DataSource({
         // use sessionStorage instead of localStorage
         offlineStorage: {
@@ -609,6 +610,7 @@ The offline storage key or custom offline storage implementation.
             }
         }
     });
+    </script>
 
 ### page `Number`
 
