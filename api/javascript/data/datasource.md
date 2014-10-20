@@ -580,7 +580,7 @@ The offline storage key or custom offline storage implementation.
 
 #### Example - set offline storage key
     <script>
-    var dataSource = kendo.data.DataSource({
+    var dataSource = new kendo.data.DataSource({
         offlineStorage: "products-offline",
         transport: {
             read: {
@@ -593,7 +593,7 @@ The offline storage key or custom offline storage implementation.
 
 #### Example - set custom offline storage implementation
     <script>
-    var dataSource = kendo.data.DataSource({
+    var dataSource = new kendo.data.DataSource({
         // use sessionStorage instead of localStorage
         offlineStorage: {
             getItem: function() {
