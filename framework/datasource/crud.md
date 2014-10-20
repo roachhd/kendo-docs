@@ -59,6 +59,7 @@ updated, they are received as an array of objects in `e.data.models`. Again, the
 
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             update: function (e) {
                 // batch is enabled
                 //var updateItems = e.data.models;
@@ -88,6 +89,7 @@ Otherwise the DataSource instance will operate with incorrect data and subsequen
     
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             update: function (e) {
                 // batch is disabled
                 // generate appropriate data item ID and save the new items to the original datasource
@@ -109,6 +111,7 @@ The function should remove the provided items from the original datasource and r
 
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             destroy: function (e) {
                 // remove items from the original datasource by using e.data
                 
@@ -371,6 +374,7 @@ An empty response is also treated as a valid success response.
 
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             update: {
                 url: "service/products/create/",
                 type: "post"
@@ -401,6 +405,7 @@ In this case these IDs will be assigned to the client-side data items in the sam
 
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             create: {
                 url: "service/products/create/",
                 type: "post"
@@ -429,6 +434,7 @@ The expected response is similar to that of the `update` action - it can be empt
 
     var dataSource = new kendo.data.DataSource({
         transport: {
+            /* the other CRUD settings are ommitted for brevity */
             destroy: {
                 url: "service/products/destroy/",
                 type: "post"
@@ -458,6 +464,7 @@ Here is a standard error example:
     
     */
     var dataSource = new kendo.data.DataSource({
+        /* the other CRUD settings are ommitted for brevity */
         error: function (e) {
             /* the e event argument will represent the following object:
             
@@ -482,6 +489,7 @@ Here is a custom error example:
     
     */
     var dataSource = new kendo.data.DataSource({
+        /* the other CRUD settings are ommitted for brevity */
         error: function (e) {
             /* the e event argument will represent the following object:
             
