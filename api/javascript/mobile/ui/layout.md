@@ -90,11 +90,11 @@ The mobile view instance
       Foo view
     </div>
 
-    <div id="bar" data-role="view" data-layout="default" data-hide="onHide">
+    <div id="bar" data-role="view" data-layout="default">
       Bar view
     </div>
 
-    <div data-role="layout" data-id="default">
+    <div data-role="layout" data-id="default" data-hide="onHide">
       <div data-role="footer">
         <div data-role="tabstrip">
           <a href="#foo" data-icon="contacts">foo</a>
@@ -123,11 +123,11 @@ The mobile layout instance
 
 #### Example
 
-    <div id="foo" data-role="view" data-layout="default" data-init="onInit">
+    <div id="foo" data-role="view" data-layout="default">
       Foo view
     </div>
 
-    <div data-role="layout" data-id="default">
+    <div data-role="layout" data-id="default"  data-init="onInit">
       <header data-role="header">
         <div data-role="navbar">
           <span data-role="view-title"></span>
@@ -159,7 +159,7 @@ The mobile view instance
 
 #### Example
 
-    <div id="foo" data-role="view" data-layout="default" data-show="onShow">
+    <div id="foo" data-role="view" data-layout="default">
       Foo view
     </div>
 
@@ -167,7 +167,7 @@ The mobile view instance
       Bar view
     </div>
 
-    <div data-role="layout" data-id="default">
+    <div data-role="layout" data-id="default"  data-show="onShow">
       <div data-role="footer">
         <div data-role="tabstrip">
           <a href="#foo" data-icon="contacts">foo</a>
