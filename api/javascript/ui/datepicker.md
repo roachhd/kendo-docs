@@ -242,7 +242,7 @@ shows the decades from the century
     <input id="datepicker" />
     <script>
     $("#datepicker").kendoDatePicker({
-        min: new Date(2011, 0, 1) // sets max date to Jan 1st, 2011
+        min: new Date(2011, 0, 1) // sets min date to Jan 1st, 2011
     });
     </script>
 
