@@ -285,3 +285,10 @@ If there are multiple Window instances on the page and only one should be printe
             display: none;
         }
     }
+
+## Resolve scrollbar overlap issue in OS X
+
+In some browsers or operating system (specifically Safari under OS X), a scrollbar of an element **below** the Window popup can be displayed over the Window popup.
+This can be resolved with the following CSS style applied to the scrollbar container below the Window:
+
+    -webkit-transform: translate3d(0, 0, 0);
