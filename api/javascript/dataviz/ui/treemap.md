@@ -181,12 +181,14 @@ The source widget instance.
                 color: "red"
             }]
         },
+        autoBind: false,
         valueField: "value",
         textField: "name",
         colorField: "color"
     });
     var treemap = $("#treemap").getKendoTreeMap();
     treemap.bind("dataBound", dataBound);
+    treemap.dataSource.fetch();
     </script>
 
 ## Methods
