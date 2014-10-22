@@ -9,7 +9,7 @@ This help topic shows how to bind Kendo Scheduler for PHP to JSON response.
 
 
 
-> The following demos are using the sample SQLite database shipped with the Telerik UI for PHP** demos (**/wrappers/php/sample.db).
+> The following demos are using the sample SQLite database shipped with the Telerik UI for PHP demos (**/wrappers/php/sample.db**).
 
 ## Binding to array returned by PDO
 
@@ -297,7 +297,7 @@ This help topic shows how to bind Kendo Scheduler for PHP to JSON response.
 ## Binding using the DataSourceResult Helper
 
 The `DataSourceResult` class is a helper utility on top of PDO which simplifies common CRUD operations.
-It is distributed with the Telerik UI for PHP** demos and can be found in the **/wrappers/php/lib/** directory of the **Telerik UI for PHP distribution.
+It is distributed with the Telerik UI for PHP demos and can be found in the **/wrappers/php/lib/** directory of the Telerik UI for PHP distribution.
 
 First we will configure a Kendo Grid for PHP binding and then we will implement the remote service.
 
