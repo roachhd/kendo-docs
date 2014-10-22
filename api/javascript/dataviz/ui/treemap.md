@@ -169,7 +169,7 @@ The source widget instance.
 #### Example - subscribe to the "dataBound" event after initialization
     <div id="treemap"></div>
     <script>
-    function dataBund(e) {
+    function dataBound(e) {
       console.log("DataBound");
     }
 
@@ -186,7 +186,7 @@ The source widget instance.
         colorField: "color"
     });
     var treemap = $("#treemap").getKendoTreeMap();
-    treemap.bind("dataBound", dataBund);
+    treemap.bind("dataBound", dataBound);
     </script>
 
 ## Methods
