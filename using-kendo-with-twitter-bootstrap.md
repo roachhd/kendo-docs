@@ -20,6 +20,9 @@ The following example demonstrates the necessary links to these stylesheets (rep
 While these files will ensure that Kendo UI looks a lot like Bootstrap, it is not mandatory to use them.
 The default Kendo UI common.css and any other theme will style the widgets differently, but they will continue to function properly.
 
+Please note that the `kendo.bootstrap.min.css` theme styles Kendo UI to match the **default** Bootstrap look and feel.
+Other Bootstrap themes should (or can) be used with any other Kendo UI theme, or with a custom Kendo UI theme  (e.g. created with the [Kendo UI ThemeBuilder](/themebuilder)).
+
 ## Using the responsive features of Bootstrap
 
 Using the responsive features of Bootstrap does not differ from other responsive sites;
