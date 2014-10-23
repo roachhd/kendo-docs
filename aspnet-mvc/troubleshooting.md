@@ -274,3 +274,12 @@ In such scenarios the inner widget can be included via a custom helper. For exam
 				</text>);
 		})
 	)
+## Kendo UI Wrappers cause double AJAX postback in debug mode using Ajax.Beginform()
+
+To address this issue, add the following line to the bundleconfig.cs file:
+ 
+    bundles.IgnoreList.Ignore("*.unobtrusive-ajax.min.js", OptimizationMode.WhenDisabled)
+
+This will prevent the unobtrusive ajax script from loading twice (i.e. the minified and non-minified) in debug mode, which is what causes the double postback.
+
+Alternatively, just remove the non minified script from the project (this obviously has implications for debugging, if you're inclined to debug the scripts included in the project template).
